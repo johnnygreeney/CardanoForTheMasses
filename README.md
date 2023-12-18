@@ -1,6 +1,6 @@
 # Cardano for the M₳sses
 
-## Changes from last edition— 
+## Changes for new 'Chang' edition  
 - _“I didn't have time to write a short letter, so I wrote a long one instead.”_  Thinking of making the book shorter, trimming anything too technical like programming language deep dives. Keep it short as possible, can a paragraph just be sentence? Do you need long sentences when a shorter simple one will do? Keep it simple, don’t use 'sesquicentennial' when you can just say 'hard'.
 - 'Measure twice cut once'. Loose target of 10 chapters of roughly equal length 15-25 google doc pages. Does your contribution fit into structure and tone of the rest of the book? If 2 pages are dedicated to important topic like 'Midnight' then don’t submit 3 pages on your project.
 - Write for intended audience, ie. Someone who just heard of Cardano. Most reviewers/contributors are inside the Cardano bubble and often assume people know what 'byron reboot' was, or what a datum or redeemer is... 
