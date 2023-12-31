@@ -57,9 +57,9 @@ Inline-style:
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/figure%201.1%20ethereum%20tshirts.png "Logo Title Text 1")
 
 Reference-style: 
-![alt text][logo]
+![alt text][eth]
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+[eth]: https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/figure%201.1%20ethereum%20tshirts.png "Logo Title Text 2"
 
 Here is a simple footnote[^1].
 
