@@ -28,7 +28,7 @@ If you are interested in translating this book, the plan is to set up a team of 
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/CC.png "Creative Commons")
 
-**Cardano for the Masses - Change Edition** by John Greene is licensed under a _Creative Commons Attribution-ShareAlike 4.0 International License_[^3]. The terms of that license apply.	
+**Cardano for the Masses - Chang Edition** by John Greene is licensed under a _Creative Commons Attribution-ShareAlike 4.0 International License_[^3]. The terms of that license apply.	
 
 
 [^1]: Cardano for the Masses - Chang edition, amazon.com/dp/B0B912X5G6
