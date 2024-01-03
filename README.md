@@ -18,7 +18,7 @@ The book should as concise as possible. Earlier editions were too long. Many sec
 
 ## Translations 
 
-Already significant progress made on Spanish translation by Humberto Rojas Serrano and Joe San.
+There has allready been significant progress made on a Spanish translation by Humberto Rojas Serrano and Joe San.
 
 A Japanese translation[^4] of older 'Age of Voltaire' Edition, funded by Catalyst, is at an advanced stage.
 
