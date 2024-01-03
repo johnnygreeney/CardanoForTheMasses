@@ -1,6 +1,6 @@
 # Cardano for the M₳sses
 
-Chang edition[^1] was published 3rd Jan 2024 under open-source licence. If there is interest from community, plan is to have an update for the actual Change hard fork scheduled for later in 2024.  
+Chang edition[^1] was published 3rd Jan 2024 under open-source licence. If there is interest from  the community, plan is to have an update for the actual Change hard fork scheduled for later in 2024.  
 
 ## Guidelines for contributors  
 - _“I didn't have time to write a short letter, so I wrote a long one instead.”_  
