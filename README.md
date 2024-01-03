@@ -16,7 +16,7 @@ The book should as concise as possible. Earlier editions were too long. Many sec
 - Working on an Audio book - abridged version + quotes mp4 edited with audacity
 - Guidelines for KDP, Kindle Direct Publishing[^2] are useful rules for all publishing platforms. Would be nice to get it out on more platforms like book.io, etc
 
-## TRANSLATIONS
+## Translations 
 
 Already significant progress made on Spanish translation by Humberto Rojas Serrano and Joe San.
 
@@ -24,7 +24,7 @@ A Japanese translation[^4] of older 'Age of Voltaire' Edition, funded by Catalys
 
 If you are interested in translating this book, the plan is to set up a team of volunteers at: https://www.transifex.com/
 
-## LICENSING
+## Licensing
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/CC.png "Creative Commons")
 
