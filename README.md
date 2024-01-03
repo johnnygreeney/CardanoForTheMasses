@@ -7,12 +7,12 @@ Chang edition[^1] was published 3rd Jan 2024 under open-source licence. If there
 The book should as concise as possible. Earlier editions were too long. Many sections have been cut to make it more concise and readable.
 - Keep it short as possible, can a paragraph just be sentence? Do you need long sentences when a shorter simple one will do? Don’t say 'sesquipedalian' when you can just say 'long'.
 - 'Measure twice cut once'. Target of 10 chapters of roughly equal length 15-25 google doc pages. Does your contribution fit into structure and tone of the rest of the book? 
-- Write for intended audience, ie. Someone who just heard of Cardano. Most reviewers/contributors are inside the Cardano bubble and often assume people know what 'byron reboot' was, or what a datum or redeemer is... This book should be the less technical 'story of Cardano' that preps readers for more techncial 'Masering Cardano' book coming.
+- Write for intended audience, ie. Someone who just heard of Cardano. This book should be the less technical 'story of Cardano' that preps readers for more techncial 'Masering Cardano' book coming.
 
 ## To do
 - Add style guide 
 - May be a low stakes way of stress testing gov tools to choose a cover, etc…
-- Model for bootstrapping has always been self-sustaining with no Catalyst funding, etc. Hundreds of books have been given away already at conferences and meetups since Aug 2022. For now more sales equals more giveaways... Amzn ‘author copies’ p&p allow slightly discounted distribution to events/meetups.
+- Model for bootstrapping has always been self-sustaining with no Catalyst funding, etc. Hundreds of books have been given away already at conferences and meetups since Aug 2022. For now, more sales equals more giveaways... Amzn ‘author copies’ p&p allow slightly discounted distribution to events/meetups.
 - Working on an Audio book - abridged version + quotes mp4 edited with audacity
 - Guidelines for KDP, Kindle Direct Publishing[^2] are useful rules for all publishing platforms. Would be nice to get it out on more platforms like book.io, etc
 
