@@ -18,7 +18,6 @@ The book should as concise as possible. Earlier editions were too long. Many sec
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/CC.png "Creative Commons")
 
-
 **Cardano for the Masses - Change Edition** by John Greene is licensed under a _Creative Commons Attribution-ShareAlike 4.0 International License_[^2]. The terms of that license apply.	
 
 
