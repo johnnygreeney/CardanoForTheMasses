@@ -14,6 +14,14 @@ The book should as concise as possible. Earlier editions were too long. Many sec
 - Based on requests, also working on Audio book - abridged version + quotes mp4 edited with audacity
 - Guidelines for KDP, Kindle Direct Publishing[^1] are useful rules for all publishing platforms. Would be nice to get it out on more platforms like book.io, etc
 
+## TRANSLATIONS
+
+Already significant progress made on Spanish translation by Humberto Rojas Serrano, and Joe San
+
+A Japanese translation[^3] of older 'Age of Voltaire' Edition, funded by Catalyst, is at an advanced stage.
+
+If you are interested in translating this book, the plan is to set up a team of volunteers at: https://www.transifex.com/
+
 ## LICENSING
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/CC.png "Creative Commons")
@@ -24,7 +32,7 @@ The book should as concise as possible. Earlier editions were too long. Many sec
 
 [^1]: KDP Guidelines kdp.amazon.com/en_US/help/topic/GU72M65VRFPH43L6
 [^2]: Creative Commons License, creativecommons.org/licenses/by-sa/4.0/
-
+[^3]: Cardano For the M₳sses - Japanese Book, lidonation.com/ja/proposals/cardano-for-the-marasses-japanese-book-f10
 
 
 
