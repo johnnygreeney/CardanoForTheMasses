@@ -16,7 +16,6 @@ The book should as concise as possible. Earlier editions were too long. Many sec
 
 ## LICENSING
 
-Inline-style: 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/CC.png "Creative Commons")
 
 
