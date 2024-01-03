@@ -14,11 +14,13 @@ The book should as concise as possible. Earlier editions were too long. Many sec
 - Based on requests, also working on Audio book - abridged version + quotes mp4 edited with audacity
 - Guidelines for KDP, Kindle Direct Publishing[^1] are useful rules for all publishing platforms. Would be nice to get it out on more platforms like book.io, etc
 
-## To do
-- add style guide
+## LICENSING
+
+Inline-style: 
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/CC.png "Creative Commons")
 
 
-Cardano for the Masses - Change Edition by John Greene is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License[^2]. The terms of that license apply.	
+**Cardano for the Masses - Change Edition** by John Greene is licensed under a _Creative Commons Attribution-ShareAlike 4.0 International License_[^2]. The terms of that license apply.	
 
 
 
