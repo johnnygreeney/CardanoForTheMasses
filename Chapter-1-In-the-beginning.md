@@ -178,9 +178,9 @@ All of 2016 was devoted to science and research. The initial small team with mas
 
 November 4, 2020. __What is IOG?__ CH:[^64] 
 
-With input output, what I wanted to do there was marry two things simultaneously. One, I wanted to have a company with a very strong philosophy about how to build products. I said, ‘these products are born as a scientific method and of evidence, and we need to follow formal methods[^65] and evidence-based software and we need to follow a rigorous academic approach to protocol development’.
-
-So that was one thing, the other thing was the types of products I wanted to build. What I believe in is the philosophy of cascading disruption. So basically what that means is that you're like the first domino, you're like the little pebble on the top of the hill that when you push it, it creates an avalanche. So you build a product, you embed in it all these processes and rules and then after a while, maybe a few years… you can actually walk away, and the product becomes self-evolving.
+>With input output, what I wanted to do there was marry two things simultaneously. One, I wanted to have a company with a very strong philosophy about how to build products. I said, ‘these products are born as a scientific method and of evidence, and we need to follow formal methods[^65] and evidence-based software and we need to follow a rigorous academic approach to protocol development’.
+>
+>So that was one thing, the other thing was the types of products I wanted to build. What I believe in is the philosophy of cascading disruption. So basically what that means is that you're like the first domino, you're like the little pebble on the top of the hill that when you push it, it creates an avalanche. So you build a product, you embed in it all these processes and rules and then after a while, maybe a few years… you can actually walk away, and the product becomes self-evolving.
 
 Back in 2015, IOG stepped back and asked a very simple question which was ‘What is the consequence of Ethereum's success? If it works, what's going to happen to the industry?’ 
 
