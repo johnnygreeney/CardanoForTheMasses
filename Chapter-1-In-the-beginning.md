@@ -208,20 +208,20 @@ IOG chose one of the most scientifically oriented programming languages, Haskell
 
 ## Cardano Timeline
 
-Sep 2015	Crowdsale funded development and treasury.
-Aug 2017	Ouroboros paper accepted at Crypto 17[^77]
-Sep 2017	Byron release
-Dec 2018	Launch of Plutus and Marlowe at PlutusFest
-Dec 2018	Sidechains paper[^78] published 
-Dec 2019	Shelley Incentivized Testnet (ITN)[^79]
-Mar 2020	Byron Reboot, first Hard Fork Combinator event
-July 2020	Shelley release (decentralization)
-Mar 2021	Full decentralization (d=0)
-Sep 2021	Goguen release (smart contracts, Plutus V1)
-Sep 2022	Vasil release (Plutus V2)
-Nov 2022	Launch of Age of Voltaire at ScotFest
-Feb 2023	'Valentine' hard fork
-2024		Chang hard fork (scheduled)
+Sep 2015	Crowdsale funded development and treasury<br>
+Aug 2017	Ouroboros paper accepted at Crypto 17[^77]<br>
+Sep 2017	Byron release<br>
+Dec 2018	Launch of Plutus and Marlowe at PlutusFest<br>
+Dec 2018	Sidechains paper[^78] published <br>
+Dec 2019	Shelley Incentivized Testnet (ITN)[^79]<br>
+Mar 2020	Byron Reboot, first Hard Fork Combinator event<br>
+July 2020	Shelley release (decentralization)<br>
+Mar 2021	Full decentralization (d=0)<br>
+Sep 2021	Goguen release (smart contracts, Plutus V1)<br>
+Sep 2022	Vasil release (Plutus V2)<br>
+Nov 2022	Launch of Age of Voltaire at ScotFest<br>
+Feb 2023	'Valentine' hard fork<br>
+2024		Chang hard fork (scheduled)<br>
 
 Note that there was no white paper in all this time, instead IOG focused on building on principles. In the next chapter we’ll delve into more technical details and explain Cardano’s roadmap and naming scheme. 
 
