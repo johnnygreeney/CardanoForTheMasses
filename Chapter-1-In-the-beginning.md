@@ -114,15 +114,15 @@ I said ‘alright, well is there a way we can bundle both solutions together?’
 
 Around the same time, Buterin grew frustrated trying to expand Bitcoin’s functionality with colored coins[^40] and Mastercoin.[^41] Trying to augment Bitcoin proved to be more effort than it was worth. CH:[^42]
 
-Let's be honest here, it (Bitcoin) is the least sophisticated ledger, the least sophisticated consensus algorithm and it consumes more power than the country of Sweden or Switzerland. It is the least sophisticated scripting language, it is not useful at the moment, and it requires enormous effort to innovate.
+>Let's be honest here, it (Bitcoin) is the least sophisticated ledger, the least sophisticated consensus algorithm and it consumes more power than the country of Sweden or Switzerland. It is the least sophisticated scripting language, it is not useful at the moment, and it requires enormous effort to innovate.
+>
+>We created Ethereum on the bones of colored coins and Mastercoin. We didn't just go create Ethereum. Everybody in that damn project was trying to do something useful with Bitcoin and they couldn't! They spent millions of dollars, and months and months to do basic things like issue an asset, and then suddenly with Ethereum around, you could do it with a few lines of code that we could put on a f$$king t-shirt!
+>
+>So this is my counterpoint to Bitcoin, and my primary issue with Bitcoin, is of the insular nature of the community, especially the maximalists,[^43] the inability to adapt and grow and adopt new technology, even when it's obvious that that tech is good like NIPoPoWs,[^44] the fact that they brutally attack people who are innovating and call those people criminals and scammers for having the audacity to try different things.
+>
+>The fact that the monetary policy can never be updated or evolved, that's both a blessing and a curse, and the ignorance of science, especially when it comes to proof of stake,[^45] and this belief that what they've done is perfect and never can be changed and that cult of personality around the cult of Satoshi. That said, its digital gold, it's a standard, I think it’ll always have value. It's done a huge amount of good. Bitcoin is why we're all here, it's why I'm here. So I never will say it's a bad project and I'll never say it's not worth holding BTC.
 
-We created Ethereum on the bones of colored coins and Mastercoin. We didn't just go create Ethereum. Everybody in that damn project was trying to do something useful with Bitcoin and they couldn't! They spent millions of dollars, and months and months to do basic things like issue an asset, and then suddenly with Ethereum around, you could do it with a few lines of code that we could put on a f$$king t-shirt! 
-
-So this is my counterpoint to Bitcoin, and my primary issue with Bitcoin, is of the insular nature of the community, especially the maximalists,[^43] the inability to adapt and grow and adopt new technology, even when it's obvious that that tech is good like NIPoPoWs,[^44] the fact that they brutally attack people who are innovating and call those people criminals and scammers for having the audacity to try different things.
-
-The fact that the monetary policy can never be updated or evolved, that's both a blessing and a curse, and the ignorance of science, especially when it comes to proof of stake,[^45] and this belief that what they've done is perfect and never can be changed and that cult of personality around the cult of Satoshi. That said, its digital gold, it's a standard, I think it’ll always have value. It's done a huge amount of good. Bitcoin is why we're all here, it's why I'm here. So I never will say it's a bad project and I'll never say it's not worth holding BTC.
-
-Origins of Ethereum
+__Origins of Ethereum__
 
 Hoskinson met Anthony Di Iorio through a contact of his. Di Iorio ran the Bitcoin Alliance of Canada (BAC)[^46] and asked him if they could use some of his educational material on Udemy. Hoskinson agreed and they started working together. Di Iorio shared Vitalik Buterin’s white paper and Hoskinson read it and provided feedback. The white paper went through several iterations, the group converged together, and the result was Ethereum, deemed now to be the second-generation blockchain. Gavin Wood was credited by Hoskinson as the person who built it in a proper way that actually would work. Hoskinson helped set up the initial legal structure. The main point of Ethereum was to add programmability to cryptocurrencies. CH:[^47]
 
