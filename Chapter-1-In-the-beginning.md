@@ -225,5 +225,11 @@ I have six (in 2021) years of history at IOG, and I have six months of history a
 
 
 [^1]: ‘A brief (and fascinating) history of money’, britannica.com/story/a-brief-and-fascinating-history-of-money
+[^2]:A __blockchain__ is a continuously growing list of records, called blocks, which are linked and secured using cryptography. Each block typically contains a link to a previous block, a timestamp and transaction data. By design, blockchains are inherently resistant to modification of the data. A blockchain is ‘an open, distributed ledger that can record transactions between two parties efficiently and in a verifiable and permanent way.’
+[^3]:__Bitcoin (BTC)__ is a cryptocurrency and a payment system that uses a public distributed ledger called a blockchain. Invented by a single (or potentially a group) under the Satoshi Nakamoto alias. On 31 October 2008, Bitcoin was introduced to a cryptography mailing list and released as open-source software in 2009. There have been various claims and speculation concerning the identity of Nakamoto, none of which has been confirmed. The system is peer-to-peer, so transactions take place between users directly, without an intermediary. These transactions are verified by network nodes and recorded in the blockchain, which uses bitcoin as its unit of account.
+[^4]:A __cypherpunk__ is any activist advocating widespread use of strong cryptography and privacy-enhancing technologies as a route to social and political change. Originally communicating through the cypherpunks email list, informal groups aimed to achieve privacy and security through proactive use of cryptography. Cypherpunks have been engaged in an active movement since the late 1980s.
+[^5]: Satoshi Nakamoto (2008) ‘Bitcoin: A Peer-to-Peer Electronic Cash System’, bitcoin.org/bitcoin.pdf
+[^6]: A __genesis block__ is the first block of a block chain. The genesis block is almost always hardcoded into the software of the applications that utilize its block chain. It is a special case in that it does not reference a previous block.
+[^7]:Bitcoin Source Code Walkthrough, drnealaggarwal.info/bitcoin-source-code-walkthrough/
+[^8]:Bitcoin’s logo, decrypt.co/43923/bitcoins-logo-the-story-of-the-big-orange-b
 
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
