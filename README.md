@@ -15,7 +15,7 @@ The book should as concise as possible. Earlier editions were too long. Many sec
 - May be a low stakes way of stress testing gov tools to choose a cover, etc…
 - Model for bootstrapping has always been self-sustaining with no Catalyst funding, etc. Hundreds of books have been given away already at conferences and meetups since Aug 2022. For now, more sales equals more giveaways... Amzn ‘author copies’ p&p allow slightly discounted distribution to events/meetups.
 - Working on an Audio book - abridged version + quotes mp4 edited with audacity
-- Guidelines for KDP, Kindle Direct Publishing[^2] are useful rules for all publishing platforms. Would be nice to get it out on more platforms like book.io, etc
+- Guidelines for KDP, Kindle Direct Publishing[^3] are useful rules for all publishing platforms. Would be nice to get it out on more platforms like book.io, etc
 
 ## Translations 
 
@@ -29,14 +29,16 @@ If you are interested in translating this book, the plan is to set up a team of 
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/CC.png "Creative Commons")
 
-**Cardano for the Masses - Chang Edition** by John Greene is licensed under a _Creative Commons Attribution-ShareAlike 4.0 International License_[^3]. The terms of that license apply.	
+**Cardano for the Masses - Chang Edition** by John Greene is licensed under a _Creative Commons Attribution-ShareAlike 4.0 International License_[^5]. The terms of that license apply.	
 
 
 [^1]: Cardano for the Masses - Chang edition, amazon.com/dp/B0B912X5G6
 [^2]: Markdown cheatsheet, github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 [^3]: KDP Guidelines kdp.amazon.com/en_US/help/topic/GU72M65VRFPH43L6
-[^4]: Creative Commons License, creativecommons.org/licenses/by-sa/4.0/
-[^5]: Cardano For the M₳sses - Japanese Book, lidonation.com/ja/proposals/cardano-for-the-marasses-japanese-book-f10
+[^4]: Cardano For the M₳sses - Japanese Book, lidonation.com/ja/proposals/cardano-for-the-marasses-japanese-book-f10
+[^5]: Creative Commons License, creativecommons.org/licenses/by-sa/4.0/
+
+
 
 
 
