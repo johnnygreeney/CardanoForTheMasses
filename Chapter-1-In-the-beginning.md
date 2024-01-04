@@ -89,7 +89,8 @@ Today, your identity is at the mercy of third parties. Statements and claims are
 __Decentralized finance (DeFi)__ is about blockchain disrupting traditional banking services. Banking customers in the developed world are not in dire need of DeFi. In the developing world, where you might pay up to 80% interest on a microfinance loan, it’s easy to see why DeFi is starting to be accepted. That’s an important potential aspect of blockchain and cryptocurrencies – bringing three billion ‘unbanked’ people into the economy, liquefying trillions of dollars of illiquid wealth.
 
 The above examples only scratch the surface. There are many other platforms that we use daily that can be improved with decentralized alternatives. So the point of these systems is to find a way to build them in a way where they work for the small guy in Africa, as much as they do the affluent banker sitting in a Manhattan skyscraper.
-Charles Hoskinson’s early days in crypto
+
+## Charles Hoskinson’s early days in crypto
 
 Charles Hoskinson is a Colorado-based technology entrepreneur and mathematician. He studied analytic number theory before he discovered cryptography. He was a supporter of the Ron Paul campaign for the US presidency campaign in 2008 and often speaks glowingly of how Paul inspired him. Hoskinson was involved with Bitcoin from the early days:
 
