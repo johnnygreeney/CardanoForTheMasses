@@ -38,8 +38,8 @@ __Fungibility__ was a term familiar only to commodity traders until the 2021 cra
 
 __Divisibility__ is another important property. You can try, but a coffee shop is unlikely to accept seashells as payment. So it is convenient to replicate a ‘cash in, cash out’ system. Digital currencies facilitate divisibility in a mathematical sense very well by design. However, some are more intuitive in practice. For example, paying a $10 equivalent for this book in different cryptocurrencies (July 2022) would work out as follows:
 
-0.00043 Bitcoin (BTC)
-0.0063 Ethereum (ETH)
+0.00043 Bitcoin (BTC)<br>
+0.0063 Ethereum (ETH)<br>
 20.01035705 Cardano (ADA)
 
 Some real currencies are losing divisibility and there have been proposals to get rid of the penny, which is a fundamental unit of account. Rounding was introduced for cash transactions in Ireland in 2015, which means that the total amount of a bill will be rounded up or down to the nearest five cents.
