@@ -5,8 +5,7 @@ The 3rd 'Chang' edition[^1] was published on 3rd Jan 2024, under an open-source 
 ## Guidelines for contributors  
 - _“I didn't have time to write a short letter, so I wrote a long one instead.”_  
 The book should as concise as possible. Earlier editions were too long. Many sections have been cut to make it more concise and readable.
-- Everything is done in 'markdown' files, see here for a [cheatsheet]([url](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-))
+- Everything is done in 'markdown' files, see here for a cheatsheet[^2]
 - Keep it short as possible, can a paragraph just be sentence? Do you need long sentences when a shorter simple one will do? Don’t say 'sesquipedalian' when you can just say 'long'.
 - 'Measure twice cut once'. Target of 10 chapters of roughly equal length 15-25 google doc pages. Does your contribution fit into structure and tone of the rest of the book? 
 - Write for intended audience, ie. Someone who just heard of Cardano. This book should be the less technical 'story of Cardano' that preps readers for more techncial 'Masering Cardano' book coming.
@@ -34,9 +33,10 @@ If you are interested in translating this book, the plan is to set up a team of 
 
 
 [^1]: Cardano for the Masses - Chang edition, amazon.com/dp/B0B912X5G6
-[^2]: KDP Guidelines kdp.amazon.com/en_US/help/topic/GU72M65VRFPH43L6
-[^3]: Creative Commons License, creativecommons.org/licenses/by-sa/4.0/
-[^4]: Cardano For the M₳sses - Japanese Book, lidonation.com/ja/proposals/cardano-for-the-marasses-japanese-book-f10
+[^2]: Markdown cheatsheet, github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+[^3]: KDP Guidelines kdp.amazon.com/en_US/help/topic/GU72M65VRFPH43L6
+[^4]: Creative Commons License, creativecommons.org/licenses/by-sa/4.0/
+[^5]: Cardano For the M₳sses - Japanese Book, lidonation.com/ja/proposals/cardano-for-the-marasses-japanese-book-f10
 
 
 
