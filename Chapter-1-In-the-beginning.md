@@ -133,7 +133,7 @@ It was similar to when JavaScript was introduced to the web browser. Before that
 Ironically, Ethereum was announced at the January 2014 North American Bitcoin conference. Bitcoin had just surged from $100 to $1,000, so the event was boisterous and rowdy. The first Ethereum t-shirt, made for the conference, had source code on the back of it for issuing your own token. It was so awkward to do that with Mastercoin and colored coins. So ironically, Ethereum was also born out of frustration, frustration with Bitcoin’s rigidness and poor developer experience. By bringing a programming language to a blockchain, this allowed smart contracts[^49] to be written to have customizable transactions. So now when Alice sent value to Bob, terms and conditions could be embedded within the transaction, bespoke to her particular needs.
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/figure%201.1%20ethereum%20tshirts.png "Ethereum T-shirt")
-Figure 1.1: Ethereum T-shirt at January 2014 launch
+<br> Figure 1.1: Ethereum T-shirt at January 2014 launch
 
 Hoskinson wanted to set up a proper company, a for-profit and have Founders Agreements.[^50] After looking at the project’s structure and direction, he was worried nobody had any incentive to stay involved after the project was launched. He wanted ‘golden handcuffs’, vesting, and standard things a normal company would have. There was a disagreement as Buterin wanted it to remain an open-source project. Hoskinson argued that if everyone was paid upfront, nobody would be motivated to commit long term. It didn’t work out, Hoskinson left in June 2014. 
 
