@@ -38,7 +38,7 @@ If you are interested in translating this book, the plan is to set up a team of 
 [^3]: KDP Guidelines kdp.amazon.com/en_US/help/topic/GU72M65VRFPH43L6
 [^4]: Cardano For the M₳sses - Japanese Book, lidonation.com/ja/proposals/cardano-for-the-marasses-japanese-book-f10
 [^5]: Creative Commons License, creativecommons.org/licenses/by-sa/4.0/
-[^6]: https://www.transifex.com/cardanobookcom/cardanoforthemaases/
+[^6]: transifex.com/cardanobookcom/cardanoforthemaases/
 
 
 
