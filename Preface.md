@@ -15,7 +15,7 @@ Writing about cryptocurrencies is challenging. Most of the best-selling crypto b
 
 I made every effort to be accurate, however, Cardano is evolving rapidly. There has probably been a change, or update of some sort, as you read this. The book is now open-sourced on GitHub[^2] inviting contributions. It seemed fitting, as I’m mostly reporting on other peoples work, to seek their review and inputs.
 
->‘Good, better, best. Never let it rest till your good is better and your better is good’ -St. Jerome
+>_Good, better, best. Never let it rest till your good is better and your better is good_ -St. Jerome
 
 In some respects, the book will always be a work in progress. I intend to update the book regularly in cadence with Cardano updates, improving readability with each edition. This is the 3rd edition, the Chang Edition, updated in the lead up to the Chang hard fork, due in 2024, named in memory of the late Philip Chang,[^3] former Voltaire Product Manager.
 
