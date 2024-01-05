@@ -9,7 +9,7 @@ john@cardanobook.com
 
 ## Preface
 
-I discovered Cardano while researching a college project in 2018. Ever since I asked a question of Cardano co-founder Charles Hoskinson in one of his AMAs[^1] My reference. I had intended to write a book of some sort. I tried different ideas, gave up, and returned several times. On hearing that the much-anticipated Mastering Cardano book would be delayed, I felt there might be a space for a ‘can opener’ in the meantime. 
+I discovered Cardano while researching a college project in 2018. Ever since I asked a question of Cardano co-founder Charles Hoskinson in one of his AMAs[^1], I had intended to write a book of some sort. I tried different ideas, gave up, and returned several times. On hearing that the much-anticipated Mastering Cardano book would be delayed, I felt there might be a space for a ‘can opener’ in the meantime. 
 
 Writing about cryptocurrencies is challenging. Most of the best-selling crypto books have 'Flesch reading ease scores' in the 50s. I wanted this book to be more inclusive. With so much jargon in the blockchain space, I decided to arm the reader with explainers throughout. However, I didn't want to obstruct the flow either. As Kindle automatically converts footnotes to a popup format, explainers are accessible by clicking on superscripts in the text. The explainers also form a glossary at the end of the book. I added excerpts from Charles Hoskinson’s various updates to interweave his perspective throughout the book. I felt they add context to many technology decisions while painting a vision for the overall project and industry.
 
