@@ -4,7 +4,8 @@ The 3rd 'Chang' edition[^1] was published on 3rd Jan 2024, under an open-source 
 
 ## Guidelines for contributors  
 >_'I didn't have time to write a short letter, so I wrote a long one instead'_  
-The book should as concise as possible. Earlier editions were too long. Many sections have been cut to make it more concise and readable.
+
+- The book should as concise as possible. Earlier editions were too long. Many sections have been cut to make it more concise and readable.
 - Everything is done in 'markdown' files, see here[^2] for a cheatsheet
 - Keep it short as possible, can a paragraph just be sentence? Do you need long sentences when a shorter simple one will do? Don’t say 'sesquipedalian' when you can just say 'long'.
 - 'Measure twice cut once'. Target of 10 chapters of roughly equal length 15-25 google doc pages. Does your contribution fit into structure and tone of the rest of the book? 
