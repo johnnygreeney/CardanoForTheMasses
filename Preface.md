@@ -4,7 +4,7 @@ John Greene has a background in cloud infrastructure and security with an MSc in
 
 __Contact:__ 
 
-twitter.com/CardanoBook, 
+twitter.com/CardanoBook,<br> 
 john@cardanobook.com
 
 ## Preface
