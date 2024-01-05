@@ -24,7 +24,7 @@ There has allready been significant progress made on a Spanish translation by Hu
 
 A Japanese translation[^4] of older 'Age of Voltaire' Edition, funded by Catalyst, is at an advanced stage.
 
-If you are interested in translating this book, the plan is to set up a team of volunteers at: [https://www.transifex.com/](https://explore.transifex.com/cardanobookcom/cardanoforthemaases/)
+If you are interested in translating this book, the plan is to set up a team of volunteers at: [https://www.transifex.com/cardanobookcom/cardanoforthemaases/]((https://www.transifex.com/cardanobookcom/cardanoforthemaases))
 
 ## Licensing
 
