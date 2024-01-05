@@ -21,7 +21,7 @@ In some respects, the book will always be a work in progress. I intend to update
 
 __Intended audience__
 
-This book is mainly for Cardano newcomers. It does not focus on specific projects built on Cardano. It does not go deep into the weeds of the technical research papers,[^4] nor explore concepts in detail. The goal is to give a broad overview of Cardano. Each chapter can be read on its own, however, it’s best to read from start to finish if you are new to Cardano. OGs can browse and read sections independently. Nothing within these covers is financial advice. The views expressed here are my own, not those of my employer.
+This book is mainly for Cardano newcomers. It does not focus on specific projects built on Cardano. It does not go deep into the weeds of the technical research papers,[^4] nor explore concepts in detail. The goal is to give a broad overview of Cardano. Each chapter can be read on its own, however, it’s best to read from start to finish if you are new to Cardano. OGs[^5] can browse and read sections independently. Nothing within these covers is financial advice. The views expressed here are my own, not those of my employer.
 
 Chapter 1 is a high-level overview of blockchain and how Cardano started. Chapter 2 goes through foundational concepts and Chapter 3 addresses proof of stake and Cardano’s differentiators. The remaining chapters walk through different aspects of the Cardano roadmap (roadmap.cardano.org). The final Chapter 10 is about the end product: RealFi on Cardano.
 
