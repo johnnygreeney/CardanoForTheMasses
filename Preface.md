@@ -17,7 +17,7 @@ I made every effort to be accurate, however, Cardano is evolving rapidly. There 
 
 >_Good, better, best. Never let it rest. 'Til your good is better and your better is best'_  -St. Jerome
 
-In some respects, the book will always be a work in progress. I intend to update the book regularly in cadence with Cardano updates, improving readability with each edition. This is the 3rd edition, the Chang Edition, updated in the lead up to the Chang hard fork, due in 2024, named in memory of the late Philip Chang,[^3] former Voltaire Product Manager.
+In some respects, the book will always be a work in progress. I intend to update the book regularly in cadence with Cardano updates, improving readability with each edition. This is the 3rd edition, the _Chang Edition_, updated in the lead up to the _Chang_ hard fork, due in 2024, named in memory of the late Philip Chang,[^3] former Voltaire Product Manager.
 
 __Intended audience__
 
