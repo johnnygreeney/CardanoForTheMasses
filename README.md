@@ -13,7 +13,7 @@ The 3rd 'Chang' edition[^1] was published on 3rd Jan 2024, under an open-source 
 
 ## To do
 - Add style guide 
-- May be a low stakes way of stress testing gov tools to choose a cover, etc…
+- May be a low stakes way of stress testing _Cardano Ballot_ and _GovTool_ to choose a cover, etc…
 - Model for bootstrapping has always been self-sustaining with no Catalyst funding, etc. Hundreds of books have been given away already at conferences and meetups since Aug 2022. For now, more sales equals more giveaways... Amzn ‘author copies’ p&p allow slightly discounted distribution to events/meetups.
 - Working on an Audio book - abridged version + quotes mp4 edited with audacity
 - Guidelines for KDP, Kindle Direct Publishing[^3] are useful rules for all publishing platforms. Would be nice to get it out on more platforms like book.io, etc
