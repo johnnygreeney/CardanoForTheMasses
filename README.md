@@ -1,6 +1,6 @@
 # Cardano for the M₳sses
 
-The 3rd 'Chang' edition[^1] was published on 3rd Jan 2024, under an open-source licence. If there is interest from  the community, the plan is to have an update for the actual Change hard fork scheduled for later in 2024.  
+The 3rd 'Chang' edition[^1] was published on 3rd Jan 2024, under an open-source licence. If there is interest from  the community, the plan is to have an update for the actual Chang hard fork scheduled for later in 2024.  
 
 ## Guidelines for contributors  
 >_'I didn't have time to write a short letter, so I wrote a long one instead'_  
