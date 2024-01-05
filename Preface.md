@@ -15,11 +15,11 @@ Writing about cryptocurrencies is challenging. Most of the best-selling crypto b
 
 I made every effort to be accurate, however, Cardano is evolving rapidly. There has probably been a change, or update of some sort, as you read this. The book is now open-sourced on GitHub[^2] inviting contributions. It seemed fitting, as I’m mostly reporting on other peoples work, to seek their review and inputs.
 
->_Good, better, best. Never let it rest till your good is better and your better is good_ -St. Jerome
+>_Good, better, best. Never let it rest. 'Til your good is better and your better is best_ -St. Jerome
 
 In some respects, the book will always be a work in progress. I intend to update the book regularly in cadence with Cardano updates, improving readability with each edition. This is the 3rd edition, the Chang Edition, updated in the lead up to the Chang hard fork, due in 2024, named in memory of the late Philip Chang,[^3] former Voltaire Product Manager.
 
-Intended audience
+__Intended audience__
 
 This book is mainly for Cardano newcomers. It does not focus on specific projects built on Cardano. It does not go deep into the weeds of the technical research papers,[^4] nor explore concepts in detail. The goal is to give a broad overview of Cardano. Each chapter can be read on its own, however, it’s best to read from start to finish if you are new to Cardano. OGs can browse and read sections independently. Nothing within these covers is financial advice. The views expressed here are my own, not those of my employer.
 
@@ -27,7 +27,7 @@ Chapter 1 is a high-level overview of blockchain and how Cardano started. Chapte
 
 For e-readers, graphics are best viewed in ‘landscape’ mode.
 
-IOG and IOHK
+__IOG and IOHK__
 
 Input Output was founded in Hong Kong, hence the abbreviation IOHK. However, the company has since moved its base to Wyoming, US and is rebranding itself as Input Output Global (IOG). At some stage, the website will probably migrate from iohk.io to iog.io.
 
