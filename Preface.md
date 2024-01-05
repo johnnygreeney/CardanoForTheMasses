@@ -13,7 +13,7 @@ I discovered Cardano while researching a college project in 2018. Ever since I a
 
 Writing about cryptocurrencies is challenging. Most of the best-selling crypto books have 'Flesch reading ease scores' in the 50s. I wanted this book to be more inclusive. With so much jargon in the blockchain space, I decided to arm the reader with explainers throughout. However, I didn't want to obstruct the flow either. As Kindle automatically converts footnotes to a popup format, explainers are accessible by clicking on superscripts in the text. The explainers also form a glossary at the end of the book. I added excerpts from Charles Hoskinson’s various updates to interweave his perspective throughout the book. I felt they add context to many technology decisions while painting a vision for the overall project and industry.
 
-I made every effort to be accurate, however, Cardano is evolving rapidly. There has probably been a change, or update of some sort, as you read this. The book is now open-sourced on GitHub[^2] inviting contributions. It seemed fitting as I’m mostly reporting on other peoples work, to seek their review and inputs.
+I made every effort to be accurate, however, Cardano is evolving rapidly. There has probably been a change, or update of some sort, as you read this. The book is now open-sourced on GitHub[^2] inviting contributions. It seemed fitting, as I’m mostly reporting on other peoples work, to seek their review and inputs.
 
 >‘Good, better, best. Never let it rest till your good is better and your better is good’ -St. Jerome
 
