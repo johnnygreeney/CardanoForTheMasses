@@ -24,7 +24,7 @@ There has allready been significant progress made on a Spanish translation by Hu
 
 A Japanese translation[^4] of older 'Age of Voltaire' Edition, funded by Catalyst, is at an advanced stage.
 
-If you are interested in translating this book, the plan is to set up a team of volunteers at: [https://www.transifex.com/cardanobookcom/cardanoforthemaases/]((https://www.transifex.com/cardanobookcom/cardanoforthemaases))
+If you are interested in translating this book, the plan is to set up a team of volunteers at _Transifex_[^6] 
 
 ## Licensing
 
@@ -38,6 +38,7 @@ If you are interested in translating this book, the plan is to set up a team of 
 [^3]: KDP Guidelines kdp.amazon.com/en_US/help/topic/GU72M65VRFPH43L6
 [^4]: Cardano For the M₳sses - Japanese Book, lidonation.com/ja/proposals/cardano-for-the-marasses-japanese-book-f10
 [^5]: Creative Commons License, creativecommons.org/licenses/by-sa/4.0/
+[^6]: https://www.transifex.com/cardanobookcom/cardanoforthemaases/
 
 
 
