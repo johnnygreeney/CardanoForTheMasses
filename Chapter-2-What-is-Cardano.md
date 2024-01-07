@@ -184,6 +184,8 @@ Cardano’s development roadmap[^48] has been divided into five eras, each focus
 
 Each era is built around a collection of features that are implemented and improved over many code releases. While the work for each of these development streams is delivered in order, it is typically done simultaneously, with research, prototyping, and development happening at the same time throughout. 
 
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/roadmap.png "roadmap")
+
 **Figure 2.4.** from roadmap.cardano.org
 
 **Byron**
@@ -264,6 +266,36 @@ The focus of IOG’s design is to accommodate the social features of cryptocurre
 **February 8, 2019, Charles Hoskinson: In Defense of Peer Review**[^68] 
 
 >…unlike journals, which sometimes take years for research to actually get published, fully peer-reviewed and get through the system, conferences are very frequent. If you look at the cryptographic world you have Eurocrypt, CCS, Real World Crypto and dozens of other conferences every year. Almost every month there’s some form of conference going on. So it doesn’t slow you down to write a paper, in a very structured, thoughtful way, get it into a conference and then get some review from the community. Suddenly, now you have some of the brightest people in the world waking up trying to destroy your argument, because they know that it benefits their academic career if they can find a flaw in your paper.
+
+Cardano is a cryptocurrency that acknowledges that ‘money is social’. A social construct is something that comes through human interaction rather than objective reality. It exists because people acknowledge and believe in it. Countries and currencies are two examples of social constructs.
+
+Flexibility and the capacity to handle complexity in any transaction are critical. If the Cardano project is successful in scaling up to be used by billions of people, massive computing, storage, and network resources will be required to handle billions of concurrent transactions. Cardano’s architecture inherits the notion of separation of concerns from TCP/IP.
+
+Blockchains are, at their core, databases that arrange facts and events based on timestamps and immutability to record asset ownership. It’s non-trivial then to add complicated computation for storing and executing dApps. Do we need to know how much money someone is sending? Do we want to become engaged in deciphering the transaction’s whole narrative?
+
+To figure out what’s happening, a single protocol must be able to comprehend arbitrary events, script arbitrary transactions, allow for fraud arbitration, and even reverse transactions when new information becomes available.
+
+Then there’s the issue of deciding what information to retain for each transaction, which is a challenging design choice. What components of a transaction narrative are relevant? Are they going to be significant in the future? When will it be safe to discard certain data? Is it illegal in certain jurisdictions to do so? Certain computations are by their very nature secret. It’s always good to remember the difference between confidentiality and privacy.
+
+Privacy and confidentiality are two separate concepts that protect different types of data. 'Privacy' is used in relation to data that is protected by law, whereas 'confidentiality' refers to different data contained in valid contracts and agreements.
+
+A transaction consists of two parts: the mechanism for sending and recording token flows, as well as the reasons and circumstances for transferring tokens. The latter may be very complicated, including gigabytes of data, signatures, and the occurrence of unforeseen scenarios. With a single signature moving value to another address, it can also be straightforward.
+
+Modeling the motives and circumstances of value movement is difficult because they are personal to the parties involved in the most unanticipated ways. Contract law creates an even more complex picture, in which the actors may not even be aware that the transaction does not match commercial reality. This concept is known as the ‘semantic gap’.
+
+The general lack of legal clarity around protocol participants’ legal safeguards is another gray area. There is no limit to what a sophisticated cryptocurrency may do. A blockchain such as Cardano can unwittingly facilitate all sorts of crime and malfeasance. Just how complex this is in practice is discussed in various academic papers, including The Ring of Gyges: using smart contracts for crime. 
+
+Cardano and Bitcoin have an advantage in that they have opted to split into layers. Bitcoin gave us Rootstock (rsk.co), while the Cardano Computation Layer is Cardano’s proposal.
+
+​​IOG provides a reference library of Plutus code for application developers to use in their projects, similar to the Solidity-based Zeppelin project. IOG also created a set of tools for formal verification based on the Liquid Haskell project. 
+
+The ‘Why Cardano’ essay from 2017 describes the vision for The Cardano Settlement Layer (CSL) vs Cardano Computation Layer (CCL). The same functionality exists today, but it is implemented differently than outlined back then. The layered approach was kept but computation is done on the main chain, Layer 1. This was implemented very carefully as the development of Plutus relied on formal methods and a secure design that would not endanger ‘simple' non-script assets on the chain. The strategy and terminology was revised slightly again in 2023, but don’t worry about that for now, we will revisit this in Chapter 8.
+
+The code base was totally rewritten in a modular format in preparation for the implementation of the hard fork combinator (HFC) in March 2020. The modular approach made it far easier to make changes with the HFC. The ‘Byron reboot’ and HFC in 2020, with the move to Ouroboros Praos, were fundamental in implementing code that would support the future of the blockchain. This was a watershed moment in the efficiency of the chain and for the productivity of IOG. It made possible the move to the quarterly update schedule in place today. Nobody had done anything like the HFC before; it made upgrades easy, another advantage of the third-generation approach.
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/hfc.png "hfc")
+
+Figure 2.5: Mainnet Byron to Shelley Roadmap
 
 
 
