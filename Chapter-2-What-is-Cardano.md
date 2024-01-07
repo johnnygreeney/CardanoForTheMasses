@@ -2,7 +2,7 @@
 
 *‘We tell you what we're going to do, we write it down, we go do it, and then we tell you that we did it, and we show you the evidence and proof ... it's the Paul Halmos way of doing things’* ― Charles Hoskinson
 
-< charles tweet alex hammer >
+[< charles tweet alex hammer >](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/chapter%202%20tweet.png)
 
 Cardano is a decentralized, third-generation, proof-of-stake blockchain platform. It is the first blockchain to emerge from a scientific ethos and a research-driven methodology. Ada (₳, or ADA is the ‘ticker’ used on cryptocurrency exchanges) is the first cryptocurrency built on Cardano.  
 
