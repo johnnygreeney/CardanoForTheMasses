@@ -251,6 +251,8 @@ Ada holders initially relied on the *Daedalus* wallet from IOG (full node, deskt
 
 Cardano-node, originally developed by IOG, is now an open-source project in its own right. IOG are placing more and more of an emphasis on their open-source credentials. You can review the repository on GitHub[^60] to understand how you can contribute, codes of conduct, benchmarking results, etc. and visit CardanoUpdates.com for roadmap details.
 
+
+
 [^1]: Surprise AMA! 12/12/2020, youtube.com/watch?v=GlVU8ZiVUL0
 [^2]: **Ledger:** a distributed ledger (also called a shared ledger or referred to as distributed ledger technology) is a consensus of replicated, shared, and synchronized digital data geographically spread across sites, countries, or institutions. There is no central administrator or centralized data storage.
 [^3]: In telecom networks, a **node** is either a redistribution point or a communication endpoint. The definition of a node depends on the network and protocol layer referred to. A physical network node is an active electronic device that is attached to a network, and is capable of creating, receiving, or transmitting information over a communications channel.
