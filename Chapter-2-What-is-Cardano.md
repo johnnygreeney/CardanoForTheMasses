@@ -31,7 +31,7 @@ A blockchain may be likened to a book of permanent records, with each page servi
 Networks can be configured in several ways (see Figure 2.2):
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/figure2.2threenetworks.png "3 networks")
-**Figure 2.2.** Three types of network structures.
+<br> **Figure 2.2.** Three types of network structures.
 
 With decentralized blockchains, users can deal with each other directly – peer to peer – without having to go through a central, controlling system
 
