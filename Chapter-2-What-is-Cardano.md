@@ -24,10 +24,13 @@ A decentralized blockchain is independent of centralized, controlling companies,
 
 A blockchain may be likened to a book of permanent records, with each page serving as a data storage device.
 
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/chapter%202%20tweet.png "Tweet what is cardano")
+
 **Figure 2.1:** Infographic of blockchain blocks linked by hash[^5] pointers
 
-Networks can be configured in several ways (see Figure 3):
+Networks can be configured in several ways (see Figure 2.2):
 
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/chapter%202%20tweet.png "Tweet what is cardano")
 **Figure 2.2.** Three types of network structures.
 
 With decentralized blockchains, users can deal with each other directly – peer to peer – without having to go through a central, controlling system
@@ -54,7 +57,7 @@ Each blockchain ledger has its own cryptocurrency that provides the ‘oil’ to
 
 The smallest ada denomination is a lovelace. 1,000,000 lovelaces = 1 ada. Because transactions are calculated to six decimal places, it is easy to divide a single ada into fractions.  
   
-**What is a native token? ** 
+**What is a native token?** 
   
 Cardano allows users to generate (mint), or delete (burn), their own tokens. These are digital assets, each of which is minted for a particular purpose. On Cardano, tokens are native assets, meaning that they interact directly with the blockchain, rather than being generated using a smart contract. This means that users, developers, and companies may create tokens that reflect a value footprint on the Cardano blockchain (as defined by the community, market state, or self-governed entity). A token may be fungible (replaceable) or non-fungible (unique), and it can be used as a payment unit, a reward, a trade asset, or a holder of information.
 
@@ -151,6 +154,8 @@ Fungible and non-fungible tokens (NFTs) are treated as native tokens, so no smar
 ## Why choose Cardano?
 
 Of the  18,000  cryptocurrencies[^41] around today, trying to grasp what differentiates one from another can be overwhelming. Are cryptos actually ranked on their merits? How is something as trite as Doge[^42] in the top 20 while a technical marvel like Ergo[^43] languishes outside the top 200? If you look at it long enough, CoinMartketCap begins to look like the odds for a horse race, and just as unpredictable.
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/chapter%202%20tweet.png "Tweet what is cardano")
 
 **Figure 2.3.** Horse racing odds vs Coincap.io
 
