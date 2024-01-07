@@ -11,9 +11,9 @@
 > quote.
 
 
-With [Handlebars templates](https://www.cardano.org/), you have full control over what you export.
+This is a sample link [Cardano.org](https://www.cardano.org/), 
 
-## SmartyPants
+## Sample table format
 
 SmartyPants converts ASCII punctuation characters into "smart" typographic punctuation HTML entities. For example:
 
