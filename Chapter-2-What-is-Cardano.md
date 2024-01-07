@@ -251,7 +251,21 @@ Ada holders initially relied on the *Daedalus* wallet from IOG (full node, deskt
 
 Cardano-node, originally developed by IOG, is now an open-source project in its own right. IOG are placing more and more of an emphasis on their open-source credentials. You can review the repository on GitHub[^60] to understand how you can contribute, codes of conduct, benchmarking results, etc. and visit CardanoUpdates.com for roadmap details.
 
+## Cardano design decisions
 
+Many people discovered Cardano by watching Charles Hoskinson’s Whiteboard YouTube presentation.[^60] However, Cardano didn’t start out with a detailed plan or even a white paper, as many open-source initiatives do. IOG explored the cryptocurrency landscape by adopting a ‘first principles’ approach.[^61] The Scorex project[^62] and IOG’s vault of research papers[^63] were the product of this study. 
+
+Unlike successful protocols such as TCP/IP,[^64] most cryptocurrencies have no layering in their architecture. Regardless of whether it makes sense, there has been a desire to retain a single concept of agreement around facts and occurrences recorded in a single ledger.
+
+For example, Ethereum has accumulated vast complexity in its quest to become a world computer, yet it is plagued by minor issues that might jeopardize the system’s capacity to function. Should every dApp, regardless of its economic worth, maintenance costs, or regulatory implications, be treated as a first-class citizen?
+
+**Layered architecture**
+
+The focus of IOG’s design is to accommodate the social features of cryptocurrencies, to create layers by separating value accounting from computation, and to answer the demands of regulators while adhering to the founding principles.[^65] IOG also assessed protocols via peer review and inspected code against formal specifications[^66] whenever possible.
+
+**February 8, 2019, Charles Hoskinson: In Defense of Peer Review**[^67] 
+
+>…unlike journals, which sometimes take years for research to actually get published, fully peer-reviewed and get through the system, conferences are very frequent. If you look at the cryptographic world you have Eurocrypt, CCS, Real World Crypto and dozens of other conferences every year. Almost every month there’s some form of conference going on. So it doesn’t slow you down to write a paper, in a very structured, thoughtful way, get it into a conference and then get some review from the community. Suddenly, now you have some of the brightest people in the world waking up trying to destroy your argument, because they know that it benefits their academic career if they can find a flaw in your paper.
 
 [^1]: Surprise AMA! 12/12/2020, youtube.com/watch?v=GlVU8ZiVUL0
 [^2]: **Ledger:** a distributed ledger (also called a shared ledger or referred to as distributed ledger technology) is a consensus of replicated, shared, and synchronized digital data geographically spread across sites, countries, or institutions. There is no central administrator or centralized data storage.
