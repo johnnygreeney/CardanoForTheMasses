@@ -24,13 +24,13 @@ A decentralized blockchain is independent of centralized, controlling companies,
 
 A blockchain may be likened to a book of permanent records, with each page serving as a data storage device.
 
-![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/chapter%202%20tweet.png "Tweet what is cardano")
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/figure2.1blocks.png "blocks")
 
 **Figure 2.1:** Infographic of blockchain blocks linked by hash[^5] pointers
 
 Networks can be configured in several ways (see Figure 2.2):
 
-![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/chapter%202%20tweet.png "Tweet what is cardano")
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/figure2.2threenetworks.png "3 networks")
 **Figure 2.2.** Three types of network structures.
 
 With decentralized blockchains, users can deal with each other directly – peer to peer – without having to go through a central, controlling system
@@ -155,7 +155,7 @@ Fungible and non-fungible tokens (NFTs) are treated as native tokens, so no smar
 
 Of the  18,000  cryptocurrencies[^41] around today, trying to grasp what differentiates one from another can be overwhelming. Are cryptos actually ranked on their merits? How is something as trite as Doge[^42] in the top 20 while a technical marvel like Ergo[^43] languishes outside the top 200? If you look at it long enough, CoinMartketCap begins to look like the odds for a horse race, and just as unpredictable.
 
-![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/chapter%202%20tweet.png "Tweet what is cardano")
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/figure2.3coincap.png "Horse vs coincap")
 
 **Figure 2.3.** Horse racing odds vs Coincap.io
 
