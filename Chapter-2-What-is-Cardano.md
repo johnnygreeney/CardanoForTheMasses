@@ -297,6 +297,63 @@ The code base was totally rewritten in a modular format in preparation for the i
 
 Figure 2.5: Mainnet Byron to Shelley Roadmap
 
+Charles Hoskinson has explained the layered approach in many of his YouTube AMAs (ask-me-anything). Excerpts from some of these are included below for clarity.
+
+**April 21, 2019. Is Cardano going to be more of a sidechain host model?** CH:
+
+>Cardano has always been a two-layer system, so this concept of the settlement system and a control layer idea …so the control layers are either permissioned or permissionless and they can have arbitrary complexity. The settlement system has basically everything that you would need for a long-term cryptocurrency …so basically Cardano, at the settlement layer, is kind of like what I would like Bitcoin to look like. […]
+>
+>In terms of the conceptual design and actually the formal specification, we have a total understanding of what ledgers need to look like, the accounting systems behind them… we have an incredibly intricate understanding of what consensus looks like and the tradeoffs of consensus. We have a detailed understanding of interoperability; we understand how to extend the UTXO model to include pretty much as much scripting as you want… but do this in a very safe way where you have predictable gas cost 
+
+**July 9, 2020. Thoughts on Cross Chain Communication, Sidechains, NiPoPoWs and Litecoin**
+
+>You can have a maximalist model …and if they (Bitcoin) ever actually implemented this technology, it actually would be competitive. They've had since 2014 to do it but they haven't done it. This is this concept of primary - secondary chains. Used to be called master – slave, but that language is rapidly falling out of use even in different context. Basically, we did this in our original white paper, we said SL (settlement layer) and the CL (computation layer) concept… so the idea is that there's one primary chain and that's where the token lives, ADA. Then that token ADA can be used to power different chains, that have different network logic, it has different consensus rules, it has different ledger rules, a different computational model and somehow these chains don't have their own native token …rather they are at the service of the primary chain. So, let's look at this in the context of the ITN (incentivized testnet).
+>
+>So let's say that we modify Ouroboros….and Ouroboros now when you're a stake pool operator, instead of just getting one block, you get block Cardano… but then you'd also get block CL1, block CL2… block CLn… and so if you’re a stake pool operator, when your job comes up to expand the state of the chain, you'll actually do that for each of these networks in addition to SL. So you'll generate the normal Cardano block, like all the stake pool operators do, but then you'll make the block for the next network, the block for the next network … and you'll look up that network logic and those consensus rules and the ledger logic and you'll follow the computational model, and these will all be different.
+>
+>[...] This was kind of an envisioned model that came out of Blockstream when they were talking about sidechains. They said Bitcoin can be that version of SL, and it could be very simple and safe and secure, and then you could have Ethereum as a sidechain of Bitcoin, send your Bitcoin into that sidechain, operate and then send your Bitcoin back when you're done.
+
+**December 30, 2020. Is the distinction between the Cardano computation layer and the Cardano's settlement layer still relevant?** CH:
+
+>Yes, and in fact the sidechains that we're going to run are examples of what I call the computation layer. The difference is they're not ephemeral, they're actually permanently there …but yeah that's exactly what we intended.  You have a very stable secure settlement system which is the primary network with the stake pool operators …and you have this collection of sidechains which do different things and have different computational models than the main chain. 
+
+**Regulatory landscape**
+
+If a financial system grows and achieves adoption, it develops a need for regulation, or at the very least a desire for it. Regulatory reform is usually the consequence of periodic market breakdowns caused by the incompetence of some actor(s).
+
+The Knickerbocker Crisis of 1907, for example, led to the establishment of the Federal Reserve System as a lender of last resort in 1913. Another example is the excesses of the United States in the 1920s, which ended in the Great Depression, a devastating financial catastrophe. The Securities Exchange Commission was established in 1934 as a result of this collapse in an attempt to avoid a repeat of the incident or at the very least hold unscrupulous actors responsible. The Bitcoin Genesis block referred to ‘Chancellor on the Brink of Second Bailout for Banks’ implying some inspiration from the events of the time.
+
+One might question the need, breadth, and usefulness of regulation, but one cannot deny that it exists and that major governments have implemented it with enthusiasm, with many subsequently performing an about-turn once they realize the consequences. Cardano, like other financial systems, must have a viewpoint on what is fair and acceptable in its design. Cardano opted to distinguish between individual rights and market rights.
+
+Individuals should always have complete control over their finances, free of coercion or civil asset forfeiture. This principle must be enforced because, as crises like Venezuela, Zimbabwe and Cyprus have shown previously, and the ongoing war in Ukraine shows today, not all governments can be trusted not to misuse their sovereign authority for the personal enrichment of corrupt leaders. Cryptocurrencies must be designed with the lowest common denominator in mind.
+
+There should never be any tampering with history. Immutability is promised by blockchains. Introducing the ability to rewrite history or the official record offers much too much temptation to change the past to favor a certain actor(s).
+
+There should be no restrictions on the movement of wealth. Human rights are harmed by capital restrictions and other artificial barriers. Aside from the impossibility of enforcing them in a global market where many residents in developing countries migrate outside of their jurisdiction in search of a livable income, limiting capital flows also frequently harms the world’s poorest.
+
+According to these concepts, markets are separate from people. While Cardano believes in individual rights, markets also have the right to publicly express their terms and conditions. If a person decides to conduct business inside this market, they must be held to those T&Cs for the sake of the system’s integrity.  
+
+**December 30, 2020. Is the SEC (Securities & Exchange Commission) the enemy of Crypto?** CH:
+
+>No…the regulators are not the enemy of crypto … let’s be honest here our space created Bitconnect, OneCoin, Mount Gox, Bitmex… thousands of scams that have hurt people. Regulators are like vampires, in a good way. They come in when you invite them. Okay, a vampire standing at the door says, ‘can I come in?’ …what brings a regulator into an industry? Happy well-functioned industries where everything is going right? … like how many regulators are there for mathematics? Is there a mathematics exchange commission? …that sits down and says ‘we really need to look into those topologists? …. they’re slippery people, we are deeply concerned about statistics. Yeah, there’s some problems there man, serious problems, 64% of people know that…’
+>
+>No! because it’s like… what scandals occur in the mathematical world? Occasionally we have an older fields medalist who claims he proved the Riemann hypothesis and turns out his brain’s baked and it is a garbage paper! Okay we’re pretty good at self-regulating in that industry. On the other hand, why is the pharmaceutical industry regulated? Because they make stuff that you put into people’s bodies, and if they that up they break your penis, they break your brain, they break your eyes, you go deaf …. okay more than one person has gone deaf from the first reaction to an antibiotic. There are all kinds of bad things that can occur …so you need to regulate it! Because there are perverse incentives against your health!
+…
+So let’s look at crypto, you have the ICO (Initial Coin Offering) boom, you have tons of scandals and scams, you have rampant insider trading, you have wash trading on exchanges, you have exchanges failing and the principals of the exchange are stealing the money and fleeing abroad, you have software flaws that were made on purpose to steal people’s money, you have massive misrepresentations… you have impersonations… you have people claiming they’re using project capital for something but they’re actually using to buy yachts and Miami houses and prostitutes and… rah-rah-rah
+>
+>That is a big neon sign at the front of your door…. ‘Vampire come in!’ …our industry did that, we didn’t self-regulate, we didn’t stop the agency failures, we created a neon sign and welcomed a vampire and now they’re here! …and we’re going to complain that they’re doing stuff… filing lawsuits, getting involved like a bull in a China shop… of course they are, and their ability to act is proportional to the sophistication of the tools and the modernity of the laws. The Howey test is an artifact of the 1940s …it cannot work in ‘stem cell’ finance, where an asset can be everything… it can be a currency, a commodity and a security all at the same time, could be everything and nothing… 
+
+In June 2022, Charles Hoskinson spoke before Congress on the ‘The Future of Digital Asset Regulation’. He didn’t focus attention on Cardano, and instead spoke for the industry. The main message he delivered to representatives was cryptocurrencies, in general, should be treated as financial stem cells rather than be rigidly defined as a security, currency or a commodity. Future legislation should be based on principles, not focused on individual jurisdictions or bodies. His contribution was broadly well received.
+
+**Cardano Vision**
+
+Cardano is a long-term project that has benefited from the input of hundreds of the world’s brightest minds, both within and outside the cryptocurrency sector. It entails constant iteration, active peer review, and leverages the findings of open-source research. 
+
+While no project can meet all goals or please all users, IOG intends to present a vision for what a self-evolving financial stack should look like for countries that don’t have one. Realistically, cryptocurrencies will not replace current financial institutions. Legacy financial systems have always been able to absorb change. Instead, it’s more fruitful to focus on jurisdictions where deploying the old banking system is just too costly, where many people survive on less than a few dollars a day, have no fixed identification, and credit is difficult to come by.
+
+The ability to combine a payment system, property rights, identification, credit, and risk protection into a single mobile app is not just beneficial, but life-altering in these regions. IOG believes Cardano can build on the successes of projects like M-pesa and Kiva. If Cardano can transform the way cryptocurrencies are conceived, developed, and financed, then we are heading towards Dr Pangloss’s ‘best of all possible worlds.’
+
+## Behind the names
 
 
 [^1]: Surprise AMA! 12/12/2020, youtube.com/watch?v=GlVU8ZiVUL0
