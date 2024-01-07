@@ -213,7 +213,43 @@ Voltaire is built on decentralized governance and decision-making, allowing the 
 
 ## How does Cardano work?
 
+The Cardano node is the network’s top-level component that powers the blockchain. The networking layer, which is the driving force for supplying information exchange needs, connects network nodes to one another. For enhanced data flow, this provides new block diffusion and transaction metadata. Cardano nodes keep in touch with each other using a peer-selection method. You participate in and contribute to the Cardano network by hosting a node. As with every aspect of Cardano, security is paramount. The network protocol uses a pull communication method so if a node tries to push information, it is automatically disconnected.
 
+Stake pools are responsible for transaction processing and block generation and use the Cardano node to check how the pool interacts with the network. They operate as secure server nodes, storing and maintaining the pooled stakes of several stakeholders in a single entity.
+
+**Block production** 
+The purpose of blockchain technology is to create a cryptographically connected, independently verifiable chain of records (blocks). A network of block producers collaborates to enhance the blockchain as a whole. A consensus protocol ensures that the chain is transparent and determines which candidate blocks should be chosen to expand it.
+Valid transactions that have been submitted may be included in any new block. A block’s producer signs it cryptographically and links it to the preceding block in the chain. This makes it hard to erase transactions from a block, change the order of the blocks, remove a block from the chain (if it has a lot of other blocks following it), or add a new block to the chain without notifying all network members. This protects the blockchain expansion’s integrity and accountability. 
+
+**Slots and epochs**
+The Ouroboros protocol is used by the Cardano blockchain to support chain consensus. Time is divided into epochs. An epoch is made up of slots, each of which lasts one second. There are currently 432,000 slots (five days) in a Cardano epoch. Slot leaders[^52] are elected randomly from among the stake pools. One node should be nominated every 20 seconds on average, for a total of 21,600 nominations every epoch. One of the randomly drawn slot leaders will be added to the chain if they create blocks. A node that goes offline will miss its chance, and another node will be chosen. This means stake pools have to be very reliable and be online all the time. The remainder of the candidate blocks will be discarded.
+There are several versions of Ouroboros: Classic, Byzantine Fault Tolerance (BFT), Genesis, Praos, and Leois. More about this in Chapter 3.
+
+**Slot leader election**
+The Cardano network is made up of a number of stake pools, or delegators, that govern the aggregated stake of their owners and other stakeholders. The slot leaders are chosen at random from the stake pools. The bigger a pool’s stake, the more likely it is to be chosen as a slot leader and generate a new block that is accepted into the blockchain. This is the foundation of Cardano’s proof-of-stake (PoS) approach. Cardano includes an incentive scheme that discourages delegation to pools that already control too much of the overall stake, to preserve a level playing field and avoid a small number of extremely large pools controlling most of the stake.
+
+**Transaction validation**
+A slot leader must confirm that the sender has included enough resources to pay for the transaction and that the transaction’s requirements are satisfied while validating a transaction. The slot leader will record the transaction as part of a new block, which will subsequently be joined to other blocks in the chain, if it fits all these conditions.
+
+**How to purchase ada?** 
+
+Most people buy ada via centralized exchanges such as Kraken, Coinbase or Binance. The steps are documented in Cardano Docs and via a plethora of blogs and YouTube videos.[^53] Centralized exchanges are no longer the only fiat onramps available with wallets such as eternl and vendors like nmkr.io offering the user the ability to buy Ada with their local currency.
+
+**How to Delegate and earn rewards**
+
+The number of ada you hold determines the size of your stake. Cardano users may receive passive rewards for verifying blocks if they have a stake in the protocol. 
+
+Because not everyone has the time, skills, or money to operate a stake pool, ada holders may delegate their stake to a chosen pool and have it managed on their behalf by an operator. This enables everyone to contribute to the consensus and receive rewards without having to keep a node online all of the time. The bigger the stake in a pool, the greater the rewards for its owners. You can spend your ada whenever you choose, regardless of whether it has been delegated.
+
+Ada holders initially relied on the *Daedalus* wallet from IOG (full node, desktop wallet) or Yoroi from Emurgo (light, mobile client) to delegate their share. But as Cardano matures, there are now many more options. In June 2022, IOG announced a new light wallet, *Lace* will be one-stop shop for everything in the Cardano ecosystem. Meanwhile dcSpark’s (dcSpark.io) Flint and eternl are just two of the many wallets available.[^54] Here are a few guides recommended in Cardano Docs:
+
+- How to choose a stake pool[^55]
+- How safe is it to delegate to a stake pool?[^56]
+- How to delegate to a stake pool (Daedalus)[^57]
+- Staking and delegating for beginners (Daedalus)[^58]
+- How to delegate from the Yoroi wallet[^59]
+
+Cardano-node, originally developed by IOG, is now an open-source project in its own right. IOG are placing more and more of an emphasis on their open-source credentials. You can review the repository on GitHub[^60] to understand how you can contribute, codes of conduct, benchmarking results, etc. and visit CardanoUpdates.com for roadmap details.
 
 [^1]: Surprise AMA! 12/12/2020, youtube.com/watch?v=GlVU8ZiVUL0
 [^2]: **Ledger:** a distributed ledger (also called a shared ledger or referred to as distributed ledger technology) is a consensus of replicated, shared, and synchronized digital data geographically spread across sites, countries, or institutions. There is no central administrator or centralized data storage.
