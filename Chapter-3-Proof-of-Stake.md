@@ -2,7 +2,42 @@
 
 *‘He who has a why to live for can bear almost any how’* ― Friedrich Nietzsche
 
+## What is proof of stake?
 
+Proof of stake (PoS) is a consensus protocol, or methodology, that determines consensus based on the amount of stake (or value) retained in the system. A consensus protocol, in essence, is what governs the laws and parameters that regulate the behavior of blockchains, similar to a set of rules that each network member follows. Because blockchains aren’t controlled by a single, central authority, a consensus protocol is employed to enable dispersed network users to agree on the network’s history as recorded on the blockchain - to achieve agreement on what’s occurred and move forward from a single source of truth.
+
+Cardano is based on Ouroboros, an innovative proof-of-stake consensus system that was created via peer-reviewed research. Stake pools, which are server nodes maintained by a stake pool operator (SPO) to whom ada holders may delegate their stake, are at the core of this PoS technology. Stake pools are used to guarantee that everyone may participate in the protocol, regardless of technical expertise or availability to maintain a node. These stake pools are focused on upkeep and hold the pooled stakes of several stakeholders in one place.
+
+**Proof of stake vs proof of work**
+
+Proof of work (PoW), on the other hand, is a synchronous system[^1] that encourages miners to compete to solve problems inside the block first. This problem-solving is rewarded via a system of incentives. This strategy, however, comes at a cost: higher power consumption and longer time span to handle issues within the chain. These issues might cause the network to slow down dramatically, making it expensive to maintain.
+
+One of the most important elements of proof of stake (PoS) is that as a user’s funds grow, so does their ability to maintain the ledger. ie. the ability to create new blocks that can be put to the blockchain and timestamped correctly. A mix of random selection and a determination of their stake, or money, determines who creates a new block. Within the chain, a form of leader election takes place. Under a proof-of-stake system, users earn transaction fees as they go, increasing their balance with passive income (staking). This strategy promotes the blockchain’s steady and consistent expansion in line with the goal of the network becoming stronger as participants join. 
+
+**Benefits of proof of stake**
+
+The following are some of the main benefits of PoS versus PoW:
+
+- A proof-of-stake protocol incorporates stringent security procedures
+- Decentralization - the danger of centralization is lowered by imposing penalties for selfish behavior inside the network 
+- Energy efficiency - energy consumption is incredibly efficient since the blockchain requires less power and hardware resources to operate. For example, ‘Berry’ is a Cardano Stake pool[^2] running on a Raspberry Pi.[^3] Markus Gufler[^4] ran a Cardano node on a Rock Pi (single-board computer made by Radxa) at the IOHK Summit in 2019. A Rock Pi uses as little as 10W to function. 
+- Cost-effectiveness - proof-of-stake currencies are considerably more cost-effective than proof-of-work currencies.
+
+Although using proof of stake for a cryptocurrency was a contentious design decision, IOG chose to embrace it since it offers a method for introducing safe voting, has more scaling capacity, and allows for more complex incentive schemes.
+
+The Ouroboros protocol was developed by a skilled group of cryptographers from five academic institutions headed by Professor Aggelos Kiayias of the University of Edinburgh. Beyond being verified secure using a rigorous cryptographic model, the fundamental innovation it delivers is a modular and adaptable architecture that allows for the combination of multiple protocols to boost functionality.
+
+Delegation, sidechains, subscribable checkpoints, improved data structures for light wallets,[^5] multiple types of random number generation, and even alternate synchronization assumptions are all possible thanks to this flexibility. The needs of a network’s consensus algorithm will alter as it grows from hundreds to millions and ultimately billions of members. As a result, it’s critical to have enough flexibility to handle these changes and, as a result, future-proof the cryptocurrency’s core.
+
+## ’The green blockchain’
+
+The environmental effect of proof-of-work mining became a hot topic in 2021. Yahoo Finance,[^6] EuroNews[^7] and the Independent Newspaper[^8] were just some of those to dub Cardano the ‘green blockchain’. Cardano’s staking mechanism avoids Bitcoin mining’s huge energy consumption and hardware pollution. Bitcoin has been the subject of debate since Satoshi Nakamoto released the Bitcoin whitepaper[^9] in 2008. Cryptocurrency has been in the news a lot of times for all the wrong reasons. The most common objection is that Bitcoin mining, and other cryptos based on proofs of useless work[^10] protocols are harmful to the environment. 
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/cornel.png "Cornel Paper") 
+
+Figure 3.1. Table from Cornel University Paper
+
+According to a paper[^11] published by Cornell University, Bitcoin and Ethereum’s combined carbon footprint would rank 41st in the world. 
 
 
 [^1]: In a **synchronous system**, operations are coordinated by one, or more, centralized clock signals. An asynchronous digital system, in contrast, has no global clock. Asynchronous systems do not depend on strict arrival times of signals or messages for reliable operation. Coordination is achieved via events such as: packet arrival, changes (transitions) of signals, handshake protocols, and other methods.
