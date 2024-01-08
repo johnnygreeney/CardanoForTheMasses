@@ -39,6 +39,115 @@ Figure 3.1. Table from Cornel University Paper
 
 According to a paper[^11] published by Cornell University, Bitcoin and Ethereum’s combined carbon footprint would rank 41st in the world. 
 
+Algorithms for mining take a lot of power. This problem was exacerbated until recently by the fact that 70% of mining took place in China, where energy is generated using fossil fuels, notably coal. A crackdown by Chinese authorities has resulted in a crypto mining migration, which only shifted the issue to other nations. And the problem has ramifications in other areas. Concerns over energy use, for example, led to the banning of mining in Inner Mongolia.[^12] 
+
+Bitcoin’s proof-of-work algorithm is it’s Achilles heel, yet essential to its operation. Mining rigs that are powerful and state-of-the-art create higher yields, but the quicker they are, the more energy they use. This raises the issue of long-term viability. According to a recent article on the Ethereum Foundation blog,[^13] ‘Ethereum’s power-hungry days are limited,’ and that the long-awaited switch to proof of stake would require 99.95% less energy.[^14] ‘The Merge’ finally took place in September 2022, however, the move to proof-of-stake has been anything but smooth with stakes locked up indefinitely and centralization concerns.[^15] It’s also just the first step on a convoluted roadmap to Eth 2.0. Since ‘the Merge’ was delayed for several years, it’s difficult to forecast when the rest of the roadmap will happen.
+
+As Ethereum’s proof of work miners were effectively fired as a result of ‘the Merge’, an interesting discussion is ‘When Ethereum goes Proof of Stake, is Ergo likely to absorb most of the hash power?’[^16] 
+
+But what distinguishes proof of stake from other blockchains in terms of environmental impact? Because miners must answer increasingly sophisticated mathematical problems to produce blocks, proof of work is resource intensive. They’re on a high-energy race across the world to solve meaningless, randomly generated problems. This vast amount of computing power might be put to better use like programming wind turbines or solar cells. This PoUW (Proof-of-useful-work) paper[^17] discusses alternatives to proof of work. This squandered digital effort has real-world ramifications.
+
+The need for powerful hardware creates a further issue: e-waste. Miners must continually surpass their competitors, which necessitates the purchase of increasingly powerful mining equipment. ‘Old’ equipment, which is typically only fit for mining, soon becomes outdated. It is wasted, and Bitcoin’s e-waste is a growing problem. Because only 20% of electronic trash is recycled worldwide, the rigs’ plastics and dangerous elements, such as heavy metals, may wind up in landfills. By 2050, the United Nations predicts that the globe will create up to 120m tons of e-waste each year. This paper ‘Bitcoin’s growing e-waste problem’[^18] goes into greater detail.
+
+So why is Cardano being dubbed the ‘green blockchain’? Cardano offers two distinct benefits when it comes to sustainability and environmentally friendly cryptocurrencies: considerably reduced energy use and staking. Network users run nodes in proof of stake, and the chain chooses a node to add the next block depending on the stake and other attributes of the node. The fundamental difference between these two algorithms (and hence their energy needs) is that block producers in proof of stake do not need to spend a lot of time and compute power solving random problems. Cardano’s energy consumption is projected to be 0.01% of Bitcoin’s.[^19] 
+
+In a meaningless, energy-intensive arms race, proof-of-work cryptos need compute power to create blocks. A Cardano node, on the other hand, may operate on a low-power CPU like a Raspberry Pi. More than 40 million of these have been created, many of which are destined for schools in underdeveloped nations due to their low cost of $40-$70. This simplicity also cuts down on plastic and electronic waste.
+
+Extreme weather and forest fires seem to increase each year, with the warnings from UN Climate reports becoming starker and starker. A report in April 2022[^20] insisted it was ‘now or never’. Society is aware of deforestation, ice shelf depletion, and global warming. Heatwaves are wreaking havoc on the ecosystem in many regions of the globe, and forest fires are ravaging numerous places. As a result, everything that contributes to the sustainability issue is scrutinized. This encompasses the expanding cryptocurrency market.
+
+When it comes to solving environmental issues, there are no simple solutions. Cardano is a decentralized platform that can replace older and legacy systems’ inefficiencies. Cardano, and other proof-of-stake protocols, are considered to be contributing to the solution because of their sustainability credentials.
+
+Although Cardano is a proof-of-stake blockchain and the focus of much of IOG’s work, they do research other protocols and have published extensively on Proof of work also. Their paper[^21] *Ofelimos: Combinatorial Optimization via Proof-of-Useful-Work: A Provably Secure Blockchain Protocol* was presented at Crypto 2022.
+
+## Philosophy of POS
+
+Decentralization is arguably Cardano’s most important and fundamental goal. The basis of every blockchain is its protocols and parameters. However, the community itself, how it perceives itself, acts, and establishes shared norms, is a major influence on the project’s success. Cardano has been meticulously architected to have ‘by design’ all of the qualities required for a successful blockchain system. Cardano is a social construct, and as such, adherence, interpretation, and social conventions all have a part in determining its robustness and long-term viability.
+
+**Staking Principles**
+
+Since the debut of the Bitcoin blockchain, consensus-based on a *resource* that is disseminated over a population of users – rather than identity-based participation – has been the hallmark of the blockchain ecosystem. Proof-of-stake systems are distinct in this space because they employ a *virtual resource* called stake that is recorded in the blockchain itself.
+
+Pooling resources for participation is unavoidable; some amount of pooling is generally advantageous in terms of economics; therefore resource holders will find a means to make it happen. Given this inevitability, the challenge is then to avoid the emergence of a dictatorship, large entity, or oligarchy[^22] controlling too much stake. 
+
+**Goal of Staking Rewards System**
+
+Unlike previous blockchain systems, Cardano employs a reward sharing mechanism that (a) permits staking without unnecessary inconvenience and (b) incentivizes resource pooling in such a manner that system-wide decentralization develops spontaneously through resource holders’ rational engagement.
+
+The mechanism’s two main goals are as follows:
+
+- Involve all stakeholders - The more people who are involved in the system, the more secure the distributed ledger becomes. This also means that the system should have no participation barriers and should not cause friction by necessitating off-chain coordination amongst stakeholders to participate with the mechanism.
+
+- Keep individual stakeholders’ power to a minimum - For certain stakeholders, pooling resources increases their influence. The power of pool operators on the system is proportional to the resources managed by their pool, not to their own. Without pooling, all resource holders have a leverage of one. The stronger the system’s leverage, the less secure it is (a 51%[^23] attack on the system is more likely).
+
+A large pool size is not the sole cause of increased leverage; stakeholders may also gain leverage by forming several pools, either publicly or secretly (known as a Sybil attack).[^24] The greater the degree of decentralization of a blockchain system, the lesser its leverage.
+
+**From Theory to Practice**
+
+So, how does Cardano’s reward-sharing mechanism achieve the aforementioned goals? Staking with Cardano allows for two options: pledging[^25] and delegating. Stake pool operators use pledged stake; pledged stake is committed to a stake pool and is expected to remain there for the duration of the pool’s operation. Consider pledge to be a ‘commitment’ to the network. It’s a way to ‘lock up’ a specific amount of stake to help protect and secure the protocol. 
+
+Delegating, on the other hand, is for individuals who don’t want to be hands-on. Instead, individuals are encouraged to evaluate the stake pool operators available and delegate their stake to one or more pools that, in their judgment, best serve their and the community’s interests. There is no reason to refrain from staking in Cardano since delegation does not involve the locking up of money. Liquid staking[^26] means you always have access to your ada. This is not a given with other proof-of-stake blockchains. 
+
+For example, with Polkadot,[^27] your funds are ‘bonded’, which is a fancy word for ‘locked’. It takes a full 28 days to ‘unbond’ or ‘unlock’ your funds. That is generous compared to Ethereum, where stakers were not able to withdraw staked Ether prior to the *Shanghai* upgrade. Staking on Cardano is non-custodial, so there are no slashing[^28] penalties imposed. As a delegator, your staked funds are never at risk of being taken by the SPO, significantly adding to delegator participation.
+
+Cardano’s incentive model is based on Nash equilibrium.[^29] The idea is that when stake pool operators and delegators are properly incentivized, then a Nash equilibrium will be reached based on their rational and honest behavior. The goal of the incentive mechanism is to achieve a high level of decentralization, security and participation.
+
+Two parameters, *k* and *a0 (/a naught/)*, are crucial to the mechanism’s operation. Pool rewards are limited to 1/k of the amount available thanks to the k-parameter. Adding X amount of pledge to a pool boosts its rewards by up to a0*X, thanks to the *a0* option. This isn’t at the expense of other pools; any rewards that go unclaimed due to inadequate pledging will be restored to Cardano’s reserves and distributed in the future.
+
+Creating a stake pool necessitates operators (aka stake pool operators, aka SPOs) declaring their profit margin[^30] and operating expenditures[^31] in addition to agreeing on an amount to pledge. The operating expenses are withheld first when the pool payouts are distributed at the conclusion of each epoch, ensuring that stake pools stay sustainable. Following that, the operator profit is determined, and all pool delegators are compensated in accordance with their investment.
+
+This approach, when combined with the delegates’ evaluation of stake pools, offers the correct set of restrictions for the system to converge to a configuration of k equal-sized pools with the largest amount of pledge. 
+
+Cardano’s blockchain architecture, like many others, has an innovative and well-researched mechanism. The rewards system has been mathematically shown to provide an equilibrium that matches its goals. But, in the end, arithmetic alone will not be enough; only humans will be able to make it happen. The future of Cardano lies in the hands of the community.
+
+## Stake Pool Personas
+
+A stake pool is a server node that aggregates and maintains the stakes of several stakeholders into a single entity. Stake pools oversee transaction processing and block production, and they monitor their interactions with the network via the Cardano node.
+
+To manage a stake pool effectively, you’ll need a stake pool operator and one or more stake pool owners. There are conceptual differences between these two jobs:
+
+- A stake pool operator is in charge of setting up and managing the stake pool, which means they own or rent a server, manage and monitor the node, and have access to the stake pool. Stake pool operators may sign blocks, register, re-register, and retire stake pools, as well as upload updated certificates, using their key
+
+- A stake pool owner is someone who offers their stake to the pool to boost the pool’s reward earning capability and appeal. Sybil attacks are mitigated by the owner’s capacity to pledge stake.
+
+The stake pool operator and owner are normally the same person, although a stake pool might have several owners who commit their share to establish a larger pool and maintain it competitively. Stake pool activities are still managed by a single stake pool operator in this case.
+
+The stake pool operator must have the trust of all stake pool owners. All operator and owner rewards are placed into a single shared reward account linked to the pool’s reward address, and the protocol distributes them among the owner accounts. The reasoning for this is because if everyone could become a co-owner of a stake pool rather than delegating, the process would be rendered obsolete.
+
+It’s advisable to have a contract to specify when and how the collected incentives in a shared account should be divided. They can, for example, agree to have the operator manage the shared account, or they can use a multisig[^32] account.
+
+A bidirectional relationship and trust are required to run a pool properly. If this trust is betrayed, other parties may suffer losses in terms of accumulated or projected benefits, as well as the operator’s reputation.
+
+The **controlled stake** is the entire amount of stake held by a stake pool. It combines the pool operator’s stake and any stakes that have been delegated to the pool by other ada holders. It may be expressed as a total quantity of ada (e.g., 2M ada) or as a percentage of the network’s total ada supply (e.g., 2%).
+
+## Setting up and running a stake pool
+
+Stake pools are an important aspect of the decentralized Cardano network, since they enable the procedures that assure the network’s long-term health and viability. Stake pool operators allow other users to participate in the system and earn rewards without having to host an active node all of the time. The scope of this book is to address the theoretical. 
+
+More in-depth practical details are out of scope and covered in the Cardano Developer Portal.[^33]
+
+## Cardano network
+
+Federated nodes were solely responsible for block production and network connectivity in the Byron era. The Byron network was made up of federated core nodes, which were static nodes that created blocks and kept the Cardano network running. With the launch of Shelley, the network transitioned to a hybrid mode, with IOG-operated federated nodes (which configure connection between various stake pool operators) and SPO (stake pool operator)-operated nodes. The percentage of blocks produced by decentralized nodes steadily increased, while federated nodes progressively ceased operations, distributing network maintenance equitably across all stake pool operators. Using ongoing automated discovery and selection of peers, Shelley’s network migrated to complete decentralization.
+
+Nodes linked to other nodes using a static configuration established in a topology file during the startup phase. It is critical to connect to dependable relay nodes to avoid a situation where relay nodes fall offline, rendering block-producing nodes unreachable. IOG provided SPOs with a list of all registered relays[^34] organized by geographical location for connecting reasons. SPOs should additionally produce a configuration that includes 20 other SPOs as peers. Many SPOs can employ more than 20 peers for connection reasons in practice. The list lets you choose peers both close and far away, ensuring inter-region connection.
+
+The node’s network layer was altered to employ continuous automated discovery and peer selection as the network was shifted from federated to completely decentralized. Upgrades to the network stack were used to accomplish this. Initially, this allowed for enhanced automation of connecting SPO relays to one another, reducing the requirement for static setup. Dynamic peer-to-peer (P2P)[^35] networking came to the Cardano mainnet in March 2023. Nodes could now automatically communicate without the need for static configurations. More about this in the next chapter. 
+
+More information regarding the Cardano network, node communication, and mini protocols that allow this capability may be found in the docs.[^35]
+
+Core and Relay Node Connections
+
+As a stake pool operator, you are concerned with two node types: core nodes and relay nodes. One or more relay nodes must accompany each core node. Core nodes are in charge of creating blocks, whilst relays are in charge of connecting with other relays in the network as well as broadcasting blocks. This distinction influences how they are set up and linked to the network.
+
+For block generation, a core node is set up with several key pairs[^36] and an operational certificate. It only communicates with the relay nodes it has set up. Because a relay node does not need any keys, it is unable to create blocks. It communicates with its core node, relays, and external nodes. Each node should operate on its own server, with the firewall on the core node server set to only accept connections from its relays.
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/relay.png "Core and Relay nodes") 
+
+Figure 3.2: Core and Relay nodes
+
+## How to choose a Stake Pools
+
+
 
 [^1]: In a **synchronous system**, operations are coordinated by one, or more, centralized clock signals. An asynchronous digital system, in contrast, has no global clock. Asynchronous systems do not depend on strict arrival times of signals or messages for reliable operation. Coordination is achieved via events such as: packet arrival, changes (transitions) of signals, handshake protocols, and other methods.
 [^2]: Berry Pool, github.com/alessandrokonrad/Pi-Pool
