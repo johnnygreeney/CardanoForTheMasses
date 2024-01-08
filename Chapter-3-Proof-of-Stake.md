@@ -168,7 +168,6 @@ The ranking system is intended to let users pick the best stake pool for a great
 The cost and margin of a pool, as well as the pool’s performance and the amount of stake it has previously attracted, all factor towards its rating. These variables encourage the creation of dependable stake pools that are not yet saturated and provide low cost and margin.
 
 The *Cardano Developer Portal includes guidelines for operating stake pools*[^42]  
-
 ## Types of Addresses in Cardano
 
 The addresses are a blake2b-256 hash of the related verifying/public keys combined with some metadata stored on the Cardano blockchain.
@@ -223,7 +222,216 @@ Don’t worry if you don’t grasp every detail. It's just included for some con
 
 ## Pledging
 
+Decentralization became a point of contention as Shelley approached on the Cardano mainnet. Proof-of-work cryptocurrencies like Bitcoin have grown increasingly centralized over time, regardless of their original founding aim. The days of Bitcoin fanatics mining blocks on AWS EC2 spot instances are long gone, and today’s mining networks are dominated by a tiny handful of specialized, professional mining companies.
 
+This isn’t inherently a negative thing in and of itself, but it would go against Cardano’s idea of a decentralized, proof-of-stake system if it occurred. Cardano was built from the bottom up with decentralization in mind, especially in terms of stake delegation and reward systems. Pools larger than a certain size will not be competitive on the Cardano network, and delegation rewards for everyone will be ideal when there are numerous medium-sized pools. Diversity is beneficial to all ecosystems. Similarly, this method strikes the optimal mix between promoting grassroots participation from experienced community members and assisting individuals looking to start commercial stake pool firms.
+
+**How Pledging Works**
+
+A pool operator might pledge a personal investment in their pool upon registration to make it more appealing. The pledged sum may be modified epoch by epoch and will be refunded when the pool closes.
+
+On the Cardano blockchain, anybody may run a pool. There is no minimum pledge. To make their pool more appealing, pool managers might pledge some or all of their stake to the pool. The more ada pledged, the more rewards will be given to the pool, which will attract more delegators.
+
+It’s also worth noting that there’s also no maximum pledge, so a pool operator with a lot of ada to stake may maximize their own profits by filling up the pool with pledges and avoiding attracting any delegation. Of course, only a few operators will be able to do so; most will attempt to entice delegation with a mix of pledge, cheap costs, low profit-taking, and strong performance.
+
+The appeal of a pool to delegators is determined by four interconnected factors:
+
+- operating costs (lower the better)
+- operator margin (lower the better)
+- performance (higher the better)
+- pledge (higher the better).
+
+The pool operator might request a bigger operator margin while remaining desirable to delegators by offering a larger pledge.
+
+**Pledging rewards**
+
+Given two similar stake pools, the one with the higher pledge will receive more rewards and hence be more appealing to other delegators. The SPO (Stake pool operator) or other pool owners should work together to fulfill the pledge by delegating themselves. It’s also crucial to make sure there’s enough funds in the accounts that utilize the pool owner’s address(es) as stake reference. Failure to meet the pledge will result in no rewards for the pool being earned by any owner or delegators. This will almost always result in a loss of delegation and, in the worst-case scenario, pool collapse.
+
+Unlike delegation, the SPO is in charge of all pledge rewards distribution. This may be done in any way that is mutually agreed upon and is not governed by the blockchain. 
+
+**Why do we need pledging?**
+
+Pledging on the Cardano blockchain is a technique for promoting a healthy economic environment. The pledge mechanism is also required to prevent Sybil attacks on the system. In such an attack, someone with very little personal stake establishes hundreds or thousands of pools with tiny margins and attempts to draw the bulk of stake to their pools. They can influence consensus and engage in double-spending attacks, create forks, censor blocks, and harm or even collapse the system if this succeeds. Such attacks are stopped by making pools with greater pledges more appealing, since an attacker must now divide their stake over many pools, making those pools less desirable and raising the inherent cost of executing a Sybil attack.
+
+**How to measure the impact of Pledging**
+
+Prior to the launch of Shelley on the Cardano mainnet, the parameter that affects pledging needed to be set. The parameter was created to be flexible and adaptable over time. The Shelley Haskell testnet was an excellent resource for fine-tuning this parameter and determining which values worked and which didn’t. IOG also created a calculator to assist pool operators estimate alternative pledge quantities and figure out how delegation could be affected.
+
+Reasonable values are determined by a variety of variables, including: What percentage of a pool operator’s interest does he or she own? How much does it cost to run a node? How many people want to run a staking pool? During the Incentivized Testnet, a lot of data was acquired. 
+
+IOG is committed to the scientific approach and that their architecture will result in a decentralized, stable, and secure blockchain— yet science and mathematics can only take you so far. Modeling assumptions must always be made, and no model will ever be as complex and colorful as what happens in practice.
+
+On Reddit and on a ‘Cardano Effect’ episode, there was heated discussion on the matter. The Shelley Haskell testnets provided the ideal environment for continued debate. IOG evaluated, iterated and cooperated with stake pool managers to determine what is best for everyone. IOG enlisted the community’s support to put their findings into effect, much as they did with the Incentivized Testnet and Daedalus Flight user testing.
+
+## Delegation
+
+The practice of assigning individual stakeholders’ ada to collective stake pools is known as stake delegation. Delegation is used in block production to guarantee that the block is created in accordance with the proof-of-stake consensus. Stakeholders do not transfer stake ownership, voting rights, or other rights when they delegate.
+
+To maintain confidence in the blockchain, large SPOs will often own a considerable amount of third-party stake, making them accountable for:
+
+- block production
+- transaction processing
+- Cardano network maintenance
+- ensuring the owner makes a pledge
+- pool security (protecting its private keys.etc)
+- updating the community about anything related to the pool.
+
+The blockchain handles the distribution of block production rewards to delegators, so large operators aren’t concerned with it. SPOs are also not in charge of procuring delegated keys or acting on behalf of stakeholders in terms of delegation, voting, or other activities. Individual stakeholders must assume personal responsibility for their own security and make their own judgments on delegation, voting, and other matters.
+
+Because Cardano is a proof-of-stake system, holding ada gives you the right, and duty, to participate in the protocol and build blocks in addition to allowing you to purchase products and services. Delegation of stake is a technique built into the Cardano proof-of-stake (PoS) protocol that enables it to grow even in the face of a widely dispersed group of stakeholders.
+
+Anyone with ada may take part in the stake delegation process while keeping their spending power. Note that regardless of how you delegated your ada, you may spend it at any stage. In each epoch, the protocol allows stakeholders to engage in the slot leader election process. Stake delegation creates ‘stake pools,’ which function similarly to the Bitcoin protocol’s mining pools. When they are chosen as slot leaders, stake pool operators must be online in order to create blocks.
+
+**Stake delegation requirements**
+
+Delegating stake involves uploading of two certificates to the chain: a staking address registration and a delegation certificate. Because posting certificates necessitates funds, a user who is just getting started with their wallet needs a bootstrapping method. This approach is based on the ability of base addresses using staking keys before publishing the key’s registration certificate. The stake address can be based on a single key or a script like multi-sig.
+
+**Delegation Scheme**
+
+With the notion of delegation, any stakeholder may authorize a stake pool to create blocks for the Cardano network, and the protocol will subsequently distribute the rewards to all participants, including the stake pool operators’ fees. A stakeholder is assigned to a specific pool ID, which is a hash of the operator’s verification key.
+
+The stakeholder may restrict the proxy signing key’s valid message space to strings ending with a slot number in a certain range of values to limit the delegate’s block generating capability to a specific range of epochs and slots. Due to the verifiability and abuse prevention qualities of proxy signature schemes, this basic scheme is reliable. This guarantees that every stakeholder can verify that a proxy signing key was granted to a particular delegate by that stakeholder and that the delegate may only use these keys to sign messages inside the key’s valid message space.
+
+A single transaction with a delegation certificate is required to post funds belonging to one staking key of a user’s wallet. Only the standard transaction fees will apply. A stakeholder must pay a deposit to register a stake address, not for the stake delegation itself. After registering a stake address, the stakeholder will simply have to pay fees for their chosen delegation. During the rewards process, the stakeholders’ stake will be considered part of the pool’s stake. 
+
+## Pledging and rewards
+
+Pledging is a critical method for fostering the development of a healthy ecosystem on the Cardano blockchain. You may pledge part or all of your ada to a stake pool when you register it to make it more appealing to others who wish to delegate. Although pledging is not mandatory when creating a stake pool, it may make it more desirable to delegators since the bigger the quantity of ada pledged, the higher the rewards given out. The a0 protocol parameter specifies how the pledge affects the pool reward. There is no optimal pledge amount, it depends on the pool and personal preference. The more you pledge the higher the rewards.
+
+**Rewards Distribution** 
+
+Rewards are issued to all stakeholders who have delegated to a stake pool, either their own or another pool, at the end of each epoch. The protocol generates these rewards and does not rely on the stake pool operators to administer them. There are two types of rewards:
+
+- transaction fees: compiled from the collection of transactions contained in a block minted (generated) in that epoch
+
+- Monetary expansion entails determining the difference between the total and maximal supply of ada. All ada now in circulation, as well as ada held in the treasury, make up the total supply. The maximal supply refers to the most ada that can ever exist (45 billion ada). The reserve is the difference between these two amounts. A predetermined proportion of the remaining reserve is withdrawn during each epoch and used for epoch rewards and treasury, with the amount transferred to the treasury being a set percentage of the amount taken from the reserve.
+
+IOG’s chief scientist Professor Aggelos Kiayias discusses more in this *Rewards sharing and pledge on Cardano* video.
+
+Remember that the pledge is expressed (together with the cost and margin amounts) during pool registration and must be fulfilled by the pool owners who are delegating to the pool: Pool rewards for that epoch will be 0 if they collectively delegate less than the specified pledge. If the pool’s operator margin is set to less than 100%, the pool will be public.
+
+## Pledging and Delegation Options
+
+On the Cardano network, ada reflects a user’s stake in the protocol, with the amount of the stake proportional to the number of ada possessed. Cardano users may receive passive rewards for verifying blocks if they have a stake in the cryptocurrency. The quantity of ada they pledge or delegate to a stake pool determines the amount of rewards they may receive.
+
+Ada holders have 3 options when it comes to delegating their stake:
+
+- They are in charge of their own stake pool.
+- Rely on third party to manage a private stake pool on their behalf, such as Kraken, one of the oldest Crypto exchanges.
+- Delegate to other stake pools
+
+See the create transaction instructions for advice on how to set up a stake pool, pledge, delegate and earn ada rewards.
+
+Stake pools must maintain high availability, which means they must be accessible to verify and produce new blocks at all times. The quantity of ada committed or delegated, as well as the number of blocks a stake pool may build in a particular epoch, determine the rewards a stake pool can get. Based on the aforementioned criteria, Ouroboros, the backbone of the Cardano protocol, elects the slot leader that grants permission to process transactions and mint new blocks.
+
+Note: Before deploying to the mainnet, all stake pool functionality should be thoroughly tested on the testnet.
+
+**Pledging**
+
+When a stake pool is launched, the stake pool operator’s pledge is the amount of ada that they ‘delegate’ to their own pool. The operator’s commitment to maintain their pool and promote network activity can be seen in the pledge. It is not necessary to make a pledge, however it is suggested that you do so before starting the stake pool. The greater the pledge, the more rewards for the pool which is contingent on the pool’s uptime and performance.
+
+**Delegation**
+
+Delegating to any stake pool accessible on the network might yield rewards for ada holders who do not have technical knowhow in operating a stake pool. Multi-pool delegation has been a sought after feature for some time. It finally came to fruition in 2023 with Lace wallet offering the feature. *Strica* (makers of Typhon wallet) questioned the trade offs involved in how this feature was implemented and if it could be offered more smoothly. Meanwhile, *Atrium Labs* have been blogging about a new innovation called *staking baskets* which will allow users to stake to multiple pools via  smart contract that will be open-sourced. 
+
+Note: holders of ada and SPOs (stake pool operators) who pledge, or delegate will always have access to their ada. The rewards drop proportionately when the delegated ada is spent or withdrawn from the pool.
+
+**Rewards**
+
+For engaging in staking (either pledging or delegating), delegators earn rewards, which are immediately divided among the participants according to the rewards plan. Cardano’s reward system is decentralized, meaning there is no one governing entity. Rewards are calculated by the Ouroboros protocol and generally are about 3-4% assuming you have delegated to an unsaturated stake pool. If the amount of ada delegated to a given stake pool is over a set amount, the pool is deemed to be oversaturated. The delegating tab in most light wallets will display useful stats and details on each of the stake pool delegation candidates. 
+
+Rewards are distributed each epoch to stake pools for validating blocks. The staking and rewards should not be confused with earning interest. Interest is a fixed sum promised to a recipient, whereas there is a random element in distributing rewards, with the onus on the ada holder to delegate to a pool that is not saturated. Pooltool.io has a friendly dashboard where you can review all kinds of ‘live’ staking stats.
+
+**Open source rewards calculation**
+
+To dig deeper still, you can review the Cardano ledger specifications which outline formulas used to calculate staking rewards. As part of the Cardano Foundation’s remit to drive operational resilience of the network, they open sourced a node-independent reward calculation. The project is quite technical and beyond the scope of this book so best to review the CF blog post for more details. At a high level, the project aims to offer a means of performing and validating the rewards calculation that is independent of a single implementation. In doing so, the CF will share comprehensive documentation related to Cardano’s treasury, reserves, and pool rewards.
+
+## Types of Keys in Cardano
+
+Asymmetric cryptography key pairs known as keys are used for:
+
+- Securing payments and staking certificates by signing and verifying them
+- Identifying and defining addresses.
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/keys.png "Cardano Keys")  
+
+Figure 3.4. The link between keys, addresses, and certificates:
+
+There are two main types of keys in Cardano:
+
+- Node keys
+- Address keys
+
+**Node Keys**
+
+The following keys make up the node keys, which constitute the blockchain’s security.
+
+- Operator/operational key
+- KES key pair
+- VRF keys
+
+**Operator/operational key**
+
+These are offline key pairs for operators that include a certificate counter for new certificates. The operator is responsible for managing both the hot (online) and cold (offline) keys for the pool. Cold keys must be kept secure and should not be stored on a device that has internet access. Cold key backups should be kept in several locations.
+
+**KES key pair**
+
+A Key Evolving Signature (KES) key pair, which authenticates who you are, is required to establish an operational certificate for a block-producing node.
+
+A KES key can only evolve for a set amount of time (a certain number of epochs) before becoming worthless. This is important because, even if an attacker compromises the key and has access to the signing key, he can only use it to sign blocks going forward, not blocks from previous epochs, preventing the attacker from rewriting history.
+
+The node operator must produce a new KES key pair, issue a new operational node certificate with the new key pair, and restart the node with the new certificate when the specified number of epochs have elapsed.
+
+**VRF keys**
+
+Ouroboros Praos (Ouroboros versions are explained later, in Chapter 4) provided an additional degree of protection by using Verifiable Random Function (VRF) keys in block production. VRF makes the consensus protocol difficult to attack because it’s impossible to predict the next producing nodes.
+
+Because the slot leader schedule is known in other proof-of-stake blockchain protocols (such as Ouroboros Classic or BFT), it’s known who has the authority to create the block in each slot. In this instance, you have to establish that you are who you claim you are, and anybody can verify this by looking at the public slot leader schedule. This process was subsequently improved in the Feb 2022 release, with a new CLI tool for SPOs to check their own slot leadership schedule.
+
+Ouroboros Praos’ slot leader schedule, on the other hand, is kept private, which means that no one knows who the slot leader in advance will be, but once they are, they can verify to everyone else that they are using the VRF key.
+
+The VRF key is a signature verification key that is recorded in the operating certificate. It establishes a node’s permission to produce a block in a certain slot. 
+
+**Address keys**
+
+The purposes of address keys are derived from the keys for identifying ada on the blockchain, which include the following keys:
+
+Payment key: a single address key pair that is often used to create UTXO addresses
+Staking key: a key pair consisting of a stake and a reward address that is typically used to generate account and reward addresses.
+
+**Signatures**
+
+If a cryptocurrency uses a single signature scheme, it must accept the risk that the scheme may be broken in the future, and that at least one entity will be unable to utilize the cryptocurrency owing to legal or industry constraints. However, a cryptocurrency cannot support all signature schemes since each client would have to comprehend and verify each scheme.
+
+For Cardano, IOG chose to start with elliptic curve encryption, specifically the Ed25519 curve.
+
+Cardano enabled additional signature systems post ‘Vasil’ hard fork in the subsequent ‘Valentine’ update in February 2023, and the Chang hard fork due in 2024. Quantum computer-resistant signatures will be included into the system. Cardano was built with specific features that enable a soft fork and the addition of new signature schemes. They will be included when required and as part of the roadmap’s major releases. 
+
+**March 19, 2020, in response to the US Senate bill and prose to outlaw encryption.** CH:
+
+
+>I think that’s equivalent to the ability to outlaw gravity or to change Pi to 3. I mean people can certainly say stuff and try to do things, but you cannot enforce something as crazy as outlawing encryption …it’s like how would the internet even work? SSL (secure sockets layer) is now illegal? You have to have certificate authorities …put a man-in-the-middle attack for every single website? Does the US government enforce that? It’s old people who have no clue how the internet works, or technology works, playing and fiddling with things …and they should be in diapers instead of voting.
+
+## Cardano tracking tools   
+
+Because Cardano is a public blockchain ledger, many tools may be used to conveniently follow all recent transactions, block information, and epoch data.
+
+**Exploring transactions and blocks**
+
+Cardano Explorer is a user-friendly application that pulls information from the main database and displays it in an easy-to-use online interface.
+
+By selecting a single block, you may discover more about it, including its ID, size, epoch, and block data, as well as the number of transactions and confirmations contained. You may also use the search area to look for certain epochs, transactions, or blocks by pasting their IDs.
+
+The Cardano Foundation talks regularly with regulators and auditors to clarify the nuances of proof of stake (PoS). It is crucial they understand that not all PoS blockchains are the same. The Cardano Explorer has become a useful tool in explaining how Cardano functions. There are sections to explain the staking lifecycle and a smart contract visualization user interface (UI). More features are planned, it’s best to check the release notes on GitHub for the latest. 
+
+**Explorer options**
+
+There’s a whole gamut of tools such as cardanoscan.io, cexplorer.io and many more listed under IOG’s Essential Cardano, the Cardano Developer Portal, as well as third party sites like CardanoCube (cardanocube.io) and BuiltOnCardano (builtoncardano.com).
+
+Multi-asset generation and administration are supported by Cardano. You may use tools such as Cardano Assets (cardanoassets.com) and Cardanoscan (cardanoscan.io/tokens) to view a list of assets and tokens. Everyone has their favorite, mine are taptools.io and eutxo.org You can use these tools like Adapools (adapools.org) and Pool.pm (pool.pm/search) to get a list of all active stake pools, their tickers, pool names, and IDs. 
+
+## Getting hands on   
+Static text in a book is perhaps not the best medium to explain how to get hands-on with wallets and staking. There are numerous YouTube guides on how to use any of the 20+ light wallets available. We talked about the theory and design of Cardano staking in this chapter. In practice, it is a seamless ‘point and click’ experience in most wallets UIs today. The CF provides a free online course which is geared towards those taking the *Cardano Blockchain Certified Associate* exam. You can review more about the course overview here where module 4 guides you the practical steps of buying ada, staking and other beginner steps.
 
 [^1]: In a **synchronous system**, operations are coordinated by one, or more, centralized clock signals. An asynchronous digital system, in contrast, has no global clock. Asynchronous systems do not depend on strict arrival times of signals or messages for reliable operation. Coordination is achieved via events such as: packet arrival, changes (transitions) of signals, handshake protocols, and other methods.
 [^2]: Berry Pool, github.com/alessandrokonrad/Pi-Pool
