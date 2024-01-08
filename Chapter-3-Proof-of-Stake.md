@@ -513,6 +513,3 @@ reddit.com/r/cardano/comments/gfed1l/cardano_mainnet_pledge_influence_factor_ana
 [^77]: Cardano developer portal, developers.cardano.org/showcase
 [^78]: Cardano Blockchain Certified Associate, academy.cardanofoundation.org/overview
 
-
-
-**_To be uploaded soon..._**
