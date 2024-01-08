@@ -147,6 +147,82 @@ Figure 3.2: Core and Relay nodes
 
 ## How to choose a Stake Pools
 
+Choosing a stake pool is not an exact science. There are many factors and delegators have different preferences, the process is entirely subjective. Some are attracted superficially to the pool with lowest fees, but on closer review, it is usually the least important consideration. If you are unsure about any of the parameters, or want to scrutinize a specific stake pool, you can dive deep with a favoured explorer tool such as the Cardano Foundation Explorer or peruse CardanoCube under ‘Tools and Explorers’
+
+## Stake Pool Performance 
+
+The creation of new blocks for the Cardano network is the responsibility of a stake pool designated as a slot leader. The slot will stay unfilled if the stake pool does not create a block, and the blockchain will not be extended. Although the Cardano blockchain may accept a few missing blocks, the bulk of expected blocks (at least 50% + 1) must be created within an epoch. Although missing blocks do not affect the blockchain’s overall extension, an unresponsive elected stake pool reduces the network’s overall speed.
+
+The ratio of the number of blocks a stake pool generates in a particular epoch versus the number it was capable of producing is used to measure stake pool performance. For example, if a stake pool could create 100 blocks in an epoch (depending on its stake and likelihood of being elected), but only produced 50 blocks, its performance would be 50%. Poor stake pool performance reduces the quantity of rewards received by a pool and its members, making it less appealing to delegators. A stake pool should have adequate network connectivity, be run on a dependable system, and engage in block generation and verification to increase its performance.
+
+The stronger the pool’s performance, the more appealing it will be to delegators, since higher rewards will be offered. Setting up and running a stake pool is not too challenging from a technical perspective. Marketing and attracting delegation to your pool is a competitive sport.
+
+## Ranking Stake Pools
+
+Stake pools are ranked in the Daedalus wallet and Cardano Explorer depending on the amount of rewards users will get if they opt to delegate to them. The ranking indicates the saturation level of the pool, making pool selection easier. From the standpoint of a delegator, once a pool reaches a specific saturation threshold, delegating to it is no longer profitable. The most desirable stake pools are shown first, and they are sorted from top to bottom.
+
+The ranking system is intended to let users pick the best stake pool for a greater return on investment (ROI), so that dependable stake pool owners can keep the system running and maximize decentralization.
+
+**Ranking parameters**
+
+The cost and margin of a pool, as well as the pool’s performance and the amount of stake it has previously attracted, all factor towards its rating. These variables encourage the creation of dependable stake pools that are not yet saturated and provide low cost and margin.
+
+The *Cardano Developer Portal includes guidelines for operating stake pools*  
+
+## Types of Addresses in Cardano
+
+The addresses are a blake2b-256 hash of the related verifying/public keys combined with some metadata stored on the Cardano blockchain.
+
+Shelley introduced four different types of addresses:
+
+- base addresses
+- pointer addresses
+- enterprise addresses
+- reward account addresses
+
+Aside from those addresses, Byron-era bootstrap and script addresses are still supported by Shelley. Only the new base and pointer addresses have stake rights. Addresses, such as a UTXO address, are made up of serialized data described in the ledger specification stored in the blocks of the blockchain.
+
+There are two pieces to the serialized data (address):
+
+- Metadata for interpreting.
+- Payload: raw or encoded data
+
+**Base Address**
+
+The staking key that should manage the stake for that address is explicitly specified in a base address. The owner of the staking key can exercise the staking rights connected with funds kept at this address. Without first registering the staking key, base addresses may be used in transactions. Only by registering the stake key and delegating to a stake pool can the stake rights be exercised. After the stake key has been registered, stake rights can be exercised for base addresses used in transactions before or after the key registration.
+
+**Pointer Address**
+
+A pointer address indirectly specifies the staking key that should control the stake for the address. They are quite nuanced, and their practical use is open to question. They are not discussed in detail here because they are not intuitive to understand, but also because removing pointer addresses is a dependency for implementing a future version of Ouroboros. To dig into the technical reasoning, see the ongoing discussion on *CPS-0002 Pointer Address Removal*. CPS stands for ‘Cardano Problem Statement,’ a governance mechanism for proposing change. More on this later. 
+
+**Enterprise Address**
+
+Because enterprise addresses don’t come with stake rights, adopting them implies you’re opting out of the proof-of-stake protocol. Stake rights may not be exercised by exchanges or other entities that control substantial quantities of ada on behalf of other users. Exchanges may indicate that they observe this guideline by utilizing enterprise addresses. Enterprise addresses are automatically removed from the process that determines the slot leadership schedule since they are not connected with any staking key. Employing addresses with no stake rights reduces the overall amount of stake, which aids a prospective attack.
+
+**Reward Account Address**
+
+A reward address is a cryptographic hash of the address’s public staking key. To pay rewards for participating in the proof-of-stake protocol, reward account addresses are used (directly or via delegation).
+
+They possess the following characteristics:
+
+- Account-style accounting is employed rather than UTXO-style
+- Transactions cannot be used to receive funds. Instead, when rewards are paid, their balance is just raised
+- Registered staking keys and reward account addresses have a one-to-one relationship.
+
+When funds are removed from the address, this key is used. Additionally, the stake connected with the funds in the address contributes to the stake of this key. The staking object for a reward address does not have to include any information, just as with enterprise addresses.
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/address.png "Address structure")  
+
+Figure 3.3: Cardano address structure, credit: aiken-lang.org/fundamentals/eutxo
+
+The address is structured in 2, or sometimes 3 parts. An address always contains a header and payment credentials, but may also, optionally, contain delegation credentials. The header describes the address type and the network it is for, the delegation credentials part, while optional, is highly recommended. You have nothing to lose by not delegating your ada!
+
+Credentials, whether payment or delegation, take one of two forms: a verification key hash, or a script hash. As the names suggest, payment credentials control how to spend from the address, while delegation credentials control how to publish certificates and how to withdraw staking rewards. A script allows a developer to code in some arbitrary validation logic.
+
+Don’t worry if you don’t grasp every detail. It's just included for some context. We will elaborate more about scripts later. You can get even more forensic about addresses and their workings by reviewing the Cardano Improvement Proposal, CIP-19, Cardano Addresses.
+
+## Pledging
+
 
 
 [^1]: In a **synchronous system**, operations are coordinated by one, or more, centralized clock signals. An asynchronous digital system, in contrast, has no global clock. Asynchronous systems do not depend on strict arrival times of signals or messages for reliable operation. Coordination is achieved via events such as: packet arrival, changes (transitions) of signals, handshake protocols, and other methods.
