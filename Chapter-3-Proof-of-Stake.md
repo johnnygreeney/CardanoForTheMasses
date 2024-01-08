@@ -133,13 +133,13 @@ Nodes linked to other nodes using a static configuration established in a topolo
 
 The node’s network layer was altered to employ continuous automated discovery and peer selection as the network was shifted from federated to completely decentralized. Upgrades to the network stack were used to accomplish this. Initially, this allowed for enhanced automation of connecting SPO relays to one another, reducing the requirement for static setup. Dynamic peer-to-peer (P2P)[^35] networking came to the Cardano mainnet in March 2023. Nodes could now automatically communicate without the need for static configurations. More about this in the next chapter. 
 
-More information regarding the Cardano network, node communication, and mini protocols that allow this capability may be found in the docs.[^35]
+More information regarding the Cardano network, node communication, and mini protocols that allow this capability may be found in the docs.[^36]
 
 Core and Relay Node Connections
 
 As a stake pool operator, you are concerned with two node types: core nodes and relay nodes. One or more relay nodes must accompany each core node. Core nodes are in charge of creating blocks, whilst relays are in charge of connecting with other relays in the network as well as broadcasting blocks. This distinction influences how they are set up and linked to the network.
 
-For block generation, a core node is set up with several key pairs[^36] and an operational certificate. It only communicates with the relay nodes it has set up. Because a relay node does not need any keys, it is unable to create blocks. It communicates with its core node, relays, and external nodes. Each node should operate on its own server, with the firewall on the core node server set to only accept connections from its relays.
+For block generation, a core node is set up with several key pairs[^37] and an operational certificate. It only communicates with the relay nodes it has set up. Because a relay node does not need any keys, it is unable to create blocks. It communicates with its core node, relays, and external nodes. Each node should operate on its own server, with the firewall on the core node server set to only accept connections from its relays.
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/relay.png "Core and Relay nodes") 
 
