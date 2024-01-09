@@ -162,7 +162,7 @@ The Cardano consensus layer is responsible for two major duties:
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/node.png "Cardano Node") 
 
-Figure 4.1:  Cardano Node component parts  
+Figure 4.1:  Cardano Node component parts, drawing by @_ktorz_
 
 The Cardano node is made up of several interconnected layers:
 
