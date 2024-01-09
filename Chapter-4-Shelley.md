@@ -220,6 +220,74 @@ To achieve all of this, a programming language with exceptional abstraction capa
 
 ## Hard Forking Business  
 
+In the context of the blockchain, a ‘hard fork’ refers to a significant change in the chain, such as switching from one protocol to another. A hard fork in most blockchains denotes block modifications or a change in their interpretation. Typically, when a hard fork is performed, the existing protocol is turned off, new rules and modifications are introduced, and the chain is restarted. A hard-forked chain will be distinct from the prior version, and that the pre-forked blockchain’s history will no longer be accessible.
+
+The Cardano blockchain has hard forked from a federated Byron model to a decentralized Shelley model. This hard fork, on the other hand, was one-of-a-kind. IOG guaranteed a seamless transition to a new protocol while maintaining the history of earlier blocks, rather than making major modifications, the chain did not alter drastically. Instead, it included Byron blocks before adding Shelley blocks after a transition time. There was no ‘turning it on and off again’. The entire history was retained. There has been no downtime or restarts with Cardano, which is not always the case with other chains.
+
+**Hard Fork Combinator**
+
+In Cardano docs and blogs, you may have seen a hard fork referred to as an ‘HFC’ or a ‘HFC event’. A combinator is a technical term that refers to the joining of two or more processes. In the context of Cardano, a hard fork combinator combines protocols, allowing the Byron-to-Shelley transition to be completed without the need for a system restart. It guaranteed that the ledgers of Byron and Shelley display as a single ledger. It was not necessary for all nodes to update at the same time when switching from Ouroboros BFT to Ouroboros Praos. Instead, nodes updated in stages; some running Byron blocks, others running Shelley blocks.
+
+The hard fork combinator is intended to allow the integration of many protocols without requiring major changes. Byron and Shelley blocks are now combined in the Cardano chain. For future ‘hard fork events’, Basho and Voltaire blocks will be combined as well - all as a single property. By simplifying the prior Byron-to-Shelley evolution, this (HFC) hard fork combinator also made the transfer from Shelley to Goguen seamless with gradual, iterative upgrades rolled out as the Allegra, Mary and Alonzo updates. 
+
+**HFC history to date** 
+
+The Cardano platform entered a rapid development phase with the introduction of the Incentivized Testnet in 2019, which marked the beginning of the Shelley era. The Ouroboros Classic consensus system previously supported Byron and ada, and subsequently migrated to Ouroboros Praos. As Cardano decentralized, this was the version of proof-of-stake (PoS) protocol that first powered Shelley. It incorporated monetary rewards into the staking procedure for ada holders and stake pool owners.
+
+In February 2020, IOG upgraded Cardano with a hard fork that moved the mainnet from Ouroboros Classic to Ouroboros BFT, an enhanced version of the original consensus mechanism. This BFT hard fork kicked off a transition phase under Ouroboros BFT, a pared-down version of the protocol aimed to ease the transfer to Praos while still avoiding malicious behavior. Users were unlikely to have noticed. It meant a routine software update for Daedalus wallet users. Exchanges were required to update manually, but they had many weeks to do it and IOG were available to assist.
+
+The ‘Byron reboot’ followed that in March 2020. Many Cardano components received completely new code, including a new node to handle delegation and decentralization, as well as future Shelley features. The new code base was redesigned to be modular, which meant that many components could be updated without impacting the others.
+
+In turn, the BFT served as a springboard for the Shelley hard fork, which happened after the Haskell testnet was complete. For exchanges, ada holders, and wallet users, this second hard fork was similar to the first, a non-event in terms of user disruption. However, although everything seems to be in order on the surface, there was a lot of activity going on behind the scenes. IOG’s developers were hard at work making it a seamless, benign experience for the end user. IOG chief architect Duncan Coutts explained at the time:
+
+>IOG’s blockchain engineers believe in smooth code updates. Instead of trying to do the jump from Ouroboros Classic to Praos in a single update – which would be an incredibly complex task – it’s been a two-stage approach using Ouroboros BFT as an intermediary. The BFT code is compatible with both the Byron-era federated nodes and the Shelley-style nodes released in the Byron reboot. It’s like a relay race: one runner (in our case, running one protocol) enters the handover box where the other runner is waiting; they synchronize their speeds (so they’re perfectly compatible with each other) and then hand over the baton (operating the mainnet), and then the new runner with the baton continues from the handover box for the next lap.
+
+IOG were able to swiftly design and test a new wallet using Daedalus *Flight*, and once everyone was using it on the mainnet, and IOG finished changing over the core nodes, the old code was obsolete. *Flight* is IOGs version of Chrome Canary for Daedalus.
+
+In summary, the only real hard fork for Cardano was the switch from Ouroboros Classic to BFT (February 2020). The Byron mainnet was relaunched to run the BFT protocol, allowing for a smoother transition to Ouroboros Praos with fewer chain disruptions. The BFT protocol was meticulously built to preserve blockchain history and make the blockchain look as a single entity.
+
+As IOG chief executive Charles Hoskinson discussed in his whiteboard video about the hard fork, the goal was to have a ‘graceful entry into Shelley.’ The hard fork combinator was crucial in accomplishing this transition. 
+
+**Goguen Era Updates**
+
+**Allegra (Token Locking)**
+
+Token locking was a feature introduced to the Shelley protocol to allow a variety of smart contract use cases, such as generating and transacting with multi-asset tokens and adding support for the Voltaire voting mechanism. Token locking is the act of reserving a certain number of assets and agreeing not to sell them for a given length of time. This functionality was enabled in the *Allegra* upgrade in December 2020. *Allegra* was named after Allegra Byron, Lord Byron’s daughter and sister to Ada Lovelace. 
+
+Token locking allowed for more complicated deal settlement and fund accounting. It’s used in the following scenarios:
+
+- **Contractual agreement** - when someone engages into a contractual agreement, such as to sell an asset like a painting, it is essential to guarantee that the painting will not be sold to anyone else save the person who pays the money. The token may represent both the painting and the ‘promise’, the actual token locking in this example. The contract becomes invalid if the painting is sold to a different third party
+
+- **Vote registry** - Token locking allows users to lock a set quantity of their tokens to reflect their voting rights inside the Voltaire voting system. Holders of ada tokens who participate in the voting process must ‘lock’ their tokens. This will reflect their voting rights in proportion to their investment and will prevent the hazards of double-counting votes, awarding more votes than is feasible, contradicting votes, or vote duplication
+
+- **Multi-asset tokens** - In addition to ada, Cardano allows for multi-asset tokens, with the ledger supporting the creation and usage of several bespoke token types. Token locking enables ada tokens to be ‘locked’ to create a bespoke asset of equal value.
+
+**Mary (multi-asset support)**
+
+This then paved the way for the *Mary* (multi-asset support) upgrade in March 2021. It was named after Mary Shelley (the author and wife of Shelley). MAS (multi-asset support) means you can record that a particular token is being used for a specified purpose. The token may represent any object that is recorded on (native to) the blockchain ledger, such as ada, and other custom tokens. *Mary* enables users to generate (custom) tokens with unique characteristics and conduct transactions with them directly on the blockchain.
+
+The ledger’s accounting architecture now handles not just ada transactions, but also transactions that hold several asset types at the same time. Developers benefit from native support since they don’t have to write smart contracts to handle bespoke token minting or transactions. Instead, the accounting ledger keeps track of asset ownership and transfers, minimizing unnecessary complexity and the risk of human error while also ensuring considerable cost savings.
+
+To fulfill commercial or business goals, developers, enterprises, and apps can build general purpose (fungible) or specialized (non-fungible) tokens. Custom payment tokens or rewards for decentralized apps, stablecoins pegged to other currencies, and unique assets that represent intellectual property are just a few examples. All of these assets may then be traded, swapped, or used to purchase goods and services.
+
+**Alonzo (smart contracts)**
+
+Still part of the Goguen era, *Alonzo* was the next protocol update in Sept 2021. To enable functional smart contracts, *Alonzo* built on top of transaction metadata, token locking, and native asset functionality. By allowing the development of smart contracts and decentralized apps (dApps) for DeFi (decentralized finance), this update created a diverse platform that opened up options for enterprises and developers.
+
+This functionality is available and enabled by the tools and infrastructure that make up the Plutus Platform. *Alonzo* enhanced Shelley’s basic multi-signature (multisig) scripting language with a rigorous methodology based on formal methods and verification. For more sophisticated and secure scripting capabilities, Multisig was updated into the Plutus Core language. *Alonzo* enables this through extended unspent transaction output (eUTXO) accounting. More on this later.
+
+*Alonzo* was named after Alonzo Church (1903-95). Church was a logician and mathematician who worked on logic and the foundations of theoretical computer science in the US. He is also recognized for establishing lambda calculus, a formal system that may be used to argue that the Entscheidungsproblem is unsolvable. Later, when working with Alan Turing, they realized that the lambda calculus and the Turing machine had equivalent capabilities, displaying numerous mechanical computing processes. Plutus Core (Cardano’s smart contract language) is a variant of lambda calculus, which is one of the reasons for naming the smart contract upgrade after Church.
+
+**Vasil**
+
+Named after a Bulgarian mathematician Vasil Dabov, who was also a Cardano community member, the Vasil hard fork in Sept 2022 brought five key features to boost performance. These were mainly focused on Plutus V2 after CIPs (Cardano Improvement Proposal) were submitted by the community. CIP-31 (Reference Inputs), CIP-32 (Inline Datums), CIP-33 (Reference Scripts), CIP-40 (Collateral Outputs), and diffusion pipelining are discussed later.
+
+The terminology and the use of the same terms in different contexts can get quite confusing. Fear not, as there is page the documentation explaining the difference between an ‘era’ and a ‘phase’, and how a ‘hard fork’ differs from an ‘intra-era hard fork’. Starting with Alonzo, the ‘ledger eras’ are named after mathematicians and computer scientists, kind of like the hurricane naming system but in alphabetical ordering. The release dates are named in honor of Cardano community members.  
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/eras.png "Cardano Eras")
+
+**Figure 4.2:**  Cardano Phases, eras, and intra-era hard forks  
+
 
 **_To be uploaded soon..._**
 
