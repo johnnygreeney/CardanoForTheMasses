@@ -64,6 +64,96 @@ The disadvantages of Ouroboros Classic were that it was vulnerable to adaptive a
 
 **Ouroboros BFT**
 
+Following ‘Classic’ was the Ouroboros BFT paper in 2018 (deployed in May 2020). Cardano employed the Ouroboros BFT (Byzantine Fault Tolerance) protocol during the Byron reboot, which was the transfer of the old Cardano codebase to the new. Ouroboros BFT aided in the preparation of Cardano’s release of Shelley, with it, decentralization.
+
+Rather than needing all nodes to be always available, Ouroboros BFT assumes a federated network of servers and synchronous communication between the servers, allowing for easier and more predictable ledger consensus.
+
+Other advantages include immediate evidence of settlement, transaction settlement at network speed (i.e., the speed of your network connection to an OBFT node determines transaction settlement), and instant confirmation in a single round trip of communication. Each of these has a substantial impact on performance.
+
+**Ouroboros Praos**  (current protocol at time of writing, Jan 2024)
+
+The Ouroboros Praos paper was published in 2018 (deployed in August 2020) and is based on Ouroboros Classic, but with significant security and scalability enhancements. Ouroboros Praos, like Ouroboros Classic, divides transaction blocks into slots, which are then aggregated into epochs. Praos, on the other hand, is inspected in a semi-synchronous context and is safe against adaptive attackers, unlike Ouroboros Classic. 
+
+It presupposes two things: that adversaries may transmit arbitrary messages to any participant at any time, and those adversaries can delay honest participant communications for more than one slot. Praos assures that a powerful attacker cannot guess the next slot leader and conduct a targeted attack (like a DDoS attack) to pervert the protocol by using private-leader selection and forward-secure, key-evolving signatures. Praos can also tolerate adversarial controlled message delivery delays and gradual corruption of individual participants in an evolving stakeholder population, which is critical for maintaining network security in a global setting, as long as an honest majority of stakeholder population is maintained.
+
+**Ouroboros Genesis** (paper 2018, not deployed at time of press, but in development)
+
+Ouroboros Genesis was the fourth version of the protocol and built on Ouroboros Praos by including a unique chain selection mechanism that allows parties to bootstrap from a genesis block — without the requirement for trusted checkpoints or assumptions about prior availability. Genesis also proves the protocol’s universal composability, demonstrating that it may be used with other protocols in real world configurations without weakening its security posture. This boosts its security and long-term viability, as well as that of the networks that use it. Genesis is in development and will allow the IOG relays to finally be turned off, which along with the peer-to-peer deployment, will complete the decentralization of the physical network.
+
+Genesis is being implemented by Tweag (*Tweag.io*). Their Director of Engineering gave an explanation of Genesis at the Dubai Cardano Summit
+
+> so it's effectively..if you're concerned about these ...what are called long range attacks. So attacks that would target the chain in the past, with the intent of having an impact on the future... now Ouroboros is is provably secure under certain conditions provided that the nodes are always online, but if a node joins the network, then those those guarantees don't apply, and so Ouroboros Genesis is about saying 'let's allow nodes to not join the network without needing to talk to a trusted relay'... so this is about decentralization
+
+**Ouroboros Peras** will bring fast finality to Cardano. Block finality is about the point at which a block of transactions is considered permanent and cannot be changed or reversed. There is not much more detail about this at time of writing but we should hear more in 2024.
+
+**~~Ouroboros~~ Hydra**
+
+Hydra is an off-chain scaling architecture that tackles three major scalability issues: large transaction output, low latency, and lightweight storage per node. The Hydra whitepaper proposes and details the inclusion of multi-party state channels, which provide parallel transaction processing to greatly boost Cardano’s transaction-per-second (TPS) output, as well as speedy confirmation of transactions. The paper refers to off-chain ledger siblings — state channels – as heads, reflecting the implementation’s namesake. This makes the ledger multi-headed.
+
+Instead of scaling vertically by adding more powerful hardware, Ouroboros Hydra allows Cardano to expand horizontally, enhancing performance by including extra nodes. Early testing indicates that each head is capable of 1,000 TPS. Hydra is being developed in collaboration with the Ouroboros protocol and the Cardano ledger, although it may be used with other systems as long as they have the same properties as Cardano. Hydra was later decoupled from Ouroboros and became an open-source project in its own right. More about Hydra later in Chapter 8.
+
+**Consensus Redux**
+
+The Consensus Redux paper was published August 2020. This paper discusses the concept of a self-healing ledger. How does the ledger recover when it's been attacked? How does a network recover when it's been attacked? The paper outlines solutions in both categories.
+
+**Ouroboros Crypsinous**
+
+The Crypsinous paper was published in 2019 but has yet to be implemented. Crypsinous is the first privacy-preserving proof-of-stake protocol. It boasts increased security features to protect against adaptive attacks including a coin evolution technique based on SNARKS and key-private forward-secure encryption.
+
+**Ouroboros Chronos** (Paper 2021, not deployed at time of press)
+
+Chronos will deliver greater security and network resilience to communication delays by providing more accurate global timekeeping. To maintain the robustness of any dispersed network, global time synchronization is required. Time synchronization is critical in smart contract implementation, from guaranteeing up-to-date information amongst all participants to maintaining correct transaction processing and block construction.
+
+IOG discovered a means to synchronize clocks across a blockchain in conjunction with experts from the Universities of Edinburgh, Purdue, and Connecticut to create a more secure and tamper-proof global time source. This includes time synchronization from internet of things (IoT) devices, such as supply chain monitoring tools, and general distributed systems, especially if a central clock failure poses a security issue. The research is implemented as Ouroboros Chronos (Greek for ‘Time’). 
+
+Chronos is a cryptographically secure blockchain protocol that also offers an accurate source of time thanks to an innovative time synchronization technique that avoids the flaws of externally maintained clocks. This also enables blockchain to precisely time-stamp transactions, making the ledger more resistant to time-based attacks.
+
+By syncing local time to a uniform network clock with no single point of failure, the new protocol may greatly improve the resilience of essential telecoms, transportation, trade systems, and infrastructures. This scientific accomplishment also represents a huge step toward building completely auditable and fraud-proof financial systems by providing exact time and hence full traceability of all transactions. 
+
+**September 22, 2020, re: Chronos.** CH:
+
+> Ouroboros Chronos was a special paper. Leslie Lamport was one of the first guys to do major work in distributed systems and he wrote this beautiful paper on clocks and time in the distributed system from the 1960s or 1970s. It’s one of the most cited papers of all time in the systems world… ‘Time, clocks, and the ordering of events in a distributed system’ and Chronos was like unfinished business in that respect. It’s fun to write papers like that and it has real use. You can completely decouple a dependency on NTP and these types of things, there’s a lot of theory there.
+
+**Timing is everything** 
+
+Within computer systems and applications, the idea of time is critical. You wouldn’t be able to access any transport layer security (TLS)-based websites, exchange data, or use other cryptographic techniques without this notion.
+
+Time tracking, on the other hand, is a challenging issue to tackle. Accurate time synchronization requires data transfer throughout the whole internet, which costs time as well. It’s also difficult to forecast how long a particular data transfer will take since the network status is continually changing and is influenced by variables like congestion and data size, among others. As a result, discrepancies are common, and it’s critical to supply the tools and solutions necessary for accurate timekeeping.
+
+It’s easy to take timekeeping for granted with basic PCs. Behind the scenes, however, there is a strict protocol to follow. The Network Time Protocol (NTP), for example, uses a worldwide hierarchy of servers to solve the timekeeping problem. This comprises up to 15 Stratums, each with its own routing designed to synchronize in the most efficient way possible. The development of a Bellman-Ford shortest-path spanning tree, which reduces latency and transmission time inconsistencies, also helps.
+
+**Time synching on the Blockchain** 
+
+For distributed ledger technology, the idea of timekeeping is different. The network cannot verify that a transaction being processed is genuine, and does not reverse the prior one, without a correct timestamp. Different timestamping algorithms are employed across a variety of blockchain ledgers; however, they aren’t always reliable. Bitcoin, for example, employs timestamps for consensus security but not for timekeeping.
+
+Timekeeping is also necessary for smart contract execution. Decentralized finance (DeFi) smart contract attacks are vulnerable to inaccuracy. Vulnerabilities in smart contracts aren’t necessarily caused by bad code; time discrepancies should be fixed to prevent any potential attacks on the ledger. Some blockchains, such as Solana, have experienced critical ‘clock drift’ issues.
+
+**Time for reflection**
+
+Building complex trading platforms, such as Axo (axo.trade), is not trivial when calculating exact times on a decentralized blockchain. The topic has been debated in IOG’s blogs, in the docs and more heatedly on twitter.  Although Cardano's current measure of time appears satisfactory to cover many use cases, it is not perfect. To dive deeper into the technical minutiae, it’s best to take in the views of several experts. Axo chief Jarek Hirniak, an experienced developer in trading software, wrote *Time on Cardano*, while Sebastien Guillemot has covered ‘timing’ comprehensively in several of his YouTube videos.
+
+**December 12, 2020. Is Chronos implemented?** CH:
+
+> We'd like to be reliant on nothing and no one, and as decentralized as possible. So, we were the first to address this in the very first paper of its kind, with something called Ouroboros Chronos, but it would be an unnecessary diversion to just go and chase 3 months of implementation to pull Chronos in, when we don't need it as a system right now. […] 
+>
+>The other thing is that Chronos should be implemented with Consensus Redux, should be implemented with Genesis, and should be implemented with fast finality. and high throughput enhancements to the system, so Ouroboros 2 (subsequently named Ouroboros Omega) is a rollup of all the research that we've done which will make it considerably better than anything in market. So, the name of deployment execution is saying ‘what is a problem today? What's a theoretical but unlikely issue? Versus what is a practical and certainly problematic issue to resolve?’ …and understand how to balance things and create a roadmap accordingly.
+
+**Ouroboros Leios**
+
+The Leios paper was published in November 2022 and is surprisingly readable. It was previewed in this video by Professor Aggelos Kiayias. The focus of Leios is Input Endorsers which leverage the aforementioned foundational Ouroboros functionality as well as Mithril (See Chapter 8). As input endorsers are quite technical and based on concepts not discussed yet, they are covered in the last section of *Chapter 8, Basho (Scalability)*. From section 6.2 of the paper:
+
+> Just as Ouroboros Praos+Genesis is a valid combination, Ouroboros Leios+Genesis makes perfect sense too and provides the same benefits. Thus in some sense Leios and Genesis are independent features. In practice Genesis will be deployed by the time that Leios is available and so it would be a regression if the Genesis feature were not included.
+
+**Ouroboros Omega** will be the capstone of all the proof-of-stake research IOG have accomplished since 2016. There should be a paper soon on the ‘convergence of all the ideas.’ 
+
+**February 9, 2021. Can you talk about Ouroboros Omega?** CH:
+
+> Omega is the culmination of all of our research of the last 6 years for Ouroboros: no reliance on external clock, self-healing so it can gradually recover 51% attacks, the ability to bootstrap from Genesis, semi-synchrony, adaptive security, instant finality… all kinds of stuff…multi-validation per block… there's so much stuff …. Things like the consensus Redux paper, the Ledger Combiners paper … the Chronos paper, the Genesis paper, the Praos paper and then all the theory and then some of the engineering acumen, including an improvement to about a thousand TPS (transactions per second). 
+
+## How the Consensus Layer Works
+
+
+
 
 **_To be uploaded soon..._**
 
