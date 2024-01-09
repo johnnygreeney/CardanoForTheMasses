@@ -152,7 +152,73 @@ The Leios paper was published in November 2022 and is surprisingly readable. It 
 
 ## How the Consensus Layer Works
 
+Abstraction is a key feature of the consensus layer.
 
+The Cardano consensus layer is responsible for two major duties:  
+ 
+1. It uses the blockchain consensus mechanism to keep track of transactions. Consensus, or ‘majority of opinion,’ in the context of a blockchain, implies that everyone participating agrees on the one true chain. This means that the consensus layer is responsible for accepting blocks, selecting between rival chains if any exist, and determining when to create its own blocks.
+
+2. It is in charge of preserving all of the information needed to make these judgments. The protocol must verify a block in relation to the state of the ledger before deciding whether to accept it. It must preserve enough history to be able to rebuild the ledger state on a different chain (a different point of a fork in the chain) if it chooses to move to a different chain. It must maintain a mempool of transactions to be placed into those blocks to be able to create blocks.
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/node.png "Cardano Node") 
+
+Figure 4.1:  Cardano Node component parts  
+
+The Cardano node is made up of several interconnected layers:
+
+- The networking layer is based on a P2P (peer-to-peer) networking stack tailored to Ouroboros consensus protocol. This includes a framework which supports pipelining, multiplexing and various protections against adversarial peers.
+
+- The consensus layer is an implementation of the Ouroboros family of protocols. 
+
+- The settlement layer is a multi-era ledger implementation derived from formal specifications. This is where the core Cardano entities are defined as well as the rules for using them. This is the bedrock on top of which consensus and networking are built upon. The settlement layer is completely stateless and only contains pure functions. As a result, it isn’t necessary for the consensus layer to understand the precise nature of the ledger state, or even the contents of the blocks (apart from some header fields required to run the consensus protocol).
+
+- The scripting layer, Haskell code on the Plutus Platform (subject of a later chapter) is a scripting language embedded in the Cardano ledger to provide smart-contract capabilities to the network. 
+
+**Consensus Roles**
+
+The consensus protocol has three major roles: 
+
+1. Leader check (who should produce a block?)
+2. Chain selection
+3. Block verification
+
+The protocol is designed to be independent of a specific block or ledger, allowing a single protocol to be used with a variety of blocks and/or ledgers. As a result, each of these three roles establishes its own ‘picture’ of the data.
+
+Every slot has a **leader check** that determines whether the node should create a block. In practice, the leader check may need the extraction of certain information from the ledger state. The chance of a node being elected as leader (authorized to generate a block) in the Ouroboros Praos consensus protocol, for example, is dependent on its stake, the node’s stake. 
+
+The process of selecting between two competing chains is known as **chain selection**. The chain length is the most important selection criteria here, however other protocols may have extra requirements. Blocks, for example, are usually signed using a ‘hot’ key that lives on the server and created by a ‘cold’ key that never appears on any networked device. If the hot key is compromised, the node operator may create a new one using the cold key and ‘delegate’ to it. A consensus protocol will favor the newer hot key over two chains of similar length, ie. Each chain includes a tip signed by the same cold key but a different hot key.
+
+**Block validation** is primarily a ledger problem; checks such as ensuring all transaction inputs are accessible to prevent double spending are specified in the ledger layer. What’s within the blocks is mainly unknown to the consensus layer; in fact, it may not even be a cryptocurrency, but a distinct use of blockchain technology. IOG used the example of a Pokémon ledger on Ouroboros previously. However, block headers include a few items that are expressly designed to aid the consensus layer.
+
+**Node configuration**
+
+To execute, each protocol may need certain static data, such as keys to sign blocks, a unique id for the leader check, and so on. This is referred to as the ‘node configuration.’
+
+**The ledger state**
+
+The consensus layer not only handles the ledger state but also operates the consensus protocol. It is unconcerned with the look of the ledger state; instead, it assumes that some form of ledger state is connected with a block type.
+
+If a block is invalid, you may get an error while applying it to the ledger state. The ledger layer defines the precise kind of ledger errors, which are ledger specific. The Shelley ledger, for example, will have staking errors, but the Byron ledger would not since it does not enable staking; and ledgers that aren’t crypto ledgers will have quite different errors.
+
+The Cardano consensus layer was created with the Cardano blockchain in mind, which initially ran Byron and was updated to run Shelley. It’s fair to ask why didn’t IOG developers create for that particular blockchain first? Then generalize when utilizing the consensus layer for other blockchains? However, there would have been significant drawbacks in doing so:
+
+- It would obstruct IOG’s capacity to conduct tests. They wouldn’t be able to choose which nodes create blocks when, they wouldn’t be able to use a dual ledger, and so on
+
+- It would entangle things that should be logically separate. The Shelley ledger, in the abstract method, is made up of three parts: a Byron chain, a Shelley chain, and a hard fork combinator that connects the two. Without abstractions, such separation of concerns would be more difficult to establish, resulting in code that was more complex to comprehend and maintain
+
+- Abstract code is less likely to include flaws. For example, since the dual ledger combinator is polymorphic  in the two ledgers it combines, and they are of different types, IOG couldn’t construct type correct code that attempts to apply the main block to the auxiliary ledger
+
+- When the time inevitably comes to instantiate the consensus layer for a new blockchain, writing it in an abstract manner from the start forces IOG to think carefully about the design and avoid coupling things that shouldn’t be coupled, or making assumptions that may or may not be true in general. It might be difficult to fix such issues once the design has been implemented.
+
+To achieve all of this, a programming language with exceptional abstraction capabilities is required, and Haskell is well equipped in this regard.
+
+**January 10, 2021. Please explain Cardano being 100x more decentralized than BTC or others, how is this calculated?** CH:
+
+>It’s calculated by those who produce blocks, so if you have a hundred times the unique entities producing blocks, then we say it’s a hundred times more decentralized, but there are many measurements of decentralization. You can look at network propagation, so how many full nodes you have. You can look at unique development entities responsible for it …you can look at the funding sources and see how many unique funding sources are there. You can see the totality of the user count…
+>
+>You can see it by the total applications on the system but usually when we say decentralization, we strictly mean the amount of nodes participating in the consensus process and how many unique people are making blocks. In the case of bitcoin, 3 to 5 usually make the same blocks again and again… and we consistently have 300 to 500 stake pools consistently making blocks that are unique. There’s over 1200 registered (currently over 3,000), so I feel very comfortable in the 100x statement, but reasonable people can have different definitions, there’s no consensus in the industry of what decentralization is.
+
+## Hard Forking Business  
 
 
 **_To be uploaded soon..._**
