@@ -393,6 +393,78 @@ In May 2023, the Cardano Foundation conducted a SPO on-chain poll, a new mechani
 
 ## Ouroboros lays the foundation for the Basho Era
 
+Considering all the features and functionality introduced by the hard forks we just talked about, it's not a surprise that network activity would pick up, but Cardano’s design will enable it to bend and adapt as needed.
+
+**Network bandwidth**   
+
+All Cardano activities are built on top of networking. The Cardano network distributes transactions and blocks among nodes all around the globe that build and validate the blockchain. This is known as data diffusion, and it is necessary for the consensus protocol to make judgments by providing the necessary information to nodes. These choices move the chain forward, since node consensus guarantees that all transactions are confirmed and approved, allowing them to be included in a new block in a transparent manner.
+
+The speed with which the system as a whole operates is influenced by network performance. This covers things like:
+
+- *throughput* (amount of data transferred)
+- *timeliness* (time for block adoption)
+
+These two needs are in direct opposition to one another. When the created blocks are used as effectively as possible, throughput can be increased. This, in turn, requires adequate buffering to offset latency, reducing the negative effects of a globally distributed system. When the system is saturated, more buffering may frequently suggest greater block (and network) usage, but it comes at the expense of higher latency (time to adoption in the chain).
+
+**A block’s budget**
+
+To comprehend how quickly Cardano transactions and scripts may be completed, the concept of the block budget is key. A block’s total size strikes a balance between maximizing network use and reducing transaction latencies. A single block may include a variety of transactions, including smart contracts written in Plutus, native tokens, metadata, and straightforward ada transactions (payments).       
+
+Another attribute is the block time budget, which is a set amount of time allowed to complete all of the transactions in a single block. This is split between the amount of time available for Plutus script execution and the amount of time available for other transactions. This attribute guarantees that transactions containing Plutus scripts do not consume the available time budget, and that basic payments may always be processed in the same block as Plutus scripts. 
+
+The entire time budget for creating each block (including networking overhead) is set to 1 second, with a Plutus script execution budget of around 50 milliseconds. This is a reasonable provision; IOG’s testing has demonstrated that many scripts on a testing environment will run in 1 millisecond or less.
+
+The block time budget was set initially at 1 second. Due to security concerns, the Praos consensus process picks just a small proportion (1 in 20) of the blocks that might possibly be added to the chain. Obviously, the size and effective payloads of various transactions will change. A single transaction, for example, may close off an entire Catalyst voting round, moving millions of dollars in value.
+
+As previously stated, each block contains a number of transactions submitted by end users through wallets, the command-line interface (CLI), and other means. These transactions are stored in the mempool, a temporary in-memory storage space, until they are ready to be processed and included in a block. As a block is minted, pending transactions are removed from the mempool, allowing new transactions to be added. The potential of nodes being overwhelmed during high-demand times was eliminated by employing a fixed-size mempool, although this meant that a wallet or application may have needed to re-submit transactions. The mempool size was determined using queueing models.
+
+**Stress testing the network**
+
+Ouroboros is built to manage massive amounts of data, as well as transactions and scripts of various sizes and complexity. With the settings in place the Cardano network was still only using around 25% of its capacity on average in October 2021. Of course, the most efficient option is for Cardano to operate at or near 100% capacity (network saturation). While many networking systems would suffer in such circumstances, Ouroboros and the Cardano network stack have been engineered to be fair and very durable even in the face of extreme saturation. 
+
+Benchmarking data reveals that even at 200% saturation, overall performance remains stable, and no network failures occur. Even with stress tested at 44x, there were no problems in the entire network capacity (though some transactions may be slightly delayed). Backpressure is used to regulate the overall system load, which is how the network is meant to function. 
+
+While certain users participating in a big NFT drop may suffer lengthier wait times for their transactions or may need to resubmit the rare transaction from a large batch (or spread the drops over a longer time period), this does not indicate that the network is not coping. It really signifies that the network is working properly. It’s referred to as ‘graceful degradation,’ and you can understand in more detail by reading the network design paper. See ‘Cardano Upcoming NFT drops.’
+
+**Wallet types**   
+
+End-user wallets submit payments and other transactions to the blockchain on their behalf, as well as monitor the blockchain’s progress. One of the most important functions of a wallet is to submit transactions on behalf of the user, validate that they have been approved into the blockchain, and retry them if the first attempt fails. That is, when the network saturates, the wallet should consider the implications of backpressure as well as other network effects (temporary disconnection, possible chain forks, etc). Wallets may be one of two types:
+
+- Full-node wallets (like Daedalus), which operate a node that connects directly to the Cardano network using local compute and network resources
+
+- Light wallets, on the other hand, take advantage of pooled processing and networking resources to service a large number of users.
+
+Both kinds of wallets may need to retry transactions during times of strong demand (e.g., an NFT drop). Light wallets may need to temporarily scale available compute and network resources to meet user demand since they share resources across numerous users. Full node wallets, on the other hand, may be unaffected. Transactions may be somewhat delayed, but each wallet will have the dedicated resources, including its own network connections, to attempt the submission. dApp providers should follow similar principles: if particular network endpoints are offered, system resources should be adjusted to match demand.
+
+## Chain v transaction confirmation
+
+*‘What is Cardano’s TPS (transactions per second)?’* is one of the most common questions on Crypto Twitter. How many network confirmations does Cardano require before a transaction goes through? The solutions to these concerns necessitate a more in-depth examination of the principles of chain confirmation and transaction confirmation, as well as their relationship to the protocol.
+
+**Chain confirmation**
+
+This is the threshold at which the protocol guarantees that the chain will not change any further due to randomness or random occurrences. After enough future k blocks have been issued, chain confirmation happens at some point in the future. The stability window is the period between now and when chain confirmation for a certain transaction happens (that is, the number of slots required for a block to become stable, where stability is defined as a block that cannot be rolled back). The formula for calculating this window is:
+
+            3k/f 
+
+- where k is the parameter that restricts a pool’s growth by lowering its rewards yield beyond a particular threshold, 
+- f is the parameter that determines a pool’s maximum size 
+
+**Transaction confirmation**
+
+When a transaction is accepted into the chain, it becomes immutable at this point. The terms ‘block depth’ and ‘settlement window’ are used here. If the block containing the transaction is deep enough in the chain, it is deemed confirmed. Deep enough is a relative term: the depth of a block shows how many further blocks have been added to the chain since that block was introduced. Because blocks have depth, the transactions included within them have depth as well.
+
+The transaction is deemed verified when the depth of a specific block exceeds a certain threshold, and the assets in that transaction can be used ‘safely’ (i.e., the protocol can guarantee the transaction is immutable, so the assets can be traded, exchanged, etc).
+
+The settlement window is the amount of time between when a transaction is confirmed and when the transaction’s assets may be utilized to swap with other assets. A transaction becomes immutable as soon as its depth is greater than 3k/f slots (that is, 129600 slots on current mainnet, or 36 hours). 
+
+**The chance of immutability**
+
+Another factor to examine when deciding whether or not a transaction is verified is its possibility of immutability. The likelihood of a transaction being immutable is proportional to the number of blocks added to the chain since the transaction was approved. The bigger the number of blocks added, the more likely the transaction will become immutable. When a transaction’s depth exceeds 3k/f slots, it becomes immutable. The Ouroboros Praos protocol guarantees this.
+
+Sebastien Guillemot covers transaction finality, amongst other in things, in this informative deep dive on *Cardano & Algorand: Leader Selection Explained*
+
+## P2P (peer-to-peer)
+
 
 **_To be uploaded soon..._**
 
