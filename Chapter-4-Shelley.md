@@ -474,14 +474,14 @@ Sebastien Guillemot covers transaction finality, amongst other in things, in thi
 [^3]:  Comparing 4 decentralized data storage offerings, techtarget.com/searchstorage/tip/Comparing-4-decentralized-data-storage-offerings
 [^4]: A **gossip protocol** is a procedure or process of computer peer-to-peer communication that is based on the way epidemics spread. Some distributed systems use peer-to-peer gossip to ensure that data is routed to all members of an ad-hoc network. Some ad-hoc networks have no central registry and the only way to spread common data is to rely on each member to pass it along to their neighbors.
 [^5]: 6 types of blockchain consensus mechanisms, essentialcardano.io/article/6-types-of-blockchain-consensus-mechanisms
-[^6]:
-[^7]:
-[^8]:
-[^9]:
-[^10]:
-[^11]:
-[^12]:
-[^13]:
+[^6]: Fernando Sanchez, ‘Why They’re Calling Cardano the Green Blockchain’, iohk.io/en/blog/posts/2021/08/17/why-they-re-calling-cardano-the-green-blockchain/
+[^7]: About stake pools, docs.cardano.org/getting-started/operating-a-stake-pool/about-stake-pools
+[^8]: Lark Davis interview, youtu.be/BptZkkNN3tw?t=575
+[^9]: Mempool role in multiple transactions, docs.cardano.org/core-concepts/multiple-transactions
+[^10]: Kiayias, Russell (2018) 'Ouroboros-BFT: A Simple Byzantine Fault Tolerant Consensus Protocol', eprint.iacr.org/2018/1049.pdf
+[^11]: David, Gazi, Kiayias, Russell (2017) 'Ouroboros Praos: An adaptively-secure, semi-synchronous proof-of-stake blockchain', eprint.iacr.org/2017/573.pdf
+[^12]: Badertscher, Gazi, Kiayias, Russell, Zikas (2019), 'Ouroboros Genesis: Composable Proof-of-Stake Blockchains with Dynamic Availability', eprint.iacr.org/2018/378.pdf
+[^13]: The framework of **universal composability** is a general-purpose model for the analysis of cryptographic protocols. It guarantees very strong security properties. Protocols remain secure even if arbitrarily composed with other instances of the same or other protocols. Security is defined in the sense of protocol emulation. Intuitively, a protocol is said to emulate another one, if no environment (observer) can distinguish the executions. Literally, the protocol may simulate the other protocol (without having access to the code). The notion of security is derived by implication.
 [^14]:
 [^15]:
 [^16]:
@@ -489,8 +489,74 @@ Sebastien Guillemot covers transaction finality, amongst other in things, in thi
 [^18]:
 [^19]:
 [^20]:
-
-
+[^21]:
+[^22]:
+[^23]:
+[^24]:
+[^25]:
+[^26]:
+[^27]:
+[^28]:
+[^29]:
+[^30]:
+[^31]:
+[^32]:
+[^33]:
+[^34]:
+[^35]:
+[^36]:
+[^37]:
+[^38]:
+[^39]:
+[^40]:
+[^41]:
+[^42]:
+[^43]:
+[^44]:
+[^45]:
+[^46]:
+[^47]:
+[^48]:
+[^49]:
+[^50]:
+[^51]:
+[^52]:
+[^53]:
+[^54]:
+[^55]:
+[^56]:
+[^57]:
+[^58]:
+[^59]:
+[^60]:
+[^61]:
+[^62]:
+[^63]:
+[^64]:
+[^65]:
+[^66]:
+[^67]:
+[^68]:
+[^69]:
+[^70]:
+[^71]:
+[^72]:
+[^73]:
+[^74]:
+[^75]:
+[^76]:
+[^77]:
+[^78]:
+[^79]:
+[^80]:
+[^81]:
+[^82]:
+[^83]:
+[^84]:
+[^85]:
+[^86]:
+[^87]:
+[^88]:
 [^89]:
 [^90]:
 [^91]:
