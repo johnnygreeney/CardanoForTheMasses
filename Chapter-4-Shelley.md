@@ -719,52 +719,51 @@ tip: gets the node's current tip (slot number, hash, and block number)
 [^49]:  How we will launch Shelley, youtube.com/watch?v=g7uySEgt06c
 [^50]:  Cardano Allegra and Mary hard fork changes explained, youtube.com/watch?v=9mjvXjxTks8
 [^51]:  **Plutus Core** is the programming language in which scripts on the Cardano blockchain are written. Plutus Core is a small functional programming language — a formal specification is available. Plutus Core is not read or written by humans; it is a compilation target for other languages.
-[^52]: 
-[^53]: **Lambda calculus (λ-calculus)** is a formal system in math logic for expressing computation based on function abstraction and application using variable binding and substitution. It is a universal model of computation that can be used to simulate any Turing machine. It was introduced by the mathematician Alonzo Church in the 1930s as part of his research into the foundations of mathematics. 
-[^54]:  In math and computer science, the **Entscheidungsproblem** (pronounced German for ‘decision problem’) is a challenge posed by David Hilbert and Wilhelm Ackermann in 1928. The problem asks for an algorithm that takes as input a statement of a first-order logic and answers ‘Yes’ or ‘No’ according to whether the statement is universally valid, i.e., valid in every structure satisfying the axioms. By the completeness theorem of first-order logic, a statement is universally valid if and only if it can be deduced from the axioms, so the Entscheidungsproblem can also be viewed as asking for an algorithm to decide whether a given statement is provable from the axioms using the rules of logic.
-[^55]:  A **Turing machine** is a mathematical model of computation that defines an abstract machine, which manipulates symbols on a strip of tape according to a table of rules. Despite the model’s simplicity, given any computer algorithm, a Turing machine capable of simulating that algorithm’s logic can be constructed.
-[^56]: Development phases and eras on Cardano, docs.cardano.org/explore-cardano/eras-and-phases
-[^57]: Surprise AMA 06/05/2020, youtu.be/6pQzQbVgX7c?t=2449
-[^58]: Protocol Parameters, cips.cardano.org/cip/CIP-0009
-[^59]: Current Cardano Parameter Settings, adapools.org/protocol-parameters
-[^60]: Special 4th of July Surprise AMA, youtu.be/1qoeLinJ3rg?t=3278
-[^61]: Alexander Russel, iohk.io/en/research/library/authors/alexander-russel/
-[^62]: The **Bitcoin halving** is when the reward for Bitcoin mining is halved. Halving takes place every 4 years. The halving policy was written into Bitcoin's mining algorithm to counteract inflation by maintaining scarcity
-[^63]:  Cardano Pledge, Rewards, and Network Security with Kevin, Lars, and Duncan | TCE 90, youtube.com/watch?v=X-ziLksiPOE
-[^64]: Cardano Mainnet: Pledge Influence Factor Analysis, reddit.com/r/cardano/comments/gfed1l/cardano_mainnet_pledge_influence_factor_analysis
-[^65]: Rare Bloom Day Two Cardano Livestream, youtu.be/eBH34WkU_2w?t=16180
-[^66]: Apr SPO Call - Discord Stage follow-up, input-output.typeform.com/report/Row2tnqQ/HSCUwpltfMyJ7yp7
-[^67]: Oct 25 2022: Cardano MinPool Fee Discussion, youtu.be/Gz8J5vX1Rnk
-[^68]: @adamKdean, twitter.com/adamKDean/status/1612118333603860480?t=mM5focPvmY-GKax-lOkAPA
-[^69]: Cardano (ADA) & Silver Bullets | Cardano Rumor Rundown #514, youtube.com/watch?v=yWRwncQd4Vs&t=28s
-[^70]: Staking parameters and network optimization – where next for ‘k’ and ‘min fee’?, essentialcardano.io/article/staking-parameters-and-network-optimization-where-next-for-k-and-min-fee
-[^71]: Surprise AMA 01/07/2023, youtube.com/watch?v=djhKk-3rYhU&t=328s
-[^72]: Entering Voltaire: on-chain poll for SPOs, cardanofoundation.org/en/news/entering-voltaire-on-chain-poll-for-spos/
-[^73]: CIP-0094? | SPO On-chain Polls #496, github.com/cardano-foundation/CIPs/pull/496
-[^74]: **Backpressure**: Cardano is designed to automatically deal with heavy traffic. Ouroboros and the network stack function even when saturated. If the network is saturated, Cardano can use the admission control method to regulate and restore normalcy. This is the term ‘backpressure’ mentioned in blogs and documentation, it is basically a strategy for network load management.
-[^75]: An **NFT drop** is the release of a non-fungible token project. A drop refers to the exact date, time, and generally the minting price of the NFT. Many NFT drops have purchase limits that apply to the number of NFTs you are able to mint in one transaction. 
-[^76]: Coutts, Davies, Szamotulski, Thompson (2020) 'Introduction to the design of the Data Diffusion and Networking for Cardano Shelley', hydra.iohk.io/build/7249613/download/1/network-design.pdf
-[^77]: Cardano Upcoming NFT Drops, nftcalendar.io/b/cardano/ 
-[^78]: Cardano & Algorand: Leader Selection Explained, youtu.be/3k3ls7pzlKg 
-[^79]: P2P networking docs, docs.cardano.org/explore-cardano/cardano-network/p2p-networking
-[^80]: io-sim, github.com/input-output-hk/io-sim 
-[^81]: Polymorphism is the provision of a single interface to entities of different types .
-[^82]: Multiplexing, docs.cardano.org/explore-cardano/cardano-network/networking-protocol/#multiplexin 
-[^83]: Ouroboros.Network.PeerSelection.Governor, input-output-hk.github.io/ouroboros-network/ouroboros-network/Ouroboros-Network-PeerSelection-Governor.html 
-[^84]: Kevin Hammond, P2P Network talk @ 2hr 30min, twitter.com/InputOutputHK/status/1593884394715897858?s=20&t=0mPqLNPBdJ7vFHxTGFW6ew
-[^85]: Kolyvas, Voulgaris (2022), 'CougaR: Fast and Eclipse-Resilient Dissemination for Blockchain Networks'
+[^52]: **Lambda calculus (λ-calculus)** is a formal system in math logic for expressing computation based on function abstraction and application using variable binding and substitution. It is a universal model of computation that can be used to simulate any Turing machine. It was introduced by the mathematician Alonzo Church in the 1930s as part of his research into the foundations of mathematics. 
+[^53]:  In math and computer science, the **Entscheidungsproblem** (pronounced German for ‘decision problem’) is a challenge posed by David Hilbert and Wilhelm Ackermann in 1928. The problem asks for an algorithm that takes as input a statement of a first-order logic and answers ‘Yes’ or ‘No’ according to whether the statement is universally valid, i.e., valid in every structure satisfying the axioms. By the completeness theorem of first-order logic, a statement is universally valid if and only if it can be deduced from the axioms, so the Entscheidungsproblem can also be viewed as asking for an algorithm to decide whether a given statement is provable from the axioms using the rules of logic.
+[^54]:  A **Turing machine** is a mathematical model of computation that defines an abstract machine, which manipulates symbols on a strip of tape according to a table of rules. Despite the model’s simplicity, given any computer algorithm, a Turing machine capable of simulating that algorithm’s logic can be constructed.
+[^55]: Development phases and eras on Cardano, docs.cardano.org/explore-cardano/eras-and-phases
+[^56]: Surprise AMA 06/05/2020, youtu.be/6pQzQbVgX7c?t=2449
+[^57]: Protocol Parameters, cips.cardano.org/cip/CIP-0009
+[^58]: Current Cardano Parameter Settings, adapools.org/protocol-parameters
+[^59]: Special 4th of July Surprise AMA, youtu.be/1qoeLinJ3rg?t=3278
+[^60]: Alexander Russel, iohk.io/en/research/library/authors/alexander-russel/
+[^61]: The **Bitcoin halving** is when the reward for Bitcoin mining is halved. Halving takes place every 4 years. The halving policy was written into Bitcoin's mining algorithm to counteract inflation by maintaining scarcity
+[^62]:  Cardano Pledge, Rewards, and Network Security with Kevin, Lars, and Duncan | TCE 90, youtube.com/watch?v=X-ziLksiPOE
+[^63]: Cardano Mainnet: Pledge Influence Factor Analysis, reddit.com/r/cardano/comments/gfed1l/cardano_mainnet_pledge_influence_factor_analysis
+[^64]: Rare Bloom Day Two Cardano Livestream, youtu.be/eBH34WkU_2w?t=16180
+[^65]: Apr SPO Call - Discord Stage follow-up, input-output.typeform.com/report/Row2tnqQ/HSCUwpltfMyJ7yp7
+[^66]: Oct 25 2022: Cardano MinPool Fee Discussion, youtu.be/Gz8J5vX1Rnk
+[^67]: @adamKdean, twitter.com/adamKDean/status/1612118333603860480?t=mM5focPvmY-GKax-lOkAPA
+[^68]: Cardano (ADA) & Silver Bullets | Cardano Rumor Rundown #514, youtube.com/watch?v=yWRwncQd4Vs&t=28s
+[^69]: Staking parameters and network optimization – where next for ‘k’ and ‘min fee’?, essentialcardano.io/article/staking-parameters-and-network-optimization-where-next-for-k-and-min-fee
+[^70]: Surprise AMA 01/07/2023, youtube.com/watch?v=djhKk-3rYhU&t=328s
+[^71]: Entering Voltaire: on-chain poll for SPOs, cardanofoundation.org/en/news/entering-voltaire-on-chain-poll-for-spos/
+[^72]: CIP-0094? | SPO On-chain Polls #496, github.com/cardano-foundation/CIPs/pull/496
+[^73]: **Backpressure**: Cardano is designed to automatically deal with heavy traffic. Ouroboros and the network stack function even when saturated. If the network is saturated, Cardano can use the admission control method to regulate and restore normalcy. This is the term ‘backpressure’ mentioned in blogs and documentation, it is basically a strategy for network load management.
+[^74]: An **NFT drop** is the release of a non-fungible token project. A drop refers to the exact date, time, and generally the minting price of the NFT. Many NFT drops have purchase limits that apply to the number of NFTs you are able to mint in one transaction. 
+[^75]: Coutts, Davies, Szamotulski, Thompson (2020) 'Introduction to the design of the Data Diffusion and Networking for Cardano Shelley', hydra.iohk.io/build/7249613/download/1/network-design.pdf
+[^76]: Cardano Upcoming NFT Drops, nftcalendar.io/b/cardano/ 
+[^77]: Cardano & Algorand: Leader Selection Explained, youtu.be/3k3ls7pzlKg 
+[^78]: P2P networking docs, docs.cardano.org/explore-cardano/cardano-network/p2p-networking
+[^79]: io-sim, github.com/input-output-hk/io-sim 
+[^80]: Polymorphism is the provision of a single interface to entities of different types .
+[^81]: Multiplexing, docs.cardano.org/explore-cardano/cardano-network/networking-protocol/#multiplexin 
+[^82]: Ouroboros.Network.PeerSelection.Governor, input-output-hk.github.io/ouroboros-network/ouroboros-network/Ouroboros-Network-PeerSelection-Governor.html 
+[^83]: Kevin Hammond, P2P Network talk @ 2hr 30min, twitter.com/InputOutputHK/status/1593884394715897858?s=20&t=0mPqLNPBdJ7vFHxTGFW6ew
+[^84]: Kolyvas, Voulgaris (2022), 'CougaR: Fast and Eclipse-Resilient Dissemination for Blockchain Networks'
 iohk.io/en/research/library/papers/cougar-fast-and-eclipse-resilient-dissemination-for-blockchain-networks/
-[^86]: Dynamic P2P is available on mainnet, iohk.io/en/blog/posts/2023/03/16/dynamic-p2p-is-coming-to-cardano/ 
-[^87]: Cardano weekly dev updates, essentialcardano.io/development-update 
-[^88]: IOG Engineering updates, engineering.iog.io/archive/ 
-[^89]: SPO Masterclass: Cardano Network Health Monitoring Q&A, youtube.com/watch?v=hahYBjNrhEs&t=2s
-[^90]: A **nonce** is an arbitrary number that can be used just once in a cryptographic communication. It is similar in spirit to a nonce word, hence the name. It is often a random or pseudo-random number issued in an authentication protocol to ensure that old communications cannot be reused in replay attacks.
-[^91]: Explanation of the nonce value, docs.cardano.org/explore-cardano/explain-nonce
-[^92]: Twitter Space ‘Sunday Chat with Charles’, twitter.com/IOHK_Charles/status/1515872352395055109?s=20&t=ivZvNmtLVKrKk_ZEg-1e_A 
-[^93]: Marcin Szamotulski, ‘Cardano’s Path to Decentralization’, iohk.io/en/blog/posts/2020/07/09/cardanos-path-to-decentralization-by-marcin-szamotulski/ 
-[^94]: Decentralization unpacked with Colin Edwards, Duncan Coutts, Lars Brunjes & Shawn McMurdo , youtu.be/mXYIQDUitYI 
-[^95]: Charles Hoskinson Explains Cardano's Secret Weapon (Project Catalyst), youtube.com/watch?v=vQOvX-HAQDQ 
-[^96]: Comparing the decentralization of Cardano and Ethereum, cexplorer.io/article/comparing-the-decentralization-of-cardano-and-ethereum 
-[^97]: The **minimum attack vector (MAV)** is the minimum number of participants required to hijack control in order to attack, or manipulate, the network.  
-[^98]: The first of its kind, introducing the Edinburgh Decentralization Index, youtube.com/watch?v=8GJQDsH854Q
-[^99]: Karakostas, Kiayias, Ovezik (2022), 'SoK: A Stratified Approach to Blockchain Decentralization', arxiv.org/abs/2211.01291
+[^85]: Dynamic P2P is available on mainnet, iohk.io/en/blog/posts/2023/03/16/dynamic-p2p-is-coming-to-cardano/ 
+[^86]: Cardano weekly dev updates, essentialcardano.io/development-update 
+[^87]: IOG Engineering updates, engineering.iog.io/archive/ 
+[^88]: SPO Masterclass: Cardano Network Health Monitoring Q&A, youtube.com/watch?v=hahYBjNrhEs&t=2s
+[^89]: A **nonce** is an arbitrary number that can be used just once in a cryptographic communication. It is similar in spirit to a nonce word, hence the name. It is often a random or pseudo-random number issued in an authentication protocol to ensure that old communications cannot be reused in replay attacks.
+[^90]: Explanation of the nonce value, docs.cardano.org/explore-cardano/explain-nonce
+[^91]: Twitter Space ‘Sunday Chat with Charles’, twitter.com/IOHK_Charles/status/1515872352395055109?s=20&t=ivZvNmtLVKrKk_ZEg-1e_A 
+[^92]: Marcin Szamotulski, ‘Cardano’s Path to Decentralization’, iohk.io/en/blog/posts/2020/07/09/cardanos-path-to-decentralization-by-marcin-szamotulski/ 
+[^93]: Decentralization unpacked with Colin Edwards, Duncan Coutts, Lars Brunjes & Shawn McMurdo , youtu.be/mXYIQDUitYI 
+[^94]: Charles Hoskinson Explains Cardano's Secret Weapon (Project Catalyst), youtube.com/watch?v=vQOvX-HAQDQ 
+[^95]: Comparing the decentralization of Cardano and Ethereum, cexplorer.io/article/comparing-the-decentralization-of-cardano-and-ethereum 
+[^96]: The **minimum attack vector (MAV)** is the minimum number of participants required to hijack control in order to attack, or manipulate, the network.  
+[^97]: The first of its kind, introducing the Edinburgh Decentralization Index, youtube.com/watch?v=8GJQDsH854Q
+[^98]: Karakostas, Kiayias, Ovezik (2022), 'SoK: A Stratified Approach to Blockchain Decentralization', arxiv.org/abs/2211.01291
