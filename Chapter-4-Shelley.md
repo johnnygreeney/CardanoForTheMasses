@@ -680,14 +680,14 @@ To dig deeper into the EDI, study the research paper which outlines the framewor
 [^11]: David, Gazi, Kiayias, Russell (2017) 'Ouroboros Praos: An adaptively-secure, semi-synchronous proof-of-stake blockchain', eprint.iacr.org/2017/573.pdf
 [^12]: Badertscher, Gazi, Kiayias, Russell, Zikas (2019), 'Ouroboros Genesis: Composable Proof-of-Stake Blockchains with Dynamic Availability', eprint.iacr.org/2018/378.pdf
 [^13]: The framework of **universal composability** is a general-purpose model for the analysis of cryptographic protocols. It guarantees very strong security properties. Protocols remain secure even if arbitrarily composed with other instances of the same or other protocols. Security is defined in the sense of protocol emulation. Intuitively, a protocol is said to emulate another one, if no environment (observer) can distinguish the executions. Literally, the protocol may simulate the other protocol (without having access to the code). The notion of security is derived by implication.
-[^14]:
-[^15]:
-[^16]:
-[^17]:
-[^18]:
-[^19]:
-[^20]:
-[^21]:
+[^14]: Cardano Summit 2023 - LIVE at the IOG booth, youtube.com/live/0JRtWUR4doM?feature=shared&t=2640
+[^15]: **State channels** refer to the process in which users transact with one another directly outside of the blockchain, or 'off-chain,' and greatly minimize their use of 'on-chain' operations.
+[^16]: Hydra Head GitHub, github.com/orgs/input-output-hk/projects/21
+[^17]: Badertscher, Gazi, Kiayias, Russell, Zikas (2020), ‘Consensus Redux: Distributed Ledgers in the Face of Adversarial Supremacy’, eprint.iacr.org/2020/1021.pdf
+[^18]: Kerber, Kohlweiss, Kiayias, Zikas (2019), ‘Ouroboros Crypsinous Privacy-preserving proof-of-stake’, eprint.iacr.org/2018/1132.pdf
+[^19]: **SNARK** stands for ‘Succinct Non-Interactive Argument of Knowledge.’ A (zero knowledge) zk-SNARK is a cryptographic proof that allows one party to prove it possesses certain information without revealing that information. This proof is made possible using a secret key created before the transaction takes place.
+[^20]: Badertscher, Gazi, Kiayias, Russell, Zikas (2019),‘Ouroboros Chronos: Permissionless Clock Synchronization via Proof-of-Stake’, eprint.iacr.org/2019/838.pdf
+[^21]: The **Internet of Things (IoT)** is a system of interrelated computing devices, mechanical and digital machines, objects, animals or people that are provided with unique identifiers (UIDs) and the ability to transfer data over a network without requiring human-to-human or human-to-computer interaction.
 [^22]:
 [^23]:
 [^24]:
