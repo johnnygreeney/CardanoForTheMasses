@@ -1,6 +1,6 @@
 # Chapter 5: Goguen (Smart Contracts)
 
-*‘The most damaging phrase in the language is... it’s always been done this way’* ― Grace Hopper
+*‘The most damaging phrase in the language is... it’s always been done this way’* <br>― Grace Hopper
 
 <br><br><br><br><br><br><br><br><br><br><br>
 
