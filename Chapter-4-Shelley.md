@@ -475,25 +475,25 @@ During the Byron era the P2P ran as a federated system, with nodes connected by 
 
 Cardano’s network is a cutting edge, self-organizing network. It includes block producing nodes, relay nodes connecting the network and supporting nodes like Daedalus full node wallets, exchange nodes, etc. The network binds all these nodes together. The SPOs run the block producing nodes which isolate themselves from the network using relays, which talk directly with the rest of the network. The relays take care of the overall network connectivity. 
 
-A deeper dive into the intricacies around the techniques and mini-protocols involved is in the documentation. Some of the innovative tools used by IOG include IOsim, an open-source Haskell package which allows IOG to stress test the network with heavy network traffic to help them run simulations of rare large-scale events. 
+A deeper dive into the intricacies around the techniques and mini-protocols involved is in the documentation.[^78] Some of the innovative tools used by IOG include IOsim,[^79] an open-source Haskell package which allows IOG to stress test the network with heavy network traffic to help them run simulations of rare large-scale events. 
 
-The network is also parametrically polymorphic, meaning there is a degree of separation of the network layer from the rest of the cardano-node code. This allows the ledger and consensus layers to be developed independently of the node code, so critical updates to the network and node don’t need to happen at the same time. 
+The network is also parametrically polymorphic,[^80] meaning there is a degree of separation of the network layer from the rest of the cardano-node code. This allows the ledger and consensus layers to be developed independently of the node code, so critical updates to the network and node don’t need to happen at the same time. 
 
-All connections are multiplexed which means combining a series of mini protocols into a single Transmission Control Protocol (TCP) connection channel. This has three benefits: bidirectional peer communication (any peer may commence communication with no constraints since both parties have read and write rights inside the same channel), and improved node-to-node communication without compromising performance. It also makes troubleshooting easier as you have less connections.
+All connections are multiplexed[^81] which means combining a series of mini protocols into a single Transmission Control Protocol (TCP) connection channel. This has three benefits: bidirectional peer communication (any peer may commence communication with no constraints since both parties have read and write rights inside the same channel), and improved node-to-node communication without compromising performance. It also makes troubleshooting easier as you have less connections.
 
-The P2P governor keeps track of connections and which peers are active and doing well. It optimizes network speed and reliability on an hourly basis. Peers are divided into three kinds:
+The P2P governor[^82] keeps track of connections and which peers are active and doing well. It optimizes network speed and reliability on an hourly basis. Peers are divided into three kinds:
 
 - **cold peers**: peers that are known of, but where there is no established connection
 - **warm peers**: where a connection is established but it is used only for network measurements and not for any application-level consensus protocols
 - **hot peers**: peers where the connection is actively used for the application-level consensus protocols.
 
-IOG’s Technology Manager Kevin Hammond gave a clever analogy during his ScotFest talk:
+IOG’s Technology Manager Kevin Hammond gave a clever analogy during his ScotFest talk:[^83]
 
 > By hot connections, what I mean is me, and the people in this room are hot connections. Warm connections are the people watching me on YouTube, you're not active in this room at this point in time, but you could be very shortly, if you come to Edinburgh… Cold connections, those who are not yet connected, but we’re aware of, people who aren't watching the YouTube video live but will watch it later. The cold connections may become (promoted) to warm connections when they watch the YouTube video, and then perhaps (promoted) to hot connections at some point in the future…this is the fundamental concept that we are using with the p2p governor system
 
 **P2P roadmap**
 
-To get to a self-organizing, fully automated, decentralized P2P network, the network needs to pass through the following four phases. This strategy was not drawn up on the back of a beer mat but based on deep technical research beyond the scope of this beginners’ book.
+To get to a self-organizing, fully automated, decentralized P2P network, the network needs to pass through the following four phases. This strategy was not drawn up on the back of a beer mat but based on deep technical research[^84] beyond the scope of this beginners’ book.
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/p2p1.png "P2P roadmap 1") 
 
@@ -505,9 +505,9 @@ Hybrid Mode is the current state of the network at time of writing. In this setu
 
 **Figure 4.4**: Dynamic p2p phase, from Kevin Hammond ScotFest talk
 
-Dynamic P2P was rolled out in 2023. This phase introduces a dynamic self-discovery layer between the SPOs. Rather than having a manual configuration, there is now an automatic self-configuring, reconfiguring layer. SPOs don’t have to go and download the latest list of relays, the relay nodes themselves will automatically reconfigure the network keeping it optimized and secure.
+Dynamic P2P was rolled out[^85] in 2023. This phase introduces a dynamic self-discovery layer between the SPOs. Rather than having a manual configuration, there is now an automatic self-configuring, reconfiguring layer. SPOs don’t have to go and download the latest list of relays, the relay nodes themselves will automatically reconfigure the network keeping it optimized and secure.
 
-As always, it’s best to check IOG’s weekly dev updates for the very latest. For those more technical, there are regular updates from engineering teams in the archive.
+As always, it’s best to check IOG’s weekly dev updates[^86] for the very latest. For those more technical, there are regular updates from engineering teams in the archive.[^87]
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/p2p3.png "P2P roadmap 3")
 
@@ -523,7 +523,7 @@ The final stage 4 is ‘peer sharing’ when the orange nodes above will be intr
 
 **Cardano Foundation role in network resilience** 
 
-The Cardano Foundation also plays an active role in ensuring the network is resilient. They guide SPOs in best practices and provide tooling. For example, at the Dubai Cardano Summit, Markus Gufler held a Masterclass to demo a network health monitoring tool which gives SPOs a way to understand the scope and limits of pool operations, as well as the global network, by combining telemetry data together.
+The Cardano Foundation also plays an active role in ensuring the network is resilient. They guide SPOs in best practices and provide tooling. For example, at the Dubai Cardano Summit, Markus Gufler held a Masterclass[^88] to demo a network health monitoring tool which gives SPOs a way to understand the scope and limits of pool operations, as well as the global network, by combining telemetry data together.
 
 ## Cardano Entropy (Randomness)
 
@@ -533,7 +533,7 @@ The entropy parameter specifies Cardano’s randomization source. Outside of the
 
 **Entropy addition mechanism**
 
-To appreciate the entropy addition mechanism, one must first comprehend completely decentralized block generation and how the transition nonce will impact this process.
+To appreciate the entropy addition mechanism, one must first comprehend completely decentralized block generation and how the transition nonce[^89] will impact this process.
 
 The Ouroboros protocol uses an evolving sequence of leadership nonces to decide which pools are chosen as block producers (cryptographic seeds used to generate a sequence of values using a repeatable random number generation algorithm). These nonces determine the block production schedule. This timetable is determined by each leader nonce for a whole 5-day epoch, during which the nonce controls the stake pools used to guide the development of each block. To achieve the basic ledger features needed, the leadership nonces and stake distributions develop in lockstep.
 
@@ -543,7 +543,7 @@ IOG added a transition nonce to the running leadership nonce just after March 31
 
 The transition nonce is a reflection of entropy generated by a multitude of external, unpredictable sources determine the transition nonce, and thus contribute directly to Ouroboros’ perpetual cycle of randomness generation.
 
-A user gives a nonce for a transaction when using the Cardano command line interface (cardano-CLI), however the nonce retrieved when viewing the details of the transaction is different. You can review more details and the relevant command line options in Cardano docs here.
+A user gives a nonce for a transaction when using the Cardano command line interface (cardano-CLI), however the nonce retrieved when viewing the details of the transaction is different. You can review more details and the relevant command line options in Cardano docs here.[^90]
 
 **February 2, 2021… How can you explain verifiable randomness to a layman?** CH:
 
@@ -585,7 +585,7 @@ The transaction cost is dependent on the transaction size, as indicated by param
 
 Regardless of the magnitude of the transaction, the value of b is the fee that must be paid. The purpose of this option is to avoid Distributed Denial-of-Service (DDoS) attacks. b makes such attacks extremely costly and removes the chance of an attacker flooding the system with millions of small transactions.
 
-From Twitter Space, April 18, 2022, ‘Sunday Chat with Charles’ **Re: Rewards going down, compensated by Transaction fees.** 
+From Twitter Space, April 18, 2022, ‘Sunday Chat with Charles’ **Re: Rewards going down, compensated by Transaction fees.**[^91] 
 
 > Well, there’s a formal curve in the specification, so if you look at the inflation, it’s over a 140-year period, I think, so it goes down. But it’s bounded and there’s precise formulas for how that works. It’s unlike Bitcoin, which has a step function which reduces every four years by half. This is a continuous emission decline, so it’s a nice gradual monotonically decreasing curve that’s quite smooth.
 >
@@ -617,7 +617,7 @@ The number of stake pools continues to grow and grow, with a good number of them
 
 The introduction of peer-to-peer (P2P) networking is the second pillar of Cardano’s decentralization. The goal is to connect geographically dispersed pools to create a safe and reliable blockchain platform.
 
-This feature will leverage a collection of mini protocols and a categorization of cold, warm, and hot peers on mainnet to allow a node to make the best connection choice possible. In terms of networking, there was a hybrid era where SPOs had to use manual methods to maintain network connections. As SPOs took over block production at d=0, all core nodes were decommissioned. IOG continued to maintain relays, but the SPO network are gradually taking over this duty. To learn more about this, watch March 2021 Cardano360 episode, in which IOG’s principal architect Duncan Coutts outlined the P2P future. 
+This feature will leverage a collection of mini protocols[^92] and a categorization of cold, warm, and hot peers on mainnet to allow a node to make the best connection choice possible. In terms of networking, there was a hybrid era where SPOs had to use manual methods to maintain network connections. As SPOs took over block production at d=0, all core nodes were decommissioned. IOG continued to maintain relays, but the SPO network are gradually taking over this duty. To learn more about this, watch March 2021 Cardano360 episode,[^93] in which IOG’s principal architect Duncan Coutts outlined the P2P future. 
 
 **3. Decentralized Governance** 
 
@@ -627,7 +627,7 @@ At the same time, something even more powerful has emerged with Project Catalyst
 
 Cardano’s ultimate goal is to create a blockchain where a community of stakeholders make practical choices regarding the chain’s protocol and growth, which is supported by a layer of robust governance. Catalyst was the forerunner of Voltaire, the development era that will usher in the third and ultimate degree of decentralization by integrating governance and on-chain decision-making/voting. Chapter 9 is all about the Age of Voltaire and how the governance mechanisms will be rolled out.
 
-**September 8, 2021. Re: Catalyst.** CH:
+**September 8, 2021. Re: Catalyst.** CH:[^94]
 
 > The cryptocurrency space, as a whole, is not aware of this yet, they're still thinking that it's just all centralized and top down, and there's a few people floating around who make all these calls. They don't really understand that we've silently built one of the world's largest decentralized organizations and decentralized decision-making machines, and it's in its infancy.
 >
@@ -643,14 +643,14 @@ Cardano’s ultimate goal is to create a blockchain where a community of stakeho
 
 With a regulatory vacuum and no requirement for transparency, it’s not hard to make a digital asset look superficially attractive. With no agreed definition of what decentralization is, who is to say something is not decentralized? Who decides on the criteria of what we are all supposed to be measuring? Who has any remit in a permissionless and open industry? With many blockchains categorized based on high-level criteria, they are often very different once you look closer.
 
-Consider just some of the findings from a well-researched article by the *Cardanians (cardanians.io)* published in October 2022:
+Consider just some of the findings from a well-researched article[^95] by the *Cardanians (cardanians.io)* published in October 2022:
 
 - Cardano has one entity (Binance) with more than 10% share in the network. Ethereum has numerous such entities with largest having 30%+ share
-- Cardano’s minimum attack vector (MAV) is approx 24, Ethereum and Bitcoinn both have a MAV of 3. 
+- Cardano’s minimum attack vector (MAV)[^96] is approx 24, Ethereum and Bitcoinn both have a MAV of 3. 
 - Anyone can stake their ada on Cardano, with no need to entrust your ada to a third party. You can spend or withdraw your ada anytime. Liquid staking means your funds are never locked. With Ethereum, there is no protocol-level stake delegation. If you have less than 32 ETH, you are obliged to trust a validator with your coins and signing keys.
 - It is easy and inexpensive to run a Cardano stake pool. On Ethereum, you are required to lock 32 ETH to run a validator (stake pool equivalent). 
 
-While the above study is compelling and the numbers speak for themselves, such a study is complex and nuanced as configurations change all the time. Definitions of the different terms vary based on who you ask. Clearly, a more permanent and objective formal analysis is required. An academic institute may be the best candidate to host such a research agenda. Enter the *Edinburgh Decentralization Index (EDI)*, a project launched by Dr. Daniel Woods and Prof Aggelos Kiayias at ScotFest  The goal is to propose a structured approach to quantifying decentralization in blockchain systems. 
+While the above study is compelling and the numbers speak for themselves, such a study is complex and nuanced as configurations change all the time. Definitions of the different terms vary based on who you ask. Clearly, a more permanent and objective formal analysis is required. An academic institute may be the best candidate to host such a research agenda. Enter the *Edinburgh Decentralization Index (EDI)*, a project launched by Dr. Daniel Woods and Prof Aggelos Kiayias at ScotFest.[^97] The goal is to propose a structured approach to quantifying decentralization in blockchain systems. 
 
 The EDI will be a bellwether for the industry, a north star for retail investors, regulatory bodies, and governments. The research at Edinburgh is a collaborative, interdisciplinary initiative spearheaded by one of IOG’s oldest academic partners, the UoE’s Blockchain Technology Laboratory (BTL).
 
