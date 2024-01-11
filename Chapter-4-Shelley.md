@@ -465,9 +465,207 @@ Sebastien Guillemot covers transaction finality, amongst other in things, in thi
 
 ## P2P (peer-to-peer)
 
+The **networking layer** of Cardano is a physical infrastructure that unifies nodes and their interactions into a single system. The network disseminates transaction and block generation information to all active nodes. The system validates and adds blocks to the chain in this manner, as well as verifying transactions. As a result, a distributed network of nodes must have minimal communication latency and be robust enough to deal with outages, capacity restrictions, and hackers.
 
-**_To be uploaded soon..._**
+If there is to be complete decentralization in terms of block generation, it’s also critical that there is decentralization of network connectivity as well. Cardano achieves this with peer-to-peer (P2P) networking.
 
+During the Byron era the P2P ran as a federated system, with nodes connected by a static configuration defined in a topology file. Since Shelley, the system then moved to a hybrid mode. During this transition, IOG added a manually constructed peer-to-peer (P2P) network of stake pool operator (SPO) relay nodes.  SPO core nodes could now connect to both federated relay nodes and to other SPO-run relay nodes. This connectivity was not automated but still enabled the exchange of block and transaction information without relying on federated nodes. The goal was to switch off all federated relay nodes so that SPOs can connect to each other’s relays. 
+
+**How it works**
+
+Cardano’s network is a cutting edge, self-organizing network. It includes block producing nodes, relay nodes connecting the network and supporting nodes like Daedalus full node wallets, exchange nodes, etc. The network binds all these nodes together. The SPOs run the block producing nodes which isolate themselves from the network using relays, which talk directly with the rest of the network. The relays take care of the overall network connectivity. 
+
+A deeper dive into the intricacies around the techniques and mini-protocols involved is in the documentation. Some of the innovative tools used by IOG include IOsim, an open-source Haskell package which allows IOG to stress test the network with heavy network traffic to help them run simulations of rare large-scale events. 
+
+The network is also parametrically polymorphic, meaning there is a degree of separation of the network layer from the rest of the cardano-node code. This allows the ledger and consensus layers to be developed independently of the node code, so critical updates to the network and node don’t need to happen at the same time. 
+
+All connections are multiplexed which means combining a series of mini protocols into a single Transmission Control Protocol (TCP) connection channel. This has three benefits: bidirectional peer communication (any peer may commence communication with no constraints since both parties have read and write rights inside the same channel), and improved node-to-node communication without compromising performance. It also makes troubleshooting easier as you have less connections.
+
+The P2P governor keeps track of connections and which peers are active and doing well. It optimizes network speed and reliability on an hourly basis. Peers are divided into three kinds:
+
+- **cold peers**: peers that are known of, but where there is no established connection
+- **warm peers**: where a connection is established but it is used only for network measurements and not for any application-level consensus protocols
+- **hot peers**: peers where the connection is actively used for the application-level consensus protocols.
+
+IOG’s Technology Manager Kevin Hammond gave a clever analogy during his ScotFest talk:
+
+> By hot connections, what I mean is me, and the people in this room are hot connections. Warm connections are the people watching me on YouTube, you're not active in this room at this point in time, but you could be very shortly, if you come to Edinburgh… Cold connections, those who are not yet connected, but we’re aware of, people who aren't watching the YouTube video live but will watch it later. The cold connections may become (promoted) to warm connections when they watch the YouTube video, and then perhaps (promoted) to hot connections at some point in the future…this is the fundamental concept that we are using with the p2p governor system
+
+**P2P roadmap**
+
+To get to a self-organizing, fully automated, decentralized P2P network, the network needs to pass through the following four phases. This strategy was not drawn up on the back of a beer mat but based on deep technical research beyond the scope of this beginners’ book.
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/p2p1.png "P2P roadmap 1") 
+
+**Figure 4.3:** ‘Hybrid’ Mode, from Kevin Hammond ScotFest talk
+
+Hybrid Mode is the current state of the network at time of writing. In this setup, the black nodes are block producing nodes, which connect via the red circles (relays). The community has produced a manual topology that allows block producing relays to connect with each other. The backbone, the outer ring, is the set of relays that is currently operated by IOG, which the exchanges, Daedalus wallets and light wallets connect with. 
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/p2p2.png "P2P roadmap 2")
+
+**Figure 4.4**: Dynamic p2p phase, from Kevin Hammond ScotFest talk
+
+Dynamic P2P was rolled out in 2023. This phase introduces a dynamic self-discovery layer between the SPOs. Rather than having a manual configuration, there is now an automatic self-configuring, reconfiguring layer. SPOs don’t have to go and download the latest list of relays, the relay nodes themselves will automatically reconfigure the network keeping it optimized and secure.
+
+As always, it’s best to check IOG’s weekly dev updates for the very latest. For those more technical, there are regular updates from engineering teams in the archive.
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/p2p3.png "P2P roadmap 3")
+
+**Figure 4.5**: ‘Genesis’ phase, from Kevin Hammond ScotFest talk
+
+The third stage is Ouroboros Genesis, which is in design and development. Genesis will enable secure node bootstrapping by removing the need for the IOG relays. The outer layer will be gone, leaving a completely peer-supported network.
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/p2p4.png "P2P roadmap 4")
+
+**Figure 4.6**: ‘Peer sharing’ phase, from Kevin Hammond ScotFest talk
+
+The final stage 4 is ‘peer sharing’ when the orange nodes above will be introduced. These will be well connected nodes, run by the community, which will maintain and establish the network. So, then you will no longer have to go to a trusted sources to download the latest set of known relay peers, individual nodes will automatically reconfigure, and the network will be self-organizing. 
+
+**Cardano Foundation role in network resilience** 
+
+The Cardano Foundation also plays an active role in ensuring the network is resilient. They guide SPOs in best practices and provide tooling. For example, at the Dubai Cardano Summit, Markus Gufler held a Masterclass to demo a network health monitoring tool which gives SPOs a way to understand the scope and limits of pool operations, as well as the global network, by combining telemetry data together.
+
+## Cardano Entropy (Randomness)
+
+It shouldn’t be possible to anticipate or influence future blockchain states if the system is genuinely decentralized. All future on-chain events must be fully random. Cardano makes this possible by including an extra entropy mechanism that may be applied to assure the system’s randomness. Any complicated cryptographic system relies on true randomness. A source of pure, unexpected randomness must exist for a cryptographic environment, like the Cardano blockchain, to operate and be accepted by the community as truly decentralized and fair. This assures that the chain’s future path cannot be altered by anybody with knowledge of the past.
+
+The entropy parameter specifies Cardano’s randomization source. Outside of the Cardano ecosystem, this signifies something unexpected, ensuring that no one can ‘hijack’ the blockchain’s randomness. This parameter’s value was computed based on occurrences that could not have been predicted in advance or about which anybody might have had insider knowledge.
+
+**Entropy addition mechanism**
+
+To appreciate the entropy addition mechanism, one must first comprehend completely decentralized block generation and how the transition nonce will impact this process.
+
+The Ouroboros protocol uses an evolving sequence of leadership nonces to decide which pools are chosen as block producers (cryptographic seeds used to generate a sequence of values using a repeatable random number generation algorithm). These nonces determine the block production schedule. This timetable is determined by each leader nonce for a whole 5-day epoch, during which the nonce controls the stake pools used to guide the development of each block. To achieve the basic ledger features needed, the leadership nonces and stake distributions develop in lockstep.
+
+**Nonce Value**
+
+IOG added a transition nonce to the running leadership nonce just after March 31, 2022. When the stake distribution for the April 10 epoch was decided, the transition nonce then had to depend on random values (which are introduced by on-chain transactions) that can’t be anticipated. This emphasizes transactions that emerge on the blockchain between the 12-hour mark — when the stake distribution is settled — and the 42-hour mark, when the hash value is removed.
+
+The transition nonce is a reflection of entropy generated by a multitude of external, unpredictable sources determine the transition nonce, and thus contribute directly to Ouroboros’ perpetual cycle of randomness generation.
+
+A user gives a nonce for a transaction when using the Cardano command line interface (cardano-CLI), however the nonce retrieved when viewing the details of the transaction is different. You can review more details and the relevant command line options in Cardano docs here.
+
+**February 2, 2021… How can you explain verifiable randomness to a layman?** CH:
+
+> That’s easy so imagine your gambling against the server, you know, like for example you’re playing Blackjack. So, when you play Blackjack in human life, you have the dealer and the dealer playing against you and he’s giving you cards, you want to believe that the deck is randomly shuffled but it doesn’t have to be. What if the dealer had pre-set the cards up so he always gets good cards, and you get bad cards? So, what does a dealer do to give you some faith in the process? He shuffles the cards in front of you. If you believe that shuffling is a randomization process then you will be satisfied that you’re playing a fair game, but the problem is what happens if you can’t see them shuffle the cards?
+>
+> This is the problem when you gamble with central servers, so you’re playing blackjack against blackjackstarz.com or whatever the hell these sites are. Well, how do you know that that’s a fair deck? Well, they have a random number generator, but how do you know it’s not biased so that they win more than you win? Well, you trust that maybe a regulator stepped in and did that. What if you had a cryptographic protocol, you could verify the person’s running and you trust the protocol to produce true randomness, then that protocol would guarantee that they’re shuffling correctly.
+>
+> That has to be done for a proof-of-stake system. Why? Because we are replacing traditional proof of work, where it’s a meritocratic thing where your computer is chipping away at computations, with a synthetic lottery proportional to your amount of stake you have in the system. So, if you have 25% of the total stake in the system, you should win on average 25% of the time. But what if randomness is biased? Then what can happen is even though you have 25% (of the stake), maybe you only win 8% of the time, because I biased the numbers in a way to reduce your chance of winning. So, you have to have faith that the randomness in the system is secure, it’s true.
+
+## Fees on Cardano
+
+Cardano has a transaction fee scheme that covers the cost of transaction processing and long-term storage.
+
+Fees are not paid directly to the block maker in the Cardano ecosystem, which is unusual in the blockchain world. They are instead pooled and given to all pools that produced blocks during an epoch. There are no costs for the memory cost of keeping track of the accumulated chain state, specifically UTXO.
+
+**Halting economic attacks**
+
+The Shelley hard fork changed the Cardano blockchain from federated to entirely decentralized, thus increasing the incentive for bad actors to carry out economic attacks.
+
+
+When the running costs of the operators of a system are not compensated by fees imposed on the system’s users, an economic attack could occur. These conditions enable users to impose charges on operators without incurring the whole cost themselves, possibly resulting in a significant decline in operator involvement and, eventually, the system’s collapse.
+
+Cardano’s fee structure is straightforward.
+
+The structure of fees is based on two constants (a and b). 
+
+- *a* and *b* are protocol parameters, and the method for determining minimum fees for a transaction (tx) is a * size(tx) + b
+- size(tx) is the size of the transaction in bytes.
+
+**Protocol parameters**
+
+Cardano’s update system may adjust protocol settings to respond and adapt to changes in transaction volume, hardware pricing, and ada valuation. Changing these settings is considered a hard fork since it affects which transactions the system accepts.
+
+**Parameter a**
+
+The transaction cost is dependent on the transaction size, as indicated by parameter a. Larger transactions require more resources to store and complete a transaction.
+
+**Parameter b**
+
+Regardless of the magnitude of the transaction, the value of b is the fee that must be paid. The purpose of this option is to avoid Distributed Denial-of-Service (DDoS) attacks. b makes such attacks extremely costly and removes the chance of an attacker flooding the system with millions of small transactions.
+
+From Twitter Space, April 18, 2022, ‘Sunday Chat with Charles’ **Re: Rewards going down, compensated by Transaction fees.** 
+
+> Well, there’s a formal curve in the specification, so if you look at the inflation, it’s over a 140-year period, I think, so it goes down. But it’s bounded and there’s precise formulas for how that works. It’s unlike Bitcoin, which has a step function which reduces every four years by half. This is a continuous emission decline, so it’s a nice gradual monotonically decreasing curve that’s quite smooth.
+>
+> Now Cardano is unique, unlike Bitcoin, where sidechains are going to really change things. So what people don’t seem to understand is that when a sidechain comes out, the sidechain is going to do its quorum sampling from stake pool operators. And when you mine that sidechain, you have to pay a block reward to get those stake pool operators interested in it, but then that gets paid to the operators and to the delegators, just like ada rewards are.
+>
+> So as a sidechain ecosystem starts building up, and we have dozens and eventually hundreds of sidechains, that means when you hold ada, in addition to getting ada rewards, you’ll also get tokens from all the sidechains that are supported. So that plus transaction fees is really going to change the calculus. The other thing is that ada is a very volatile asset. So yeah, block rewards are worth something, but you know, ada was $3 less than seven months ago. It could be $5 in seven months. It could be $0.05 in seven months. So, percentages certainly matter, but the real value does as well. And there’s some elasticity there. So, I think the introduction of sidechains increases the transaction volume, and then also the volatility of the price of the underlying asset is going to really be a game changer for the return for holding in that respect, and this is what makes it fun.
+>
+> You know, the other thing is multi-resource consensus is going to come at some point. It’s one of our proposals for the long-term road map, and there, you’ll have different ways of creating resources for consensus, and those could either be directly monetized with ada or they could be monetized with a different asset. So, there’s a lot there. That said, ada is a deflationary asset. Bitcoin Maxis (maximalists) seem to hate us, but we actually have the same monetary policy in that respect.
+>
+> Fixed supply 45 billion, we’re gradually earning our way up to it and it’s monotonically decreasing inflation. So it’s a deflationary asset, at its core, and that’s one of the reasons why a lot of people like ada. But there’s going to be a whole ecosystem of tokens, a constellation of them, and lots of utility and things to do. DeFi also changes the equation as well, because you can use your ada and DeFi at the same time, so you can also augment your yields to offset the decline in yields. So, it just basically comes down to what your risk profile is from that respect.
+
+## The 3 different sides of full Decentralization
+
+Decentralization is the transfer of power from a central authority to smaller entities. However, in the context of cryptocurrencies and blockchain, this definition merely scratches the surface. Cardano’s technological road to complete decentralization gradually unfolded, with stake pool operators (SPOs) producing varying degrees of blocks, peer-to-peer (P2P) network discovery, and ‘gossip’ with peers trading information among themselves. It entails the implementation of sophisticated community-led governance and decision-making mechanisms, with completely decentralized software and protocol changes as a result.
+
+**Pushing power to the edges**
+
+The balance of power has moved from the people to businesses like Facebook and Google, resulting in a virtual information monopoly. Centralized authority has data hegemony over their customers due to their unassailable market positions.
+
+Decentralization is the antidote to power concentration and the dangers it entails. Decentralization allows individuals to make choices and decisions, restores personal information ownership to the individual, pushes authority to the margins, and gives every network member (or ada holder) a stake. Cardano’s decentralization is built on three principles: block production, networking, and governance. These are inextricably intertwined and work together to produce a cohesive result: complete decentralization, which lies at their intersection.
+
+**1. Decentralized block production**
+
+To develop and prosper, every blockchain depends on the creation of new blocks. Core nodes – maintained by IOG, Emurgo, and the Cardano Foundation – were solely responsible for building blocks and maintaining the network throughout the Byron era deployment. Shelley and the Incentivized Testnet, which launched in 2019, served as a testbed for decentralized block production. The Incentivized Testnet experiment demonstrated that Cardano could be supported by a network of community-run stake pools. 
+
+The number of stake pools continues to grow and grow, with a good number of them forming blocks and rewarding delegates. Exchanges control some, while single-pool community operators handle others. Everyone contributes to the network’s worth. The former because of their capacity to attract new ada holders into the ecosystem, and the latter because of their contribution to decentralization and grassroots involvement. IOG is dedicated to promoting decentralization, and while they tweaked parameters in the past, the reigns will be handed over to the community gradually with the *Age of Voltaire.* 
+
+**2. Decentralized Network**
+
+The introduction of peer-to-peer (P2P) networking is the second pillar of Cardano’s decentralization. The goal is to connect geographically dispersed pools to create a safe and reliable blockchain platform.
+
+This feature will leverage a collection of mini protocols and a categorization of cold, warm, and hot peers on mainnet to allow a node to make the best connection choice possible. In terms of networking, there was a hybrid era where SPOs had to use manual methods to maintain network connections. As SPOs took over block production at d=0, all core nodes were decommissioned. IOG continued to maintain relays, but the SPO network are gradually taking over this duty. To learn more about this, watch March 2021 Cardano360 episode, in which IOG’s principal architect Duncan Coutts outlined the P2P future. 
+
+**3. Decentralized Governance** 
+
+Cardano has already got transaction metadata and native tokens thanks to the Goguen rollout. Since the Shelley launch, this has perhaps been the most visible evidence of Cardano’s development and success.
+
+At the same time, something even more powerful has emerged with Project Catalyst: an active community of builders, innovators, and entrepreneurs. The Catalyst community has a worldwide membership of entrepreneurs, professionals, and specialists from a variety of fields that make up this pool of decentralized talent, which offers a broad reservoir of innovation to guarantee the greatest and brightest ideas receive the financing they deserve.
+
+Cardano’s ultimate goal is to create a blockchain where a community of stakeholders make practical choices regarding the chain’s protocol and growth, which is supported by a layer of robust governance. Catalyst was the forerunner of Voltaire, the development era that will usher in the third and ultimate degree of decentralization by integrating governance and on-chain decision-making/voting. Chapter 9 is all about the Age of Voltaire and how the governance mechanisms will be rolled out.
+
+**September 8, 2021. Re: Catalyst.** CH:
+
+> The cryptocurrency space, as a whole, is not aware of this yet, they're still thinking that it's just all centralized and top down, and there's a few people floating around who make all these calls. They don't really understand that we've silently built one of the world's largest decentralized organizations and decentralized decision-making machines, and it's in its infancy.
+>
+> We have constructed this meta brain, that runs this meta machine in the sky, and all these people whether in the south of France, or an island, or right here in Colorado with a lobster on the mic... we somehow just come together, with different values, different languages, different perceptions of reality and we converge to a point where we actually can vote on, and move forward, and make change and get funding behind people... more and more of the community is going to be involved in deciding the direction and governance of Cardano in general.
+>
+> What's so cool about this is it's completely bottom up. There's not a lot of top down here, the top down stuff is just ensuring that there's best practices and good infrastructure ...and asking questions about what tools we need to construct and how do we improve things? ...but the solutions are coming bottom up, and it's growing rapidly, and more and more people come in every time we do a fund, it just massively increases [..]...we don't even have the mobile interfaces in yet, or the Daedalus integration in yet.
+>
+> Half a million, million people are going to be in this club next year, if not more. So this is a great opportunity for us to kind of explain where this is going, and why this is the heart of Cardano and what's going to make Cardano frankly not only here to stay, but the dominant protocol of all the protocols.
+
+## Edinburgh Decentralization Index   
+
+‘Decentralized’ has become a meaningless buzzword for many crypto projects. How does one judge claims with so much misinformation, willful ignorance, FUD (fear, uncertainty and doubt) and good old-fashioned greed and corruption prevalent? The politest description of many claims is that they are subjective and warrant scrutiny. Blockchain and crypto are complex and nuanced for most casual investors, who have little time in their busy lives to do any deep research into projects. 
+
+With a regulatory vacuum and no requirement for transparency, it’s not hard to make a digital asset look superficially attractive. With no agreed definition of what decentralization is, who is to say something is not decentralized? Who decides on the criteria of what we are all supposed to be measuring? Who has any remit in a permissionless and open industry? With many blockchains categorized based on high-level criteria, they are often very different once you look closer.
+
+Consider just some of the findings from a well-researched article by the *Cardanians (cardanians.io)* published in October 2022:
+
+- Cardano has one entity (Binance) with more than 10% share in the network. Ethereum has numerous such entities with largest having 30%+ share
+- Cardano’s minimum attack vector (MAV) is approx 24, Ethereum and Bitcoinn both have a MAV of 3. 
+- Anyone can stake their ada on Cardano, with no need to entrust your ada to a third party. You can spend or withdraw your ada anytime. Liquid staking means your funds are never locked. With Ethereum, there is no protocol-level stake delegation. If you have less than 32 ETH, you are obliged to trust a validator with your coins and signing keys.
+- It is easy and inexpensive to run a Cardano stake pool. On Ethereum, you are required to lock 32 ETH to run a validator (stake pool equivalent). 
+
+While the above study is compelling and the numbers speak for themselves, such a study is complex and nuanced as configurations change all the time. Definitions of the different terms vary based on who you ask. Clearly, a more permanent and objective formal analysis is required. An academic institute may be the best candidate to host such a research agenda. Enter the *Edinburgh Decentralization Index (EDI)*, a project launched by Dr. Daniel Woods and Prof Aggelos Kiayias at ScotFest  The goal is to propose a structured approach to quantifying decentralization in blockchain systems. 
+
+The EDI will be a bellwether for the industry, a north star for retail investors, regulatory bodies, and governments. The research at Edinburgh is a collaborative, interdisciplinary initiative spearheaded by one of IOG’s oldest academic partners, the UoE’s Blockchain Technology Laboratory (BTL).
+
+The EDI will be based on a unified framework for assessing different aspects of decentralization. The researchers will start with Bitcoin and eventually include other chains. The index measures the following criteria: 
+
+- Hardware
+- Software
+- Network
+- Consensus mechanism
+- Tokenomics
+- API
+- Governance
+- Validators’ geographic distribution
+
+To dig deeper into the EDI, study the research paper which outlines the framework.
 
 [^1]: A server is a computer program or device that provides a service to another computer program and its user, also known as the client.
 [^2]: **BitTorrent** is a communication protocol for peer-to-peer (P2P) file sharing which is used to distribute data and electronic files over the Internet. BitTorrent is one of the most common protocols for transferring large files, such as digital files containing movies or music.
