@@ -2,6 +2,8 @@
 
 *‘The most damaging phrase in the language is... it’s always been done this way’* ― Grace Hopper
 
+<br><br><br><br><br><br><br><br><br><br><br>
+
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/eutxo5.png "eutxo tweet") 
 
 ## Extended UTXO 
