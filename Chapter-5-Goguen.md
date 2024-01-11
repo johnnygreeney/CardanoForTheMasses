@@ -15,7 +15,7 @@ Cardano aimed to create an Extended UTXO (eUTXO) accounting model by combining B
 **How does the accounting model work?**
 
 
-**_To be uploaded soon..._**
+**_Rest of chapter to be uploaded soon..._**
 
 
 
