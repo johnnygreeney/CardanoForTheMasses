@@ -665,7 +665,7 @@ The EDI will be based on a unified framework for assessing different aspects of 
 - Governance
 - Validators’ geographic distribution
 
-To dig deeper into the EDI, study the research paper which outlines the framework.
+To dig deeper into the EDI, study the research paper[^98] which outlines the framework.
 
 [^1]: A server is a computer program or device that provides a service to another computer program and its user, also known as the client.
 [^2]: **BitTorrent** is a communication protocol for peer-to-peer (P2P) file sharing which is used to distribute data and electronic files over the Internet. BitTorrent is one of the most common protocols for transferring large files, such as digital files containing movies or music.
