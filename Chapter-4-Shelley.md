@@ -688,28 +688,29 @@ To dig deeper into the EDI, study the research paper which outlines the framewor
 [^19]: **SNARK** stands for ‘Succinct Non-Interactive Argument of Knowledge.’ A (zero knowledge) zk-SNARK is a cryptographic proof that allows one party to prove it possesses certain information without revealing that information. This proof is made possible using a secret key created before the transaction takes place.
 [^20]: Badertscher, Gazi, Kiayias, Russell, Zikas (2019),‘Ouroboros Chronos: Permissionless Clock Synchronization via Proof-of-Stake’, eprint.iacr.org/2019/838.pdf
 [^21]: The **Internet of Things (IoT)** is a system of interrelated computing devices, mechanical and digital machines, objects, animals or people that are provided with unique identifiers (UIDs) and the ability to transfer data over a network without requiring human-to-human or human-to-computer interaction.
-[^22]:
-[^23]:
-[^24]:
-[^25]:
-[^26]:
-[^27]:
-[^28]:
-[^29]:
-[^30]:
-[^31]:
-[^32]:
-[^33]:
-[^34]:
-[^35]:
-[^36]:
-[^37]:
-[^38]:
-[^39]:
-[^40]:
-[^41]:
-[^42]:
-[^43]:
+[^22]: Slot Leader Episode 1, youtu.be/YT0PXYBEnuE?t=2218
+[^23]: Leslie Lamport, everipedia.org/wiki/lang_en/Leslie_Lamport
+[^24]: Leslie Lamport, ‘Time, clocks, and the ordering of events in a distributed system’, dl.acm.org/doi/10.1145/359545.359563
+[^25]: **Network Time Protocol (NTP)** is a networking protocol for clock synchronization between computer systems over packet-switched, variable-latency data networks. In operation since before 1985, NTP is one of the oldest Internet protocols in current use.
+[^26]: Network time protocol, ntp.org/
+[^27]: The **Bellman–Ford algorithm** computes shortest paths from a single source vertex to all of the other vertices in a weighted digraph. It is slower than Dijkstra’s algorithm for the same problem, but more versatile, as it is capable of handling graphs in which some of the edge weights are negative numbers. The algorithm was first proposed by Alfonso Shimbel (1955), but is instead named after Richard Bellman and Lester Ford Jr., who published it in 1958 and 1956, respectively.
+[^28]: Solana Downtime Series Continues, Network Faces Serious Issues Again, u.today/solana-downtime-series-continues-network-faces-serious-issues-again
+[^29]: Time handling on Cardano, docs.cardano.org/explore-cardano/time
+[^30]: Jarek Hirniak on Cardano’s timing issue, twitter.com/ravanave/status/1589241299667800065?s=20&t=tCzT7srtCJ362-aWyi-jYA
+[^31]: MinSwap & Axo: sandwich attacks and timing in blockchain, youtube.com/watch?v=mGLm0QdVoNc
+[^32]: Surprise AMA! 12/12/2020, youtu.be/GlVU8ZiVUL0?t=3061
+[^33]: Coutts, Panagiotakos, Fitzi, (2022) ‘Ouroboros Leios: design goals and concepts’, iohk.io/en/research/library/papers/ouroboros-leios-design-goals-and-concepts/
+[^34]: Advances in Ouroboros: Scaling for Future Growth, youtube.com/watch?v=xKv94MwSNBw
+[^35]: Ouroboros Omega, twitter.com/iohk_charles/status/1357364560504709120
+[^36]: Surprise AMA 02/09/2021, youtu.be/K3l3_SAGXEE?t=1350
+[^37]: Gazi, Kiayias, Russell, Zikas (2020) ‘Ledger Combiners for fast settlement’, eprint.iacr.org/2020/675.pdf
+[^38]: **Abstraction** is used to make models that can be used and reused without having to re-write all the program code for each new application on every different type of computer. Abstraction is usually achieved by writing source code in some particular computer language which can be translated into machine code for different types of computers to execute. Abstraction allows program designers to separate a framework from specific instances which implement details.
+[^39]:  The **mempool (memory pool)** is a smaller database of unconfirmed or pending transactions which every node keeps. When a transaction is confirmed by being included in a block, it is removed from the mempool. You can think of a mempool as being like a ‘waiting room’ where a transaction sits before it is added to a block.
+[^40]: **Stateful** services keep track of sessions or transactions and react differently to the same inputs based on that history. **Stateless** services rely on clients to maintain sessions and center around operations that manipulate resources, rather than the state.
+[^41]: **Block height** represents the number of blocks that were validated and confirmed in the entire history of a particular blockchain network, from the genesis block (or block zero) until the most recent one. Unlike the genesis block, all other blocks contain a reference, or hash, to the block that came immediately before it, and the block height is the number of each block in that sequence. So the block height of the genesis block is #0, and the block height of the first block is #1.
+[^42]: cardano-cli (command line interface) query command contains subcommand, one of which is tip:
+tip: gets the node's current tip (slot number, hash, and block number)
+[^43]: Anthony Quinn, ‘Combinator makes easy work of Shelley hard fork’, iohk.io/en/blog/posts/2020/05/07/combinator-makes-easy-work-of-shelley-hard-fork
 [^44]:
 [^45]:
 [^46]:
