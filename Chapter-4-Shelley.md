@@ -336,7 +336,7 @@ Transaction fees and monetary expansion are used to fund staking rewards for bot
 
 This approach guarantees that the share of rewards taken from the reserves is large in the beginning, when the number of transactions is still relatively modest since users are only starting to create their businesses on Cardano. Early adopters will be enticed to act swiftly to reap the benefits of the high initial payouts. The higher costs compensate for declining reserves over time as transaction volume grows.
 
-This technique also guarantees that the rewards provided are predictable and evolve over time. There will be no ‘jumps’ like the bitcoin halving occurrences that occur every four years. Instead, a steady exponential fall is guaranteed by a predetermined proportion deducted from residual reserves every epoch.
+This technique also guarantees that the rewards provided are predictable and evolve over time. There will be no ‘jumps’ like the bitcoin halving[^61] occurrences that occur every four years. Instead, a steady exponential fall is guaranteed by a predetermined proportion deducted from residual reserves every epoch.
 
 So, what kind of value should *ρ* take? What percentage of the budget should go to the Treasury? This is also another trade-off: larger values of *ρ* indicate bigger rewards for everyone at first, as well as a faster-filling treasury. However, greater levels of *ρ* imply a quicker depletion of reserves. Paying big incentives and incentivizing early adopters is crucial, however, it is equally critical to present all stakeholders with a long-term view.
 
@@ -354,7 +354,7 @@ It’s not expected that pools’ pledges will be overly large, just high enough
 
 **Pledge Influence Factor (a0)** 
 
-The ada pledged by pool owners protects against Sybil attacks by ensuring that delegated stake is not overly drawn to pools whose owners attempt to abuse the system by forming multiple pools without owning a substantial amount of stake themselves. There was a lengthy debate, at the time, on this episode of the Cardano Effect. The debate has continued for some time about why, how and by whom, the parameters should be adjusted. Umed Saidov (who wrote this analysis in 2020) and ‘Big Pey’ laid out their case for change in this passionate discussion at the *Rare Bloom* event. 
+The ada pledged by pool owners protects against Sybil attacks by ensuring that delegated stake is not overly drawn to pools whose owners attempt to abuse the system by forming multiple pools without owning a substantial amount of stake themselves. There was a lengthy debate, at the time, on this episode of the Cardano Effect.[^62] The debate has continued for some time about why, how and by whom, the parameters should be adjusted. Umed Saidov (who wrote this analysis[^63] in 2020) and ‘Big Pey’ laid out their case for change in this passionate discussion[^64] at the *Rare Bloom* event. 
 
 The pledge influence factor has a direct impact on a pool’s rewards: the higher the influence factor, the greater the impact of a bigger pledge on rewards. A greater influence factor improves Sybil protection and makes the system safer and more secure, but it also offers stake pool owners who can afford a bigger pledge an advantage.
 
@@ -374,7 +374,7 @@ Two variable parameters continue to divide opinion among the SPOs community as t
 
 *k* (currently 500) impacts the max pool size, based on the equation: = (45bn - reserves) / *k* = ( 35bn / 500 ) = 70m
 
-IOG conducted a community survey to ‘read the room’ but there was not consensus on what changes to make, or how to implement them. IOG previously proposed raising *k* to 1000, but this was postponed as the survey was not clear cut, IOG were busy with the Vasil hard fork and it was decided more planning and discussion was required.
+IOG conducted a community survey[^65] to ‘read the room’ but there was not consensus on what changes to make, or how to implement them. IOG previously proposed raising *k* to 1000, but this was postponed as the survey was not clear cut, IOG were busy with the Vasil hard fork and it was decided more planning and discussion was required.
 
 The MinPool fee has also been an emotive topic. SPOs are the engine room for Cardano operationally. They produce new blocks and ensure a decentralized network grows. They are paid for their work in two ways:
 
@@ -385,11 +385,11 @@ Staking pools can chose to set any variable fee they like, but the ledger rules 
 
 A big reason to reduce, or remove it, is it is an obstacle for small new pools to compete with the bigger, more established stake pools. This can be a double whammy as the minimum fee can also incentivize larger SPOs to create new pools since there is a guaranteed profit from doing so.
 
-To get a sense of how emotive these issues are, you should listen to the Twitter Space hosted by Bullish Dumpling and read Adam Dean’s twitter thread. *Army of Spies* dedicated a video to it and IOG have written a blog post mapping out potential courses of action. We haven’t even mentioned CIP 50 (Liesenfelt Shelleys Voltaire Decentralization Update) which is worthy of a book in itself. I suspect these decisions are deliberately being left to test-drive the new on-chain governance mechanisms. These new levers of power are explored in Chapter 9. Charles Hoskinson all but confirmed this on a recent AMA: 
+To get a sense of how emotive these issues are, you should listen to the Twitter Space hosted by Bullish Dumpling[^66] and read Adam Dean’s twitter thread.[^67] *Army of Spies* dedicated a video[^68] to it and IOG have written a blog post[^69] mapping out potential courses of action. We haven’t even mentioned CIP 50 (Liesenfelt Shelleys Voltaire Decentralization Update) which is worthy of a book in itself. I suspect these decisions are deliberately being left to test-drive the new on-chain governance mechanisms. These new levers of power are explored in Chapter 9. Charles Hoskinson all but confirmed this on a recent AMA:[^70] 
 
 > It's not about IOG changing parameters, the system is stable at the moment, it would be nice to get all the parameters and tune them on a regular basis, but that's the entire point of CIP 1694. You guys should be doing that. If you want to sign up and have a custodian sit down and think about how to tune the system every month, so that it promotes some outcome, I think that's not the point of Cardano, the point of Cardano is the Cardano community self-regulates Cardano. So what we did is we got the system to a stable state, with that stable state it's able to survive and thrive, the next step is to get the community to take that stable state and create a government on top of it. So if you want to change the system parameters, then go ahead and get something like CIP 1694 in. Obviously, there'll be some fine tuning throughout this year, there's some final things to do as things change, as peer-to-peer gets fully implemented and Genesis gets fully implemented, but it defeats the entire purpose of decentralization to have a tuning committee that's federated
 
-In May 2023, the Cardano Foundation conducted a SPO on-chain poll, a new mechanism (defined in CIP-94) to allow stake pool operators to vote on crucial issues based on the stake delegated to their pool. Shortly after the poll, ‘minPoolCost’ was subsequently cut to 170 ada. It was decided it would be risky to change the *k* parameter at the same time. More about the governance around protocol updates in Chapter 9. 
+In May 2023, the Cardano Foundation conducted a SPO on-chain poll,[^71] a new mechanism (defined in CIP-94)[^72] to allow stake pool operators to vote on crucial issues based on the stake delegated to their pool. Shortly after the poll, ‘minPoolCost’ was subsequently cut to 170 ada. It was decided it would be risky to change the *k* parameter at the same time. More about the governance around protocol updates in Chapter 9. 
 
 ## Ouroboros lays the foundation for the Basho Era
 
@@ -422,9 +422,9 @@ As previously stated, each block contains a number of transactions submitted by 
 
 Ouroboros is built to manage massive amounts of data, as well as transactions and scripts of various sizes and complexity. With the settings in place the Cardano network was still only using around 25% of its capacity on average in October 2021. Of course, the most efficient option is for Cardano to operate at or near 100% capacity (network saturation). While many networking systems would suffer in such circumstances, Ouroboros and the Cardano network stack have been engineered to be fair and very durable even in the face of extreme saturation. 
 
-Benchmarking data reveals that even at 200% saturation, overall performance remains stable, and no network failures occur. Even with stress tested at 44x, there were no problems in the entire network capacity (though some transactions may be slightly delayed). Backpressure is used to regulate the overall system load, which is how the network is meant to function. 
+Benchmarking data reveals that even at 200% saturation, overall performance remains stable, and no network failures occur. Even with stress tested at 44x, there were no problems in the entire network capacity (though some transactions may be slightly delayed). Backpressure[^73] is used to regulate the overall system load, which is how the network is meant to function. 
 
-While certain users participating in a big NFT drop may suffer lengthier wait times for their transactions or may need to resubmit the rare transaction from a large batch (or spread the drops over a longer time period), this does not indicate that the network is not coping. It really signifies that the network is working properly. It’s referred to as ‘graceful degradation,’ and you can understand in more detail by reading the network design paper. See ‘Cardano Upcoming NFT drops.’
+While certain users participating in a big NFT drop[^74] may suffer lengthier wait times for their transactions or may need to resubmit the rare transaction from a large batch (or spread the drops over a longer time period), this does not indicate that the network is not coping. It really signifies that the network is working properly. It’s referred to as ‘graceful degradation,’ and you can understand in more detail by reading the network design paper.[^75] See ‘Cardano Upcoming NFT drops.’[^76]
 
 **Wallet types**   
 
@@ -461,7 +461,7 @@ The settlement window is the amount of time between when a transaction is confir
 
 Another factor to examine when deciding whether or not a transaction is verified is its possibility of immutability. The likelihood of a transaction being immutable is proportional to the number of blocks added to the chain since the transaction was approved. The bigger the number of blocks added, the more likely the transaction will become immutable. When a transaction’s depth exceeds 3k/f slots, it becomes immutable. The Ouroboros Praos protocol guarantees this.
 
-Sebastien Guillemot covers transaction finality, amongst other in things, in this informative deep dive on *Cardano & Algorand: Leader Selection Explained*
+Sebastien Guillemot covers transaction finality, amongst other in things, in this informative deep dive on *Cardano & Algorand: Leader Selection Explained*[^77]
 
 ## P2P (peer-to-peer)
 
