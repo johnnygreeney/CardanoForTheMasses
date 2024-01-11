@@ -276,13 +276,13 @@ Still part of the Goguen era, *Alonzo* was the next protocol update in Sept 2021
 
 This functionality is available and enabled by the tools and infrastructure that make up the Plutus Platform. *Alonzo* enhanced Shelley’s basic multi-signature (multisig) scripting language with a rigorous methodology based on formal methods and verification. For more sophisticated and secure scripting capabilities, Multisig was updated into the Plutus Core language.[^51] *Alonzo* enables this through extended unspent transaction output (eUTXO) accounting. More on this later.
 
-*Alonzo* was named after Alonzo Church (1903-95). Church was a logician and mathematician who worked on logic and the foundations of theoretical computer science in the US. He is also recognized for establishing lambda calculus, a formal system that may be used to argue that the Entscheidungsproblem is unsolvable. Later, when working with Alan Turing, they realized that the lambda calculus and the Turing machine had equivalent capabilities, displaying numerous mechanical computing processes. Plutus Core (Cardano’s smart contract language) is a variant of lambda calculus, which is one of the reasons for naming the smart contract upgrade after Church.
+*Alonzo* was named after Alonzo Church (1903-95). Church was a logician and mathematician who worked on logic and the foundations of theoretical computer science in the US. He is also recognized for establishing lambda calculus,[^52] a formal system that may be used to argue that the Entscheidungsproblem[^53] is unsolvable. Later, when working with Alan Turing, they realized that the lambda calculus and the Turing machine[^54] had equivalent capabilities, displaying numerous mechanical computing processes. Plutus Core (Cardano’s smart contract language) is a variant of lambda calculus, which is one of the reasons for naming the smart contract upgrade after Church.
 
 **Vasil**
 
 Named after a Bulgarian mathematician Vasil Dabov, who was also a Cardano community member, the Vasil hard fork in Sept 2022 brought five key features to boost performance. These were mainly focused on Plutus V2 after CIPs (Cardano Improvement Proposal) were submitted by the community. CIP-31 (Reference Inputs), CIP-32 (Inline Datums), CIP-33 (Reference Scripts), CIP-40 (Collateral Outputs), and diffusion pipelining are discussed later.
 
-The terminology and the use of the same terms in different contexts can get quite confusing. Fear not, as there is page the documentation explaining the difference between an ‘era’ and a ‘phase’, and how a ‘hard fork’ differs from an ‘intra-era hard fork’. Starting with Alonzo, the ‘ledger eras’ are named after mathematicians and computer scientists, kind of like the hurricane naming system but in alphabetical ordering. The release dates are named in honor of Cardano community members.  
+The terminology and the use of the same terms in different contexts can get quite confusing. Fear not, as there is page the documentation[^55] explaining the difference between an ‘era’ and a ‘phase’, and how a ‘hard fork’ differs from an ‘intra-era hard fork’. Starting with Alonzo, the ‘ledger eras’ are named after mathematicians and computer scientists, kind of like the hurricane naming system but in alphabetical ordering. The release dates are named in honor of Cardano community members.  
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/eras.png "Cardano Eras")
 
@@ -290,7 +290,7 @@ The terminology and the use of the same terms in different contexts can get quit
 
 The SECP update in Februrary 2023 was executed as an ‘intra-era hard fork’. This brought new cryptographic primitives to Cardano. More about this update in chapter 6.
 
-**June 5, 2020. What is the best code in Cardano?** CH:
+**June 5, 2020. What is the best code in Cardano?** CH:[^56]
 
 > The hard fork combinator code is the second most elegant code we have; the most elegant code belongs to the network code. We have lots of crazy stuff there, very elegant, very academic scary code …but beautiful.
 
@@ -306,11 +306,11 @@ IOG steadily lowered *d* at a rate of 0.02 each epoch over time, an increase of 
 
 **Trickier parameter adjustments**
 
-> Setting stable parameter settings, while still being flexible for the future, is critical to Cardano’s continued development and decentralization. While the transitioning the d parameter was smooth and predictable, changing other parameters requires a more nuanced approach. IOG consulted with the community before setting initial values. Around 20 parameters regulate network behavior, and settings had to be specified for all of them before the mainnet could be launched. The majority of these parameters are technical in nature, so although they must be set appropriately to ensure system safety and improve performance, their specific values have little impact on user experience. You can review the full list of current parameter settings on ADApools.org. 
+> Setting stable parameter settings, while still being flexible for the future, is critical to Cardano’s continued development and decentralization. While the transitioning the d parameter was smooth and predictable, changing other parameters requires a more nuanced approach. IOG consulted with the community before setting initial values. Around 20 parameters[^57] regulate network behavior, and settings had to be specified for all of them before the mainnet could be launched. The majority of these parameters are technical in nature, so although they must be set appropriately to ensure system safety and improve performance, their specific values have little impact on user experience. You can review the full list of current parameter settings on ADApools.org.[^58] 
 
-**June 4, 2019. Re: Ouroboros parameters.** CH:
+**June 4, 2019. Re: Ouroboros parameters.** CH:[^59]
 
-> What is the protection mechanism against too many stake pools? So, you have to delegate to the stake pools …so there’s only a finite amount of ada and the financial incentives are basically set up in a way where you will have a ceiling of stake pools, and if you have more than that, you actually make less money. So, I’d highly encourage you to read our paper, we wrote out of Oxford with Alexander Russel. The paper covers how you parameterize that model and that’s why we can believe that there’ll be a stable thousand stake pools after a while.
+> What is the protection mechanism against too many stake pools? So, you have to delegate to the stake pools …so there’s only a finite amount of ada and the financial incentives are basically set up in a way where you will have a ceiling of stake pools, and if you have more than that, you actually make less money. So, I’d highly encourage you to read our paper, we wrote out of Oxford with Alexander Russel.[^60] The paper covers how you parameterize that model and that’s why we can believe that there’ll be a stable thousand stake pools after a while.
 
 **K = number of stake pools**
 
