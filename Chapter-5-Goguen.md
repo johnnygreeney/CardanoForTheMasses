@@ -75,6 +75,42 @@ The output of a preceding transaction is referred to as a transaction input. A p
 
 **How UTXO works**
 
+Transactions consume unspent outputs from earlier transactions and create fresh outputs that may be used as inputs for future transactions under a UTXO accounting model.
+
+These UTXOs are managed by the users’ wallets, which also start transactions using the user’s UTXOs. At all times, every blockchain node keeps track of a subset of all UTXOs. This is called the UTXO set. In technical jargon, this is the chainstate, which is kept in each node’s data directory. The chainstate is changed whenever a new block is added to the chain. The list of recent transactions is included in this new block (including of course a record of spent UTXOs, and new ones created since the chainstate was last updated). Every node keeps a duplicate of the chainstate.
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/51utxo.png "utxos")
+
+**Figure 5.1**:  UTXOs
+
+A UTxO consists of the reference to the transaction that created it (TxId), and its index (TxIx) on the host transaction. Think of the index as like a plane seat number, where the UTXO sits on the transaction. A UTxO is associated with an asset value, an address which dictates its spending conditions and other metadata. A transaction can take multiple inputs (consuming multiple UTxOs) and produce multiple outputs (new UTxOs to be used by future transactions). This is why measuring transactions per second is nonsense on Cardano, as a transaction can contain hundreds of inputs and outputs. We’ll revisit this topic in Chapter 8 (Basho).
+
+As you continue reading about Cardano, you’ll see almost everything happens as a result of a transaction. A transaction is usually one of the following on-chain events:
+
+- Transfer of ada
+- Transfer of Native Assets
+- Minting or burning of Native Assets
+- Posting of delegation certificates on-chain
+- Stakepool registrations 
+- Metadata stored on-chain
+- A governance upgrade proposal
+- Any combination of the above
+
+**Why Cardano chose eUTXO**
+
+Cardano’s UTXO accounting mechanism is not the same as Bitcoin’s, since Cardano is meant to do more than only manage payments. The necessity for increased programming expressiveness in the Alonzo era’s smart contracts feature required a unique (’Extended’) approach.
+
+The ‘basic’ UTXO concept has a restricted programmability expressiveness. With the establishment of an account-based ledger and related contract accounts, Ethereum’s Account/Balance accounting model addresses this particular challenge. However, the contract code’s semantics grew significantly more sophisticated as a result, which had the unintended consequence of compelling contract writers to fully comprehend the semantics to prevent the insertion of potentially extremely expensive flaws in the code.
+
+An ‘extended’ UTXO solution would need two features that the current UTXO model lacks:
+
+1. To be able to keep the contract in its current state.
+2. To be able to ensure that the same contract code is used throughout the transaction sequence. This is what is referred to as continuity.
+
+The eUTXO model has the advantage of being able to forecast the fees necessary for a successful transaction before it is processed. This is a characteristic that account-based models do not have.
+
+**Why is it called eUTXO?**
+
 
 **_Rest of chapter to be uploaded soon..._**
 
