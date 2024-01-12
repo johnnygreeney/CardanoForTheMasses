@@ -145,7 +145,7 @@ For block generation, a core node is set up with several key pairs[^37] and an o
 
 Figure 3.2: Core and Relay nodes
 
-## How to choose a Stake Pools
+## How to choose a Stake Pool
 
 Choosing a stake pool is not an exact science. There are many factors and delegators have different preferences, the process is entirely subjective. Some are attracted superficially to the pool with lowest fees, but on closer review, it is usually the least important consideration. If you are unsure about any of the parameters, or want to scrutinize a specific stake pool, you can dive deep with a favoured explorer tool such as the Cardano Foundation Explorer[^38] or peruse CardanoCube[^39] under ‘Tools and Explorers’
 
