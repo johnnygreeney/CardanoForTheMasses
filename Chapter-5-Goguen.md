@@ -142,29 +142,29 @@ The UTXO model is extended in two ways by the eUTXO model:
 
 2. The second distinction between UTXO and eUTXO is that, in addition to an address and a value, outputs may contain (virtually) any data. By enabling scripts to carry state, they become considerably more powerful.
 
-Furthermore, eUTXO expands on the UTXO concept by enabling output addresses to include complicated logic to determine which transactions are allowed to unlock them, as well as by allowing custom data to be added to all outputs. When verifying an address,[^04] the script will look at the data carried by the output,[^05] the transaction being checked, and some extra data known as redeemers[^06] that the transaction supplies for each input. The script[^07] provides enough context to deliver a ‘yes’ or ‘no’ response, in what may be very complicated circumstances, by uncovering all of this information.[^09]
+Furthermore, eUTXO expands on the UTXO concept by enabling output addresses to include complicated logic to determine which transactions are allowed to unlock them, as well as by allowing custom data to be added to all outputs. When verifying an address,[^04] the script will look at the data carried by the output,[^05] the transaction being checked, and some extra data known as redeemers[^06] that the transaction supplies for each input. The script[^07] provides enough context to deliver a ‘yes’ or ‘no’ response, in what may be very complicated circumstances, by uncovering all of this information.[^08]
 
 eUTXO allows for arbitrary logic to be expressed in the form of scripts. This arbitrary logic examines the transaction and data to determine whether or not the transaction may use an input.
 
 The graph structure of the UTXO paradigm differs significantly from the account-based model employed by several current smart-contract enabled blockchains. As a consequence, design paradigms for dApps on account-based blockchains do not easily adapt to Cardano. Because the underlying representation of the data is different, new design patterns are required.
 
-The per-branches architecture of the UTXO (Bitcoin) model is carried over to eUTXO, where one branch is defined as a series of transactions requiring a succession of validations. Building dApps and other solutions with numerous UTXOs is vital for splitting the functionality over various branches and enforcing additional parallelism.[^08] This has benefits when trying solve the scalability conundrum. More about Scalability in Chapter 8 (Basho).
+The per-branches architecture of the UTXO (Bitcoin) model is carried over to eUTXO, where one branch is defined as a series of transactions requiring a succession of validations. Building dApps and other solutions with numerous UTXOs is vital for splitting the functionality over various branches and enforcing additional parallelism.[^09] This has benefits when trying solve the scalability conundrum. More about Scalability in Chapter 8 (Basho).
 
 **eUTXO Advantages**
 
 Compared to other accounting models, the eUTXO model has several distinct benefits. The transaction’s success or failure is solely determined by the transaction and its inputs, not by anything else on the blockchain. As a result, before a transaction is posted to the blockchain, the legitimacy of the transaction may be confirmed off-chain. A transaction may still fail if another transaction consumes an input that the transaction is expecting at the same time, but if all inputs are still available, the transaction will succeed.
 
-This contrasts with an account-based approach (such as Ethereum), which allows a transaction to fail in the middle of its execution. In eUTXO,[^09] this will never happen. Also, transaction execution costs may be calculated off-chain before transmission, which is something that Ethereum does not allow.
+This contrasts with an account-based approach (such as Ethereum), which allows a transaction to fail in the middle of its execution. In eUTXO,[^10] this will never happen. Also, transaction execution costs may be calculated off-chain before transmission, which is something that Ethereum does not allow.
 
 Cardano’s eUTXO paradigm provides a safe and flexible environment for processing many operations without causing system issues. This architecture provides superior scalability and privacy, as well as more straightforward transaction logic, since each UTXO can only be used once and in its entirety, making transaction verification considerably easier.
 
 The eUTXO model has the advantage of being able to forecast the fees necessary for a successful transaction before it is posted. This is a feature that account-based models do not have. Account-based blockchains, such as Ethereum, are indeterministic, meaning the impact of a transaction on the chain cannot be guaranteed. This ambiguity raises the danger of financial loss, unexpectedly expensive costs, and a broader attack vector for hackers to exploit. 
 
-A deep technical analysis of eUTXO ledger’s architecture is beyond the scope of this book, however, you can get ‘into the weeds’ by reviewing IOG’s blog ‘Architecting dApps on the eUTXO Ledger’[^10] where they provide a sample architecture. SundaeSwap[^11] and Axo (previously Maladex) also blogged about their solution while *Spectrum Finance* (formerly known as ERGOdex)[^12] talked about their philosophy on *Cardano with Paul*[^13] YouTube channel. There are also some code samples from IOG on avoiding concurrency using multi signatures in the Lobster Challenge.[^14] IOG analyze a sample order book pattern[^15] architecture in their blog. For a deeper dive into eUTXO, read the handbook.[^16]
+A deep technical analysis of eUTXO ledger’s architecture is beyond the scope of this book, however, you can get ‘into the weeds’ by reviewing IOG’s blog ‘Architecting dApps on the eUTXO Ledger’[^11] where they provide a sample architecture. SundaeSwap[^12] and Axo (previously Maladex) also blogged about their solution while *Spectrum Finance* (formerly known as ERGOdex)[^13] talked about their philosophy on *Cardano with Paul*[^14] YouTube channel. There are also some code samples from IOG on avoiding concurrency using multi signatures in the Lobster Challenge.[^15] IOG analyze a sample order book pattern[^16] architecture in their blog. For a deeper dive into eUTXO, read the handbook.[^17]
 
 ## ’Neither smart nor a contract’
 
-While Vitalik Buterin and others[^17] have opined that smart contracts are neither smart nor a contract, let’s not be pedantic for the sake of brevity. A smart contract is a code-based automatic digital agreement that records, validates, and executes the contract’s binding transactions between numerous participants. When preset criteria are satisfied, the smart contract code automatically executes the contract’s transactions. A smart contract is just a brief program whose inputs and outputs are blockchain transactions.
+While Vitalik Buterin and others[^18] have opined that smart contracts are neither smart nor a contract, let’s not be pedantic for the sake of brevity. A smart contract is a code-based automatic digital agreement that records, validates, and executes the contract’s binding transactions between numerous participants. When preset criteria are satisfied, the smart contract code automatically executes the contract’s transactions. A smart contract is just a brief program whose inputs and outputs are blockchain transactions.
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/vitalik.png "Vitalik")
 
@@ -198,17 +198,17 @@ The term ‘metadata’ refers to information about information. It defines the 
 
 Whether it’s a purchase for a product or service or a money transfer to a family member, all transactions have a definite purpose. When making an online purchase, for example, there is a lot of information that can be gathered about the transaction. Metadata may help convey the tale of a product purchase by revealing information about the customer and seller, the date of the transaction, the product maker, and the supply circumstances. 
 
-**March 31, 2019. On metadata.** CH:[^18]
+**March 31, 2019. On metadata.** CH:[^19]
 
-> An example of this…. let’s say that Bob goes to an ATM and withdraws $300 of value out of an ATM …now that’s a transaction …now let’s say Bob did that next in an Italian restaurant on his birthday and all of his friends happen to be there …you would say ‘oh it looks like Bob’s pulling money out to pay the check’ ….or in some way is connected to this event, he’s at a celebration, there’s people there…. it’s expensive and let’s say it’s at 12 o’clock …it’s lunchtime… Bob can then go take 300 dollars from an ATM, so the same type of transaction but now I’ve changed the metadata…
+> An example of this…. let’s say that Bob goes to an ATM and withdraws $300 of value out of an ATM …now that’s a transaction …now let’s say Bob did that next in an Italian restaurant on his birthday and all of his friends happen to be there …you would say ‘oh it looks like Bob’s pulling money out to pay the check’ ….or in some way is connected to this event, he’s at a celebration, there’s people there… it’s expensive and let’s say it’s at 12 o’clock …it’s lunchtime… Bob can then go take 300 dollars from an ATM, so the same type of transaction but now I’ve changed the metadata…
 > 
->Let’s say it's 2:00 a.m. right next to a known brothel ….so basically the exact same type of transaction …the same type of value, the same actor involved… this is his account and his money, but because you’ve changed the metadata it has vastly different implications…. So, what if you could swap these metadata and then suddenly you can now make the Italian restaurant look like a brothel? …whoever controls that story has a lot of power.
+>Let’s say it's 2:00 a.m. right next to a known brothel ….so basically the exact same type of transaction …the same type of value, the same actor involved… this is his account and his money, but because you’ve changed the metadata it has vastly different implications… So, what if you could swap these metadata and then suddenly you can now make the Italian restaurant look like a brothel? …whoever controls that story has a lot of power.
 
-With the advent of Bitcoin, developers began using blockchain technology to add small amounts of new data to the chain, knowing that the data would be accessible for the rest of time. In 2015, the University of Nicosia[^19] became the first university to issue academic certificates whose authenticity could be verified through the Bitcoin blockchain. Adding information to the chain became the norm over time. 
+With the advent of Bitcoin, developers began using blockchain technology to add small amounts of new data to the chain, knowing that the data would be accessible for the rest of time. In 2015, the University of Nicosia[^20] became the first university to issue academic certificates whose authenticity could be verified through the Bitcoin blockchain. Adding information to the chain became the norm over time. 
 
 **Transaction metadata**
 
-Metadata is a useful tool for certifying and validating information. It lets cryptocurrency assets save information about their previous owners, transfers, and values. This is especially useful when dealing with non-fungible[^20] assets that reflect value, such as property or intellectual property. A public key may also be used to sign and certify a variety of documents, proving the document’s authenticity.
+Metadata is a useful tool for certifying and validating information. It lets cryptocurrency assets save information about their previous owners, transfers, and values. This is especially useful when dealing with non-fungible[^21] assets that reflect value, such as property or intellectual property. A public key may also be used to sign and certify a variety of documents, proving the document’s authenticity.
 
 One of the most well-known applications of metadata is in the supply chain. Factories, customers, suppliers, and delivery services are all part of the supply chain. Participants must give proof of interconnected services that are available to everyone for verification in order to allow effective data tracking. In this situation, metadata may give a full view of supply chain activities by combining fixed data on the blockchain ledger with metadata. For all parties, this ensures openness, immutability, and confidence.
 
@@ -216,7 +216,7 @@ One of the most well-known applications of metadata is in the supply chain. Fact
 
 IOG’s Atala product suite, which includes Atala PRISM, Atala Trace, and Atala Scan solutions, saw early commercialization of metadata deployment on Cardano. The IOG team is developing metadata support while connecting with the Cardano ledger to improve the entire product functionality in terms of data feasibility, accountability, and traceability.
 
-Atala PRISM[^21] is a decentralized identification system that allows individuals to control their personal data and communicate with organizations in a seamless, private, and safe manner. On Cardano, the Atala PRISM team is using metadata to certify and store DIDs and DID documents. It will also be able to cancel credentials such as university certificates, in addition to creating them.
+Atala PRISM[^22] is a decentralized identification system that allows individuals to control their personal data and communicate with organizations in a seamless, private, and safe manner. On Cardano, the Atala PRISM team is using metadata to certify and store DIDs and DID documents. It will also be able to cancel credentials such as university certificates, in addition to creating them.
 
 Atala Trace and Atala Scan are being developed to help brand owners get a better understanding of supply chain operations while also establishing product provenance and auditability. Metadata integration will be employed in these circumstances to store tamper-proof supply-chain information.
 
@@ -224,9 +224,9 @@ Transaction metadata was an early component of Goguen utility and smart contract
 
 **Cardano Foundation partnerships** 
 
-In line with their open source strategy, the Cardano Foundation leveraged Ledger Sync[^22] and the Identity Wallet[^23] to deliver the Bolnisi track and trace solution.[^24] The Bolnisi winemakers have already tracked 100,000 bottles of wine on Cardano. This project sets a precedent for future work, leveraging Web3 technology to verify a product's proof of origin and authenticity. This solution is reproducible for similar challenges with counterfeit goods across many industry verticals. 
+In line with their open source strategy, the Cardano Foundation leveraged Ledger Sync[^23] and the Identity Wallet[^24] to deliver the Bolnisi track and trace solution.[^25] The Bolnisi winemakers have already tracked 100,000 bottles of wine on Cardano. This project sets a precedent for future work, leveraging Web3 technology to verify a product's proof of origin and authenticity. This solution is reproducible for similar challenges with counterfeit goods across many industry verticals. 
 
-I'ts no secret that the fashion industry loses billions each year from counterfeit products. The Cardano Foundation partnered with *Epoch Sports* and *Merchadise*[^25] to address the issue of licensed intellectual property. NFC chips linked to on-chain records on the Cardano blockchain verify the authenticity of their jerseys while also enabling more consumer engagement. The same solution is in place for the proof-of-concept (POC) hoodie in the Cardano store.[^26] The CF plans to publish all technical details on the Developer Portal in due course.
+I'ts no secret that the fashion industry loses billions each year from counterfeit products. The Cardano Foundation partnered with *Epoch Sports* and *Merchadise*[^26] to address the issue of licensed intellectual property. NFC chips linked to on-chain records on the Cardano blockchain verify the authenticity of their jerseys while also enabling more consumer engagement. The same solution is in place for the proof-of-concept (POC) hoodie in the Cardano store.[^27] The CF plans to publish all technical details on the Developer Portal in due course.
 
 **Cardano’s metadata strategy**
 
@@ -234,11 +234,11 @@ Metadata has a wide range of applications. With this in mind, IOG has been tryin
 
 **Differentiators**
 
-Metadata conveys a transaction’s narrative, and there are several methods to engage with it. Ada users may search for particular information in the Cardano Explorer, and developers can make use of metadata by embedding details directly into a transaction. The data may be directly contributed, or a Merkle tree[^27] of the data can be created and the root hash of the Merkle tree placed on the blockchain for larger data sets. Once this is completed, it can be shown that the data exists at a certain moment in time and that it is permanently stored on the chain for future use.
+Metadata conveys a transaction’s narrative, and there are several methods to engage with it. Ada users may search for particular information in the Cardano Explorer, and developers can make use of metadata by embedding details directly into a transaction. The data may be directly contributed, or a Merkle tree[^28] of the data can be created and the root hash of the Merkle tree placed on the blockchain for larger data sets. Once this is completed, it can be shown that the data exists at a certain moment in time and that it is permanently stored on the chain for future use.
 
 It’s also worth noting that transaction information is recorded on the blockchain and sent with every transaction. The fact that it is kept on-chain rather than in the ledger state is advantageous since it has no impact on transaction validation and does not degrade ledger performance.
 
-The additional cost is that metadata increases the transaction’s size in bytes, and the processing speed is dependent on transaction size. The Concise Binary Object Representation (CBOR)[^28] and Concise Data Definition Language (CDDL)[^29] notations may be used to create metadata. Check the Cardano wallet’s transaction metadata and how to use transaction metadata schemes in Cardano CLI.[^30]
+The additional cost is that metadata increases the transaction’s size in bytes, and the processing speed is dependent on transaction size. The Concise Binary Object Representation (CBOR)[^29] and Concise Data Definition Language (CDDL)[^30] notations may be used to create metadata. Check the Cardano wallet’s transaction metadata and how to use transaction metadata schemes in Cardano CLI.[^31]
 
 ## Token Locking on Cardano 
 
@@ -246,7 +246,7 @@ Cardano’s growth has been envisioned as a journey encompassing five overlappin
 
 **The introduction of token locking**
 
-Token locking was the main feature of the second Goguen protocol upgrade *Allegra*. This was the next major update for Goguen, after the network integration of metadata.[^31]
+Token locking was the main feature of the second Goguen protocol upgrade *Allegra*. This was the next major update for Goguen, after the network integration of metadata.[^32]
 
 This was a minor technical adjustment to the consensus process that had little effect on the ledger. It was crucial, though, since it prepared the platform for smart contracts and the production of Cardano-based assets (in addition to ada). It also supports voting, an essential piece of Voltaire (governance) functionality. 
 
@@ -272,17 +272,17 @@ Protocols were built early in Bitcoin’s existence to enable users to issue ass
 
 In July of 2015, Ethereum was launched. Even though Bitcoin had been in existence for six years at the time, the cryptocurrency world was a nascent industry. When Ethereum first appeared on the scene, its schtick was smart contracts. This meant that third-party developers could create their own apps and run them on the Ethereum blockchain in a decentralized way. Ethereum outperformed Bitcoin in terms of marketability and adaptability.
 
-On the Ethereum blockchain, smart contracts allowed for the creation of user-defined tokens. The ERC20[^32] standard allowed for the creation of fungible Ethereum tokens, whereas the ERC721[^33] framework allowed for the creation of unique, non-fungible tokens. However, since the Ethereum chain did not enable native token support, user defined Ethereum tokens (both fungible and non-fungible) had an inherent inefficiency: they required the construction and execution of custom code.
+On the Ethereum blockchain, smart contracts allowed for the creation of user-defined tokens. The ERC20[^33] standard allowed for the creation of fungible Ethereum tokens, whereas the ERC721[^34] framework allowed for the creation of unique, non-fungible tokens. However, since the Ethereum chain did not enable native token support, user defined Ethereum tokens (both fungible and non-fungible) had an inherent inefficiency: they required the construction and execution of custom code.
 
 **What is Tokenization?**
 
 Tokenization is the process of converting physical objects into digital assets. Tokenization replaces a non-sensitive data element for a sensitive data element. This non-sensitive equivalent is known as a token, and it has no intrinsic or exploitable value or meaning. 
 
-Reduced transaction costs, transparency, higher liquidity, decentralization, and increased efficiency are just a few of the benefits. Tokenization is a very adaptable feature that may be used to achieve a variety of goals. Tokens[^34] are programmable; thus they may be made unique, which adds to their usefulness.
+Reduced transaction costs, transparency, higher liquidity, decentralization, and increased efficiency are just a few of the benefits. Tokenization is a very adaptable feature that may be used to achieve a variety of goals. Tokens[^35] are programmable; thus they may be made unique, which adds to their usefulness.
 
 Tokens may, for example, be designed to provide holders access to unique material, personalized items, or even a voting right. It makes no difference what the aim of the voting process is. Finally, tokenizing the capacity to vote provides individuals the sense of being a part of something bigger than themselves, and that their opinions may be heard.
 
-Financial goods and economic models may be created via tokenization. Collectibles, alternative investments, gift cards, sports betting, in-game assets, commodities, video clips of your favorite NBA star[^35] and a variety of other areas are all possible examples. This has the ability to link physical products, services, and activities to the virtual world.
+Financial goods and economic models may be created via tokenization. Collectibles, alternative investments, gift cards, sports betting, in-game assets, commodities, video clips of your favorite NBA star[^36] and a variety of other areas are all possible examples. This has the ability to link physical products, services, and activities to the virtual world.
 
 **Tokenization on Cardano**
 
@@ -306,15 +306,15 @@ In the crypto industry, the phrases ‘coin’ and ‘token’ are often interch
 
 **Native tokens on Cardano vs Ethereum**
 
-Token code for both standards (ERC20 and ERC721) is copied and modified, rather than being part of the system itself, therefore Ethereum needs custom code for user-defined tokens to be supported on the chain. This adds a layer of complexity, expense (gas[^36] is required to pay for the execution of the code), and inefficiency. This is an inherent flaw in the Ethereum blockchain since it allows for human error. If coding best practices are not followed, dodgy custom code might bring problems that can result in significant financial loss. Software vulnerabilities contributed to the loss of $300m worth of ether in one especially memorable[^37] occurrence. Solana[^38] has been restarted several times and suffered an expensive Wormhole hack. Cardano seeks to avoid such debacles.
+Token code for both standards (ERC20 and ERC721) is copied and modified, rather than being part of the system itself, therefore Ethereum needs custom code for user-defined tokens to be supported on the chain. This adds a layer of complexity, expense (gas[^37] is required to pay for the execution of the code), and inefficiency. This is an inherent flaw in the Ethereum blockchain since it allows for human error. If coding best practices are not followed, dodgy custom code might bring problems that can result in significant financial loss. Software vulnerabilities contributed to the loss of $300m worth of ether in one especially memorable[^38] occurrence. Solana[^39] has been restarted several times and suffered an expensive Wormhole hack. Cardano seeks to avoid such debacles.
 
 The native tokens framework in Cardano enables user-defined tokens natively, that is, without the requirement for special programming. Native tokens are a kind of accounting system that is inherently provided by the ledger. This eliminates the complicated, unpredictable and expensive aspects of tokenization on Ethereum.
 
-Cardano is a kind of decentralized ledger. Typically, a distributed ledger can only track a single asset type when it is created (usually its own cryptocurrency). However, as the ledger gets more decentralized, the requirement and capability of monitoring different kinds of assets on the same infrastructure emerges, which is why blockchains need to handle numerous assets such as stablecoins, utility tokens,[^39] credential tokens, and security tokens. Native tokens, unlike ERC20, do not need extra event-handling logic or specific transfer costs to monitor transactions.
+Cardano is a kind of decentralized ledger. Typically, a distributed ledger can only track a single asset type when it is created (usually its own cryptocurrency). However, as the ledger gets more decentralized, the requirement and capability of monitoring different kinds of assets on the same infrastructure emerges, which is why blockchains need to handle numerous assets such as stablecoins, utility tokens,[^40] credential tokens, and security tokens. Native tokens, unlike ERC20, do not need extra event-handling logic or specific transfer costs to monitor transactions.
 
 The accounting infrastructure established in the ledger model, initially intended for processing ada-only transactions, was extended to support transactions that employ many kinds of assets at the same time. Native tokens have the advantage of not requiring smart contracts to transmit their value and may be traded alongside other kinds of tokens. 
 
-Security is another benefit of native coins over ERC20. ERC20 tokens have been shown to be subject to a variety of security problems that are well documented.[^40] This is because creating ERC20 tokens requires manual changes of the contract standard, which might lead to mistakes and flaws. Because the ledger manages the token logic, creating and transacting tokens natively eliminates this risk. Additionally, native tokens do not suffer the same overflow and underflow vulnerabilities as ERC20 tokens since Cardano’s scripting language does not employ fixed-size integers and the ledger itself (as opposed to the ERC20 user code) monitors token movement.
+Security is another benefit of native coins over ERC20. ERC20 tokens have been shown to be subject to a variety of security problems that are well documented.[^41] This is because creating ERC20 tokens requires manual changes of the contract standard, which might lead to mistakes and flaws. Because the ledger manages the token logic, creating and transacting tokens natively eliminates this risk. Additionally, native tokens do not suffer the same overflow and underflow vulnerabilities as ERC20 tokens since Cardano’s scripting language does not employ fixed-size integers and the ledger itself (as opposed to the ERC20 user code) monitors token movement.
 
 **Four Differentiators of Native Tokens on Cardano**
 
@@ -346,7 +346,7 @@ As a result, the policy is the only custom code necessary to alter tokens in Car
 
 Now that Goguen’s native tokens are implemented, the ledger treats all tokens in the same manner. To avoid ambiguity and any errors or flaws, a token may only be minted in one method. This streamlining of development via the use of a uniform methodology resulted in speedier development and a better overall development experience.
 
-IOG has provided more detail on GitHub under native tokens and how they compare to ada and ERC20.[^41] There is also a native tokens explainer video.[^42] Momentum built steadily after the *Mary* and *Alonzo* upgrades, with developers realizing the benefits of deploying native tokens and NFTs on Cardano. *Cardano blockchain insights*[^43] report almost 4.5 million wallets, over 9.3 million native tokens, and more than 1,500+ projects deploying to Cardano as of January 2024.[^44]
+IOG has provided more detail on GitHub under native tokens and how they compare to ada and ERC20.[^42] There is also a native tokens explainer video.[^43] Momentum built steadily after the *Mary* and *Alonzo* upgrades, with developers realizing the benefits of deploying native tokens and NFTs on Cardano. *Cardano blockchain insights*[^44] report almost 4.5 million wallets, over 9.3 million native tokens, and more than 1,500+ projects deploying to Cardano as of January 2024.[^45]
 
 ## Multi-Asset Support (MAS)
 
@@ -407,7 +407,7 @@ As a result of its design, the following conditions apply:
 
 - The number of each kind of token in an output can have a slight bearing on the output’s min-ada-value. There is the same effect as the minimum UTXO value takes memory overhead into account when storing it on a computer. The memory overhead isn’t affected greatly by an increase in ada but adding multi-assets does have an impact. This is because the names and policy IDs of each kind of token take up extra space in the output
 
-- When sending custom tokens to an address, the min-ada-value of ada is always sent together with the custom tokens (by including the ada in the same output). The ada supplied with the tokens no longer belongs to the sender, if the address is not spendable by the person sending the tokens. Users may opt to employ off-chain dialogue to discuss who gives the ada to cover the min-ada-value in the output created by the transferring transaction before transferring custom tokens. Typhon wallet is always innovating and they introduced Warp Transactions in 2023, allowing users to send tokens without spending that minimum ADA.[^45]
+- When sending custom tokens to an address, the min-ada-value of ada is always sent together with the custom tokens (by including the ada in the same output). The ada supplied with the tokens no longer belongs to the sender, if the address is not spendable by the person sending the tokens. Users may opt to employ off-chain dialogue to discuss who gives the ada to cover the min-ada-value in the output created by the transferring transaction before transferring custom tokens. Typhon wallet is always innovating and they introduced Warp Transactions in 2023, allowing users to send tokens without spending that minimum ADA.[^46]
 
 - To recover the ada stored alongside custom tokens in an output O, the user must either: 
 
