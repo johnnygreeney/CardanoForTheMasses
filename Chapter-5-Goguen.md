@@ -242,7 +242,242 @@ The additional cost is that metadata increases the transaction’s size in bytes
 
 ## Token Locking on Cardano 
 
+Cardano’s growth has been envisioned as a journey encompassing five overlapping development eras, each of which is supported by the Ouroboros consensus system. As Cardano developed, the protocol adapted as well, as new features and functionality were added to the platform. Upgrades need progressive modifications to the network protocol. 
 
+**The introduction of token locking**
+
+Token locking was the main feature of the second Goguen protocol upgrade *Allegra*. This was the next major update for Goguen, after the network integration of metadata.
+
+This was a minor technical adjustment to the consensus process that had little effect on the ledger. It was crucial, though, since it prepared the platform for smart contracts and the production of Cardano-based assets (in addition to ada). It also supports voting, an essential piece of Voltaire (governance) functionality. 
+
+Token locking is a method of locking the usage of a single token for a defined purpose (such as voting or running a smart contract). The assets that are tallied by the blockchain ledger are referred to as tokens. There was just ada before this, but many more custom tokens were able to utilize the Cardano platform since. In this scenario, locking means ‘reserving’ a particular quantity of tokens for a certain length of time so they can’t be sold for a profit.
+
+**Token locking enable smart contracts**
+
+Token locking is required to implement sophisticated smart contracts and certain circumstances, such as when completing a purchase. When someone gets into a contractual arrangement to sell a painting to an art gallery, the seller promises that the painting will not be sold to anyone else. In this scenario, the token might represent the painting, while the ‘promise’ represents the real token locking. If the painting is sold to a third party, the contract’s guarantee will be breached, and any penalties will apply. With the introduction of token locking and the use of ada coins as tokens, contract providers will have access to this exact capability. 
+
+Those ada holders who participated in the Catalyst Fund2 voting process had to ‘freeze’ ada. This indicated their voting privileges, based on how much ada they had locked. It proved each person had a certain amount of votes and avoided the chance of votes being tallied twice. Individuals were unable to assign more votes than they had, vote on opposing proposals, or duplicate vote.
+
+Following the implementation of token locking on the mainnet Cardano ledger, future hard forks included multi-asset and other smart contract features. These features leverage token locking as well, giving Cardano users a plethora of additional options. This paved the way for non-fungible (unique) tokens to be created on the Cardano blockchain.
+
+Cardano has a safe, seamless route to frequent protocol changes, each of which adds new value and usefulness to the network while reducing interruption and risk, thanks to the innovative hard fork combinator.
+
+## Native Tokens 
+
+**Tokens on Bitcoin**
+
+Protocols were built early in Bitcoin’s existence to enable users to issue assets that piggybacked on Bitcoin’s accounting system to monitor numerous currencies at the same time. The Bitcoin protocol does not support these protocols natively, but they were created through hacks. Light clients are forced to depend on trustworthy servers in the case of Bitcoin overlays like Colored Coins and Mastercoin (now Omni). Transaction fees must still be paid in bitcoins. These characteristics, together with the fact that transactions are approved via a single pipeline, render Bitcoin unsuitable for multi-asset accounting.
+
+**Tokens on Ethereum**
+
+In July of 2015, Ethereum was launched. Even though Bitcoin had been in existence for six years at the time, the cryptocurrency world was a nascent industry. When Ethereum first appeared on the scene, its schtick was smart contracts. This meant that third-party developers could create their own apps and run them on the Ethereum blockchain in a decentralized way. Ethereum outperformed Bitcoin in terms of marketability and adaptability.
+
+On the Ethereum blockchain, smart contracts allowed for the creation of user-defined tokens. The ERC20 standard allowed for the creation of fungible Ethereum tokens, whereas the ERC721 framework allowed for the creation of unique, non-fungible tokens. However, since the Ethereum chain did not enable native token support, user defined Ethereum tokens (both fungible and non-fungible) had an inherent inefficiency: they required the construction and execution of custom code.
+
+**What is Tokenization?**
+
+Tokenization is the process of converting physical objects into digital assets. Tokenization replaces a non-sensitive data element for a sensitive data element. This non-sensitive equivalent is known as a token, and it has no intrinsic or exploitable value or meaning. 
+
+Reduced transaction costs, transparency, higher liquidity, decentralization, and increased efficiency are just a few of the benefits. Tokenization is a very adaptable feature that may be used to achieve a variety of goals. Tokens are programmable; thus they may be made unique, which adds to their usefulness.
+
+Tokens may, for example, be designed to provide holders access to unique material, personalized items, or even a voting right. It makes no difference what the aim of the voting process is. Finally, tokenizing the capacity to vote provides individuals the sense of being a part of something bigger than themselves, and that their opinions may be heard.
+
+Financial goods and economic models may be created via tokenization. Collectibles, alternative investments, gift cards, sports betting, in-game assets, commodities, video clips of your favorite NBA star and a variety of other areas are all possible examples. This has the ability to link physical products, services, and activities to the virtual world.
+
+**Tokenization on Cardano**
+
+Goguen added a technique that handles tokenization natively. Rather than depending on smart contracts, the logic is based on the Cardano ledger. IOG created an efficient tokenization technique that is superior to the Ethereum blockchain’s ERC20 and ERC721 standards by following this approach.
+
+On the Ethereum blockchain, user-defined tokens (both fungible ERC20 and non-fungible ERC721 tokens) are non-native, meaning that the underlying ledger does not directly support them. ERC20 and ERC721 tokens are fundamentally distinct from Ether, Ethereum’s native coin.
+
+The Cardano approach to tokenization allows for the representation of custom assets on the blockchain without the use of smart contracts, as well as for those assets to behave similarly to the primary currency, ada, with the exception that: 
+
+- native tokens, unlike ada, can be minted and destroyed; and 
+- Ada is the only currency that can be used to pay fees, rewards, and deposits at present. This may change with the introduction of Babel Fees and tokens specific to different new sidechains. More about this later.
+
+**Native tokens parlance**
+
+In the crypto industry, the phrases ‘coin’ and ‘token’ are often interchangeable, and sometimes they aren’t. And, in other cases, the word ‘token’ is used to refer to all digital assets. Cardano’s tokenization strategy is as unique as the blockchain itself, therefore here’s a glossary to help you grasp the native tokens architecture.
+
+- A token is defined as a representation of an asset kept on the Cardano blockchain 
+- An asset is defined as anything that can be quantified 
+- A token bundle is a representation of numerous tokens in Cardano
+- Token logic that runs on the Cardano ledger rather than smart contracts is referred to as native.
+
+**Native tokens on Cardano vs Ethereum**
+
+Token code for both standards (ERC20 and ERC721) is copied and modified, rather than being part of the system itself, therefore Ethereum needs custom code for user-defined tokens to be supported on the chain. This adds a layer of complexity, expense (gas is required to pay for the execution of the code), and inefficiency. This is an inherent flaw in the Ethereum blockchain since it allows for human error. If coding best practices are not followed, dodgy custom code might bring problems that can result in significant financial loss. Software vulnerabilities contributed to the loss of $300m worth of ether in one especially memorable occurrence. Solana has been restarted several times and suffered an expensive Wormhole hack. Cardano seeks to avoid such debacles.
+
+The native tokens framework in Cardano enables user-defined tokens natively, that is, without the requirement for special programming. Native tokens are a kind of accounting system that is inherently provided by the ledger. This eliminates the complicated, unpredictable and expensive aspects of tokenization on Ethereum.
+
+Cardano is a kind of decentralized ledger. Typically, a distributed ledger can only track a single asset type when it is created (usually its own cryptocurrency). However, as the ledger gets more decentralized, the requirement and capability of monitoring different kinds of assets on the same infrastructure emerges, which is why blockchains need to handle numerous assets such as stablecoins, utility tokens, credential tokens, and security tokens. Native tokens, unlike ERC20, do not need extra event-handling logic or specific transfer costs to monitor transactions.
+
+The accounting infrastructure established in the ledger model, initially intended for processing ada-only transactions, was extended to support transactions that employ many kinds of assets at the same time. Native tokens have the advantage of not requiring smart contracts to transmit their value and may be traded alongside other kinds of tokens. 
+Security is another benefit of native coins over ERC20. ERC20 tokens have been shown to be subject to a variety of security problems that are well documented. This is because creating ERC20 tokens requires manual changes of the contract standard, which might lead to mistakes and flaws. Because the ledger manages the token logic, creating and transacting tokens natively eliminates this risk. Additionally, native tokens do not suffer the same overflow and underflow vulnerabilities as ERC20 tokens since Cardano’s scripting language does not employ fixed-size integers and the ledger itself (as opposed to the ERC20 user code) monitors token movement.
+
+**Four Differentiators of Native Tokens on Cardano**
+
+**Lightweight Architecture**
+
+The native token architecture is constructed around token bundles and is based on a multi-asset ledger structure. A token bundle might include a mixture of ada and other tokens. Instead of ada, these token-containing structures are recorded as outputs on the ledger. The asset ID of each kind of token contains a hash reference to the token’s minting policy. The minting policy is only verified during the minting or burning process, and it is not maintained on the ledger, making this method very light.
+
+The asset ID also captures the fungibility connection in a lightweight way: tokens with the same asset ID are fungible with one other, but not with tokens with different asset IDs. The asset ID of unique tokens is coupled with a quantity of precisely one.
+
+Within a single token bundle and throughout the whole ledger, the asset ID identifies each kind of token. It also indicates the token’s position inside the token bundle’s internal two-level map structure. This underlying data structure makes it possible to express fungible and non-fungible tokens in the same way. It also allows the system a lot of flexibility in terms of the types of asset use cases that can be tokenized. It’s simple to represent, say, a collection of one-of-a-kind works of art covered by a single minting policy set by the artist.
+
+When we examine how Ethereum’s ERC20 handles asset transfers between two contracts, the inherent simplicity of native tokens is underlined even more. Smart contract code is necessary in this scenario, which adds complexity, as well as possibility for mistake and expense. Because several kinds of tokens may be traded in a single transaction, the structure of token bundles allows for a more lightweight approach to asset transfer.
+
+**Inexpensive**
+
+Transferring any amount of tokens between two peers in an ERC20 token ecosystem necessitates the execution of a smart contract, which comes with an execution charge (gas). The transfer of assets (tokens, ada, custom currencies, and so on) in Cardano’s native multi-asset ecosystem does not need a smart contract and does not incur an execution cost.
+
+**More Security, less custom code**
+
+Native tokens have a lighter and less expensive design than Ethereum’s ERC20 and ERC721 protocols. These two elements, however, would be useless without a strong security layer to ensure the system’s integrity.
+
+System integrity with native tokens is based on the ledger attribute of value preservation (that is, that the sum of all the inputs is equal to the sum of the outputs). Unlike user-defined smart contracts, all native token transfer logic is embedded in the ledger. This guarantees that the system behaves predictably and consistently, and it eliminates the need for users to master smart contracts, which can often be vulnerable to exploitation by hackers.
+
+While the ledger ensures accounting accuracy, the minting and burning of tokens is governed by their user-defined minting policies. A minting policy is hash-linked to the tokens it covers indefinitely, and there is no way to modify it. This ensures that an issuer’s policy cannot be amended to enable the minting or burning of a token that was not permitted under the initial policy. The policy for each kind of token being minted is verified and must be met whenever a minting transaction is put to the ledger. Except for ada (Cardano has limited supply of 45m ada), every token in circulation must have a minting policy and must have been minted pursuant to that policy.
+
+As a result, the policy is the only custom code necessary to alter tokens in Cardano. Because the policy hash is linked to the asset identification, there is no need for a global asset registry, making asset creation cheap and simple. The technology is still basic, light, and simple to operate.
+
+**Simplicity**
+
+Now that Goguen’s native tokens are implemented, the ledger treats all tokens in the same manner. To avoid ambiguity and any errors or flaws, a token may only be minted in one method. This streamlining of development via the use of a uniform methodology resulted in speedier development and a better overall development experience.
+
+IOG has provided more detail on GitHub under native tokens and how they compare to ada and ERC20. There is also a native tokens explainer video. Momentum built steadily after the *Mary* and *Alonzo* upgrades, with developers realizing the benefits of deploying native tokens and NFTs on Cardano. *Cardano blockchain insights* report almost 4.5 million wallets, over 9.3 million native tokens, and more than 1,500+ projects deploying to Cardano as of January 2024.
+
+## Multi-Asset Support (MAS)
+
+**Single asset ledgers**
+
+Single-asset ledgers are cryptocurrency ledgers that track just one kind of asset.
+
+**Multi-Asset support**
+
+When a blockchain, ledger, or cryptocurrency enables recording the transfer and ownership of several kinds of assets on its ledger, it is said to have multi-asset (MA) support. The native tokens feature in the Cardano ecosystem provides this capability.
+
+This feature extends the accounting infrastructure specified in the ledger model, which was intended to handle ada-only transactions, to transactions that employ a variety of assets at the same time. Ada and a range of user-defined custom token types are among these assets.
+
+**Native versus non-native** 
+
+Some cryptocurrency ledgers have features that allow you to monitor the ownership and transfer of many types of assets. Native MA (multi-asset) support is the name given to this sort of MA support. The MA functionality of Cardano is built-in or ‘native’.
+
+It is possible to monitor assets for which there is no ledger accounting support if a cryptocurrency platform has sufficiently sophisticated smart contract capabilities.
+
+**Assets**
+
+On the blockchain, an asset is an item that represents value. A digital asset like ada, a position, a certificate, or a number of products are all examples of these items.
+
+The word asset might refer to one of two things:
+
+- the identifier of a class of objects, such as ada or ‘johnCoin’; or
+- an exact amount of a certain thing, eg. ‘10 lovelace’, ‘33 johnCoin’, ‘this book’ or ‘these jars of marmalade’
+
+An asset ID is a combination of the policy ID and the asset name that uniquely identifies it. It’s worth noting that, although ada may be used as an asset, it doesn’t have an explicit policy ID.
+
+Tokens with the same asset ID are fungible with each other, however they are not fungible with tokens with different asset IDs. An asset ID is a fungible token collection’s unique identifier.
+
+*PolicyID* - The unique ID linked with a minting policy. The ID is a sequence of letters and numbers that is generated by applying a hash function on the policy itself.
+
+Asset name - an asset’s (immutable) property that is used to differentiate amongst assets within the same policy. The asset name, unlike the policyID, does not correspond to any code or set of rules and may be any common term, such as ‘tickets’ or ‘VIPTickets.’ Valid asset names may, however, be limited by the policy that defines how an asset is scoped.
+
+For distinct tokens, various policies might use the same asset names.
+
+**Tokens**
+
+A token is a short word for ‘asset token,’ which is an asset’s on-chain representation and accounting unit. One ada, one home, or a ton of tea, for example, may be represented by a token.
+
+**Currencies**
+
+Currency is a term used to describe a monetary unit that serves as a means of exchange for goods and services. Cardano accepts ada and native tokens, both of which function equally on the network.
+
+However, at this moment, ada is the only currency used to pay fees and make deposits, and it is also the only currency in which rewards are issued. The architecture of the underlying consensus protocol is responsible for this attribute of ada (and no other sort of asset).
+
+Native tokens are a kind of accounting unit that may be used for payments and transactions, as well as being transmitted to an exchange address. Because the Cardano accounting ledger has built-in functionality for tracking ownership and transfer of several types of assets, these tokens are supported by the ledger without the need for extra smart contracts. While both ada and native tokens have value and may be used to pay and transact, only ada is utilized for fees and rewards, and only native tokens can be customized.
+
+**Conditions when using ada**
+
+Cardano’s main currency is ada (₳). Because each address must have a minimum ada value, having ada (along with other currencies) is required to transfer multi-asset tokens between addresses (min-ada-value, currently set at 1 ada).
+
+As a result of its design, the following conditions apply:
+
+- You cannot create outputs only containing custom tokens
+
+- The number of each kind of token in an output can have a slight bearing on the output’s min-ada-value. There is the same effect as the minimum UTXO value takes memory overhead into account when storing it on a computer. The memory overhead isn’t affected greatly by an increase in ada but adding multi-assets does have an impact. This is because the names and policy IDs of each kind of token take up extra space in the output
+
+- When sending custom tokens to an address, the min-ada-value of ada is always sent together with the custom tokens (by including the ada in the same output). The ada supplied with the tokens no longer belongs to the sender, if the address is not spendable by the person sending the tokens. Users may opt to employ off-chain dialogue to discuss who gives the ada to cover the min-ada-value in the output created by the transferring transaction before transferring custom tokens. Typhon wallet is always innovating and they introduced Warp Transactions in 2023, allowing users to send tokens without spending that minimum ADA.
+
+- To recover the ada stored alongside custom tokens in an output O, the user must either: 
+
+   a) spend the output O and burn the custom tokens therein; or 
+   b) spend an output O and an output O’ and consolidate the tokens therein with the same collection of types of custom tokens stored in another output O. (spent within the same transaction) 
+
+For example, in a new output created by the consolidating transaction, (CryptoBisonPolicy, AmericanBison, 2) in O may be consolidated with (CryptoBisonPolicy, AmericanBison, 4) in O’, for a total of (CryptoBisonPolicy, AmericanBison, 6)
+
+- Splitting custom tokens into more outputs than they were before the transaction was executed necessitates using more ada in total to meet the min-ada-value, since ada is required in the extra outputs.
+
+**What are Token bundles?**
+
+A token bundle is a collection of tokens that is heterogeneous (’mixed’). Tokens of any kind may be packaged together. On the Cardano blockchain, token bundles are the standard way to represent and store assets. Token bundles group tokens into a certain data structure, ensuring which tokens are fungible with other tokens is clearly defined.
+
+Ada amounts were stated in transaction and UTXO outputs in prior versions of the Cardano ledger. These amounts have been expanded with token bundles, which may define an ada amount with quantities of other assets in a single output, thanks to the addition of multi-asset functionality.
+
+Token bundles are stored in transaction outputs and mint fields, as well as the UTXO set outputs, which are monitored by the ledger. Certain elements of a transaction, such as the fee field, must still explicitly state ada amounts.
+
+**Token bundle storage**
+
+Token bundles can be found:
+
+- As a transaction’s mint field, indicating that the transaction is producing the bundle’s tokens
+- In a transaction’s output or an output in the current UTXO recorded by the ledger, alongside the address of the output, e.g. Multi { MyAddress, value: TB_Example }
+
+**Splitting and combining token bundles**
+
+Token bundles may be split and combined arbitrarily by transactions. 
+
+**Minting policy**
+
+A minting policy is a collection of rules that control the minting and burning of assets that are within the policy’s control. A minting policy specifies the circumstances under which tokens are minted (or burned). The rules might, for example, describe who has authority over the asset supply through minting and burning.
+
+Users that wish to produce a new asset establish the minting policies. For example, a user may choose to limit themself to just minting a certain kind of token. This is something that would be outlined in the policy.
+
+The following are the rules for minting:
+
+As a very simple set of rules, it consists of the following (ANDs and ORs):
+
+- A list of the signatures required to enable the mint to operate (e.g., a multisig specification, where no code is needed)
+- With a Plutus Core script, a specification of when the script may be spent (e.g., after slot 10 and before slot 30).
+
+When a transaction is executed, the node checks for compliance with minting regulations by executing the code or validating the appropriate signatures. All minting policies for all assets that the transaction is seeking to mint must be followed.
+
+**Minting: Terms & Conditions**
+
+- A minting policy is required for all assets. Ada’s minting policy, for example, states that ‘new ada can never be minted’
+- A token has just one minting policy connected with it
+- A single policy describes the requirements for both minting and burning tokens that fall within its ambit. Its compliance is monitored both during minting and during burning
+- An asset’s related minting policy cannot be changed at any time, it’s irreversible. Current tokens cannot be linked to a new policy. With a new minting policy, users may purchase back and burn all current tokens while still minting new ones. This is by design, it’s not a fault in the system.
+- An existent asset on the ledger that is scoped under a certain policy is guaranteed to have been minted in accordance with that policy
+- The actual policy is unimportant until tokens of that policy are generated in a transaction. Its only purpose is to serve as a unique ID for the asset
+- Assets related with various minting policies are never interchangeable. They can be exchanged in the same manner as USD can be used to acquire Euros: the quantity of Euros you can buy with a specific amount of USD is determined by the exchange rate. 
+
+**Relationship between an asset and its minting policy**
+
+For security reasons, the link between an asset and its minting policy is permanent. This feature protects users and the system against falsely minted tokens.
+
+When a token’s minting policy changes, it’s no longer the same token, and its value can’t be compared to the original token’s. In order to define high-assurance policies, this permanent asset-policy association method is essential. Cardano’s MA (Multi Asset) technique becomes vulnerable to a variety of attacks if this identification is loosened. It’s best to ensure that every token was minted in line with its minting policy, not any other policy it may have previously been linked with, by having a permanent link between them.
+
+**Minting policy Types**
+
+There are several more sorts of minting policies to consider.
+
+**Single-issuer policy**
+
+A single-issuer minting policy states that only the entity with a certain set of keys may mint tokens for a specific asset group. For example, the minting transaction must have been signed by the set of keys provided in the minting policy.
+Tokens representing Panini football cards are an example of an asset category that would adopt a single-issuer policy. The firm that makes authentic collectors’ cards would provide the keys needed to mint fresh football cards, as required by the minting script. This means that no new football card tokens may be produced without the approval of the firm. There is no need to use Plutus smart contracts when creating this form of policy. 
+
+messi.png         
+**Figure 5.3**:  Panini soccer cards
 
 
 **_Rest of chapter to be uploaded soon..._**
