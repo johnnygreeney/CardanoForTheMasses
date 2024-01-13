@@ -242,8 +242,10 @@ The additional cost is that metadata increases the transaction’s size in bytes
 
 ## Token Locking on Cardano 
 
-**_Rest of chapter to be uploaded soon..._**
 
+
+
+**_Rest of chapter to be uploaded soon..._**
 
 
 [^01]: **Digital footprint** or digital shadow refers to one’s unique set of traceable digital activities, actions, contributions and communications manifested on the Internet or on digital devices. On the World Wide Web, the internet footprint; also known as cyber shadow, electronic footprint, or digital shadow, is the information left behind as a result of a user’s web-browsing and stored as cookies.
@@ -257,6 +259,42 @@ The additional cost is that metadata increases the transaction’s size in bytes
 [^09]:
 [^10]:
 [^11]:
+[^12]:
+[^13]:
+[^14]:
+[^15]:
+[^16]:
+[^17]:
+[^18]:
+[^19]:
+[^20]:
+[^21]:
+[^22]:
+[^23]:
+[^24]:
+[^25]:
+[^26]:
+[^27]:
+[^28]:
+[^29]:
+[^30]:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 [^70]:
 [^71]:
