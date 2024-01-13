@@ -477,7 +477,7 @@ There are several more sorts of minting policies to consider.
 A single-issuer minting policy states that only the entity with a certain set of keys may mint tokens for a specific asset group. For example, the minting transaction must have been signed by the set of keys provided in the minting policy.
 Tokens representing Panini football cards are an example of an asset category that would adopt a single-issuer policy. The firm that makes authentic collectors’ cards would provide the keys needed to mint fresh football cards, as required by the minting script. This means that no new football card tokens may be produced without the approval of the firm. There is no need to use Plutus smart contracts when creating this form of policy. 
 
-messi.png         
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/panini.png "Panini soccer cards")         
 **Figure 5.3**:  Panini soccer cards
 
 
