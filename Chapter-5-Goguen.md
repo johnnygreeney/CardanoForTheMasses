@@ -518,33 +518,40 @@ messi.png
 [^33]: **Ethereum ERC20 Contract** is a standard for building tokens on the Ethereum Blockchain. Before ERC20 tokens, Cryptocurrency exchanges had to build custom bridges between platforms to support the exchange of any token. For this reason, six rules were created by an Ethereum developer named Fabian Vogelsteller and placed under the name ERC20, which means ‘ethereum request for comment.’
 [^34]: **ERC721** is a free, open standard that describes how to build non-fungible or unique tokens on the Ethereum Blockchain.
 [^35]: **Token**: A cryptographic token that reflects the value as defined by the community, market state, or self-governed entity. A fungible or non-fungible token may be used as a payment unit, a reward, a trade asset, or a data holder.
-[^36]:
-[^37]:
-[^38]:
-[^39]:
-[^40]:
-[^41]:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[^36]: What’s all the fuss about NBA top shot?, si.com/nba/2021/03/17/nba-top-shot-crypto-daily-cover
+[^37]: **Gas (Ethereum)** refers to the fee, or pricing value, required to successfully conduct a transaction or execute a smart contract on the Ethereum blockchain platform. Priced in small fractions of the cryptocurrency ether, commonly referred to as gwei or sometimes nanoeth, the gas is used to allocate resources of the Ethereum Virtual Machine (EVM) so that decentralized applications such as smart contracts can self-execute is a secured fashion. The maximum amount of gas that you’re willing to spend on a particular transaction is known as the gas limit.
+[^38]: ‘$300m in cryptocurrency’ accidentally lost forever due to bug, theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether
+[^39]: 3 Reasons Solana Isn’t Really Decentralized, makeuseof.com/reasons-solana-isnt-really-decentralized/
+[^40]: **Utility token**: a digital token that represents a certain project or environment and has specific capabilities. These tokens may be used as payment units, prizes, or as a means of gaining entry to a particular network.
+[^41]: Blockchain Vulnerabilities: Vulnerable ERC20 Tokens and How to Avoid Writing Vulnerable Code, apriorit.com/dev-blog/555-erc20-token-vulnerability
+[^42]: What is a native token and how does it compare to ada and ERC20?, github.com/input-output-hk/cardano-ledger-specs/blob/master/doc/explanations/features.rst
+[^43]: Welcome to native tokens on Cardano!, youtube.com/watch?v=PVqsCXh-V5Y
+[^44]: Blockchain Insights, datastudio.google.com/u/0/reporting/3136c55b-635e-4f46-8e4b-b8ab54f2d460/page/p_wxcw6g0irc
+[^45]: Statistics to date (updated weekly), essentialcardano.io/development-update
+[^46]: Typhon wallet warp transactions, medium.com/@StricaHQ/introducing-warp-transactions-689d3e1339c7
+[^47]: Twitter Jonathan Dickson, twitter.com/JonathanDickson
+[^48]: Jonathan Dickson Elements NFTs on Cardano, youtube.com/watch?v=F1DR-39RN28
+[^49]:
+[^50]:
+[^51]:
+[^52]:
+[^53]:
+[^54]:
+[^55]:
+[^56]:
+[^57]:
+[^58]:
+[^59]:
+[^60]:
+[^61]:
+[^62]:
+[^63]:
+[^64]:
+[^65]:
+[^66]:
+[^67]:
+[^68]:
+[^69]:
 [^70]:
 [^71]:
 [^72]:
