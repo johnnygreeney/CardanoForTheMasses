@@ -484,35 +484,49 @@ messi.png
 
 
 [^01]: **Digital footprint** or digital shadow refers to one’s unique set of traceable digital activities, actions, contributions and communications manifested on the Internet or on digital devices. On the World Wide Web, the internet footprint; also known as cyber shadow, electronic footprint, or digital shadow, is the information left behind as a result of a user’s web-browsing and stored as cookies.
-[^02]:
-[^03]:
-[^04]:
-[^05]:
-[^06]:
-[^07]:
-[^08]:
-[^09]:
-[^10]:
-[^11]:
-[^12]:
-[^13]:
-[^14]:
-[^15]:
-[^16]:
-[^17]:
-[^18]:
-[^19]:
-[^20]:
-[^21]:
-[^22]:
-[^23]:
-[^24]:
-[^25]:
-[^26]:
-[^27]:
-[^28]:
-[^29]:
-[^30]:
+[^02]: A **directed acyclic graph** is a directed graph with no directed cycles. That is, it consists of vertices and edges, with each edge directed from one vertex to another, such that following those directions will never form a closed loop.
+[^03]: **Transaction output**: Outputs produced by transactions. They are consumed when they are spent by another transaction. Typically, some kind of evidence is required to be able to spend a UTXO, such as a signature from a public key, or (in the Extended UTXO Model) satisfying a script.
+[^04]: The **address** of a UTXO says where the output is ‘going’. The address stipulates the conditions for unlocking the output. This can be a public key hash, or (in the Extended UTXO model) a script hash.
+[^05]: A **script output**: A UTXO locked by a script.
+[^06]: **Redeemer**: The argument to the validator script which is provided by the transaction which spends a script output.
+[^07]: A **validator script** is the script attached to a script output in the Extended UTXO model. Must be run and return positively in order for the output to be spent. It determines the address of the output.
+[^08]: **Validation context**: A data structure containing a summary of the transaction being validated, and the current input whose validator is being run.
+[^09]: The term **Parallelism** refers to techniques to make programs faster by performing several computations at the same time.
+[^10]: Fernando Sanchez, ‘Cardano’s extended UTXO accounting model’, iohk.io/en/blog/posts/2021/03/12/cardanos-extended-utxo-accounting-model-part-2/
+[^11]: Jean-Frédéric Etienne, ‘Architecting dApps on the EUTXO ledger’, iohk.io/en/blog/posts/2021/11/16/architecting-dapps-on-the-eutxo-ledger/
+[^12]: SundaeSwap blog, sundaeswap-finance.medium.com/sundaeswap-labs-presents-the-scooper-model-678d6054318d
+[^13]: What is ERGO + ERGOdex Concurrency Solution For Cardano, youtube.com/watch?v=xlDlNmIFrFM
+[^14]: Cardano with Paul, youtube.com/watch?v=xlDlNmIFrFM
+[^15]: IOHK Lobster challenge, github.com/input-output-hk/lobster-challenge/tree/concurrency-multisig
+[^16]: Order book pattern, plutus-apps.readthedocs.io/en/latest/plutus/explanations/order-book-pattern.html#what-is-the-order-book-pattern
+[^17]: EUTXO handbook, ucarecdn.com/3da33f2f-73ac-4c9b-844b-f215dcce0628/EUTXOhandbook_for_EC.pdf
+[^18]: Neither Smart Nor Contracts: Smart Contracts Need a Rebrand, netguru.com/blog/smart-contracts
+[^19]: Surprise AMA 03/31/2019, youtu.be/sc4D2KrvaNA?t=2315
+[^20]: Blockchain Certificates (Academic & Others), unic.ac.cy/iff/blockchain-certificates/
+[^21]: In economics, **fungibility** is the property of a good or a commodity whose individual units are essentially interchangeable, and each of its parts is indistinguishable from another part.
+[^22]: Atala PRISM, atalaprism.io/
+[^23]: Ledger sync, github.com/cardano-foundation/cf-ledger-sync
+[^24]: CF identity wallet, identity.cardanofoundation.org/
+[^25]: Cardano Foundation Partners with Georgian National Wine Agency, cardanofoundation.org/en/news/cardano-foundation-partners-with-georgian-national-wine-agency/
+[^26]: Technical collaboration with Epoch Sports & Merchandise, cardanofoundation.org/en/news/technical-collaboration-with-epoch-sports-merchadise/
+[^27]: Cardano Store, store.cardano.org/pages/authenticated-products
+[^28]: A hash tree or **Merkle tree** is a tree in which every leaf node is labeled with the hash of a data block, and every non-leaf node is labeled with the cryptographic hash of the labels of its child nodes. Hash trees allow efficient and secure verification of the contents of large data structures. Hash trees are a generalization of hash lists and hash chains.
+[^29]: **CBOR (Concise Binary Object Representation)** is a binary data serialization format loosely based on JSON. Like JSON it allows the transmission of data objects that contain name–value pairs, but in a more concise manner. This increases processing and transfer speeds at the cost of human-readability.
+[^30]: **Concise data definition language (CDDL)** expresses Concise Binary Object Representation (CBOR) data structures. Its main goal is to provide an easy and unambiguous way to express structures for protocol messages and data formats that use CBOR or JSON (JavaScript Object Notation).
+[^31]: Transaction Metadata, github.com/input-output-hk/cardano-node/blob/master/doc/reference/tx-metadata.md
+[^32]: Alan McSherry, ‘Getting to grips with metadata on Cardano’, iohk.io/en/blog/posts/2020/11/03/getting-to-grips-with-metadata-on-cardano/
+[^33]: **Ethereum ERC20 Contract** is a standard for building tokens on the Ethereum Blockchain. Before ERC20 tokens, Cryptocurrency exchanges had to build custom bridges between platforms to support the exchange of any token. For this reason, six rules were created by an Ethereum developer named Fabian Vogelsteller and placed under the name ERC20, which means ‘ethereum request for comment.’
+[^34]: **ERC721** is a free, open standard that describes how to build non-fungible or unique tokens on the Ethereum Blockchain.
+[^35]: **Token**: A cryptographic token that reflects the value as defined by the community, market state, or self-governed entity. A fungible or non-fungible token may be used as a payment unit, a reward, a trade asset, or a data holder.
+[^36]:
+[^37]:
+[^38]:
+[^39]:
+[^40]:
+[^41]:
+
+
+
 
 
 
