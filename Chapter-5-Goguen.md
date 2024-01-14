@@ -596,8 +596,78 @@ The multi-asset token lifecycle may enable tokens to be acquired and reissued by
 
 ## Min-ada-value requirement
 
-**_Rest of chapter to be uploaded soon..._**
+On the ledger, UTXOs may contain a mixed bag of tokens, including ada. The maximum total size taken up by UTXO entries on the ledger at any one moment is limited by requiring some amount of ada to be included in every UTXO (where that amount is dependent on the size of the UTXO, in bytes).
 
+By adjusting the min-ada-value setting, the maximum permissible UTXO size (the total of the sizes of all UTXO entries) is implicitly modified. The limitation prevents the Cardano ledger from going above a specific size in this manner. A ledger without size restrictions is prone to becoming overburdened with data to the point that users will be unable to process it (or operate a node) on devices that satisfy the required node criteria.   
+
+There is more detail in the documentation on the ‘ada-only’ case, ‘min-ada-value’ calculation and with worked examples.
+
+**Native Assets in the wild** 
+
+So far we’ve talked mostly about the theory of native assets on Cardano. To get a better feel for how powerful the native asset standard is when paired with eUTXO, visit the graphical explorer, eUTxO.org, particularly the stats page which lists some of the notable transactions to date. 
+
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/eutxoorg.png "eutxo.org")
+Figure 5.5:  eutxo.org/stats/records
+
+## Smart Contracts Rollout
+
+Alonzo built on Cardano’s token improvements to provide developers with the tools they needed to create dApps. IOG laid the groundwork for Cardano to become a smart contract platform by introducing transaction metadata, token-locking with *Allegra* in December 2020, and native token issuance.  Shortly after came *Mary*, a multi-asset protocol update in March 2021 that enabled users to create native tokens for Cardano transactions.
+
+These features were built into *Alonzo*, the following protocol update in September 2021. Alonzo contributed functionality for smart contracts (digital agreements) to Cardano leveraging the novel hard fork combinator. By facilitating the construction of smart contracts and decentralized apps (dApps) for decentralized finance (DeFi), it offered up new possibilities for developers.
+
+**Plutus Scripting**
+
+IOG developed the essential tools and infrastructure with *Alonzo* to enable Plutus Platform application development. *Alonzo* enhanced Cardano Shelley’s basic multi-signature scripting language (multisig) with a rigorous methodology based on formal methods and verification. For more sophisticated and secure scripting capabilities, Multisig was updated to the Plutus Core language. The Alonzo ledger uses Plutus Core to enable advanced scripting leveraging the extended unspent transaction output (eUTXO) accounting model.
+
+The foundation for smart contracts must be both safe and dependable. As a result, Haskell was selected as the programming language for Plutus Core smart contracts. Haskell is a high-level programming language that is used by developers to code, which is then compiled into Plutus Core.
+
+Haskell has been around since 1987, and it stands out among programming languages because of its high degree of trustworthiness. Smart contracts written in Haskell, using the Plutus framework, are designed to accomplish precisely what is expected of them and can be checked for correctness before being implemented. This ensures that smart contracts written on Cardano will be simple and secure, which is critical for applications that manage automated trading or large-scale money transfers.
+
+**What smart contracts technology is currently available?**  
+
+Of the 18,000 cryptocurrencies around today, with only approximately 80 having smart contracts according to CryptoSlate. PolkaDot, Solana and Ethereum are among the participants on the market that support smart contracts. Technology is changing to suit the market needs for systems that are quick, secure, accurate, and dependable. Many firms have attempted to install large-scale apps on these platforms and have run across ‘issues’. For example, the DAO hack, the Parity bug and the shambolic Solana Wormhole hack where $320m went missing. Despite recurring hacks and rug pulls, the most critical problems in smart contracts continue to surface. Anyone can write buggy, insecure code however Cardano strives for higher standards with a functional programming model supported with rigorous property-based testing and regular audits.
+
+## UTXO alliance
+
+IOG collaborates with other UTXO-based blockchains to develop novel solutions that will improve interoperability, programmability, and scalability. IOG announced a partnership with Ergo (ergoplatform.org), Nervos (nervos.org), and Topl (topl.co) to form the UTXO alliance during the 2021 Cardano Summit. They then invited Komodo (komodoplatform.com), Alephium (alephium.org) and DigiByte (digibyte.org) into the alliance as well.
+
+The UTXO alliance will help cross-ecosystem activities to expand UTXO’s smart contract capability. The joint goal of collaborating with other blockchain sector initiatives is to stimulate and support further research, development, and education throughout the whole area.
+
+The UTXO alliance’s purpose is to keep the UTXO model evolving in terms of interoperability, scalability (sharding, state channels, etc), and smart contract solutions. Improving these solutions and leading major projects to develop bridges across blockchains enables everyone to have access to fair and accessible global finance. This also provides a collaborative effort to promote UTXO-based ledgers in the industry. Bitcoin is obviously the most well-known UTXO blockchain but spin-offs like Bitcoin Cash, Litecoin, and Zcash are among the other projects that use this approach.
+
+**Building bridges**
+
+Instead of depending on expensive middlemen, blockchain technology tackles the difficulties of centralization by allowing trustworthy peer-to-peer transactions based on cryptographic verification. To create a safe and decentralized environment for financial transactions, several blockchain solutions have developed. While these initiatives differ in terms of consensus protocols, accounting models, and smart contract approaches, they all concentrate on similar use cases.
+
+DeFi Growth has been consistent and shows no signs of slowing. However, fragmented ecosystems, differing governance standards, technology versions, and feature support slow the development of the blockchain environment. Nasdaq’s forecast on DeFi Growth is shared by Romain Pellerin, IOG technology chief: 
+
+> Mainstream blockchain adoption will pass only through the interconnection of networks, similar to how the Internet was built by the interconnection of intranets and extranets.
+
+With this in mind, it’s critical to guarantee that the whole sector is working toward interoperability. Users should be able to interact with one another without being bound by a single ledger, smart contracts should work in a variety of contexts, and decentralized apps (dApps) should be cross-platform compatible. Only in this manner will the blockchain sector be able to realize its full potential, resulting in increased adoption.
+
+**No one-size-fits-all**
+
+The UTXO alliance is also interested in blockchain programmability enabling the development of dApps and smart contracts. In reality, new languages must be created to adapt to the UTXO model’s particular transaction and data storage management (for example, Ergo’s and Cardano’s eUTXO). Antara, CKB-VM, ErgoScript, and Plutus are the smart contract languages created by the alliance’s founding members. To quickly extend the number of use cases that may be executed on UTXO-based blockchains, alliance members are pooling expertise and cooperating in the development of such technologies.
+
+Furthermore, such languages are constructed as domain-specific languages (DSLs) on top of widely used programming languages such as Scala, Haskell, C, JavaScript, Go, Rust, and others. Those mainstream languages, however, may not always provide the security or convenience of use that smart contract developers seek.
+
+IOG selected Haskell as the programming language for Plutus smart contracts to guarantee increased security and code verifiability. For application development, it is the most extensively used functional programming language. Haskell is a secure and formally verified programming language. In terms of acceptance, it is appropriate for a broad variety of financial use cases, providing for quick transfers of payments, accurate outcomes, and scalability. In terms of state distribution and parallelization for increased scalability, this programming approach works well inside the UTXO model.
+
+The UTXO alliance will investigate the best-case scenarios for creating a uniform smart contract landscape where a range of programming languages may be built and utilized on various blockchain platforms, taking into account various development initiatives. This will be critical in enabling more blockchain interoperability.
+
+**True Scalability**
+
+It’s also vital to consider a network’s scalability potential in terms of transaction processing and throughput as it expands. Because the UTXO model is based on the local state, it differs from the account-based model and hence necessitates a distinct programming paradigm.
+
+These two models have diverse features and provide different trade-offs, different benefits and drawbacks. The account model promotes the creation of use cases that depend on the global state, but the UTXO model assures determinism, predictability, and scalability by managing local states, meaning small sections of the overall graph of transactions. This slows things down as the whole graph of transactions needs to be processed before validation.
+
+As a result, the UTXO architecture has the advantage of ensuring the execution of transactions and contracts prior to their submission to the blockchain, with no fees or validation surprises. Also, since it is easier to shard a graph of transactions by breaking it into a collection of sub-graphs, the UTXO paradigm will enable higher scalability.
+
+It’s also simpler to detach a specific transaction or collection of transactions (that transfer data, scripts, and assets) and continue work off-chain before returning to the mainchain with a result, ensuring scalability by off-loading operations off the mainchain. IOG, for example, has created Hydra state channel solutions that boost system performance while allowing several tasks to occur in parallel without sacrificing scalability. To learn more, read about concurrency on Cardano. Hydra and other scalability solutions are covered in Chapter 8.
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/alliance.png "EUTXO alliance")
+Figure 5.6: Slide from James Aman’s talk ‘UTXO Alliance’ at ScotFest
 
 [^01]: **Digital footprint** or digital shadow refers to one’s unique set of traceable digital activities, actions, contributions and communications manifested on the Internet or on digital devices. On the World Wide Web, the internet footprint; also known as cyber shadow, electronic footprint, or digital shadow, is the information left behind as a result of a user’s web-browsing and stored as cookies.
 [^02]: A **directed acyclic graph** is a directed graph with no directed cycles. That is, it consists of vertices and edges, with each edge directed from one vertex to another, such that following those directions will never form a closed loop.
