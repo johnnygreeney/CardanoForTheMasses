@@ -480,7 +480,7 @@ Tokens representing Panini football cards are an example of an asset category th
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/panini.png "Panini soccer cards")         
 **Figure 5.3**:  Panini soccer cards
 
-Tokens resembling an artist’s paintings are another example of a single-issuer policy use case. This would rule out the production of new painting tokens without the artist’s signature. The insurance, on the other hand, establishes that all of the existing paintings covered by the policy were properly produced by the artist and nobody else. It enables artists a new medium to express themselves, not to mention a more efficient and fairway to sell and distribute art, as painter Jonathan Dickson explained in this video.  
+Tokens resembling an artist’s paintings are another example of a single-issuer policy use case. This would rule out the production of new painting tokens without the artist’s signature. The insurance, on the other hand, establishes that all of the existing paintings covered by the policy were properly produced by the artist and nobody else. It enables artists a new medium to express themselves, not to mention a more efficient and fairway to sell and distribute art, as painter Jonathan Dickson[^47] explained in this video.[^48]  
 
 **Time-locked minting policy** 
 
@@ -509,21 +509,21 @@ It’s worth noting that a single transaction might result in the creation of to
 
 **Metadata standards**   
 
-So as you may gather, most of the functionality for Cardano native assets is described in its metadata, and the two primary metadata standards allow for a broad range of use cases. The initial standard was CIP-25, which predated smart contracts on Cardano. These NFTs are easiest to mint, but functionality is limited since smart contracts cannot access the information. 
+So as you may gather, most of the functionality for Cardano native assets is described in its metadata, and the two primary metadata standards allow for a broad range of use cases. The initial standard was CIP-25,[^49] which predated smart contracts on Cardano. These NFTs are easiest to mint, but functionality is limited since smart contracts cannot access the information. 
 
-CIP-68 is a more recent standard and more dynamic in that it enables more sophisticated capabilities with smart contract-readable information. Since smart contracts were introduced on Cardano, this has been the accepted standard. 
+CIP-68[^50] is a more recent standard and more dynamic in that it enables more sophisticated capabilities with smart contract-readable information. Since smart contracts were introduced on Cardano, this has been the accepted standard. 
 
 Instead of storing metadata as transaction metadata as CIP-25 does, CIP-68 stores it as an inline datum on a UTXO, in the current ledger state. CIP-68 dictates that each token name must be prefixed by a label in brackets, which indicates the purpose of the token. (100) : reference token, (222) : NFT, (333) : FT and (444) : RFT. Rich Fungible Token (RFT) extends what a fungible token is, RFTs can feature images, audio and video. A major advancement with CIP-68 was that NFTs were now updatable, opening up a new world of use cases. 
 
-CIP-60 was proposed by the music streaming marketplace newm.io, extending metadata standards to cater for music tokens. As dApps on Cardano push the boundaries of creativity and innovation, the protocol will need to adapt to facilitate them. Change is managed by the CIP (Cardano Improvement Proposal) process. We’ll discuss this more when we dive into ‘Governance’ in chapter 9. 
+CIP-60[^51] was proposed by the music streaming marketplace newm.io, extending metadata standards to cater for music tokens. As dApps on Cardano push the boundaries of creativity and innovation, the protocol will need to adapt to facilitate them. Change is managed by the CIP (Cardano Improvement Proposal) process. We’ll discuss this more when we dive into ‘Governance’ in chapter 9. 
 
-Also of note to artists and builders is the NFT Guild which is in place with a mission to *‘facilitate the creation of a lively NFT developer and creator community and to ensure that projects have the resources they need and a clear understanding of best practices when getting started and throughout their journey in this space.’*
+Also of note to artists and builders is the NFT Guild[^52] which is in place with a mission to *‘facilitate the creation of a lively NFT developer and creator community and to ensure that projects have the resources they need and a clear understanding of best practices when getting started and throughout their journey in this space.’*
 
-The Cardano Token Registry allows projects to register off-chain token metadata mapping it to on-chain identifiers (usually hashes of asset IDs, output locking scripts, or token forging policies). The metadata standard described in CIP-26 helps to translate opaque on-chain identifiers to a human readable format. 
+The Cardano Token Registry[^53] allows projects to register off-chain token metadata mapping it to on-chain identifiers (usually hashes of asset IDs, output locking scripts, or token forging policies). The metadata standard described in CIP-26[^54] helps to translate opaque on-chain identifiers to a human readable format. 
 
 ## Creating native tokens on Cardano 
 
-Users can select between simple and sophisticated tools to bring their assets to life on Cardano. Many tokenization options are available in Cardano. The ledger’s accounting architecture handles not just ada transactions, but also transactions that hold several asset types at the same time.
+Users can select between simple and sophisticated tools to bring their assets to life on Cardano. Many tokenization options[^55] are available in Cardano. The ledger’s accounting architecture handles not just ada transactions, but also transactions that hold several asset types at the same time.
 
 **Utility**
 
@@ -535,7 +535,7 @@ Users will be able to transmit, receive, and burn their tokens without paying tr
 
 Developers may create (mint) assets and submit test transactions to various addresses using the native tokens testing environment.
 
-Because of the nature of working with the CLI, it is assumed that you are comfortable with setting up and administering a Cardano node, as well as dealing with transactions and managing addresses and values. To generate native tokens using Cardano CLI, follow the steps outlined in the documentation. At a high level, the steps are as follows:
+Because of the nature of working with the CLI, it is assumed that you are comfortable with setting up and administering a Cardano node, as well as dealing with transactions and managing addresses and values. To generate native tokens using Cardano CLI, follow the steps outlined in the documentation.[^56] At a high level, the steps are as follows:
 
 - Create and start a Cardano node 
 - Generate verification and signing keys
@@ -543,7 +543,7 @@ Because of the nature of working with the CLI, it is assumed that you are comfor
 - Start the minting process, create a policy and mint a new asset
 - Lastly, build the raw transactions, submit and sign transactions to send the tokens to the target address. 
 
-The Cardano Developer Portal provides native token tutorials and exercises to enable developers create tokens, implement monetary rules, and understand how to conduct multi-asset transactions.
+The Cardano Developer Portal[^57] provides native token tutorials and exercises to enable developers create tokens, implement monetary rules, and understand how to conduct multi-asset transactions.
 
 **2.  GUI-based solutions** 
 
@@ -557,7 +557,7 @@ It is a favourite for less technical users wishing to generate tokens. The graph
 - Amount to be made (eg, 10m)
 - Cardano payout wallet address
 
-It's best to watch a tutorial on YouTube to see how easy it really is, or follow along NMKR’s friendly documentation.
+It's best to watch a tutorial on YouTube to see how easy it really is, or follow along NMKR’s friendly documentation.[^58]
 
 **3. Third party platforms**
 
@@ -600,7 +600,7 @@ On the ledger, UTXOs may contain a mixed bag of tokens, including ada. The maxim
 
 By adjusting the min-ada-value setting, the maximum permissible UTXO size (the total of the sizes of all UTXO entries) is implicitly modified. The limitation prevents the Cardano ledger from going above a specific size in this manner. A ledger without size restrictions is prone to becoming overburdened with data to the point that users will be unable to process it (or operate a node) on devices that satisfy the required node criteria.   
 
-There is more detail in the documentation on the ‘ada-only’ case, ‘min-ada-value’ calculation and with worked examples.
+There is more detail in the documentation[^59] on the ‘ada-only’ case, ‘min-ada-value’ calculation and with worked examples.
 
 **Native Assets in the wild** 
 
@@ -612,7 +612,7 @@ Figure 5.5:  eutxo.org/stats/records
 
 ## Smart Contracts Rollout
 
-Alonzo built on Cardano’s token improvements to provide developers with the tools they needed to create dApps. IOG laid the groundwork for Cardano to become a smart contract platform by introducing transaction metadata, token-locking with *Allegra* in December 2020, and native token issuance.  Shortly after came *Mary*, a multi-asset protocol update in March 2021 that enabled users to create native tokens for Cardano transactions.
+Alonzo built on Cardano’s token improvements to provide developers with the tools they needed to create dApps. IOG laid the groundwork for Cardano to become a smart contract platform by introducing transaction metadata,[^60] token-locking[^61] with *Allegra* in December 2020, and native token issuance.[^62]  Shortly after came *Mary*, a multi-asset protocol update in March 2021 that enabled users to create native tokens for Cardano transactions.
 
 These features were built into *Alonzo*, the following protocol update in September 2021. Alonzo contributed functionality for smart contracts (digital agreements) to Cardano leveraging the novel hard fork combinator. By facilitating the construction of smart contracts and decentralized apps (dApps) for decentralized finance (DeFi), it offered up new possibilities for developers.
 
@@ -620,27 +620,27 @@ These features were built into *Alonzo*, the following protocol update in Septem
 
 IOG developed the essential tools and infrastructure with *Alonzo* to enable Plutus Platform application development. *Alonzo* enhanced Cardano Shelley’s basic multi-signature scripting language (multisig) with a rigorous methodology based on formal methods and verification. For more sophisticated and secure scripting capabilities, Multisig was updated to the Plutus Core language. The Alonzo ledger uses Plutus Core to enable advanced scripting leveraging the extended unspent transaction output (eUTXO) accounting model.
 
-The foundation for smart contracts must be both safe and dependable. As a result, Haskell was selected as the programming language for Plutus Core smart contracts. Haskell is a high-level programming language that is used by developers to code, which is then compiled into Plutus Core.
+The foundation for smart contracts must be both safe and dependable. As a result, Haskell was selected as the programming language for Plutus Core smart contracts. Haskell is a high-level programming language that is used by developers to code, which is then compiled into Plutus Core.[^63]
 
 Haskell has been around since 1987, and it stands out among programming languages because of its high degree of trustworthiness. Smart contracts written in Haskell, using the Plutus framework, are designed to accomplish precisely what is expected of them and can be checked for correctness before being implemented. This ensures that smart contracts written on Cardano will be simple and secure, which is critical for applications that manage automated trading or large-scale money transfers.
 
 **What smart contracts technology is currently available?**  
 
-Of the 18,000 cryptocurrencies around today, with only approximately 80 having smart contracts according to CryptoSlate. PolkaDot, Solana and Ethereum are among the participants on the market that support smart contracts. Technology is changing to suit the market needs for systems that are quick, secure, accurate, and dependable. Many firms have attempted to install large-scale apps on these platforms and have run across ‘issues’. For example, the DAO hack, the Parity bug and the shambolic Solana Wormhole hack where $320m went missing. Despite recurring hacks and rug pulls, the most critical problems in smart contracts continue to surface. Anyone can write buggy, insecure code however Cardano strives for higher standards with a functional programming model supported with rigorous property-based testing and regular audits.
+Of the 18,000 cryptocurrencies[^64] around today, with only approximately 80 having smart contracts according to CryptoSlate.[^65] PolkaDot, Solana and Ethereum are among the participants on the market that support smart contracts. Technology is changing to suit the market needs for systems that are quick, secure, accurate, and dependable. Many firms have attempted to install large-scale apps on these platforms and have run across ‘issues’. For example, the DAO hack,[^66] the Parity bug and the shambolic Solana Wormhole hack[^67] where $320m went missing. Despite recurring hacks and rug pulls,[^68] the most critical problems in smart contracts continue to surface.[^69] Anyone can write buggy, insecure code however Cardano strives for higher standards with a functional programming model supported with rigorous property-based testing and regular audits.
 
 ## UTXO alliance
 
-IOG collaborates with other UTXO-based blockchains to develop novel solutions that will improve interoperability, programmability, and scalability. IOG announced a partnership with Ergo (ergoplatform.org), Nervos (nervos.org), and Topl (topl.co) to form the UTXO alliance during the 2021 Cardano Summit. They then invited Komodo (komodoplatform.com), Alephium (alephium.org) and DigiByte (digibyte.org) into the alliance as well.
+IOG collaborates with other UTXO-based blockchains to develop novel solutions that will improve interoperability, programmability, and scalability. IOG announced a partnership with Ergo (ergoplatform.org), Nervos (nervos.org), and Topl (topl.co) to form the UTXO alliance during the 2021 Cardano Summit.[^70] They then invited Komodo (komodoplatform.com), Alephium (alephium.org) and DigiByte (digibyte.org) into the alliance as well.
 
 The UTXO alliance will help cross-ecosystem activities to expand UTXO’s smart contract capability. The joint goal of collaborating with other blockchain sector initiatives is to stimulate and support further research, development, and education throughout the whole area.
 
-The UTXO alliance’s purpose is to keep the UTXO model evolving in terms of interoperability, scalability (sharding, state channels, etc), and smart contract solutions. Improving these solutions and leading major projects to develop bridges across blockchains enables everyone to have access to fair and accessible global finance. This also provides a collaborative effort to promote UTXO-based ledgers in the industry. Bitcoin is obviously the most well-known UTXO blockchain but spin-offs like Bitcoin Cash, Litecoin, and Zcash are among the other projects that use this approach.
+The UTXO alliance’s purpose is to keep the UTXO model evolving in terms of interoperability, scalability (sharding,[^71] state channels, etc), and smart contract solutions. Improving these solutions and leading major projects to develop bridges across blockchains enables everyone to have access to fair and accessible global finance. This also provides a collaborative effort to promote UTXO-based ledgers in the industry. Bitcoin is obviously the most well-known UTXO blockchain but spin-offs like Bitcoin Cash, Litecoin, and Zcash are among the other projects that use this approach.
 
 **Building bridges**
 
 Instead of depending on expensive middlemen, blockchain technology tackles the difficulties of centralization by allowing trustworthy peer-to-peer transactions based on cryptographic verification. To create a safe and decentralized environment for financial transactions, several blockchain solutions have developed. While these initiatives differ in terms of consensus protocols, accounting models, and smart contract approaches, they all concentrate on similar use cases.
 
-DeFi Growth has been consistent and shows no signs of slowing. However, fragmented ecosystems, differing governance standards, technology versions, and feature support slow the development of the blockchain environment. Nasdaq’s forecast on DeFi Growth is shared by Romain Pellerin, IOG technology chief: 
+DeFi Growth[^72] has been consistent and shows no signs of slowing. However, fragmented ecosystems, differing governance standards, technology versions, and feature support slow the development of the blockchain environment. Nasdaq’s forecast on DeFi Growth is shared by Romain Pellerin, IOG technology chief: 
 
 > Mainstream blockchain adoption will pass only through the interconnection of networks, similar to how the Internet was built by the interconnection of intranets and extranets.
 
@@ -648,7 +648,7 @@ With this in mind, it’s critical to guarantee that the whole sector is working
 
 **No one-size-fits-all**
 
-The UTXO alliance is also interested in blockchain programmability enabling the development of dApps and smart contracts. In reality, new languages must be created to adapt to the UTXO model’s particular transaction and data storage management (for example, Ergo’s and Cardano’s eUTXO). Antara, CKB-VM, ErgoScript, and Plutus are the smart contract languages created by the alliance’s founding members. To quickly extend the number of use cases that may be executed on UTXO-based blockchains, alliance members are pooling expertise and cooperating in the development of such technologies.
+The UTXO alliance is also interested in blockchain programmability enabling the development of dApps and smart contracts. In reality, new languages must be created to adapt to the UTXO model’s particular transaction and data storage management (for example, Ergo’s[^73] and Cardano’s eUTXO). Antara, CKB-VM, ErgoScript, and Plutus are the smart contract languages created by the alliance’s founding members. To quickly extend the number of use cases that may be executed on UTXO-based blockchains, alliance members are pooling expertise and cooperating in the development of such technologies.
 
 Furthermore, such languages are constructed as domain-specific languages (DSLs) on top of widely used programming languages such as Scala, Haskell, C, JavaScript, Go, Rust, and others. Those mainstream languages, however, may not always provide the security or convenience of use that smart contract developers seek.
 
@@ -664,10 +664,10 @@ These two models have diverse features and provide different trade-offs, differe
 
 As a result, the UTXO architecture has the advantage of ensuring the execution of transactions and contracts prior to their submission to the blockchain, with no fees or validation surprises. Also, since it is easier to shard a graph of transactions by breaking it into a collection of sub-graphs, the UTXO paradigm will enable higher scalability.
 
-It’s also simpler to detach a specific transaction or collection of transactions (that transfer data, scripts, and assets) and continue work off-chain before returning to the mainchain with a result, ensuring scalability by off-loading operations off the mainchain. IOG, for example, has created Hydra state channel solutions that boost system performance while allowing several tasks to occur in parallel without sacrificing scalability. To learn more, read about concurrency on Cardano. Hydra and other scalability solutions are covered in Chapter 8.
+It’s also simpler to detach a specific transaction or collection of transactions (that transfer data, scripts, and assets) and continue work off-chain before returning to the mainchain with a result, ensuring scalability by off-loading operations off the mainchain. IOG, for example, has created Hydra state channel solutions that boost system performance while allowing several tasks to occur in parallel without sacrificing scalability. To learn more, read about concurrency[^74] on Cardano. Hydra[^75] and other scalability solutions are covered in Chapter 8.
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/alliance.png "EUTXO alliance")
-Figure 5.6: Slide from James Aman’s talk ‘UTXO Alliance’ at ScotFest
+**Figure 5.6:** Slide from James Aman’s talk ‘UTXO Alliance’ at ScotFest
 
 [^01]: **Digital footprint** or digital shadow refers to one’s unique set of traceable digital activities, actions, contributions and communications manifested on the Internet or on digital devices. On the World Wide Web, the internet footprint; also known as cyber shadow, electronic footprint, or digital shadow, is the information left behind as a result of a user’s web-browsing and stored as cookies.
 [^02]: A **directed acyclic graph** is a directed graph with no directed cycles. That is, it consists of vertices and edges, with each edge directed from one vertex to another, such that following those directions will never form a closed loop.
@@ -717,29 +717,30 @@ Figure 5.6: Slide from James Aman’s talk ‘UTXO Alliance’ at ScotFest
 [^46]: Typhon wallet warp transactions, medium.com/@StricaHQ/introducing-warp-transactions-689d3e1339c7
 [^47]: Twitter Jonathan Dickson, twitter.com/JonathanDickson
 [^48]: Jonathan Dickson Elements NFTs on Cardano, youtube.com/watch?v=F1DR-39RN28
-[^49]:
-[^50]:
-[^51]:
-[^52]:
-[^53]:
-[^54]:
-[^55]:
-[^56]:
-[^57]:
-[^58]:
-[^59]:
-[^60]:
-[^61]:
-[^62]:
-[^63]:
-[^64]:
-[^65]:
-[^66]:
-[^67]:
-[^68]:
-[^69]:
-[^70]:
-[^71]:
-[^72]:
-[^73]:
-[^74]:
+[^49]: CIP 25 Media token metadata standard, cips.cardano.org/cip/CIP-0025
+[^50]: CIP 68 Datum metadata standard, cips.cardano.org/cip/CIP-0068
+[^51]: CIP 60 Music token metadata, cips.cardano.org/cip/CIP-0060
+[^52]: NFT Guild, nft-guild.io/
+[^53]: Cardano Token Registry, github.com/cardano-foundation/cardano-token-registry
+[^54]: Cardano off-chain metadata, cips.cardano.org/cip/CIP-0026
+[^55]: Tim Harrison, ‘Native Tokens on Cardano’, iohk.io/en/blog/posts/2020/12/08/native-tokens-on-cardano/
+[^56]: Getting started with native tokens, docs.cardano.org/native-tokens/getting-started
+[^57]: Discover native tokens, developers.cardano.org/docs/native-tokens/
+[^58]: NMKR docs, docs.nmkr.io/nmkr-studio/how-to-quick-start-tutorials/how-to-add-tokens
+[^59]: Min-ada-value, cardano-ledger.readthedocs.io/en/latest/explanations/min-utxo-mary.html
+[^60]: Alan McSherry, ‘Bringing new value and utility to the Cardano blockchain’, iohk.io/en/blog/posts/2020/10/29/bringing-new-value-and-utility-to-the-cardano-blockchain/
+[^61]: Kevin Hammond, ‘Goguen brings token locking to Cardano’, iohk.io/en/blog/posts/2020/12/02/goguen-brings-token-locking-to-cardano/
+[^62]: Tim Harrison, ‘Building native tokens on Cardano for pleasure and profit’, iohk.io/en/blog/posts/2021/02/18/building-native-tokens-on-cardano-for-pleasure-and-profit/
+[^63]: Michael Peyton Jones, ‘Plutus Tx: compiling Haskell into Plutus Core’, iohk.io/en/blog/posts/2021/02/02/plutus-tx-compiling-haskell-into-plutus-core/
+[^64]: Adam Hayes, ‘10 Important Cryptocurrencies Other Than Bitcoin’, investopedia.com/tech/most-important-cryptocurrencies-other-than-bitcoin/
+[^65]: CryptoSlate Smart Contract Coins, cryptoslate.com/cryptos/smart-contracts/
+[^66]: The DAO Hack Explained: Unfortunate Take-off of Smart Contracts, ogucluturk.medium.com/the-dao-hack-explained-unfortunate-take-off-of-smart-contracts-2bd8c8db3562
+[^67]: More than $320 million stolen in latest apparent crypto hack, cnbc.com/2022/02/02/320-million-stolen-from-wormhole-bridge-linking-solana-and-ethereum.html
+[^68]: A rug pull is a crypto scam in which fraudsters lie to the public to attract funding and quickly run off with investors' funds and/or digital tokens.
+[^69]: Nikolic, Kolluri, Sergey, Saxena, Hobor (2018), Finding The Greedy, Prodigal, and Suicidal Contracts at Scale, arxiv.org/pdf/1802.06038.pdf
+[^70]: UTXO alliance announcement, summit.cardano.org/sessions/taking-outputs-as-inputs
+[^71]: **Sharding** splits a blockchain company’s entire network into smaller partitions, known as ‘shards.’ Each shard consists of its own data, making it distinctive and independent when compared to other shards.
+[^72]: Why Privacy and Interoperability Will Fuel Exponential Growth in DeFi, nasdaq.com/articles/why-privacy-and-interoperability-will-fuel-exponential-growth-in-defi-2021-03-04
+[^73]: Learning Ergo 101 : eUTXO explained for human beings, dav009.medium.com/learning-ergo-101-blockchain-paradigm-eutxo-c90b0274cf5e
+[^74]: Olga Hryniuk, ‘Concurrency and all that: Cardano smart contracts and the EUTXO model’, iohk.io/en/blog/posts/2021/09/10/concurrency-and-all-that-cardano-smart-contracts-and-the-eutxo-model/
+[^75]: Sebastian Nagel, ‘Hydra – Cardano’s solution for ultimate Layer 2 scalability’, iohk.io/en/blog/posts/2021/09/17/hydra-cardano-s-solution-for-ultimate-scalability/
