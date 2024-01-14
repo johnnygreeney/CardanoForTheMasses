@@ -480,6 +480,121 @@ Tokens representing Panini football cards are an example of an asset category th
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/panini.png "Panini soccer cards")         
 **Figure 5.3**:  Panini soccer cards
 
+Tokens resembling an artist’s paintings are another example of a single-issuer policy use case. This would rule out the production of new painting tokens without the artist’s signature. The insurance, on the other hand, establishes that all of the existing paintings covered by the policy were properly produced by the artist and nobody else. It enables artists a new medium to express themselves, not to mention a more efficient and fairway to sell and distribute art, as painter Jonathan Dickson explained in this video.  
+
+**Time-locked minting policy** 
+
+AKA token-locking. This policy may be used to limit the number of tokens that can be spent from a certain address. 
+
+- only during or after a defined time slot
+- only before a defined time slot
+
+Typically, this form of policy isn’t employed on its own. It is often used in combination with a multisignature or single issuer policy, for example. Only a transaction signed by key ‘k’ may spend this output after slot ‘s’. This form of policy may be created without the need for Plutus smart contracts. 
+
+**One-time minting policy**
+
+In a one-time mint policy, a single transaction mints the whole set of tokens for a specified asset category. This indicates that there will never be any more tokens in that asset category. This sort of policy necessitates the use of Plutus smart contracts.
+
+For example, a one-time mint policy may be used to create ticket tokens for the Super Bowl. Because the venue’s capacity is known ahead of time, there will be no need to issue more tickets.
+
+**Minting transactions**
+
+Each transaction has a mint field that may be used to add fresh amounts of new tokens to the ledger (minting) or to remove existent tokens (burning). Minting transactions are transactions in which the mint field is not empty. The usage of this field must be strictly regulated to guarantee that tokens are minted and burned in accordance with the token’s minting policy.
+
+Minting transactions must include the minting rules for the tokens they are minting, in addition to the mint field, so that these tokens may be inspected during validation.
+
+The ledger will record the assets contained in the mint field, which is included in the transaction’s balancing: if the field is positive, then the transaction’s outputs must have more assets than the inputs supply; if it is negative, then they must contain fewer.
+
+It’s worth noting that a single transaction might result in the creation of tokens with numerous minting rules. For instance, (Policy1, SomeTokens) or (Policy2, SomeOtherTokens). A transaction might also mint and burn tokens at the same time.
+
+**Metadata standards**   
+
+So as you may gather, most of the functionality for Cardano native assets is described in its metadata, and the two primary metadata standards allow for a broad range of use cases. The initial standard was CIP-25, which predated smart contracts on Cardano. These NFTs are easiest to mint, but functionality is limited since smart contracts cannot access the information. 
+
+CIP-68 is a more recent standard and more dynamic in that it enables more sophisticated capabilities with smart contract-readable information. Since smart contracts were introduced on Cardano, this has been the accepted standard. 
+
+Instead of storing metadata as transaction metadata as CIP-25 does, CIP-68 stores it as an inline datum on a UTXO, in the current ledger state. CIP-68 dictates that each token name must be prefixed by a label in brackets, which indicates the purpose of the token. (100) : reference token, (222) : NFT, (333) : FT and (444) : RFT. Rich Fungible Token (RFT) extends what a fungible token is, RFTs can feature images, audio and video. A major advancement with CIP-68 was that NFTs were now updatable, opening up a new world of use cases. 
+
+CIP-60 was proposed by the music streaming marketplace newm.io, extending metadata standards to cater for music tokens. As dApps on Cardano push the boundaries of creativity and innovation, the protocol will need to adapt to facilitate them. Change is managed by the CIP (Cardano Improvement Proposal) process. We’ll discuss this more when we dive into ‘Governance’ in chapter 9. 
+
+Also of note to artists and builders is the NFT Guild which is in place with a mission to *‘facilitate the creation of a lively NFT developer and creator community and to ensure that projects have the resources they need and a clear understanding of best practices when getting started and throughout their journey in this space.’*
+
+The Cardano Token Registry allows projects to register off-chain token metadata mapping it to on-chain identifiers (usually hashes of asset IDs, output locking scripts, or token forging policies). The metadata standard described in CIP-26 helps to translate opaque on-chain identifiers to a human readable format. 
+
+## Creating native tokens on Cardano 
+
+Users can select between simple and sophisticated tools to bring their assets to life on Cardano. Many tokenization options are available in Cardano. The ledger’s accounting architecture handles not just ada transactions, but also transactions that hold several asset types at the same time.
+
+**Utility**
+
+To fulfill commercial or business goals, developers, enterprises, and apps may build general purpose (fungible) or specialized (non-fungible) tokens. Custom payment tokens or rewards for dApps, stablecoins tied to other currencies, and unique assets, like eBooks, that represent intellectual property are just a few examples. All of these assets may then be traded, swapped, or used to purchase goods and services.
+
+Users will be able to transmit, receive, and burn their tokens without paying transaction fees or installing event-handling logic to monitor transactions since native tokens do not need smart contracts to transfer their value. Users are able to produce, distribute, trade, and store tokens in one of four ways, depending on their preferences and technical expertise:
+
+**1. Cardano CLI**
+
+Developers may create (mint) assets and submit test transactions to various addresses using the native tokens testing environment.
+
+Because of the nature of working with the CLI, it is assumed that you are comfortable with setting up and administering a Cardano node, as well as dealing with transactions and managing addresses and values. To generate native tokens using Cardano CLI, follow the steps outlined in the documentation. At a high level, the steps are as follows:
+
+- Create and start a Cardano node 
+- Generate verification and signing keys
+- Generate a payment address, fund and check the balance 
+- Start the minting process, create a policy and mint a new asset
+- Lastly, build the raw transactions, submit and sign transactions to send the tokens to the target address. 
+
+The Cardano Developer Portal provides native token tutorials and exercises to enable developers create tokens, implement monetary rules, and understand how to conduct multi-asset transactions.
+
+**2.  GUI-based solutions** 
+
+NMKR (pronounced N-Maker) enables users to manage NFT projects through simple ‘point and click’ experience. 
+
+It is a favourite for less technical users wishing to generate tokens. The graphical user interface that simplifies the process of creating tokens. To make a token, just fill in the following fields:
+
+- The token’s name (for example, CardanoForTheMasses)
+- the token’s symbol (for example, CFTM)
+- the token’s logo (upload)
+- Amount to be made (eg, 10m)
+- Cardano payout wallet address
+
+It's best to watch a tutorial on YouTube to see how easy it really is, or follow along NMKR’s friendly documentation.
+
+**3. Third party platforms**
+
+adaHandle ($handle, adahandle.com) was one of the first projects to launch after Goguen as *‘An NFT-powered naming solution for your Cardano wallet address, secured entirely on-chain via the Handle Standard’*. It is a little like having your own internet domain, eg. $cardanobook is twinned with cardanobook.com
+
+Another early project was Dripdropz (dripdropz.io), the ‘Cardano Token Distribution System’ has added great value to the ecosystem.
+
+There are new projects launching every week, visit sites like *CardanoCube.io* to browse for what you want.
+
+## The lifecycle of native tokens on Cardano
+
+The native token lifecycle will be complete after all of the required components have been deployed. It is divided into five stages: 
+
+- Minting
+- Issuing
+- Using
+- Redeeming
+- Burning
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/lifecycle.png "Native tokens lifecycle")
+**Figure 5.4:**  Lifecycle of native tokens on Cardano
+
+Each of these logical processes includes Cardano blockchain transactions, which may result in ada fees. The following are the primary actors:
+
+- Asset controllers, who determine the asset class’s policy and authorize token issuers to mint and burn tokens. They might also retain co-signing rights for any tokens that are minted or burned
+- Token issuers, who create new tokens, keep a reserve of them in circulation, distribute them to token holders, and destroy them when they’re no longer useful
+- Token holders, who keep tokens, send them to other users, use them for payment, and then redeem them with the issuers when they’re no longer needed. Normal ‘Joe Soap’ users, exchanges, and other entities may be token users.
+
+The lifespan of multi-asset tokens begins with their creation – minting, which is the process by which one or more token issuers generate new tokens in line with the monetary policy script provided by the asset controller. In most cases, new tokens will be issued to serve a particular function. Tokens that are fungible or non-fungible (unique) may be developed for particular payment, buying, or exchange requirements, for example. When a new token is created, the overall token supply for that token grows, but the ada supply remains the same. Minting coins and transferring them to new addresses may need the payment of ada, which might be proportional to the quantity of distinct tokens possessed.
+
+Token holders will store tokens in their wallets and will be able to transfer them on to other users, swap them for objects of value (including non-native tokens), and so on, just like they would with ada. When a user’s token has been used up, they may opt to redeem it. Meaning tokens are returned to their original issuer (perhaps in return for a product, service, or some other currency, for instance). Tokens may then be re-issued to other users as required after they were redeemed. To pay for transaction fees, token holders will need to keep some ada in their wallets.
+
+If required, tokens may be burnt when they become redundant, in line with the underlying monetary policy script. The act of burning these tokens eliminates them (removing them from circulation), reducing the overall token supply. At this time, any deposits will be refunded. Fungible and non-fungible tokens are both burned in the same way.
+
+The multi-asset token lifecycle may enable tokens to be acquired and reissued by other parties, such as token holders acting as reissuers. This may be done to facilitate trading across different asset classes, maintain liquidity in one or more tokens (by serving as a broker), or reduce the effort/cost of token minting, issuance, or metadata server maintenance, for example. As a result, such a transaction benefits both reissuers and issuers by reducing costs and effort, preserving separation and integrity, and infusing value into the asset class.
+
+## Min-ada-value requirement
 
 **_Rest of chapter to be uploaded soon..._**
 
