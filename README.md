@@ -25,7 +25,7 @@ There has allready been significant progress made on a **Spanish** translation b
 
 A **Japanese** translation[^4] of older 'Age of Voltaire' Edition, funded by Catalyst, is at an advanced stage.
 
-A **Vietnamese** translation is being led by Hoang Phuong Linh - from the most professional Blockchain translation team in the Vietnamese market: Fimi - http://Cardano.Vn, book title in VietNamese: "Cardano For The Masses - Cardano Bible"
+A **Vietnamese** translation is being led by Hoang Phuong Linh, with team from - http://Cardano.Vn, book title in VietNamese: "*Cardano For The Masses - Cardano Bible*"
 
 If you are interested in translating this book, the plan is to set up a team of volunteers at _Transifex_[^6] 
 
