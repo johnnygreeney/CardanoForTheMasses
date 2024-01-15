@@ -21,9 +21,11 @@ The 3rd 'Chang' edition[^1] was published on 3rd Jan 2024, under an open-source 
 
 ## Translations 
 
-There has allready been significant progress made on a Spanish translation by Humberto Rojas Serrano and Joe San.
+There has allready been significant progress made on a **Spanish** translation by Humberto Rojas Serrano and Joe San.
 
-A Japanese translation[^4] of older 'Age of Voltaire' Edition, funded by Catalyst, is at an advanced stage.
+A **Japanese** translation[^4] of older 'Age of Voltaire' Edition, funded by Catalyst, is at an advanced stage.
+
+A **Vietnamese** translation is being led by Hoang Phuong Linh - from the most professional Blockchain translation team in the Vietnamese market: Fimi - http://Cardano.Vn, book title in VietNamese: "Cardano For The Masses - Cardano Bible"
 
 If you are interested in translating this book, the plan is to set up a team of volunteers at _Transifex_[^6] 
 
