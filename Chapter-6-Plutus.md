@@ -77,9 +77,9 @@ To master Plutus, one must grasp three concepts:
 - On-chain code, Plutus Core, which runs on the blockchain and is compiled by the Plutus compiler
 - Off-chain code which runs on the user’s device. The Plutus Application Framework (PAF) may be used to write off-chain code, which is subsequently compiled by the GHC (Glasgow Haskell Compiler) 
 
-Plutus smart contracts are essentially Turing-complete Haskell programs, with both on-chain and off-chain code written in Haskell. You can be sure that your smart contracts will be executed correctly if you follow best practice with Plutus. Haskell is the foremost purely functional programming language and builds on recent language research to create a secure, full-stack development environment. The rest of Cardano, for instance the node, is also implemented in Haskell whose strong static typing and relatively high expressiveness helps reduce common mistakes and ease the translation of complex requirements into programs. It ensures ‘the absence of side effects’ in mission critical code. 
+Plutus smart contracts are essentially Turing-complete Haskell programs, with both on-chain and off-chain code written in Haskell. You can be sure that your smart contracts will be executed correctly if you follow best practice with Plutus. Haskell is the foremost purely functional programming language and builds on recent language research to create a secure, full-stack development environment. The rest of Cardano, for instance the node, is also implemented in Haskell whose strong static typing[^02] and relatively high expressiveness helps reduce common mistakes and ease the translation of complex requirements into programs. It ensures ‘the absence of side effects’ in mission critical code. 
 
-To assist you with getting started, the Plutus Playground includes ‘how to’ guides and tutorials. To understand more about the Plutus language, you should read the Plutus explanations. If you want assistance when using Plutus, create an issue in the Plutus repository including as much information as possible.
+To assist you with getting started, the Plutus Playground[^03] includes ‘how to’ guides and tutorials. To understand more about the Plutus language, you should read the Plutus explanations.[^04] If you want assistance when using Plutus, create an issue in the Plutus repository[^05] including as much information as possible.
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig65.png "figure 6.5")
 <br>**Figure 6.5**: Plutus off-chain and on-chain
@@ -101,25 +101,25 @@ In a nutshell, inputs are references to UTXOs introduced by earlier transactions
 
 Plutus Tx refers to parts of a Haskell program that are used to compile a contract application’s on-chain component into Plutus Core (this compiled code is then used for validating a transaction, hence the ‘Tx’). The Plutus Core expression that results may be included in transaction data or saved in the ledger. Plutus script refers to certain chunks of code that need specific processing on the blockchain. You can manage the flow of execution of a Plutus script by utilizing transactions. As a result, a transaction can be thought of as a series of messages sent to the smart contract. 
 
-While assessing the off-chain code, the wallet should initiate a transaction. Once the transaction is submitted, it will be verified, and a validator node will analyze the Plutus code. Every node comes with a Plutus interpreter that is responsible for running script validators on-chain. The transaction will be deemed legitimate if the script evaluates correctly. The transaction will be denied otherwise.
+While assessing the off-chain code, the wallet should initiate a transaction. Once the transaction is submitted, it will be verified, and a validator node will analyze the Plutus code. Every node comes with a Plutus interpreter[^06] that is responsible for running script validators on-chain. The transaction will be deemed legitimate if the script evaluates correctly. The transaction will be denied otherwise.
 
 The PAF may be used to write off-chain code, which is then compiled by the GHC (Glasgow Haskell Compiler), while the Plutus compiler compiles on-chain code (written in Plutus Core). It’s critical to grasp the link between these Plutus principles and native tokens functionality to realize how the latter becomes a more powerful feature as a result of their interaction.
 
 **Plutus Core**
 
-Plutus Core is utilized to build the eUTXO paradigm. Plutus Core scripts may be written in a concise, functional language comparable to Haskell, and a significant portion of Haskell can be leveraged. You don’t write Plutus Core as a smart contract programmer; In practice, you’ll create validator scripts in Haskell, which will be automatically compiled into Plutus Core using a GHC (Glasgow Haskell Compiler) plug-in called Plutus Tx. These scripts will be run ‘live’ on the chain by nodes during transaction validation. They will either use validator scripts to unlock UTXOs, or minting policies to regulate the minting and burning of native tokens. 
+Plutus Core is utilized to build the eUTXO paradigm. Plutus Core scripts may be written in a concise, functional language comparable to Haskell, and a significant portion of Haskell can be leveraged. You don’t write Plutus Core as a smart contract programmer; In practice, you’ll create validator scripts in Haskell, which will be automatically compiled into Plutus Core using a GHC (Glasgow Haskell Compiler) plug-in called Plutus Tx.[^07] These scripts will be run ‘live’ on the chain by nodes during transaction validation. They will either use validator scripts[^08] to unlock UTXOs, or minting policies to regulate the minting and burning of native tokens. 
 
 **Plutus Application Framework (PAF)**
 
 Validator scripts’ on-chain status can only be changed by transactions that spend and create script output. When designing a Plutus application, both the on-chain (the Plutus Core scripts) and the off-chain (the transaction building and submission) components must be taken into account.
 
-Unlike Ethereum, where the on-chain code is mostly written in Solidity and the off-chain code is written in JavaScript, the Cardano off-chain code is written in Haskell, exactly like the on-chain code. The business logic will only have to be written once this way. The validator script and the code that creates the transactions that execute the validator script may then employ this reasoning.
+Unlike Ethereum, where the on-chain code is mostly written in Solidity and the off-chain code is written in JavaScript, the Cardano off-chain code is written in Haskell, exactly like the on-chain code. The business logic[^09] will only have to be written once this way. The validator script and the code that creates the transactions that execute the validator script may then employ this reasoning.
 
-Many applications need to monitor the UTXO set for changes to certain addresses, so if the contract is written as a state machine, you need to keep track of the unspent output, which reflects the machine’s current state, and update your local state if the on-chain state changes. Many applications need communication with the wallet backend to access the crypto funds they are using for transactions. The Plutus Application Framework (PAF) makes it simple to access services that are often used by Plutus apps. 
+Many applications need to monitor the UTXO set[^10] for changes to certain addresses, so if the contract is written as a state machine,[^11] you need to keep track of the unspent output, which reflects the machine’s current state, and update your local state if the on-chain state changes. Many applications need communication with the wallet backend to access the crypto funds they are using for transactions. The Plutus Application Framework (PAF) makes it simple to access services that are often used by Plutus apps. 
 
 **Plutus Application Backend (PAB)**
 
-The Plutus application backend, which offers runtime support for access to the blockchain as well as additional concerns like persistence, logging, and monitoring, may be used to execute applications built using the framework’s libraries. Applications built on top of the PAF provide an HTTP and WebSocket interface that allows users to interact with the app from a web browser.
+The Plutus application backend, which offers runtime support for access to the blockchain as well as additional concerns like persistence, logging, and monitoring, may be used to execute applications built using the framework’s libraries. Applications built on top of the PAF provide an HTTP and WebSocket[^12] interface that allows users to interact with the app from a web browser.
 
 The Plutus off-chain component is executed by the PAB, which is constantly iterated upon with each release. It handles wallet backend and node application requests, saves application state, and provides an HTTP API for managing application instances. 
 
@@ -127,7 +127,7 @@ The Plutus off-chain component is executed by the PAB, which is constantly itera
 
 With the Mary hard fork in February 2021, native tokens became accessible on Cardano. Tokens could now be created by anybody, and they can be transferred and received freely. 
 
-Each native token has its own minting policy, which specifies the circumstances under which tokens may be minted and burned. Users create minting policies in Haskell and compile them to Plutus Core after Plutus was deployed. During the minting or burning process, the Plutus Core policy script will be run in the context of the transaction, and it will have to approve or reject the action. This feature has boosted Cardano Non-Fungible Tokens (CNFTs) adoption by allowing for the use of considerably more complicated minting policies and trustless NFT issuance.
+Each native token has its own minting policy,[^13] which specifies the circumstances under which tokens may be minted and burned. Users create minting policies in Haskell and compile them to Plutus Core after Plutus was deployed. During the minting or burning process, the Plutus Core policy script will be run in the context of the transaction, and it will have to approve or reject the action. This feature has boosted Cardano Non-Fungible Tokens (CNFTs) adoption by allowing for the use of considerably more complicated minting policies and trustless NFT issuance.
 
 Minting policies are made up of a series of basic rules that define signatures and timelocks. For example, a policy may declare that transactions can only mint or burn tokens if they are signed by two of the five potential signatures. A different policy can allow minting only before or after a certain time.
 
@@ -147,9 +147,9 @@ There are other benefits, for example, the Plutus virtual machine can stop a pro
 
 Plutus offers significant security benefits. It provides a simpler, more reliable method of demonstrating that your smart contracts are accurate and will not experience the issues that have plagued prior smart contract language designs.
 
-Plutus allows for a new integrated approach to smart contract and distributed application development that is easier and more secure than prior options. The same language is used for both on-chain and off-chain programming. You employ a common code base, which the Plutus toolchain divides into on-chain and off-chain code and packages for deployment. Plutus also enables user-defined tokens (both fungible and non-fungible) natively, which needs much less code than Ethereum.
+Plutus allows for a new integrated approach to smart contract and distributed application development that is easier and more secure than prior options. The same language is used for both on-chain and off-chain programming. You employ a common code base, which the Plutus toolchain[^14] divides into on-chain and off-chain code and packages for deployment. Plutus also enables user-defined tokens (both fungible and non-fungible) natively, which needs much less code than Ethereum.
 
-A key differentiator of eUTXO, and Plutus, is its predictability, often referred to as determinism. At ScotFest, James Aman (CTO of Topl) coined the phrase:
+A key differentiator of eUTXO, and Plutus, is its predictability, often referred to as determinism. At ScotFest,[^15] James Aman (CTO of Topl) coined the phrase:
 
 >‘Not your output, not your outcome’ because if you want a thing to happen in the world, you need the output, the actual thing that goes into state, to reflect your desire… because those outputs then help you achieve your desired outcomes 
 
@@ -160,20 +160,20 @@ A key differentiator of eUTXO, and Plutus, is its predictability, often referred
 
 
 [^01]: Bitcoin Script, en.bitcoin.it/wiki/Script
-[^02]:
-[^03]:
-[^04]:
-[^05]:
-[^06]:
-[^07]:
-[^08]:
-[^09]:
-[^10]:
-[^11]:
-[^12]:
-[^13]:
-[^14]:
-[^15]:
+[^02]: **Static typing** means that before source code is compiled, the type (integer, floating point, string, etc) associated with every variable must be known. Compile time is when the programming code is translated to machine code. Runtime is when a program is running, ie. after compile time.
+[^03]: Plutus Playground, playground.plutus.iohkdev.io/
+[^04]: Plutus explanations, plutus-apps.readthedocs.io/en/latest/plutus/explanations/index.html
+[^05]: Plutus github repo, github.com/intersectMBO/plutus
+[^06]: An **interpreter** translates code from a high-level programming language into machine code line-by-line as the code runs
+[^07]: Plutus Tx: The libraries and compiler for compiling Haskell into Plutus Core to form the on-chain part of a contract application.
+[^08]: Validator scripts, docs.cardano.org/plutus/Plutus-validator-scripts
+[^09]: **Business logic** or domain logic is the part of the program that encodes the real-world business rules that determine how data can be created, stored, and changed. It is contrasted with the remainder of the software that might be concerned with lower-level details.
+[^10]: The **UTXO set** is the comprehensive set of all UTXOs existing at a given point in time. The sum of the amounts of each UTXO in this set is the total supply of existing currency at that point of time. Anyone can verify the total supply at any time in a trustless manner.
+[^11]: A finite-state machine (FSM) or simply a **state machine**, is a mathematical model of computation. It is an abstract machine that can be in exactly one of a finite number of states at any given time. The FSM can change from one state to another in response to some external inputs and/or a condition is satisfied; the change from one state to another is called a transition. An FSM is defined by a list of its states, its initial state, and the conditions for each transition.
+[^12]: **WebSocket** is a communications protocol, providing full-duplex communication channels over a single TCP connection.The Transmission Control Protocol (TCP) is one of the main protocols of the Internet protocol suite. It originated in the initial network implementation in which it complemented the Internet Protocol (IP). Therefore, the entire suite is commonly referred to as TCP/IP.
+[^13]: Minting policy, github.com/input-output-hk/cardano-documentation/blob/staging/content/07-native-tokens/01-learn.mdx#minting-policy
+[^14]: A **toolchain** is a set of programming tools that is used to perform a complex software development task or to create a software product, which is typically another computer program or a set of related programs. 
+[^15]: The UTXO Alliance, youtube.com/watch?v=j-Mil0RcKhQ
 [^16]:
 [^17]:
 [^18]:
