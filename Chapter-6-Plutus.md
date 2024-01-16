@@ -42,7 +42,7 @@ Following on from this, there are also embedded domain-specific languages (eDSL)
 A **virtual machine** (VM) is a digital version of a real life physical computer. You can view it as the same thing in terms of its functionality and capabilities. A VM can execute programs and operating systems, store your data, connect to WiFi and requires security and patching just like a normal computer. The VM software is just a computer file, known as an image, that acts like an actual computer. It can run a different (OS) operating system and this is where VMs can be useful for low-stakes testing or programming, when you need a different execution model or to mimic a specific hardware architecture
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig63.png "figure 6.3")
-**Figure 6.3**:  VM drawing by @_KtorZ_ 
+<br>**Figure 6.3**:  VM drawing by @_KtorZ_ 
 
 Most dApps are architected with on-chain code and off-chain code. For a simple example, a dApp might track ownership of digital assets on-chain, but the actual transfer of the assets might occur off-chain, enabling for more efficiency, smaller transaction fees and less unnecessary data stored on-chain. 
 
@@ -61,7 +61,7 @@ Plutus is a platform that offers a native smart contract language as well as the
 The Plutus Framework enables developers to create *dApps* that interact with a *distributed ledger* featuring *scripting* capabilities. This is why it’s an entire platform, not just a language. It doesn’t just provide a few tools to make the bare minimum possible, it supports dApp development in its entirety, end-to-end from writing scripts, to testing, runtime support, and verification. 
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig64.png "figure 6.4")
-**Figure 6.4**: Plutus Platform drawing by @_KtorZ_
+<br>**Figure 6.4**: Plutus Platform drawing by @_KtorZ_
 
 Plutus is a platform made of 3 main components:
 
@@ -82,7 +82,7 @@ Plutus smart contracts are essentially Turing-complete Haskell programs, with bo
 To assist you with getting started, the Plutus Playground includes ‘how to’ guides and tutorials. To understand more about the Plutus language, you should read the Plutus explanations. If you want assistance when using Plutus, create an issue in the Plutus repository including as much information as possible.
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig65.png "figure 6.5")
-**Figure 6.5**: Plutus off-chain and on-chain
+<br>**Figure 6.5**: Plutus off-chain and on-chain
 
 **Plutus uses extended UTXO (eUTXO)**
 
@@ -95,7 +95,7 @@ eUTXO improves the UTXO architecture by enabling output addresses to include com
 A transaction is a piece of data that has both inputs and outputs, and they may incorporate Plutus scripts. The unspent outputs from prior transactions (UTXO) are referred to as inputs. A UTXO gets spent as soon as it is used as an input in a transaction and cannot be used again. An address (a public key or public key hash) and a value are used to specify the output (consisting of an ada amount and optional additional native token amounts). This flow diagram provides a better understanding of the technical components of a transaction:
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig66.png "figure 6.6")
-**Figure 6.6**: Transaction inputs and outputs
+<br>**Figure 6.6**: Transaction inputs and outputs
 
 In a nutshell, inputs are references to UTXOs introduced by earlier transactions, and outputs are the new UTXOs produced by this transaction. Since new data may be stored in the generated outputs, this enables the status of a smart contract to be modified.
 
