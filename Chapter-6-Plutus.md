@@ -33,7 +33,7 @@ There are different levels of programming languages. On one extreme, there are s
 For programming code to run on a computer, it first needs to be translated into machine code by a compiler. The computer can digest machine code much easier than a high-level programming language. If a language is very ‘high-level’ it may need to be translated into an intermediate representation (compilation target) before it can be translated further into the lowest level 1s and 0s the computer executes. 
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig62.png "figure 6.2")
-**Figure 6.2**   Compiler drawing by @_KtorZ_ 
+<br>**Figure 6.2**   Compiler drawing by @_KtorZ_ 
 
 Then you will also hear talk of domain-specific languages (DSL). A DSL is a language specific to a particular application domain like finance or law. A general-purpose language can be used across a wide range of domains. 
 
