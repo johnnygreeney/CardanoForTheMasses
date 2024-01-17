@@ -191,9 +191,9 @@ The validator script is the function that uses all that information, in this exa
 
 GitHub contains examples of validator scripts on every smart contract: 
 
-- Plutus transaction tutorial
-- Plutus Hello World
-- Plutus pioneers English Auction
+- Plutus transaction tutorial[^16]
+- Plutus Hello World[^17]
+- Plutus pioneers English Auction[^18]
 
 **Cost model parameters**
 
@@ -201,10 +201,32 @@ A number of parameters in the cost model for Plutus Core scripts are also includ
 
 See the following for more details:
 
-- A list of cost model parameters and their brief description
-- Sources to find out more about the meaning of parameters
+- A list of cost model parameters and their brief description[^19]
+- Sources to find out more about the meaning of parameters[^20]
 
 ## Plutus Versions
+
+Cardano, like any other blockchain, is a decentralized ledger or database that keeps track of all transactions and blocks made on the network. This database distributes records with all participants and synchronizes with blockchain activity on a regular basis to deliver transparent and up-to-date data to anybody. In layman’s terms, a ledger is just a system that tracks who owns what.
+
+Cardano DB Sync[^21] retrieves such blockchain information and lets users run CLI commands to access transaction and block details. There are now many alternatives to DB Sync such as Marconi,[^22] Carp,[^23] Kupo,[^24] etc. Another is Ledger Sync[^25] which is written in Java, open sourced by the Cardano Foundation, and puts sequential blockchain data in an easily accessible database structure. You can use the Cardano Explorer[^26] – a graphical user interface that exposes information in a straightforward manner – for more easy and user-friendly data analysis. 
+
+Before a transaction is submitted to a block,[^27] it is validated by a block producer. To avoid double-spending, the sender must have adequate funds, and all nodes across the ledger must establish consensus. Let’s look at how this worked in the Shelley ledger, and how Plutus scripts changed it to enable multi-asset transactions and smart contracts.
+
+**Transaction validation before Goguen**
+
+Before Plutus scripts were introduced in the Goguen era, there was a simple *‘Native Script’* scripting language. When an output is used as an input in a transaction, it is considered spent and cannot be reused. The following are the parameters for the output:
+
+- an address which holds a payment credential and an optional stake credential, which may be either a public/verification key hash or a script hash. The stake credential might alternatively be a link to the registration certificate.
+- a value: this is the amount of ada that may be spent.
+
+The owner of the private key (also known as the signature key), which corresponds to the payment credential supplied in the address, must sign a transaction. Only ada transactions were supported before Goguen. The Shelley formal specification introduced the idea of multi-signature (multisig) scripts, which are captured wholly by ledger rules. If a predetermined combination of signatures is given, this multisig approach allows an unspent transaction output to be used as an input to a new transaction. 
+
+For example, if two people must sign the transaction at the same time, two out of three keys must be given, and so on. Multisig is a very simple language that enables you to interact with RequireSignature, RequireAllOf, RequireAnyOf, and RequireMOfN, among other constructors. CIP-1854[^28] contains more info about these scripts, as well as the *Formal Ledger Specification, Figure 4: Multi-signature via Native Scripts*[^29]
+
+**Alonzo (Plutus V1)**
+
+
+
 
 **_To be uploaded soon..._**
 
@@ -224,20 +246,20 @@ See the following for more details:
 [^13]: Minting policy, github.com/input-output-hk/cardano-documentation/blob/staging/content/07-native-tokens/01-learn.mdx#minting-policy
 [^14]: A **toolchain** is a set of programming tools that is used to perform a complex software development task or to create a software product, which is typically another computer program or a set of related programs. 
 [^15]: The UTXO Alliance, youtube.com/watch?v=j-Mil0RcKhQ
-[^16]:
-[^17]:
-[^18]:
-[^19]:
-[^20]:
-[^21]:
-[^22]:
-[^23]:
-[^24]:
-[^25]:
-[^26]:
-[^27]:
-[^28]:
-[^29]:
+[^16]: Plutus transactions model, github.com/input-output-hk/Alonzo-testnet/blob/main/Alonzo-tutorials/Plutus_transactions_tutorial.md#transaction-to-lock-funds
+[^17]: Plutus HelloWorld, github.com/input-output-hk/Alonzo-testnet/blob/e27563ec0c0c3723376f4d12881cd003a7a7157f/resources/plutus-sources/plutus-helloworld/src/Cardano/PlutusExample/HelloWorld.hs#L47
+[^18]: EnglishAuction.hs, github.com/input-output-hk/plutus-pioneer-program/blob/024ebd367bf6c4003b482bfb4c6db7d745ec85aa/code/week01/src/Week01/EnglishAuction.hs#L103
+[^19]: Cost model parameters, plutus.readthedocs.io/en/latest/reference/cost-model-parameters.html
+[^20]: Plutus bibliography, plutus.readthedocs.io/en/latest/reference/bibliography.html#id13
+[^21]: The purpose of **DB Sync** is to follow the Cardano chain and take information from the chain and an internally maintained copy of ledger state. Data is then extracted from the chain and inserted into a PostgreSQL database. SQL queries can then be written directly against the database schema.
+[^22]: Marconi, github.com/input-output-hk/marconi
+[^23]: Carp -  New Cardano SQL indexer & replacement for db-sync, medium.com/dcspark/carp-new-cardano-sql-indexer-replacement-for-db-sync-b990243a329e
+[^24]: Kupo, github.com/cardanosolutions/kupo
+[^25]: Accessing Cardano Blockchain Data with Ledger Sync, cardanofoundation.org/en/news/accessing-cardano-blockchain-data-with-ledger-sync/
+[^26]: CF Cardano Explorer, github.com/cardano-foundation/cf-explorer/releases/
+[^27]: Cardano Nodes, docs.cardano.org/new-to-cardano/cardano-nodes
+[^28]: CIP-1854, github.com/cardano-foundation/CIPs/tree/master/CIP-1854
+[^29]: Shelley Ledger spec, github.com/input-output-hk/cardano-ledger/releases/latest/download/shelley-ledger.pdf
 [^30]:
 [^31]:
 [^32]:
