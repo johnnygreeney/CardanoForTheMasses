@@ -329,7 +329,7 @@ As we will see later, the next hard fork promises to be a big update, as it will
 
 Developers can leverage a variety of tools to assess and implement smart contracts on Cardano. 
 
-Plutus Playground
+**Plutus Playground**
 
 The Plutus Playground is a place where smart contracts may be written and tested before being put on the Cardano blockchain. It’s a web-based platform for Plutus development with modest resource consumption. The Plutus Playground offers a web-based simulator for building and executing smart contracts, as well as access to popular smart contracts that have already been developed. 
 
