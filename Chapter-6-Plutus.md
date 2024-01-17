@@ -169,14 +169,14 @@ A customer ‘John’ wants to buy ‘Cardano for the M₳sses’ which costs �
 
 ```if EnoughADA(book=CardanoForTheMasses, customer=john):
     buyBook()
-
-def EnoughADA (book,customer):
+```
+```def EnoughADA (book,customer):
     return customer["balance"] >= book["bookPrice"]
-
-def buyBook():
+```
+```def buyBook():
     print ("You have enough ADA to buy the book")
-
-CardanoForTheMasses = {"bookPrice":₳10}
+```
+```CardanoForTheMasses = {"bookPrice":₳10}
 john = {"balance":₳11}```
 
 In the above example:
@@ -228,6 +228,52 @@ See the following for more details:
 [^19]:
 [^20]:
 [^21]:
+[^22]:
+[^23]:
+[^24]:
+[^25]:
+[^26]:
+[^27]:
+[^28]:
+[^29]:
+[^30]:
+[^31]:
+[^32]:
+[^33]:
+[^34]:
+[^35]:
+[^36]:
+[^37]:
+[^38]:
+[^39]:
+[^40]:
+[^41]:
+[^42]:
+[^43]:
+[^44]:
+[^45]:
+[^46]:
+[^47]:
+[^48]:
+[^49]:
+[^50]:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 [^97]:
 
