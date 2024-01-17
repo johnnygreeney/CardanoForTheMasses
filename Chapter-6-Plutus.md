@@ -557,16 +557,79 @@ This chapter was just an overview of Plutus. A useful landing page to bookmark i
 
 ## Marlowe
 
+Marlowe is a simple programming language for writing financial smart contracts for Cardano. It is named after the Elizabethan poet, dramatist and spy, Christopher Marlowe. Marlowe is limited to financial applications and is not Turing-complete. It is for people who are experts in finance rather than programming.
 
+Marlowe is based on peer-reviewed research carried out by a team led by Prof Simon Thompson, first at the University of Kent with the help of an IOG research grant, and then as an internal IOG team in collaboration with the University of Wyoming Advanced Blockchain R&D Laboratory. The research has resulted in several published papers.[^82]
 
+**Context for Marlowe**
 
+Marlowe provides blockchain financial contracts that anybody can write. It’s an embedded domain-specific language (dDSL) for creating and executing financial contracts that lets users utilize their domain knowledge to quickly create and manage contracts without the steep learning curve that comes with software development, blockchain, and smart contracts. 
 
+Marlowe is a user-friendly programming language that may be used to mimic financial products. It’s a decentralized finance (DeFi) platform that allows for direct peer-to-peer lending, contracts for difference (CFDs),[^83] and other related products. Marlowe contracts are tailored for financial transactions, development platforms, and a fast track for financial service providers to establish competence in smart contracts and blockchain technology.
+
+Marlowe contracts are simpler to read, write, and comprehend because they are written in a special-purpose language. It’s also safer: certain faults are impossible to create, and IOG can fully analyze contract behavior without running a contract. Marlowe has several advantages over a Turing-complete language. It’s more secure, predictable and addresses the halting problem[^84] by guaranteeing termination. 
+
+Marlowe’s design features:
+
+- No recursion[^85] or loops as contracts are finite
+- There are timeouts on all actions, guaranteeing termination
+- Commitments and timeouts are central to how Marlowe works in a blockchain context
+- All contracts have a defined lifetime
+- No assets are retained on close
+- Value is conserved.
+
+**Who is Marlowe’s target audience?**
+
+Because Marlowe enables you to write contracts graphically as well as in more conventional code, it may be used by someone who is an expert in the subject of financial contracts or business but lacks programming abilities and expertise. It may be used by financial institutions to create and deploy unique instruments for their customers and clients.
+
+The Marlowe language is embedded in both JavaScript and Haskell, giving you a variety of editors to choose from, depending on your preferences and skill level. You can write contracts in these languages and then convert (‘compile’) them to Marlowe in the Marlowe Playground. Haskell is a functional programming language with its own established ecosystem and robust testing environment, but JavaScript provides flexibility and speed of usage with a vibrant community.
+
+Marlowe may interact with real-world data, such as oracles, and contract participants can choose what occurs on and off-chain, such as in a wallet, by making decisions inside the contract flow. Marlowe is blockchain-agnostic, allowing smart contacts to be expressed on top of account-based models like Ethereum as well as Cardano’s extended unspent transaction output (eUTXO) model. Marlowe is an industry-scale solution that incorporates examples from the ACTUS[^86] (actusfrf.org) taxonomy and financial contract standard. 
+
+**Marlowe differentiators**
+
+The way Marlowe ensures that the contract is followed is where it distinguishes from non-blockchain alternatives. This assumes not just that the contract's directions are followed, but also that the participants commit and do not leave money locked up in the contract indefinitely. Timeouts are used to accomplish this.
+
+A contract can request a person to make a deposit of a certain amount, but it cannot compel that person to do so. Instead, the contract can wait for them to commit to the contract for a set amount of time, after which it will proceed to follow some alternate instructions. This prohibits a party from canceling a contract by refusing to participate, ensuring that there's not a stalemate.
+
+Timeouts safeguard all of Marlowe's constructs that need user input, such as user deposits and user selections. As a result, it's straightforward to observe that an user's commitment to a contract is finite: Marlowe can foresee when the contract will be completed - when it may be closed. Any unspent assets in the contract are repaid to participants at this time, and the contract comes to an end. As a result, any assets deposited into the contract by a participant cannot be locked up indefinitely: the commitment essentially terminates at this moment.
+
+Furthermore, it is simple for us to read from the contract when it will end, which Marlowe refers to as the contract's lifespan: all parties will be able to determine this lifetime prior to entering into any contract.
+
+A running contract in Marlowe cannot demand a deposit or a choice; it may only seek a deposit or a selection from a user. It can't ‘push’ these actions, but it may ‘pull’ them. However, it may make payments automatically, thus some features of a Marlowe contract might ‘push’ for certain events to occur, such as guaranteeing that a payment is sent to a participant by generating an appropriate transaction output.
+
+Similar to native scripts mentioned earlier, Marlowe offers 6 primitives: **Pay, Close, If, When, Let** and **Assert**. Although you can express relatively complex logic, it is not as expressive as a general purpose programming language. 
+
+There are pros and cons for a language to be Turing-complete. Marlowe isn't Turing-Complete. This is a feature, not a bug, as only a set number of programs can be written, so in theory, it is possible to guarantee there are no security bugs or vulnerabilities for a given program.
+
+Because Marlowe is a DSL, it can predict how Marlowe contracts will function without having to execute them: meaning you can leverage static analysis[^87] to deliver important diagnostics to users before they sign a contract. Marlowe can also leverage logic tools to explicitly establish Marlowe contract properties, providing users with the maximum level of certainty that their contracts will perform as intended.
+
+**Marlowe Playground**
+
+Users would ideally like to understand how contracts will perform once deployed to the blockchain, but without the risk of actually deploying. Marlowe can help here as it replicates the contracts behavior off-chain in the Marlowe Playground. The Marlowe Playground is an online sandbox environment where you may build, model, simulate and test the process of developing smart contracts, without having to install anything. 
+
+When utilizing the Marlowe Playground, you have three choices to select from. 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig68.png "figure 6.8")
+<br>**Figure 6.8**: Creating a demo on Marlowe 
+
+You may code in Marlowe directly, but you can also utilize Blockly, a visual programming tool that allows you to design contracts by connecting blocks that represent the various components. You can use the Blockly visual interface to link together the pieces of the contract or write Marlowe code directly as Marlowe text. This is a great tool for people who are not comfortable with programming editors and prefer to work with graphics. Contracts are built by dragging and dropping components to the holes in the blocks. Blocks are selected by just clicking on them, the current active block you are using will have a yellow outline.
+
+You may also use the inbuilt Haskell or JavaScript editors to help you write more readable and concise Marlowe contracts. You can use the Haskell editor to produce Marlowe code if you’re a seasoned Haskell developer. Because Marlowe is built as a Haskell data type, creating Marlowe smart contracts using Haskell is easy. Just select ‘Haskell’ in the sample ‘Demo files’. You can use Haskell to make contract definitions more readable by using Haskell definitions for sub-components, abbreviations, and simple template functions. The editor will assist you with auto-complete, error checking during editing, and binding tips on mouse over.
+
+You can make your own templates out of Marlowe contracts and utilize unique metadata to provide user suggestions. The sandbox setting of the Marlowe Playground is where you may experiment drafting financial contracts. This playground lets you work directly in a variety of languages, including Marlowe, JavaScript, Haskell,[^88] or Blockly, depending on your preferences. New tools for creating and modifying templates and customizing information, as well as a new JSON download option for the contracts themselves, were introduced to the Marlowe Playground. 
+
+In April 2022, IOG introduced the Marlowe CLI (command line interface) tool.[^89] For users who wish to manage contracts from the command line, this new tool provides a simple approach. It allows you to concentrate on the Marlowe contract while the tool handles the specifics of the contract’s input and state. It also automates several parts of Plutus, as well as interactions with the Cardano node itself, to relieve users of some of the heavy lifting.
+
+This new CLI tool will be beneficial for teaching users how to get up to speed with Marlowe. It was used heavily in the inaugural Marlowe Pioneer Program. Late 2022 saw the launch of *Marlowe Runtime*,[^89] an application backend for Marlowe contract handling. Developers can use Marlowe Runtime’s APIs and backend to build and deploy Marlowe Web3 dApps. This saves them the hassle of needing to manually orchestrate the backend workflow. There is also a beginner-friendly Marlowe starter kit on demeter.run[^90]
+
+After an extensive audit by *Tweag.io*, documented in a long blog post, Marlowe went live[^91] on Cardano mainnet in the summer of 2023. 
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig69.png "figure 6.9")
+<br>**Figure 6.9**: Creating a smart contract using Blockly on Marlowe Playground
 
-**_To be uploaded soon..._**
+**Where can I learn more about Marlowe?**
 
+This was just a brief overview of Marlowe. To learn more, subscribe to Prof Simon Thompson’s YouTube channel[^92] and review his videos. Read the docs[^93] and register to become a Marlowe Pioneer[^94] in the next cohort at *marlowe.iohk.io/*. There was a blog post outlining the different learning paths available with IOG Academy. 
 
 [^01]: Bitcoin Script, en.bitcoin.it/wiki/Script
 [^02]: **Static typing** means that before source code is compiled, the type (integer, floating point, string, etc) associated with every variable must be known. Compile time is when the programming code is translated to machine code. Runtime is when a program is running, ie. after compile time.
