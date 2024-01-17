@@ -39,7 +39,7 @@ Andrew Westberg, NEWM CTO, speaking at the 2023 Dubai Cardano Summit[^14]
 ## Aiken is born
 
 
-**_To be uploaded soon..._**
+**_The reste will be uploaded soon..._**
 
 [^01]: Untyped Plutus Core, aiken-lang.org/uplc
 [^02]: Helios compiler, github.com/Hyperion-BT/Helios/blob/main/helios.js
