@@ -283,8 +283,37 @@ Looking at all three CIPs holistically, these enhancements pushed Plutus forward
 
 **Valentine Hard Fork** 
 
+Known internally as the SECP (Standards for Efficient Cryptography protocol) update, CIP 49[^32] was implemented as the ‘Valentine’ Intra-era hard fork[^33] on 14th February 2023. 
 
+Cryptographic primitives are like the Lego blocks used to create secure transactions and develop algorithms when building dApps. They can be random number generators, entropy (randomness) sources, basic memory or math operations that are required by the cryptographic algorithms. 
 
+Before we go any further, let’s unscramble some of the terminology:
+
+*Elliptic Curve Digital Signature Algorithm* or *ECDSA* is a cryptographic scheme for producing signatures using public and private keys. It uses a variant of Schnorr signature based on twisted Edwards curves. So what is a Schnorr signature? 
+
+A *Schnorr signature* is a digital signature produced by the Schnorr signature algorithm that was described by Claus Schnorr. It is known for its simplicity, efficiency and for generating short signatures.
+
+*Secp256k1* is the name of the elliptic curve used by Bitcoin, Ethereum and others to implement its public key cryptography. Whereas Cardano, Monero, Ripple and others employ *edwards25519* elliptic curve as a basis for their key pair generation. The curve comes from the *Ed25519* signature scheme.
+
+Initially, the Vasil hard fork was to add built-in support for *secp256k1* on Cardano, enabling developers to interact with signatures from those other blockchains. However, after extensive testing, it was decided to omit this enhancement from Vasil. As this upgrade impacted the Plutus interpreter, it needed to be implemented as a hard fork. After Vasil, it was decided that future updates would only be scheduled if certain critical mass indicators were met. A set percentage of SPOs would need to be running the new node. Exchanges would need to be consulted. Impact to other Cardano components would need to be assessed. Cexplorer.io/versions is a good page to track for ‘hard fork readiness’.
+
+The changes, outlined in CIP 49, enable dApp developers to effectively build cross-chain applications with bridges, sidechains and wrapped assets. The new functionality is crucial for bridges to sidechains, and other interoperability solutions like Wanchain.[^34] These primitives are supported as built-in functions native to Cardano, implemented and audited by security experts. This gives Plutus developer more options. For example, Schnorr-based designs are well established and adopted by the wider dApp community.
+
+As is often the case with Cardano, an analogy helps understanding. Emmanuel (@thepizzaknight_)[^35] provided this New Year’s Day gift:
+
+> For the purposes of this thread, regard Crypto Primitives as real-world language families, let's use the Indo-European language family. Cardano uses Curve25519, think Germanic (English, Deutsche, etc) Ethereum, Bitcoin, etc. use SECP256k1, think Romance (French, Spanish, etc).
+>
+>As you can imagine, it can be tough to do business as an English speaker with a Spanish-speaking person. You have to hire translators and go through a lot just to get work done. This is what it's like now for dApp (and Bridge) builders on Cardano trying to go cross-chain. Thankfully the next Chain Upgrade Event fixes this by adding support for SECP256k1 as a Built-in function on Cardano (think of it as adding a new DNA strand). This will allow Cardano (English) to naturally understand other chains (Spanish). What does this mean for you as a user or a builder? New cross-chain opportunities with better bridges and access to new tokens and dApps from other chains. With the Sidechain strategy, Cardano needs this improvement for its Interoperability vision to be feasible and real. 
+
+**Backwards compatibility** 
+
+The Cardano Ledger tags scripts with a language (V1 for Alonzo, V2 was Vasil). This dictates how the ledger treats the script. Plutus V1 must remain the same forever, or else anyone could manipulate existing scripts, potentially making outputs un-spendable and breaking users’ assumptions. For this reason, if Plutus needs significant updating, a ‘new’ language in the ledger is required. 
+
+Generally, each hard fork will produce a new ‘Plutus language version’ with additional functionality. From the ledger’s perspective, they are completely unrelated and there is no requirement that they be similar in any way. Your old scripts are still valid and will function as before. You are not obligated to use the new language version, which is a superset of the prior version. You obviously need to tag your script with the correct version to avail of new features, see ‘language versions’ in the docs for more details.
+
+To understand what kinds of changes require a new language version, see CIP 35–Plutus Core Evolution.[^36] 
+
+**Plutus V3**
 
 
 
@@ -320,45 +349,73 @@ Looking at all three CIPs holistically, these enhancements pushed Plutus forward
 [^27]: Cardano Nodes, docs.cardano.org/new-to-cardano/cardano-nodes
 [^28]: CIP-1854, github.com/cardano-foundation/CIPs/tree/master/CIP-1854
 [^29]: Shelley Ledger spec, github.com/input-output-hk/cardano-ledger/releases/latest/download/shelley-ledger.pdf
-[^30]:
-[^31]:
-[^32]:
-[^33]:
-[^34]:
-[^35]:
-[^36]:
-[^37]:
-[^38]:
-[^39]:
-[^40]:
-[^41]:
-[^42]:
-[^43]:
-[^44]:
-[^45]:
-[^46]:
-[^47]:
-[^48]:
-[^49]:
-[^50]:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[^30]: CIP (Cardano improvement proposals), cips.cardano.org/
+[^31]: Ergo data inputs, docs.ergoplatform.com/dev/scs/data-inputs/
+[^32]: CIP 49: ECDSA and Schnorr signatures in Plutus Core, github.com/mlabs-haskell/CIPs/blob/c5bdd66fe49c19c341499f86cebaa2eef9e90b74/CIP-0049/README.md
+[^33]: **Intra-era hard fork** is a small and focused semantic change to the ledger requiring a hard fork.
+[^34]: Wanchain, the Wide Area Network chain, is an interoperability solution with a mission to drive blockchain adoption through cross chain interoperability by building fully decentralized bridges that connect siloed blockchain networks
+[^35]: thepizzaknight_ primitives analogy, twitter.com/thepizzaknight_/status/1609373418759012353?s=20&t=2BonGRIWcKofrMSWJe4qYg
+[^36]: CIP 35–Plutus Core Evolution, cips.cardano.org/cip/CIP-0035
+[^37]: Plutonomy, github.com/well-typed/plutonomy#readme
+[^38]: CIP - 0085 Sums-of-products in Plutus Core, github.com/cardano-foundation/CIPs/pull/455
+[^39]: Plutus V3, github.com/IntersectMBO/cardano-ledger/pull/3365
+[^40]: Keccak-256 is a hashing algorithm within Solidity and stems from the SHA-3 family.
+[^41]: Plutus quick start, plutus.readthedocs.io/en/latest/quick-start.html
+[^42]: State of the Cardano Developer Ecosystem - 2023, cardano-foundation.github.io/state-of-the-developer-ecosystem/2023/
+[^43]: Plutus Playground - Video Tutorial: Compiling and testing a Plutus App, youtube.com/watch?v=DhRS-JvoCw8
+[^44]: Plutus Foundation, plutus.readthedocs.io/en/latest/explanations/plutus-foundation.html#what-is-plutus-foundation
+[^45]: API alternatives, youtu.be/W2R3zl91U24?t=357
+[^46]: Learn Cardano Interview w/ Genius Yield, youtube.com/watch?v=7KBhfe6GVAA&t=1763s
+[^47]: Ethereum Gas Fees Continue to Rise, analyticsinsight.net/ethereum-gas-fees-continue-to-rise-while-bitgert-zero-gas-fee-blockchain-is-booming/
+[^48]: ​​**Absolute vs. Relative Price**: Absolute price is the number of dollars that can be exchanged for a specified quantity of a given good. Relative price is the quantity of some other good that can be exchanged for a specified quantity of a given good. Suppose we have two goods A and B. The absolute price of good A is the number of dollars necessary to purchase a unit of good A. The relative price of good A in terms of B is the amount of good B necessary to purchase a unit of good A. 
+[^49]: Plutus Fee Estimator, docs.cardano.org/cardano-testnet/tools/plutus-fee-estimator
+[^50]: Cooked validators, github.com/tweag/plutus-libs/tree/main/cooked-validators
+[^51]:
+[^52]:
+[^53]:
+[^54]:
+[^55]:
+[^56]:
+[^57]:
+[^58]:
+[^59]:
+[^60]:
+[^61]:
+[^62]:
+[^63]:
+[^64]:
+[^65]:
+[^66]:
+[^67]:
+[^68]:
+[^69]:
+[^70]:
+[^71]:
+[^72]:
+[^73]:
+[^74]:
+[^75]:
+[^76]:
+[^77]:
+[^78]:
+[^79]:
+[^80]:
+[^81]:
+[^82]:
+[^83]:
+[^84]:
+[^85]:
+[^86]:
+[^87]:
+[^88]:
+[^89]:
+[^90]:
+[^91]:
+[^92]:
+[^93]:
+[^94]:
+[^95]:
+[^96]:
 [^97]:
 
 
