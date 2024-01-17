@@ -225,6 +225,66 @@ For example, if two people must sign the transaction at the same time, two out o
 
 **Alonzo (Plutus V1)**
 
+With the introduction of multi-asset support and smart contracts on Cardano, upgrading the fundamental multisig scripting language with more complex options was required. As part of the Alonzo upgrade, IOG implemented the required tools and infrastructure, as well as support for a new programming language called Plutus Core.
+
+The Alonzo ledger employs the extended unspent transaction output (eUTXO) paradigm to upgrade multisig to Plutus Core to give strong scripting features.
+
+Alonzo made the following adjustments to the ledger data:
+
+1. Plutus scripts can lock UTXOs.
+2. Script state-like functionality was enabled via a new component added to the contents of the output pieces of UTXOs. A UTXO locked by Plutus scripts includes a datum in addition to assets and an address. A datum is a piece of information that represents an interpretation of the script state.
+3. A number of new protocol parameters were added to enforce extra transaction validation requirements. These include upper restrictions on how much processing power scripts may use.
+
+Transactions were updated to support Plutus scripts as follows:
+
+1. The transaction now had a redeemer, which is a user-specified parameter for each of its activities. A redeemer may fulfill a variety of functions depending on the script. It may, for example, serve as the user’s decision to ‘hit’ or ‘stand’ in a game of blackjack or a ‘like’ or ‘share’ in some utopian decentralized social media dApp.
+2. The transaction defines each script’s computational execution budgets.
+3. Alonzo leverages collateral to verify that a transaction can pay its execution cost
+4. Transactions include an integrity hash, which is used to confirm that it hasn’t been tampered with, hasn’t expired, and so on.
+
+The node runs Alonzo-specific tests to guarantee that the transaction is built successfully. It must not, for example, exceed the maximum execution resource budget. It also runs the scripts by using Plutus script interpreter.
+
+Ethereum’s non-deterministic ‘gas’ model has the potential to charge consumers extortionately high fees. This form of indeterminism is addressed in Cardano scripts by requiring that both the resource budget and the fee necessary to cover it be included in the transaction. When designing a transaction since the Alonzo upgrade, a user may now forecast both locally. Script execution will always return one of two values: True or False, and it will not loop endlessly. This is because every action a script does requires a non-zero amount of resources, which the interpreter keeps track of. If the transaction’s budget is exceeded, the script is terminated and False is returned.
+
+The following critical features help to forecast the results of script and transaction validation:
+
+- When applied with the same parameters, the script interpreter will always terminate and deliver the same validation result
+- During validation, a transaction should correct all variables provided to the script interpreter
+- A transaction enumerates all of the operations it performs that need script validation
+- A transaction’s mandatory signatures guarantee that it can’t be tampered with by an attacker in a manner that causes scripts to fail.
+
+In the eUTXO ledger paradigm, implementing a transaction is deterministic.
+
+**Vasil (Plutus V2)**
+
+There were three Cardano Improvement Proposals implemented with the Vasil hard fork to enhance the way Plutus operates, to make things easier for developers. All three dovetail together and complement each other. 
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/seba.png "Seba tweet")
+
+CIP31[^30] defined **reference inputs**, a major step forward for how developers interact with UTXOs. A reference input is a transaction input associated with a specific transaction output, however, rather than spending the output, it just references it. 
+
+A datum can be thought of as the data for your script, bits of data attached to outputs, where you might store data like a user handle, or avatar etc. Before Vasil, if you wanted to read your handle, or score of a soccer match etc., in your dApp, you had to consume the UTXO and then recreate it after you had read the datum.
+
+Reference inputs allow you to read the datum, or the data that’s stored at a UTXO, without consuming it and recreating it. This means that multiple dApps can read from the same datum simultaneously. This boosts concurrency and throughput dramatically.
+
+Ergo, pioneers in the UTXO space, already introduced a similar concept called ‘data inputs’[^31] in 2020.
+
+CIP 32 defined **inline datums**. Before Vasil, this high score, or other data from the datum wasn’t stored on-chain. The hash (fingerprint) of it was stored on-chain and it was up to the developer to include it when they were interacting with the script. Since Vasil, the data can be stored on-chain, eliminating the need for hashes and moving closer to a truly decentralized architecture.
+
+CIP 33 is about **reference scripts**. Plutus script references can be linked to transaction outputs, allowing them to be stored on-chain and reused later. It means you are no longer required to provide a copy of the script with each transaction, thereby reducing developer friction. Using the same script in several transactions decreases transaction sizes, boosts throughput and lowers script execution costs.
+
+Before Vasil, developers had to share the scripts offline so that they could be included in transactions. However, it was harder to share those scripts with different people so that they could interact with their dApp. 
+
+Reference scripts allow developers to put Plutus scripts on-chain and then, rather than include them in a transaction, they can instead include a pointer in the transaction that just references that script on the existing chain. That means that a user doesn’t need to have a copy of this script to interact with it. You just need to let people know the address it’s at, and then users anywhere can use the same script and point to it. 
+
+This enables a use case where a developer can put reference scripts on-chain and allow others to use them as a library. There could be several libraries considered to be core to Plutus, and IOG will put them where anyone can use them and then publish the address. This allows anyone in the ecosystem to take libraries and make them available to the wider public, a powerful enhancement. 
+
+Looking at all three CIPs holistically, these enhancements pushed Plutus forward and make developers' lives easier. IOG is putting more on-chain, freeing developers from the need to monitor scripts and share scripts and datums and increases concurrency by allowing users to interact with UTXOs.
+
+**Valentine Hard Fork** 
+
+
+
 
 
 
