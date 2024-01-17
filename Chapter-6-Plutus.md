@@ -315,7 +315,45 @@ To understand what kinds of changes require a new language version, see CIP 35�
 
 **Plutus V3**
 
+Throughout 2023, the Plutus team worked on increasing script capacity with plutonomy,[^37] an optimizer for untyped plutus core. This is part of the implementation of ‘sums-of-products’. This will be a change to the Plutus Core language, which is expected to happen at the next hard fork, Chang, in 2024. This update will add native support for datatypes and provide performance improvements to scripts. Read this CIP-85[^38] to learn more. Michael Peyton Jones (Technical Architect at IOG):
 
+>This CIP proposes a substantial extension to Plutus Core to support sums-of-products, with the aim of realising some substantial performance improvements.
+
+Crucially, Plutus V3 will also support built-in functions for BLS12-381 curves.[^39] A BLS (Boneh–Lynn–Shacham) digital signature allows a user to verify that a signer is authentic. BLS support will bring 15+ crypto primitives to Plutus enabling the ability for zero knowledge rollups. In addition to that, new built-ins for *Keccak-256*[^40] will enhance compatibility with Ethereum. The Plutus team is working to improve the onboarding experience with a new Quick start guide.[^41]
+
+As we will see later, the next hard fork promises to be a big update, as it will also be a milestone with the introduction of on-chain governance mechanisms. It was the ‘most awaited feature’ from the 2023 Cardano Developer Ecosystem Survey[^42] 
+
+>The anticipation within the Cardano community is palpable, especially concerning the forthcoming Plutus V3, which is expected to bring groundbreaking advancements in zero-knowledge cryptography for Cardano. This feature tops the list of most-awaited developments, underscoring the community's keen interest in more sophisticated and privacy-preserving cryptographic techniques.
+
+## Plutus Tools
+
+Developers can leverage a variety of tools to assess and implement smart contracts on Cardano. 
+
+Plutus Playground
+
+The Plutus Playground is a place where smart contracts may be written and tested before being put on the Cardano blockchain. It’s a web-based platform for Plutus development with modest resource consumption. The Plutus Playground offers a web-based simulator for building and executing smart contracts, as well as access to popular smart contracts that have already been developed. 
+
+There is no need to install anything to use the Plutus Playground, which can be accessed from a web browser. The user interface is divided into three parts:
+
+- editor
+- simulator
+- transactions
+
+The simulator displays how a contract will function on Cardano. One of the key parts of this is that it can be used as a teaching tool for beginners. The wallets that interact with a contract, as well as the actions that affect the result, may be defined and updated by users. The outcomes may then be analyzed to determine what occurs on the blockchain and how transactions take place. Visit the Plutus github repository or watch the Plutus application compiling and testing tutorial[^43] for further details.
+
+**Plutus Application Backend**  
+
+The Plutus Application Framework (PAF) includes the Plutus Application Backend (PAB), which is the off-chain infrastructure in the UTXO paradigm that produces the transactions that power the dApps. Because it has to look at the ledger state, take some information from the ledger, and put it all together to produce a transaction with the proper bits of data in the right location, this off-chain architecture is somewhat complex. The PAB is a Haskell library that simplifies the development of both off-chain infrastructure and on-chain scripts.
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig67.png "figure 6.7")
+**Figure 6.7**: A high-level architecture of the Plutus Platform, with an emphasis on applications. From plutus.readthedocs.io/
+
+
+
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig68.png "figure 6.8")
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig69.png "figure 6.9")
 
 **_To be uploaded soon..._**
 
