@@ -618,29 +618,29 @@ This chapter was just an overview of Plutus. A useful landing page to bookmark i
 [^48]: ​​**Absolute vs. Relative Price**: Absolute price is the number of dollars that can be exchanged for a specified quantity of a given good. Relative price is the quantity of some other good that can be exchanged for a specified quantity of a given good. Suppose we have two goods A and B. The absolute price of good A is the number of dollars necessary to purchase a unit of good A. The relative price of good A in terms of B is the amount of good B necessary to purchase a unit of good A. 
 [^49]: Plutus Fee Estimator, docs.cardano.org/cardano-testnet/tools/plutus-fee-estimator
 [^50]: Cooked validators, github.com/tweag/plutus-libs/tree/main/cooked-validators
-[^51]:
-[^52]:
-[^53]:
-[^54]:
-[^55]:
-[^56]:
-[^57]:
-[^58]:
-[^59]:
-[^60]:
-[^61]:
-[^62]:
-[^63]:
-[^64]:
-[^65]:
-[^66]:
-[^67]:
-[^68]:
-[^69]:
-[^70]:
-[^71]:
-[^72]:
-[^73]:
+[^51]: Building on Cardano: overcoming challenges and the road to mass adoption, youtu.be/bASyKD2dnys?t=715
+[^52]: **Concurrency**, the property of program, algorithm, or problem decomposition into order-independent or partially ordered units.
+[^53]: Cardano Founder Deals With Concurrency FUD, a Second Japanese Exchange Lists $ADA, cryptoglobe.com/latest/2021/09/cardano-founder-deals-with-concurrency-fud-a-second-japanese-exchange-lists-ada/
+[^54]: More on Concurrency, youtu.be/OVh-eiACtzY?t=325
+[^55]: **ulimit** is a built-in Linux shell command that allows viewing or limiting system resource amounts that individual users consume. Limiting resource usage is valuable in environments with multiple users and system performance issues.
+[^56]: **UTXO congestion**: The effect of multiple transactions attempting to spend the same transaction output.
+[^57]: **Concurrency**, the property of program, algorithm, or problem decomposition into order-independent or partially-ordered units.
+[^58]: SundaeSwap blog on concurrency, sundaeswap.finance/posts/concurrency-state-cardano
+[^59]: Cardano-based DEX WingRiders Hits $44 Million TVL Within 24 hours of Launch, thecryptobasic.com/2022/04/13/cardano-based-dex-wingriders-hits-44-million-tvl-within-24-hours-of-launch/
+[^60]: Plutus Pioneers Program, iog-academy.gitbook.io/plutus-pioneers-program-fourth-cohort/
+[^61]: Surprise AMA 03/12/2019, youtu.be/f-rqaTLwWgs?t=1575
+[^62]: Redeemer validators, bitcoinmagazine.com/articles/thinking-transactions-1401650873
+[^63]: Cardano testnet, testnets.cardano.org/en/testnets/cardano/overview/
+[^64]: Peyton Jones, Kireev, ‘The Plutus Platform’, hydra.iohk.io/build/12983030/download/1/plutus.pdf
+[^65]: A Formal Specification of the Cardano Ledger integrating Plutus Core, hydra.iohk.io/build/7172824/download/1/alonzo-changes.pdf
+[^66]: Plutus Tutorial, plutus.readthedocs.io/en/latest/plutus/tutorials/index.html
+[^67]: Plutus: Writing reliable smart contracts, amazon.com/Plutus-Writing-reliable-smart-contracts-ebook/dp/B07V46LWTW/ref=sr_1_1, leanpub.com/plutus-smart-contracts
+[^68]: Haskell course, github.com/input-output-hk/haskell-course
+[^69]: Haskell and Crypto Mongolia, youtube.com/watch?v=ctfZ6DwFiPg&list=PLJ3w5xyG4JWmBVIigNBytJhvSSfZZzfTm&index=4
+[^70]: Register for the Plutus Pioneer Program, testnets.cardano.org/en/plutus-pioneer-program/
+[^71]: Plutus on the Cardano Forum, forum.cardano.org/c/developers/cardano-plutus/148
+[^72]: IOG Tech Discord, discord.com/invite/w6TwW9bGA6
+[^73]: Cardano Stack Exchange, cardano.stackexchange.com/
 [^74]:
 [^75]:
 [^76]:
