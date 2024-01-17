@@ -641,17 +641,17 @@ This chapter was just an overview of Plutus. A useful landing page to bookmark i
 [^71]: Plutus on the Cardano Forum, forum.cardano.org/c/developers/cardano-plutus/148
 [^72]: IOG Tech Discord, discord.com/invite/w6TwW9bGA6
 [^73]: Cardano Stack Exchange, cardano.stackexchange.com/
-[^74]:
-[^75]:
-[^76]:
-[^77]:
-[^78]:
-[^79]:
-[^80]:
-[^81]:
-[^82]:
-[^83]:
-[^84]:
+[^74]: ‘What is Layer 0?’, cardano.stackexchange.com/questions/8244/what-is-layer-0
+[^75]: **Stack Overflow** is a question-and-answer site for professional and enthusiast programmers. It is a privately held website, the flagship site of the Stack Exchange Network, created in 2008 by Jeff Atwood and Joel Spolsky.
+[^76]: Plutus Resources docs.cardano.org/plutus/plutus-resources
+[^77]: LIVE with Cardano's Charles Hoskinson, youtu.be/x6TZSBmDWMw?t=5107
+[^78]: Niamh Ahern, ‘The new Mantis: Bringing security and stability to the Ethereum Classic ecosystem’, iohk.io/en/blog/posts/2020/12/09/the-new-mantis-bringing-security-and-stability-to-the-ethereum-classic-ecosystem-1/
+[^79]: Luite Stegeman, 'Looking to the future of Haskell and JavaScript for Plutus', iohk.io/en/blog/posts/2020/06/04/looking-to-the-future-of-haskell-and-javascript-for-plutus/
+[^80]: Sylvain Henry, ‘Improving Haskell's big numbers support’, iohk.io/en/blog/posts/2020/07/28/improving-haskells-big-numbers-support/
+[^81]: JSCert: Formalization of the JavaScript programming language, wp.doc.ic.ac.uk/fswp/project/jscert-formalization-of-the-javascript-programming-language/
+[^82]: Quickcheck, hackage.haskell.org/package/QuickCheck
+[^83]: **TLA⁺** is a formal specification language developed by Leslie Lamport. It is used for designing, modeling, documentation, and verification of programs, especially concurrent systems and distributed systems
+[^84]: Marlowe papers, play.marlowe-finance.io/doc/marlowe/tutorials/introducing-marlowe.html#research-based
 [^85]:
 [^86]:
 [^87]:
