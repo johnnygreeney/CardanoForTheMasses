@@ -391,6 +391,171 @@ You may verify various safety and correctness aspects of your on-chain code by u
 
 ## Writing Plutus transactions
 
+Writing a Plutus transaction is accomplished in the following order:
+
+1. Write your Plutus on-chain code.
+2. Convert your Plutus code to text envelope format (this is the format expected by the cardano-cli .ie. command line interface).
+3. Using the Plutus script(s) available, create your transaction.
+4. Execute Plutus script by submitting the transaction.
+
+**Myth busting**
+
+It’s important to note that Plutus Tx is a high-level language for scripting the validation logic of the smart contract. This logic determines whether a transaction is allowed to spend a UTXO. Plutus Tx is a subset of Haskell, and it is then compiled into Plutus Core, a low-level language based on lambda calculus. Plutus Core is the code that runs on-chain, and often referred to as a Plutus script or Plutus validator.
+
+To implement a smart contract, you would also require off-chain code for building and submitting transactions, deploying smart contracts, querying for available UTXOs on-chain, etc. You will likely also need a front-end UI to make it easy for users. 
+
+After a bumpy start, which is to be expected with a brand new language, the developer experience improved and will continuously evolve with greater tooling. At the *Overcoming challenges and the road to mass adoption* talk at the 2022 Summit, the most experienced Cardano developers talked about the progress since the early days. They all agreed that most of the code required is off-chain, and can be written in whatever language that you prefer.
+
+Andrew Westberg, NEWM CTO[^51] 
+
+>It's an entire myth that you have to be a Haskell developer to work on Cardano, most of the Cardano developers I know spend more of their time in other languages. There's a lot of Rust, there's a lot of Kotlin, there's a lot of JavaScript… everybody's doing their own language, and you can actually bring your own language that you're used to, and comfortable for you, to Cardano. 
+
+## The concurrency non-issue
+
+**What is concurrency?**
+
+Concurrency[^52] may enhance or harm a system’s performance, throughput, and responsiveness. The max number of simultaneous operations that may be executed is limited by the level of concurrency. Processors or other agents in a UTXO-based blockchain should be able to do several activities at the same time to achieve real performance benefits. The max achievable parallelism rises as the amount of concurrency increases. As a result of this strategy, performance and throughput increases. It also has a number of benefits over account-based systems such as Ethereum.
+
+**FUD**
+
+Shortly after smart contracts were introduced with the Alonzo hard fork, there was a spate of memes and false accusations that Cardano was only able to process one transaction at a time due to concurrency issues.[^53] An objective analysis can only conclude this was FUD (fear, uncertainty and doubt) spread mostly by Cardano competitors.
+
+Addressing the concurrency FUD, Charles Hoskinson used the analogy of single core processor vs multi-core processor:
+The analogy I like to use here is when we went from single core processors to multi-core processors.[^54] 
+
+>You’d see the marketing dual core, quad-core, 8 core, 16 core, that meant software under the hood actually had to be written a little differently to take advantage of parallelism. If you didn’t do it you could have 16 cores, 32 cores ..but only one would actually be engaged, one thread would be engaged in that application, unless the application was rewritten for it. It’s a bit disingenuous then to say, ‘oh well intel’s a scam ...ARM is a scam and AMD is a scam... they lied to us they said 16 cores, but I only use one core’. Well, that’s a software contingent thing, those are there, you can access them, there are design patterns to do that. We’ve gotten a lot better today than we were when the dual core world came out, but you still need to introduce parallelism into your code in order to do that.
+
+One or more inputs may be used in a blockchain transaction, as well as one or more outputs. If one wishes to grasp how a transaction works and how it pertains to the Unspent Transaction Output (UTXO) accounting model, one must first comprehend the idea of inputs and outputs. Consider a transaction to be the operation that unlocks past outputs while also creating new ones.
+
+**Determinism, parallelism, and concurrency**
+
+Concurrency, parallelism, and contention are all system considerations when it comes to scalability. Concurrency is required in order for several actors to work on a job without disturbing each other. Parallelism enables such development to be made simultaneously without interfering with each other. Contention happens when different actors work concurrently, or in parallel, and interfere with one another.
+
+These features are differentiators for Plutus. There’s a structure called a directed acyclic graph mentioned previously, which can be thought of sometimes like a spider web of little nodes, little circles and they have lines to the next one and lines to the next one as a web grows, especially if it goes in one way. 
+
+The Cardano ledger forms a graph of transactions, and graphs are great for parallel processing. Cardano enables, by definition, parallel processing with the way UTXOs work. This means that because Plutus core is deterministic, and because scripts only have access to local information, it’s possible to parallel process many things during both validation of the Plutus script and validation of the ledger. 
+
+When you’re building on Cardano, better concurrency can be achieved by using multiple UTXOs and exploiting the parallelism and you can build with this style a scaling architecture that’s massively parallel and allows you to service all of your users at the same time.
+
+**Multiple transactions**
+
+There are some pointers to keep in mind when submitting multiple transactions. When the mempool fills up, users that need to submit several transactions one after another may have issues. This is referred to as ‘high throughput.’ Some transactions may not be approved if the user continues to submit transactions after the mempool is full. The system has never guaranteed a transaction can be submitted reliably. In a distributed system like Cardano, such a guarantee is difficult to offer. Resubmission logic must be handled appropriately by submitting agents.
+
+The cardano-submit-api is the proper endpoint to utilize. The thread is halted when the mempool is full. As a result, the API user may queue several transactions, which will be handled as soon as mempool capacity is available. However, the application must account for the fact that the number of in-flight transactions is restricted by the operating system’s maximum number of open files. If this limit is reached, cardano-submit-api simply quits, and no more requests are processed. Using *ulimit*[^55] to raise the number of open files permitted by the operating system will increase the number of in-flight transactions available, reducing UTXO congestion.[^56]
+
+To avoid the requirement for complex queue management, you may use the cardano-submit-api serially or with extremely low concurrency.[^57] It is a general rule that simplicity promotes resilience; if your use case allows, just submit one transaction at a time and wait for it to be verified before moving on to the next.
+
+**Launching dApps on a UTXO ledger**
+
+Cardano’s approach to dApp deployment is unique, with a steep learning curve requiring a new approach. Choosing from multiple programming languages is a similar analogy: there is usually a single end goal to implement something, but there is a plethora of languages you could use to get to this goal. 
+
+Concurrency optimization is a competence that must be mastered. Developers must code in such a manner that contention is limited (e.g., avoiding shared states and watch for accidental dependencies). This concurrency must then be turned into parallelism by the system. Several developers (such as *SundaeSwap*)[^58] have previously found approaches to this problem, while others are currently working on them. In April 2022, WingRiders (wingriders.com) innovative DEX was successfully launched.[^59] It is not possible to simply apply the same skills learnt on another blockchain directly to Plutus smart contracts. As we will see in the next chapter, there are now more options.
+
+In any case, it’s vital to remember that a developer can’t simply use an adapted Ethereum contract to build a scalable dApp on Cardano. Cardano uses the UTXO model rather than the account-based one. As a result, a single on-chain state will not satisfy the concurrency property on Cardano. dApps should instead distribute their on-chain state across several UTXOs. As a result, their application’s concurrency will grow, enabling greater throughput.
+
+**Transaction validation over two phases**
+
+The unspent outputs from prior transactions are referred to as inputs. The datum hash and a value (consisting of an ada amount and optional, extra native tokens) are kept in a UTXO at an address (public key or public key hash). The script decides whether to ‘unlock’ the funds when a UTXO at a script address is an input to a valid transaction. This may be implemented if the script’s requirements are met (an arbitrary combination of factors including datum, redeemer, and script context). A transaction must be signed by the holder of the private key associated with the address during the first validation step.
+
+From the perspective of a redeemer transaction, it’s critical to grasp the following concepts:
+
+1. Script address: the Cardano address that stores funds guarded by a Plutus script that can be further unlocked. It is a hash of the Plutus script.
+2. Datum hash: the datum hash must be linked to a UTXO at a script address in Cardano. This is done to save memory and allow for quick access when verifying transactions.
+3. Plutus script is a ledger-based executable application that performs further (phase two) transaction validation.
+4. Datum value: you need to supply the datum value that matches the datum hash supplied in the locking transaction when sending a transaction to redeem funds.
+5. Redeemer value: the same arbitrary data format as datum is used. The redeemer value is utilized by the script to verify the transaction and is tied to the input transaction to release funds from the script.
+6. Script context: a synopsis of the transaction that is also required by the Plutus script in order to verify it.
+
+The process of working with datums and redeemers is beyond the scope of this book, but you can study worked examples in the Plutus Pioneer Program.[^60] 
+
+**March 12, 2019. How is a simple transaction different from running a smart contract?** CH:[^61]
+
+> So, the goal of Plutus is to actually turn all transactions into a smart contract in some way. So basically, if you look at the difference between what Ethereum does and what a UTXO system like Cardano does… they’re different data structures. So one is kind of a mutable ledger and you send messages to it to wake it up, and then you’re going to have all the state management that you have to contend with …and it’s really difficult especially as the system grows and especially as you want to shard the system to keep track of everything …so you have to add a lot of complexity into your model.
+>
+>When you look at UTXO system it’s what’s called a data flow graph …and basically it’s just saying alright you have all these threads… and you have outputs and all you have to do to wake one of them up is just claim that you have the right to spend it …and then if you have the proof that it validates, it spends…
+>
+>…so what we’ve done is we’ve taken that model and we’ve extended it to include some state information and include the value and include some data …and we call this the Extended UTXO model… so you keep the same semantics of Redeemer validator[^62](btc scripts) that Bitcoin introduced over 10 years ago… but now you’ve added a capability of having enough information in it, that you actually can have code running, this is what Plutus is basically all about…
+>
+> Now the advantage of this type of a system is that now all transactions can be either as simple as push value from Alice to Bob ..or they can be as complicated as a smart contract that you would see like creating a currency or something like that… so there’s a whole spectrum of complexity there …and you can chain these things together.. and you can also more easily interact with that on-chain transaction with off-chain code …because when you actually look at these smart contracts generally what they are they’re wrapped in complexity from things living outside of the system… so you’ll have some JavaScript code and some web3 action going on and that’s running on a server or a client …and then that’s talking to something living on-chain …that’s the Ethereum model 
+>
+>…with Cardano it’ll just be Plutus… template Haskell… Haskell and then that runs and it runs as a single unit …and you can write all the code together and it’s very easy to validate that the off-chain and on-chain code is actually working correctly together 
+>
+>[..] So, we have a nice framework there and you can do a lot of property-based testing and a lot of cool validations… and say things are working correctly …because it’s running this data flow model that’s immutable …what’s really nice about it is that it is much easier to shard these types of transactions… So basically, the answer to your question, succinctly, is that all transactions are technically smart contracts in this Redeemer validator model… it’s just their complexity is up to the user and how they run these types of things 
+
+## Collateral mechanism   
+
+The collateral mechanism is a crucial component that guarantees smart contracts are run successfully.
+
+Cardano uses a two-phase validation mechanism, relying on the assurances offered by the ledger’s deterministic architecture. The primary goal of implementing two-phase validation is to reduce the amount of uncompensated validation effort performed by nodes. Each phase has a specific role to play in reaching this goal:
+
+- The first phase verifies that the transaction has been accurately structured and that the processing fee can be paid
+- The transaction’s scripts are executed in the second phase.
+
+Phase-2 scripts are executed if the transaction is phase-1 compliant. If phase 1 fails, no scripts are executed, and the transaction is rejected right away. If phase-2 verification fails, collateral is utilized to ensure that nodes are rewarded for their efforts. As a result, collateral is when a user gives a monetary guarantee that the contract has been properly constructed and rigorously tested. The amount of collateral input is set and included when the transaction is created. The transaction’s collateral amount is the entire balance in the UTXOs corresponding to these specifically tagged inputs. The collateral is secured if the user meets the guarantee’s requirements, and a contract is implemented.
+
+**The problem**
+
+If a smart contract fails without collateral, the user is not penalized. However, by the time the transaction fails, the network has already paid for the transaction to be initiated and validated. An attacker might spam the network with dummy transactions, thus depriving other users of service for very little expense.
+
+**How collateral solves this**
+
+When a user starts a transaction, they commit enough ada to satisfy the transaction’s cost of execution. Transactions that employ non-native smart contracts (also known as phase-2 contracts) need adequate collateral to cover the expenses of any transaction failures. This sum may seem insignificant, but it is enough to make a denial of service (DoS) attack prohibitive. Only if a transaction fails validation are collateral costs collected. The transaction costs are paid if the contract passes validation, but the collateral is not. The collateral of an honest user is never in danger of being lost.
+
+Transaction costs on the Cardano blockchain are predictable since they are solely influenced by local values and state. A user may predict the transaction’s execution cost (in ada) before initiating it. Other blockchains, like as Ethereum, whose design lets other network activities impact the gas cost. The amount of collateral needed is solely determined by the execution cost.
+
+The Cardano testnet[^63] offers a secure environment with free test ada (tAda), allowing dApp developers to extensively stress test their smart contracts before publishing them to the mainnet. If transactions go well on the testnet, the developer may be certain that all of the scripts will run smoothly as well.
+
+If the on-chain circumstances have changed after the transaction was created, the transaction will be completely rejected with no fees collected. No collateral would be charged if a signature was absent, for example.
+
+**In practice**
+
+The total ada included in the UTXOs referenced by collateral inputs is referred to as collateral. If a phase-2 script fails, a transaction uses collateral inputs to pay its fees.
+
+The idea of ‘multi-signature’ scripts was introduced by the Shelley formal specification. The ledger rules completely capture Phase-1 scripts like these. Execution costs may therefore be readily estimated prior to the implementation’s running, and any fees can be determined directly inside the ledger rule implementation depending on the size of the transaction that contains the script.
+
+Phase-2 scripts, on the other hand, may do any Turing-complete computation, in theory. We want a budget in terms of a number of abstract *ExUnits* for transactions that leverage phase-2 scripts. This budget establishes a quantitative limit on resource consumption in terms of a variety of measures, such as memory utilization or abstract execution steps. The budget is then utilized to calculate the transaction fee.
+
+From the Plutus Technical Report,[^64] 
+
+>Resources are tracked in terms of two abstract units: abstract time, and abstract (peak) memory. Together we refer to these as **exunits**. Why are the units here ‘abstract’? They must be, because we need to be able to keep things deterministic, and so we cannot use real time or memory usage. Rather we have to define some abstract measures which we try to align with real resource usage.
+
+For more info, read the Cardano ledger specification for Plutus Core.[^65]
+
+*CIP 40 - Explicit Collateral Output* further improved the user experience. Some dodgy code in certain wallets meant too much collateral was committed in error. In such a scenario, nothing too catastrophic would happen, but ultimately the collateral got taken, so users lost collateral. It was similar to overcharging a fee. 
+
+CIP-40 help to improve the user experience, where a transaction could be submitted, but the collateral included is just enough to provide cover. If you include an extra ‘0’ by an accidental fat finger or whatever, like a million ada, you get back everything that’s not required. A welcome correction. This was all part of a journey in getting Plutus to be a great user experience. If people make innocent mistakes, like typos, they don’t get harshly penalized.
+
+## Learning Plutus
+​​
+As Plutus is based on Haskell, a good starting point is the popular book *Learn You a Haskell for Great Good* by Miran Lipovača (learnyouahaskell.com) which has been many peoples’ first foray into Haskell. 
+
+You can study the original Plutus Tutorial[^66] from the documentation. The IOG education team wrote an introductory Plutus ebook, available on Amazon[^67] and LeanPub. *Plutus: Writing reliable smart contracts* is aimed at beginner-level Haskell developers focusing on the fundamentals with real-world examples. They also recently released a ‘zero to everything’ Haskell Course on GitHub.[^68]
+
+**Plutus Pioneers Program**
+
+IOG created the Plutus Pioneer Program in anticipation of the Alonzo hard fork. The program is not for beginners, so it’s perhaps best to first study the online course Haskell and Crypto Mongolia Sept 2020[^69] available on YouTube, delivered by Andres Löh, co-founder of the Well-Typed consultancy and Dr. Lars Brünjes, Education Director at IOHK. 
+
+You should now be ready to apply[^70] for the next cohort. You can also engage the community directly about Plutus on the Cardano Forum[^71] or on the IOG Technical Discord.
+
+**Cardano Stack Exchange**
+
+IOG encourages developers to join in one location — Cardano Stack Exchange[^72] – to exchange ideas, ask and answer questions regarding all aspects of Cardano development and operations, and pool resources. This site, which is run by Cardano community members, is one of the tools for learning how to create dApps and smart contracts, or if you just want to know ‘What is Layer 0?’[^73]
+
+Cardano Stack Exchange originated from Stack Overflow.[^74] It’s a community-moderated Q&A site where all Cardano developers, including Plutus pioneers, may obtain answers to a wide range of questions, from installation questions to configuration and implementation specifics. Stack Overflow’s community-driven, decentralized mentality meshes especially well with Cardano’s open-source, decentralized philosophy.
+
+This chapter was just an overview of Plutus. A useful landing page to bookmark is *Plutus Resources*[^75] which will connect you to everything going on in the Plutus ecosystem. The documentation is a little scattered and constantly changing, but that’s to be expected for a burgeoning programming language. 
+
+**April 10, 2020.  Do you regret going with Haskell?** CH:[^76]
+
+>We probably could have gotten away with F# or Scala over Haskell and gotten a lot of the Haskell benefit. I didn’t realize that Haskell was going to require as much as it did …and I wasn’t prepared for it, we didn’t set up the organizational structure that we needed at the beginning for that and had I been better prepared in the beginning, we probably could have avoided some of our growing pains that we had. On the other hand, we were able to attract some of the brightest minds in the world and work with those minds to solve problems in completely original creative ways and so Cardano was ultimately a better product for it but our time to market suffered. Whether that was the right decision or not… Who knows?! 
+>
+>Because we have to look at the project in 2022 and 2023 and if we’re the size, scope and scale of Ethereum and we have a resilient robust ecosystem then it was the right decision … if we’re not there, it was the wrong decision… but we just won’t know. We did actually look aggressively at Scala; in fact we wrote a product in Scala… and we wrote Mantis[^77] which is an Ethereum Classic client in Scala. It was a great experience, I loved it… I had so much fun we had no delays, it was easy to get out, it was like paint-by-numbers… so I like Scala a lot, it’s one of my favorite languages and I think there’s a huge amount of advantages in that ecosystem. The sharp edges have been mostly muted. 
+>
+>That said, because of work we did with Haskell and the improvements we’ve made especially with GHCJS[^78] and the improvements[^79] we’ve made on Windows and the library level improvements we’ve made… if somebody chose Haskell today for a project, with the things that we’ve done, and the ecosystem has done, I think it would be a lot easier to build a product in Haskell. We’ve left a template to do that and future projects won’t have the growing pains that we had.
+>
+>At one point, I actually considered writing Cardano in JavaScript… I really thought about it, I said we have formal semantics through the JSCert program, out of Imperial College London,[^80] and there are some functional things we can do… and we could do formal verification of some of the JavaScript code …so here’s a crazy thought …why don’t we actually get some Haskell hard core programmers and then force them to actually write JavaScript? …and build a whole ecosystem around it, write up a whole bunch of beautiful JavaScript tooling for QuickCheck[^81] and for all this other stuff and actually create a TLA port …so we can do TLA+ and connect it with JavaScript code.
+
+## Marlowe
 
 
 
