@@ -155,6 +155,54 @@ A key differentiator of eUTXO, and Plutus, is its predictability, often referred
 
 ## Plutus Scripts
 
+Cardano validates operations via scripts. Pure functions with True or False outputs are implemented in these scripts. The process of invoking the script interpreter to run a script with relevant arguments is known as script validation. A script is code that determines if the transaction spending the output is approved. This kind of script is known as a validator script since it checks if the transaction is permitted. A simple validator script would verify whether the spending transaction was signed by a certain key, just as basic pay-to-pubkey outputs do. Scripts may be used to express meaningful logic on the chain. Metadata and scripts are bundled together in a single transaction for greater throughput.
+
+The eUTXO paradigm operates by passing three parameters to validator scripts:
+
+- **Datum**: This is a piece of data that is linked with the output and is locked by the script (just the hash is present). This is usually used to carry state.
+- **Redeemer**: a piece of info associated with the spending input. This is usually used to provide the spender’s input to the script
+- **Context**: this is the metadata concerning a spending transaction. This is used to make assertions about how the output is sent. The context can be made up of inputs (outputs from previous transactions to be spent), reference inputs (just for ref, not to be spent), new outputs, fees, minted values, certificates, reward withdrawals, date ranges, transaction signatures, redeemers, map of datum hashes, transaction IDs).
+
+**Simple example**  
+
+A customer ‘John’ wants to buy ‘Cardano for the M₳sses’ which costs ₳10. There must be confirmation they have enough ₳ in their wallet before they can buy it.
+
+```if EnoughADA(book=CardanoForTheMasses, customer=john):
+    buyBook()
+
+def EnoughADA (book,customer):
+    return customer["balance"] >= book["bookPrice"]
+
+def buyBook():
+    print ("You have enough ADA to buy the book")
+
+CardanoForTheMasses = {"bookPrice":₳10}
+john = {"balance":₳11}```
+
+In the above example:
+
+The datum is the information about this transaction: *john.balance*
+The context is the state of the world, the price of the book for this example: *CardanoForTheMasses.bookPrice*
+The redeemer, is the action to perform: *buyBook()*
+
+The validator script is the function that uses all that information, in this example, *EnoughADA*
+
+GitHub contains examples of validator scripts on every smart contract: 
+
+- Plutus transaction tutorial
+- Plutus Hello World
+- Plutus pioneers English Auction
+
+**Cost model parameters**
+
+A number of parameters in the cost model for Plutus Core scripts are also included in the Cardano protocol parameters. Individual settings may be tweaked by developers.
+
+See the following for more details:
+
+- A list of cost model parameters and their brief description
+- Sources to find out more about the meaning of parameters
+
+## Plutus Versions
 
 **_To be uploaded soon..._**
 
