@@ -167,17 +167,19 @@ The eUTXO paradigm operates by passing three parameters to validator scripts:
 
 A customer ‘John’ wants to buy ‘Cardano for the M₳sses’ which costs ₳10. There must be confirmation they have enough ₳ in their wallet before they can buy it.
 
-```if EnoughADA(book=CardanoForTheMasses, customer=john):
+```
+if EnoughADA(book=CardanoForTheMasses, customer=john):
     buyBook()
-```
-```def EnoughADA (book,customer):
+
+def EnoughADA (book,customer):
     return customer["balance"] >= book["bookPrice"]
-```
-```def buyBook():
+
+def buyBook():
     print ("You have enough ADA to buy the book")
+
+CardanoForTheMasses = {"bookPrice":₳10}
+john = {"balance":₳11}
 ```
-```CardanoForTheMasses = {"bookPrice":₳10}
-john = {"balance":₳11}```
 
 In the above example:
 
