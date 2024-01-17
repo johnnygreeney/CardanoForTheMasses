@@ -609,6 +609,8 @@ Because Marlowe is a DSL, it can predict how Marlowe contracts will function wit
 Users would ideally like to understand how contracts will perform once deployed to the blockchain, but without the risk of actually deploying. Marlowe can help here as it replicates the contracts behavior off-chain in the Marlowe Playground. The Marlowe Playground is an online sandbox environment where you may build, model, simulate and test the process of developing smart contracts, without having to install anything. 
 
 When utilizing the Marlowe Playground, you have three choices to select from. 
+
+<br>
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig68.png "figure 6.8")
 <br>**Figure 6.8**: Creating a demo on Marlowe 
 
@@ -620,16 +622,16 @@ You can make your own templates out of Marlowe contracts and utilize unique meta
 
 In April 2022, IOG introduced the Marlowe CLI (command line interface) tool.[^89] For users who wish to manage contracts from the command line, this new tool provides a simple approach. It allows you to concentrate on the Marlowe contract while the tool handles the specifics of the contract’s input and state. It also automates several parts of Plutus, as well as interactions with the Cardano node itself, to relieve users of some of the heavy lifting.
 
-This new CLI tool will be beneficial for teaching users how to get up to speed with Marlowe. It was used heavily in the inaugural Marlowe Pioneer Program. Late 2022 saw the launch of *Marlowe Runtime*,[^89] an application backend for Marlowe contract handling. Developers can use Marlowe Runtime’s APIs and backend to build and deploy Marlowe Web3 dApps. This saves them the hassle of needing to manually orchestrate the backend workflow. There is also a beginner-friendly Marlowe starter kit on demeter.run[^90]
+This new CLI tool will be beneficial for teaching users how to get up to speed with Marlowe. It was used heavily in the inaugural Marlowe Pioneer Program. Late 2022 saw the launch of *Marlowe Runtime*,[^90] an application backend for Marlowe contract handling. Developers can use Marlowe Runtime’s APIs and backend to build and deploy Marlowe Web3 dApps. This saves them the hassle of needing to manually orchestrate the backend workflow. There is also a beginner-friendly Marlowe starter kit on demeter.run[^91]
 
-After an extensive audit by *Tweag.io*, documented in a long blog post, Marlowe went live[^91] on Cardano mainnet in the summer of 2023. 
+After an extensive audit by *Tweag.io*, documented in a long blog post, Marlowe went live[^92] on Cardano mainnet in the summer of 2023. 
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig69.png "figure 6.9")
 <br>**Figure 6.9**: Creating a smart contract using Blockly on Marlowe Playground
 
 **Where can I learn more about Marlowe?**
 
-This was just a brief overview of Marlowe. To learn more, subscribe to Prof Simon Thompson’s YouTube channel[^92] and review his videos. Read the docs[^93] and register to become a Marlowe Pioneer[^94] in the next cohort at *marlowe.iohk.io/*. There was a blog post outlining the different learning paths available with IOG Academy. 
+This was just a brief overview of Marlowe. To learn more, subscribe to Prof Simon Thompson’s YouTube channel[^93] and review his videos. Read the docs[^94] and register to become a Marlowe Pioneer[^95] in the next cohort at *marlowe.iohk.io/*. There was a blog post outlining the different learning paths available with IOG Academy. 
 
 [^01]: Bitcoin Script, en.bitcoin.it/wiki/Script
 [^02]: **Static typing** means that before source code is compiled, the type (integer, floating point, string, etc) associated with every variable must be known. Compile time is when the programming code is translated to machine code. Runtime is when a program is running, ie. after compile time.
@@ -715,20 +717,20 @@ This was just a brief overview of Marlowe. To learn more, subscribe to Prof Simo
 [^82]: Quickcheck, hackage.haskell.org/package/QuickCheck
 [^83]: **TLA⁺** is a formal specification language developed by Leslie Lamport. It is used for designing, modeling, documentation, and verification of programs, especially concurrent systems and distributed systems
 [^84]: Marlowe papers, play.marlowe-finance.io/doc/marlowe/tutorials/introducing-marlowe.html#research-based
-[^85]:
-[^86]:
-[^87]:
-[^88]:
-[^89]:
-[^90]:
-[^91]:
-[^92]:
-[^93]:
-[^94]:
-[^95]:
-[^96]:
-[^97]:
-
+[^85]: In finance, a **contract for difference (CFD)** is a contract between two parties, typically described as ‘buyer’ and ‘seller’, stipulating that the seller will pay to the buyer the difference between the current value of an asset and its value at contract time (if the difference is negative, then the buyer pays instead to the seller).
+[^86]: In computability theory, the **halting problem** is the problem of determining, from a description of an arbitrary computer program and an input, whether the program will finish running, or continue to run forever. 
+[^87]: **Recursion** occurs when something is defined in terms of itself or of its type. Recursion is used in a variety of disciplines ranging from linguistics to logic. The most common application of recursion is in mathematics and computer science, where a function being defined is applied within its own definition. While this apparently defines an infinite number of instances (function values), it is often done in such a way that no infinite loop can occur.
+[^88]: **ACTUS** (Algorithmic Contract Types Unified Standards) Contract Types are defined based on the underlying contractual algorithm patterns that respectively cover different classes of financial products that each Contract Type pattern is able to express.
+[^89]: **Static analysis**, static projection, or static scoring is a simplified analysis wherein the effect of an immediate change to a system is calculated without regard to the longer-term response of the system to that change.
+[^90]: Marlowe embedded in Haskell, play.marlowe-finance.io/doc/marlowe/tutorials/embedded-marlowe.html
+[^91]: Marlowe CLI Tool, github.com/input-output-hk/marlowe-cardano/blob/cli-blog-april2022/marlowe-cli/ReadMe.md
+[^92]: Marlowe Runtime, github.com/input-output-hk/marlowe-cardano/tree/main/marlowe-runtime
+[^93]: Demeter.run Marlowe starter kit, demeter.run/starter-kits/marlowe
+[^94]: Marlowe goes live, iohk.io/en/blog/posts/2023/06/01/marlowe-goes-live-be-the-first-to-explore-the-power-of-marlowes-smart-contract-toolset/
+[^95]: Prof Simon Thompson on YouTube, youtube.com/user/simonjohnthompson/videos
+[^96]: Marlowe docs, play.marlowe-finance.io/doc/marlowe/tutorials/introducing-marlowe.html
+[^97]: Niamh Ahern, ‘Learn how to create low-code, low-cost financial smart contracts in the Marlowe Pioneer Program’, iohk.io/en/blog/posts/2022/05/11/learn-how-to-create-low-code-low-cost-financial-smart-contracts-in-the-marlowe-pioneers-program/
+[^98]: IOG Academy: The pathway to becoming a Cardano smart contract developer, iohk.io/en/blog/posts/2023/02/09/iog-academy-the-pathway-to-becoming-a-cardano-smart-contract-developer/
 
 
 
