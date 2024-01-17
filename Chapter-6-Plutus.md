@@ -348,6 +348,51 @@ The Plutus Application Framework (PAF) includes the Plutus Application Backend (
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig67.png "figure 6.7")
 **Figure 6.7**: A high-level architecture of the Plutus Platform, with an emphasis on applications. From plutus.readthedocs.io/
 
+In this diagram, the Platform breaks down based on which part of the system we’re interested in:
+- Plutus Foundation[^44] is there to support writing the trusted kernel of code, and executing it on the chain
+- The Plutus Application Framework is for writing Plutus dApps
+
+The following components must be present in addition to the PAB:
+
+- **Chain index**: a database of information obtained from Cardano transactions. It must be co-located with a Cardano node and utilizes the Cardano node’s chain sync protocol. The PAB’s chain index is a read-only component. As a result, a single instance of the chain index may be shared by several instances of the PAB. A HTTP API is used to serve all chain index requests
+- **Cardano node**: the PAB leverages a socket protocol to subscribe to ledger changes from the node.
+
+While not mandatory for dApp creation or implementation, the PAB is a useful Cardano tool that makes developing dApps easier, safer, and more cost-effective. It relieves developers of mundane duties by offering information from relevant sources in an accessible style. As the ecosystem matures, the community are developing their own tooling and API-based alternatives.[^45]
+
+Innovative new platforms like Genius Yield (geniusyield.co) are trailblazers for Plutus, creating custom PAB alternatives that are open source, available to other builders. Dr Lars Brünjes, Chief Technology Officer (IOG Education Director and Genius Yield CTO) talked about open-source ethos in a *Learn Cardano* interview:[^46]
+
+> It's one of my pet hates, I can't understand how you can possibly NOT make it open source. I mean, the whole point of smart contracts…when I explain to somebody what a smart contract is….you always say ‘with normal human contracts, there's always ambiguity, and legal issues and you replace that with mathematics and code, and so it's crystal clear what’s what’   …but this whole point is mute if you don't make your smart contracts public, because then nobody can check the actual logic. I mean then you can just as well forget about blockchain and do it centralized. So in my opinion, you have to at least make the smart contracts public… and this PAB replacement that we mentioned a couple of times now, we definitely also want to make it open source, so that everybody can profit from it, and not every project has to reinvent that over and over again.
+
+**Plutus fee estimator**  
+
+IOG performance specialists created the Plutus fee calculator as an in-house tool for pricing benchmarking and comparison. It predicts the fees that will be charged for a transaction using data from real-world Plutus transactions. The estimator may be used to estimate costs for individual script transactions or whole dApps before or during development, as well as to compute fees for existing transactions (e.g., to assess the fees that will be charged if network parameters change). 
+
+The Cardano ledger’s design principles enable great performance while maintaining stringent security standards. The Extended Unspent Transaction Output (eUTXO) accounting model allows for Cardano transactions and scripts to be checked locally (off-chain), enabling users to see whether a transaction is legitimate before executing it on-chain and incurring fees. Furthermore, transaction fees are fixed with no surprises. For comparison, the cost of executing a smart contract on Ethereum varies based on network traffic, ranging from $5 to hundreds[^47] of dollars. Even unsuccessful Ethereum transactions may incur fees, adding to the price unpredictability.
+
+Users on Cardano, on the other hand, may assess the transaction fees in advance. There is no need to pay for a transaction that may fail since the user knows whether the transaction is legitimate or not in advance. This prevents money from being wasted and eliminates on-chain failures. Cardano’s ada execution fee is always consistent because it is based on predetermined network protocol parameters rather than, for example, varying network congestion variables.
+
+Cardano’s pricing strategy is based mostly on market demand rather than real supply, both relative and absolute price[^48] must be considered. One means of doing this is by examining the implications of smart contract pricing, non-fungible token (NFT) activities, and other factors with regard to a common value — in this example, the use of Cardano’s processing power. 
+
+Smart contract pricing in Cardano is based on a fixed cost, which is determined by the price of used resources (UTXO size or computation/memory consumed while executing). Stake pool operators’ (SPO) labor and resources that verify network transactions must be adequately compensated with fees. Furthermore, ensuring that any method of adopting Cardano is not significantly less expensive than another helps to prevent a wide range of adversarial attacks (e.g. a DDoS attack).
+
+Flexibility is also a significant characteristic of the Cardano protocol, since it allows users to adjust their settings and respond to price swings. If the value of ada rises dramatically, protocol settings may be modified if necessary to avoid the user from overspending for smart contract execution.
+
+IOG created the Plutus fee estimator tool for pricing benchmarking and comparison. The estimator may be used to estimate costs for individual script transactions or whole dApps before or during development, as well as to predict fees for existing transactions. It might also be used to see how script updates or optimizations affect costs.
+
+Test Drive the Plutus fee estimator[^49] and see how easy it is to estimate the processing fee without saying goodbye to your funds if a transaction fails.
+
+**Cooked Validators**
+
+With the *cooked-validators* library, you can write off-chain code and obtain property-based testing for free. As a Haskell developer using formal methods, you should be devoted to using tools and procedures to ensure the safety and soundness of decentralized applications (dApps). Just writing and deploying a dApp is inadequate; all on-chain code and Plutus scripts should be carefully tested against a variety of bad actors.
+
+With this in mind, *Tweag* introduced *cooked-validators*,[^50] a collection of ready-to-use tools for working with Plutus validator scripts. This library aids in the implementation of the innermost layer of off-chain code, which is responsible for transaction generation and submission. You receive property-based testing at the transaction level for free by using this library.
+
+You may verify various safety and correctness aspects of your on-chain code by utilizing cooked-validators to create your off-chain code, which can considerably boost your trust in the code’s correctness. During an audit, this may save time and money. The first step in a Tweag audit is to leverage cooked-validators to write transaction-generating code, allowing them to interact with their client’s infrastructure.
+
+## Writing Plutus transactions
+
+
+
 
 
 
