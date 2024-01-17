@@ -535,43 +535,43 @@ You can study the original Plutus Tutorial[^66] from the documentation. The IOG 
 
 IOG created the Plutus Pioneer Program in anticipation of the Alonzo hard fork. The program is not for beginners, so it’s perhaps best to first study the online course Haskell and Crypto Mongolia Sept 2020[^69] available on YouTube, delivered by Andres Löh, co-founder of the Well-Typed consultancy and Dr. Lars Brünjes, Education Director at IOHK. 
 
-You should now be ready to apply[^70] for the next cohort. You can also engage the community directly about Plutus on the Cardano Forum[^71] or on the IOG Technical Discord.
+You should now be ready to apply[^70] for the next cohort. You can also engage the community directly about Plutus on the Cardano Forum[^71] or on the IOG Technical Discord.[^72]
 
 **Cardano Stack Exchange**
 
-IOG encourages developers to join in one location — Cardano Stack Exchange[^72] – to exchange ideas, ask and answer questions regarding all aspects of Cardano development and operations, and pool resources. This site, which is run by Cardano community members, is one of the tools for learning how to create dApps and smart contracts, or if you just want to know ‘What is Layer 0?’[^73]
+IOG encourages developers to join in one location — Cardano Stack Exchange[^73] – to exchange ideas, ask and answer questions regarding all aspects of Cardano development and operations, and pool resources. This site, which is run by Cardano community members, is one of the tools for learning how to create dApps and smart contracts, or if you just want to know ‘What is Layer 0?’[^74]
 
-Cardano Stack Exchange originated from Stack Overflow.[^74] It’s a community-moderated Q&A site where all Cardano developers, including Plutus pioneers, may obtain answers to a wide range of questions, from installation questions to configuration and implementation specifics. Stack Overflow’s community-driven, decentralized mentality meshes especially well with Cardano’s open-source, decentralized philosophy.
+Cardano Stack Exchange originated from Stack Overflow.[^75] It’s a community-moderated Q&A site where all Cardano developers, including Plutus pioneers, may obtain answers to a wide range of questions, from installation questions to configuration and implementation specifics. Stack Overflow’s community-driven, decentralized mentality meshes especially well with Cardano’s open-source, decentralized philosophy.
 
-This chapter was just an overview of Plutus. A useful landing page to bookmark is *Plutus Resources*[^75] which will connect you to everything going on in the Plutus ecosystem. The documentation is a little scattered and constantly changing, but that’s to be expected for a burgeoning programming language. 
+This chapter was just an overview of Plutus. A useful landing page to bookmark is *Plutus Resources*[^76] which will connect you to everything going on in the Plutus ecosystem. The documentation is a little scattered and constantly changing, but that’s to be expected for a burgeoning programming language. 
 
-**April 10, 2020.  Do you regret going with Haskell?** CH:[^76]
+**April 10, 2020.  Do you regret going with Haskell?** CH:[^77]
 
 >We probably could have gotten away with F# or Scala over Haskell and gotten a lot of the Haskell benefit. I didn’t realize that Haskell was going to require as much as it did …and I wasn’t prepared for it, we didn’t set up the organizational structure that we needed at the beginning for that and had I been better prepared in the beginning, we probably could have avoided some of our growing pains that we had. On the other hand, we were able to attract some of the brightest minds in the world and work with those minds to solve problems in completely original creative ways and so Cardano was ultimately a better product for it but our time to market suffered. Whether that was the right decision or not… Who knows?! 
 >
->Because we have to look at the project in 2022 and 2023 and if we’re the size, scope and scale of Ethereum and we have a resilient robust ecosystem then it was the right decision … if we’re not there, it was the wrong decision… but we just won’t know. We did actually look aggressively at Scala; in fact we wrote a product in Scala… and we wrote Mantis[^77] which is an Ethereum Classic client in Scala. It was a great experience, I loved it… I had so much fun we had no delays, it was easy to get out, it was like paint-by-numbers… so I like Scala a lot, it’s one of my favorite languages and I think there’s a huge amount of advantages in that ecosystem. The sharp edges have been mostly muted. 
+>Because we have to look at the project in 2022 and 2023 and if we’re the size, scope and scale of Ethereum and we have a resilient robust ecosystem then it was the right decision … if we’re not there, it was the wrong decision… but we just won’t know. We did actually look aggressively at Scala; in fact we wrote a product in Scala… and we wrote Mantis[^78] which is an Ethereum Classic client in Scala. It was a great experience, I loved it… I had so much fun we had no delays, it was easy to get out, it was like paint-by-numbers… so I like Scala a lot, it’s one of my favorite languages and I think there’s a huge amount of advantages in that ecosystem. The sharp edges have been mostly muted. 
 >
->That said, because of work we did with Haskell and the improvements we’ve made especially with GHCJS[^78] and the improvements[^79] we’ve made on Windows and the library level improvements we’ve made… if somebody chose Haskell today for a project, with the things that we’ve done, and the ecosystem has done, I think it would be a lot easier to build a product in Haskell. We’ve left a template to do that and future projects won’t have the growing pains that we had.
+>That said, because of work we did with Haskell and the improvements we’ve made especially with GHCJS[^79] and the improvements[^80] we’ve made on Windows and the library level improvements we’ve made… if somebody chose Haskell today for a project, with the things that we’ve done, and the ecosystem has done, I think it would be a lot easier to build a product in Haskell. We’ve left a template to do that and future projects won’t have the growing pains that we had.
 >
->At one point, I actually considered writing Cardano in JavaScript… I really thought about it, I said we have formal semantics through the JSCert program, out of Imperial College London,[^80] and there are some functional things we can do… and we could do formal verification of some of the JavaScript code …so here’s a crazy thought …why don’t we actually get some Haskell hard core programmers and then force them to actually write JavaScript? …and build a whole ecosystem around it, write up a whole bunch of beautiful JavaScript tooling for QuickCheck[^81] and for all this other stuff and actually create a TLA port …so we can do TLA+ and connect it with JavaScript code.
+>At one point, I actually considered writing Cardano in JavaScript… I really thought about it, I said we have formal semantics through the JSCert program, out of Imperial College London,[^81] and there are some functional things we can do… and we could do formal verification of some of the JavaScript code …so here’s a crazy thought …why don’t we actually get some Haskell hard core programmers and then force them to actually write JavaScript? …and build a whole ecosystem around it, write up a whole bunch of beautiful JavaScript tooling for QuickCheck[^82] and for all this other stuff and actually create a TLA[^83] port …so we can do TLA+ and connect it with JavaScript code.
 
 ## Marlowe
 
 Marlowe is a simple programming language for writing financial smart contracts for Cardano. It is named after the Elizabethan poet, dramatist and spy, Christopher Marlowe. Marlowe is limited to financial applications and is not Turing-complete. It is for people who are experts in finance rather than programming.
 
-Marlowe is based on peer-reviewed research carried out by a team led by Prof Simon Thompson, first at the University of Kent with the help of an IOG research grant, and then as an internal IOG team in collaboration with the University of Wyoming Advanced Blockchain R&D Laboratory. The research has resulted in several published papers.[^82]
+Marlowe is based on peer-reviewed research carried out by a team led by Prof Simon Thompson, first at the University of Kent with the help of an IOG research grant, and then as an internal IOG team in collaboration with the University of Wyoming Advanced Blockchain R&D Laboratory. The research has resulted in several published papers.[^84]
 
 **Context for Marlowe**
 
 Marlowe provides blockchain financial contracts that anybody can write. It’s an embedded domain-specific language (dDSL) for creating and executing financial contracts that lets users utilize their domain knowledge to quickly create and manage contracts without the steep learning curve that comes with software development, blockchain, and smart contracts. 
 
-Marlowe is a user-friendly programming language that may be used to mimic financial products. It’s a decentralized finance (DeFi) platform that allows for direct peer-to-peer lending, contracts for difference (CFDs),[^83] and other related products. Marlowe contracts are tailored for financial transactions, development platforms, and a fast track for financial service providers to establish competence in smart contracts and blockchain technology.
+Marlowe is a user-friendly programming language that may be used to mimic financial products. It’s a decentralized finance (DeFi) platform that allows for direct peer-to-peer lending, contracts for difference (CFDs),[^85] and other related products. Marlowe contracts are tailored for financial transactions, development platforms, and a fast track for financial service providers to establish competence in smart contracts and blockchain technology.
 
-Marlowe contracts are simpler to read, write, and comprehend because they are written in a special-purpose language. It’s also safer: certain faults are impossible to create, and IOG can fully analyze contract behavior without running a contract. Marlowe has several advantages over a Turing-complete language. It’s more secure, predictable and addresses the halting problem[^84] by guaranteeing termination. 
+Marlowe contracts are simpler to read, write, and comprehend because they are written in a special-purpose language. It’s also safer: certain faults are impossible to create, and IOG can fully analyze contract behavior without running a contract. Marlowe has several advantages over a Turing-complete language. It’s more secure, predictable and addresses the halting problem[^86] by guaranteeing termination. 
 
 Marlowe’s design features:
 
-- No recursion[^85] or loops as contracts are finite
+- No recursion[^87] or loops as contracts are finite
 - There are timeouts on all actions, guaranteeing termination
 - Commitments and timeouts are central to how Marlowe works in a blockchain context
 - All contracts have a defined lifetime
@@ -584,7 +584,7 @@ Because Marlowe enables you to write contracts graphically as well as in more co
 
 The Marlowe language is embedded in both JavaScript and Haskell, giving you a variety of editors to choose from, depending on your preferences and skill level. You can write contracts in these languages and then convert (‘compile’) them to Marlowe in the Marlowe Playground. Haskell is a functional programming language with its own established ecosystem and robust testing environment, but JavaScript provides flexibility and speed of usage with a vibrant community.
 
-Marlowe may interact with real-world data, such as oracles, and contract participants can choose what occurs on and off-chain, such as in a wallet, by making decisions inside the contract flow. Marlowe is blockchain-agnostic, allowing smart contacts to be expressed on top of account-based models like Ethereum as well as Cardano’s extended unspent transaction output (eUTXO) model. Marlowe is an industry-scale solution that incorporates examples from the ACTUS[^86] (actusfrf.org) taxonomy and financial contract standard. 
+Marlowe may interact with real-world data, such as oracles, and contract participants can choose what occurs on and off-chain, such as in a wallet, by making decisions inside the contract flow. Marlowe is blockchain-agnostic, allowing smart contacts to be expressed on top of account-based models like Ethereum as well as Cardano’s extended unspent transaction output (eUTXO) model. Marlowe is an industry-scale solution that incorporates examples from the ACTUS[^88] (actusfrf.org) taxonomy and financial contract standard. 
 
 **Marlowe differentiators**
 
@@ -602,7 +602,7 @@ Similar to native scripts mentioned earlier, Marlowe offers 6 primitives: **Pay,
 
 There are pros and cons for a language to be Turing-complete. Marlowe isn't Turing-Complete. This is a feature, not a bug, as only a set number of programs can be written, so in theory, it is possible to guarantee there are no security bugs or vulnerabilities for a given program.
 
-Because Marlowe is a DSL, it can predict how Marlowe contracts will function without having to execute them: meaning you can leverage static analysis[^87] to deliver important diagnostics to users before they sign a contract. Marlowe can also leverage logic tools to explicitly establish Marlowe contract properties, providing users with the maximum level of certainty that their contracts will perform as intended.
+Because Marlowe is a DSL, it can predict how Marlowe contracts will function without having to execute them: meaning you can leverage static analysis[^89] to deliver important diagnostics to users before they sign a contract. Marlowe can also leverage logic tools to explicitly establish Marlowe contract properties, providing users with the maximum level of certainty that their contracts will perform as intended.
 
 **Marlowe Playground**
 
@@ -618,20 +618,20 @@ You may code in Marlowe directly, but you can also utilize Blockly, a visual pro
 
 You may also use the inbuilt Haskell or JavaScript editors to help you write more readable and concise Marlowe contracts. You can use the Haskell editor to produce Marlowe code if you’re a seasoned Haskell developer. Because Marlowe is built as a Haskell data type, creating Marlowe smart contracts using Haskell is easy. Just select ‘Haskell’ in the sample ‘Demo files’. You can use Haskell to make contract definitions more readable by using Haskell definitions for sub-components, abbreviations, and simple template functions. The editor will assist you with auto-complete, error checking during editing, and binding tips on mouse over.
 
-You can make your own templates out of Marlowe contracts and utilize unique metadata to provide user suggestions. The sandbox setting of the Marlowe Playground is where you may experiment drafting financial contracts. This playground lets you work directly in a variety of languages, including Marlowe, JavaScript, Haskell,[^88] or Blockly, depending on your preferences. New tools for creating and modifying templates and customizing information, as well as a new JSON download option for the contracts themselves, were introduced to the Marlowe Playground. 
+You can make your own templates out of Marlowe contracts and utilize unique metadata to provide user suggestions. The sandbox setting of the Marlowe Playground is where you may experiment drafting financial contracts. This playground lets you work directly in a variety of languages, including Marlowe, JavaScript, Haskell,[^90] or Blockly, depending on your preferences. New tools for creating and modifying templates and customizing information, as well as a new JSON download option for the contracts themselves, were introduced to the Marlowe Playground. 
 
-In April 2022, IOG introduced the Marlowe CLI (command line interface) tool.[^89] For users who wish to manage contracts from the command line, this new tool provides a simple approach. It allows you to concentrate on the Marlowe contract while the tool handles the specifics of the contract’s input and state. It also automates several parts of Plutus, as well as interactions with the Cardano node itself, to relieve users of some of the heavy lifting.
+In April 2022, IOG introduced the Marlowe CLI (command line interface) tool.[^91] For users who wish to manage contracts from the command line, this new tool provides a simple approach. It allows you to concentrate on the Marlowe contract while the tool handles the specifics of the contract’s input and state. It also automates several parts of Plutus, as well as interactions with the Cardano node itself, to relieve users of some of the heavy lifting.
 
-This new CLI tool will be beneficial for teaching users how to get up to speed with Marlowe. It was used heavily in the inaugural Marlowe Pioneer Program. Late 2022 saw the launch of *Marlowe Runtime*,[^90] an application backend for Marlowe contract handling. Developers can use Marlowe Runtime’s APIs and backend to build and deploy Marlowe Web3 dApps. This saves them the hassle of needing to manually orchestrate the backend workflow. There is also a beginner-friendly Marlowe starter kit on demeter.run[^91]
+This new CLI tool will be beneficial for teaching users how to get up to speed with Marlowe. It was used heavily in the inaugural Marlowe Pioneer Program. Late 2022 saw the launch of *Marlowe Runtime*,[^92] an application backend for Marlowe contract handling. Developers can use Marlowe Runtime’s APIs and backend to build and deploy Marlowe Web3 dApps. This saves them the hassle of needing to manually orchestrate the backend workflow. There is also a beginner-friendly Marlowe starter kit on demeter.run[^93]
 
-After an extensive audit by *Tweag.io*, documented in a long blog post, Marlowe went live[^92] on Cardano mainnet in the summer of 2023. 
+After an extensive audit by *Tweag.io*, documented in a long blog post, Marlowe went live[^94] on Cardano mainnet in the summer of 2023. 
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig69.png "figure 6.9")
 <br>**Figure 6.9**: Creating a smart contract using Blockly on Marlowe Playground
 
 **Where can I learn more about Marlowe?**
 
-This was just a brief overview of Marlowe. To learn more, subscribe to Prof Simon Thompson’s YouTube channel[^93] and review his videos. Read the docs[^94] and register to become a Marlowe Pioneer[^95] in the next cohort at *marlowe.iohk.io/*. There was a blog post outlining the different learning paths available with IOG Academy. 
+This was just a brief overview of Marlowe. To learn more, subscribe to Prof Simon Thompson’s YouTube channel[^95] and review his videos. Read the docs[^96] and register to become a Marlowe Pioneer[^97] in the next cohort at *marlowe.iohk.io/*. There was a blog post outlining the different learning paths available with IOG Academy. 
 
 [^01]: Bitcoin Script, en.bitcoin.it/wiki/Script
 [^02]: **Static typing** means that before source code is compiled, the type (integer, floating point, string, etc) associated with every variable must be known. Compile time is when the programming code is translated to machine code. Runtime is when a program is running, ie. after compile time.
