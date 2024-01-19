@@ -38,8 +38,23 @@ Andrew Westberg, NEWM CTO, speaking at the 2023 Dubai Cardano Summit[^14]
 
 ## Aiken is born
 
+The language we have not mentioned yet, but will cover now, is Aiken which is the language with all the momentum in terms of developer adoption. It polled top spot among respondents to the *State of the Cardano Developer Ecosystem 2023* survey question[^15] ‘What do you use (or plan to use) for writing Plutus script validators / smart contracts?’
+ 
+>‘Aiken, a newcomer, has made a remarkable entrance, garnering attention and use from developers across various experience levels. Its broad appeal underscores its emerging importance and sets the stage for whether it will sustain this positive impression in the times ahead.’
 
-**_The reste will be uploaded soon..._**
+So what's all the fuss about? Let's take a closer look…
+
+Aiken was born from humble beginnings through the efforts of a small group of open source pioneers supported by TxPipe.[^16] The pool of contributors[^17] grew and the Cardano Foundation was quick to see its potential. The CF actively collaborates to advance Aiken with its core development team: Lucas Rosa,[^18] Kasey White[^19] and Matthias Benkort.[^20] The CF’s involvement aligns with its own mission to increase awareness of Cardano through operational resilience, education, and adoption.
+
+Frederik Gregaard, CEO of Cardano Foundation[^21]
+
+>‘Aiken's story is a testament to how open-source initiatives can drastically reshape and improve existing infrastructures’
+Aiken fills the gaps
+
+## Aiken fills the gaps
+
+
+**_The rest will be uploaded soon..._**
 
 [^01]: Untyped Plutus Core, aiken-lang.org/uplc
 [^02]: Helios compiler, github.com/Hyperion-BT/Helios/blob/main/helios.js
@@ -56,10 +71,10 @@ Andrew Westberg, NEWM CTO, speaking at the 2023 Dubai Cardano Summit[^14]
 [^13]: Scalus, github.com/nau/scalus
 [^14]: Building dApps from Tools and Testing to Business Plans, youtu.be/CtQa2Rr448I?si=JSVVuWwgqeBSQOnv&t=151
 [^15]: State of the Cardano Developer Ecosystem - 2023, cardano-foundation.github.io/state-of-the-developer-ecosystem/2023/#what-do-you-use-or-plan-to-use-for-writing-plutus-script-validators-smart-contracts
-[^16]:
-[^17]:
-[^18]:
-[^19]: 
-[^20]:
-[^21]:
+[^16]: TxPipe, txpipe.io/
+[^17]: Aiken contributors, github.com/aiken-lang/aiken/graphs/contributors
+[^18]: Lucas Rosa, github.com/rvcas
+[^19]: Kasey White, github.com/MicroProofs
+[^20]: Matthias Benkort, github.com/KtorZ
+[^21]: AIKEN: A Game-Changer in the Cardano Landscape, linkedin.com/posts/gregaard_disrupting-defi-how-aiken-changed-the-cardano-activity-7110592762621648896-l070
 [^22]:
