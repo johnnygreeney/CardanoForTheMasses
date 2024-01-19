@@ -49,7 +49,6 @@ Aiken was born from humble beginnings through the efforts of a small group of op
 Frederik Gregaard, CEO of Cardano Foundation[^21]
 
 >‘Aiken's story is a testament to how open-source initiatives can drastically reshape and improve existing infrastructures’
-Aiken fills the gaps
 
 ## Aiken fills the gaps
 
