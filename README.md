@@ -21,7 +21,7 @@ The 3rd 'Chang' edition[^1] was published on 3rd Jan 2024, under an open-source 
 
 ## Translations 
 
-There has allready been significant progress made on a **Spanish** translation by Humberto Rojas Serrano and Joe San.
+There has already been significant progress made on a **Spanish** translation by Humberto Rojas Serrano and Joe San.
 
 A **Japanese** translation[^4] of older 'Age of Voltaire' Edition, funded by Catalyst, is at an advanced stage.
 
