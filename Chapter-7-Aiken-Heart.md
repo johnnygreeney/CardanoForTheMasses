@@ -129,7 +129,45 @@ Knowing the drawbacks of the PlutusTx language, Indigo Labs explored using Pluta
 
 They conclude that their *‘shift to Aiken is not just a technical upgrade — it’s a leap towards a more efficient and expansive future for both Indigo and the broader Cardano dApp ecosystem’.*
 
-**_The rest will be uploaded soon..._**
+Lenfi (formerly Aada Finance) is a decentralized liquidity protocol built on Cardano. The platform leverages the eUTXO model to enable peer-to-pool mechanics by introducing an innovative paradigm in DeFi lending. Lenfi was the first Cardano lending protocol written in Aiken. Their V1 rework was open-sourced in March 2023. They acknowledged the merits of Aiken as a viable alternative to Plutus-Tx for familiar reasons, reporting it gave them unparalleled efficiency and ease of use. For example, they used ‘Multi Validators’ which allows a spending validator and minting validator to share the same script hash.
+
+JPG Store is the largest NFT marketplace on Cardano and the beating heart of its NFT culture. JPG Store has delivered several innovations including smart contracts, creator royalties and low fees. One of the differentiators for JPG Store is its commitment to supporting artists. The marketplace offers a fair and transparent fee structure, ensuring artists receive a significant chunk of the sales proceeds. This is the focus of CIP 27 - CNFT Community Royalties Standard. 
+
+JPG Store has undergone several smart contract upgrades, each coming with improvements to the user experience. The latest upgrade to Jpg Store v3 saw smart contracts rewritten in Aiken and resulted in significant performance improvements, such as the ability to buy up to 50 NFTs in one transaction.
+
+
+Aiken was the perfect fit for our needs. Setting up development environments was super simple in comparison to the complex requirements of a Plutus environment. Aiken also comes with a full testing suite and the syntax is much more approachable for the average developer than the Haskell-based syntax of Plutus.
+
+MinSwap is a community-centric DEX available in more than 30 languages. A winning proposal from Catalyst Fund5, MinSwap is 100% community-funded. It is the dominant DEX in terms of TVL according to stats from Defi Llama and is the most-used dApp in the Cardano DeFi ecosystem. MinSwap V2 was written in Aiken smart contracts and its audit was funded by Catalyst and conducted by Sundae Labs. The Dex claims trading speeds improved by 5x and that ‘Minswap V2 isn't just an upgrade; it's a leap into a brighter, bolder Cardano DeFi future.’
+
+SundaeSwap is another DEX making the move to Aiken smart contracts. They lay out the reasons in their Catalyst Fund10 proposal which was funded. They will transition from ‘closed-source, inefficient’ PlutusTx contracts to Aiken providing a practical Aiken adoption case study while sharing learnings with the community. Those are just words, but the numbers don’t lie. In a demo on Cardano with Paul, Pi Lanningham revealed his benchmarking testing saw SundaeSwap smart contracts written in Aiken outperform their Plutus V1 counterpart by a significant margin. While Plutus filled just 164 orders, Aiken-powered smart contracts filled a remarkable 2258 orders. 
+
+The on-chain Plutus code consumed more CPU resources, for 2–4 orders per batch. Aiken’s on-chain code was leaner, and resulted in 25 orders per batch. The benchmarking results concluded that under optimal conditions, a DEX utilizing Aiken could process approx 100 orders in just 4 batches, while a DEX built with Plutus could only manage 8–16 orders in the same timeframe. 
+
+Sundae has also contributed several reusable Aiken libraries called Aicone and we are sure to hear more about their move to Aiken in the coming months. 
+
+This was merely an orderve, there are many more projects using Aiken. Encoins, the first privacy-oriented protocol on Cardano, are using Aiken. As is Mehen, the highly anticipated first fiat-backed stablecoin protocol on Cardano. Book.io, NEWM.io…not forgetting Hydra and Marlowe who have begun experimenting with Aiken, Charles Hoskinson revealed in an AMA
+
+We're starting to fall in love with Aiken a little bit. The Hydra team actually prototyped some of the Hydra stuff with Aiken, and did a cross comparison to Plutus script and there's some good things there, it's great ecosystem
+
+Fortuna is a Bitcoin style proof-of-work in smart contract form that showcases Aiken’s potential. Originally presented at a RareEvo workshop, it is a complete end-to-end example of a non-trivial smart contract which onboarded developers and became the 4th busiest Dapp within a week. It is open sourced with miners, explorers and tooling on GitHub. 
+
+As we finally exit a long ‘crypto winter’, the upcoming Aiken beta may be perfectly timed to attract a more diverse developer community to Cardano. The Awesome List of projects building with Aiken is sure to keep growing. As Lucas Rosa explained in a twitter space, the Aiken roadmap is mostly about improving tooling, formalizing parts of the Aiken compiler and moving towards a Beta release. 
+
+Aiken has been indirectly audited by multiple in-depth security audits of dApps built with Aiken dApps. The feedback to date has been positive from the likes of Tweag.io and Sundae Labs looking into code generated by Aiken. It has also been indirectly tested through re-implementation of existing dApps that are themselves either formally verified (for example, Marlowe) or stress tested (for example, Hydra, SundaeSwap, etc...). So we've got quite a good confidence that the compiler is doing what it's meant to be doing.
+
+The Aiken core development team talks regularly to the Plutus team, on issues like formalizing the Aiken compiler and leveraging the Haskell testing framework. Despite adopting a conservative approach of staying Alpha, many projects are happily deploying Aiken in production, only after rigorous batteries of tests. It’s important to emphasize that Aiken and Haskell run on the same virtual machine in the Cardano ledger, both benefiting from the same security derived from that execution model.
+
+To keep updated follow @aiken_eng on twitter (X) and join the discord channel which is hosted in its original home, TxPipe’s discord server. TxPipe was the original home for Aiken, and Santiago Carmuega and his team continue to support the project. TxPipe are significant contributors to the ecosystem with products like Pallas and demeter.run. Pallas offers Rust-native building blocks for Cardano, which are used by Aiken internally for some features. demeter.run is similar to a cloud service that specializes in offering infrastructure and streamlined access to almost everything running on Cardano, including an Aiken starter kit. The CF recognises the important contribution TxPipe makes to Cardano and commits to supporting them in fostering adoption and growth.
+
+Meanwhile Aiken continues to attract new fans and compliments. 
+
+Aiken is incredible really. Plutus on rocket fuel - Algorand CTO, John Woods. 
+
+The inaugural Cardano Builder Fest takes place in April 2024 and the Aiken community is set to continue expanding from its humble beginnings…
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/lucas.png "Lucas tweet")
+
 
 [^01]: Untyped Plutus Core, aiken-lang.org/uplc
 [^02]: Helios compiler, github.com/Hyperion-BT/Helios/blob/main/helios.js
