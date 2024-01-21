@@ -62,6 +62,59 @@ So although Cardano is implemented in Haskell, including the node and the virtua
 
 ## What is Aiken?
 
+Aiken is named after Howard Aiken, the mathematician who invented the *Harvard Mark I*, the forerunner of the modern electronic digital computer. Aiken is a functional domain-specific language (DSL) with strong static typing and type inference.[^23] It is written in Rust and licensed under Apache-2.0. Unlike Haskell, it is built specifically with the Cardano blockchain in mind. It places an emphasis on the developer experience. It comes with ‘batteries included’ state-of-the-art tooling, taking inspiration from modern programming languages like Rust and Elm. Indeed, on the Aiken website, there is a credit[^24] to Louis Pilfold who created and maintains Gleam,[^25] the language from which a good chunk of Aiken was forked. 
+
+Haskell is a relatively old language, especially in crypto where it’s often said ‘crypto years are like dog years’. Its strengths are its battle-tested compiler and mature ecosystem. Some tools have aged poorly, however, laden with legacy features. As with most general-purpose languages, it comes with excess baggage that isn’t useful in a blockchain environment. Many developers struggle with Haskell and grow frustrated with the steep Plutus learning curve.[^26]
+
+Aiken is a leaner language which aims to free itself from unnecessary features and instead provide a comprehensive opinionated[^27] solution with minimal configuration needed. Everything works out-of-the-box and with language-wide standards enforced by the compiler. Developers have remarked how Aiken is easy to learn and get started with in minutes. Under the covers, Aiken has a different execution model than the Haskell to Plutus Core compiler. While they both result in UPLC, they represent and manipulate data slightly differently. This leads to different trade-offs regarding execution costs. This is important for later, when we review benchmark results from projects who have compared different options. 
+
+Pi Lanningham (Sundae Labs CTO)[^28] -
+
+> When these languages started to pop up, I was really skeptical, because it takes a lot to write a programming language and to have like really high confidence that it produces correct code, because one small compiler bug and... you know we saw this on Ethereum ...there was a compiler bug that introduced reentrancy[^29] (vulnerability) and led to a bunch of hacks on a bunch of Dexes (decentralized exchanges) and so I was really skeptical of these new programming languages, because I was like 'oh you know I think it's really essential work, but it's going to take a very long time before they have kind of the confidence to be able to launch really big protocols like Sundaeswap on them'....
+>
+> So on a whim one weekend I was like 'what would Sundaeswap’s contracts look like implemented in Aiken?' and let me tell you the speed at which I got a working prototype up was phenomenal....and the main reasons for that are: 1)  the language for me at least is a lot easier to read, so I was able to iterate a lot faster. 2) It has incredible tooling, so this is one of the things that Haskell is really known for is, it has really bad tooling, so even just to start a project it's like three or four days to install all the right dependencies, and get your environment set up to just compile a set of basic smart contracts... and then there's a lot of boilerplate that you don't really understand what it's doing if you're new to Smart contracts ...and so that adds like several other days before you even get your 'hello world' example right
+>
+> ...with Aiken it's like 20 minutes and that's just because they've focused really heavily on the tooling for installing Aiken the first time for running and compiling smart contracts ...it's you know a breeze and it's super fast, you get really great error messages so this is a great example of that, you know if you're a developer this will mean something to you, if you're not don't worry about it and their tooling is very kind of ‘smart contract-first
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig72.png "figure 7.2")
+<br>**Figure 7.2**: Aiken compiles to UPLC 
+
+Although Aiken has familiar Rust-like syntax and a Rust compiler, it is not Rust. 
+
+Matthias Benkort, @KtorZ:
+
+>The fun thing is, if you take Haskell and remove all the features that aren't useable on-chain and you add curly braces, you have Aiken. Aiken and Haskell have actually many similarities. More than Aiken and Rust in fact. So learning Aiken is even a good first step towards learning Haskell
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig73.png "figure 7.3")
+<br>**Figure 7.3**: Aiken syntax 
+
+The Aiken team’s thoughtful design means the package manager[^30] encourages others to publish open source libraries. The language’s Rust libraries can be re-used for lower-level tools and services. Lucid is a good example of a service who have benefitted from this collaborative approach. Lucid[^31] is a library for creating Cardano transactions and off-chain code for Plutus contracts in JavaScript, Deno and Node.js. It leverages Aiken's UPLC[^32] crate[^33] to assess transactions before they’re submitted to calculate redeemer ExUnits. It does without using a node, Ogmios,[^34] or Blockfrost.[^35]
+
+Aiken adopts a ‘keep it simple’ approach. Compared to other languages, Aiken scripts, by design, do not support as many features as general purpose Turing-complete languages. For example, there is no support for higher-kinded types[^36] or type classes.[^37] That's not to say they won’t be introduced at a later stage. 
+
+Aiken is a small language, not a high-level general-purpose language, designed meticulously to produce small, efficient scripts for on-chain Cardano smart contracts that integrate with most languages off-chain. ‘Aiken users exhibit a tendency for Rust in off-chain scenarios’ according to the findings of the State of the Cardano Developer Ecosystem 2023 survey.[^38] Hardly surprising considering how fast Rust is growing.[^39]
+
+Aiken enables a smoother transition for developers new to Cardano, especially those used to programming in imperative languages. The interactive Aiken playground[^40] makes learning and experimenting with the language accessible. Developers can write, test, and debug Aiken code snippets in their browser. As outlined earlier, understanding the nuances and intricacies of the extended eUTxO model is a prerequisite to code effectively in Aiken. Through CIP-0057,[^41] Aiken supports blueprint stub generation. The stubs are effectively templates for different programming languages, facilitating an effortless integration between Aiken and off-chain components.
+
+When it's time to build your on-chain contract, just type:
+
+`aiken build`
+
+The compiler generates a CIP-0057 Plutus blueprint[^42] and outputs it as plutus.json in your project's root directory. This blueprint describes the on-chain contract you just created. This `plutus.json` file contains the compiled bytes of your smart contract, details about how to construct the types needed for your datum and redeemer. It's similar to an open API specification for your smart contract. This can then be used by code generation tools in your chosen language you use for off-chain components. This is usually JavaScript, Rust, etc. 
+
+Although Aiken may be more user friendly, it is still a pure functional programming language just like Haskell and maintains all the benefits of first-class functions, custom types, reusable, type-safe code, etc. You sometimes hear that Aiken offers everything a modern programming language should. But what does that actually mean?
+
+Minimal setup is required, so developers don’t need to spend much time configuring their environment. Aiken offers a unified development experience, simple efficient process with little context-switching overhead. Error messages are friendly and helpful. Aiken’s Language Server Protocol (LSP) comes with auto-formatting, code completion, syntax-highlighting and integration with popular code editors. Creating documentation is no longer a chore as it can be generated from your code comments.
+
+As you would expect with a functional programming language, there is an in-built unit testing framework. Leveraging the Plutus VMs deterministic nature, Aiken tooling allows for precise cost estimates, so smart contracts can be optimized to consume minimal resources. 
+
+When you type 'aiken check', it runs the unit tests for you. In Cardano, there is this notion of an execution budget which you can think of as a guardrail to protect you from yourself. For example, if you inadvertently code up an infinite loop, it won’t do any damage because then it consumes the execution budget and stops the program. This is another feature leveraging the determinis that comes with the eUTxO model. The Property-based testing framework will be an extension of the unit tests, where you can introduce arguments, etc. 
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig74.png "figure 7.4")
+<br>**Figure 7.4**: Aiken sample error message
+
+## Projects using Aiken
+
 
 **_The rest will be uploaded soon..._**
 
