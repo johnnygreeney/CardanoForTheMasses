@@ -115,6 +115,19 @@ When you type 'aiken check', it runs the unit tests for you. In Cardano, there i
 
 ## Projects using Aiken
 
+Many Cardano projects have experimented with Aiken smart contracts, and blogged about their benchmarking and comparison tests. We’ll chart some of their findings next. 
+
+**Indigo Protocol** is a powerful dApp which brings real-world assets on-chain. It’s also a platform that offers decentralized synthetics trading on Cardano. Users can use Indigo to create synthetic assets called iAssets. A synthetic asset is a tokenized derivative that mimics the value of another asset. Synthetic assets give users exposure to a variety of assets without the need to own the underlying asset. This could be gold, silver or traditional stocks. 
+
+Indigo’s smart contracts are some of the most complex within the Cardano ecosystem. As their protocol grew in popularity and usage, they needed to optimize. The Indigo Protocol is transitioning from PlutusTx (enhanced with Plutonomy) to Aiken. 
+
+Knowing the drawbacks of the PlutusTx language, Indigo Labs explored using Plutarch, plu-ts, Opsin and Helios before they decided on Aiken. After integrating Aiken, their performance metrics showed drastic improvements especially in terms of computational steps and memory units. Their blog[^43] details the arresting results of their competitive analysis of three phases in their development cycle:
+
+1. PlutusTx: The foundational first layer.
+2. PlutusTx with Plutonomy: The V1 contracts that were launched on Cardano mainnet. This was PlutusTx but optimized with Plutonomy, an optimizer for untyped plutus core..
+3. Aiken: They state they chose Aiken for its ease of implementation, readability, and superior performance metrics.
+
+They conclude that their *‘shift to Aiken is not just a technical upgrade — it’s a leap towards a more efficient and expansive future for both Indigo and the broader Cardano dApp ecosystem’.*
 
 **_The rest will be uploaded soon..._**
 
