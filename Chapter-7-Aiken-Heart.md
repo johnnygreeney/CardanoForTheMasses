@@ -52,6 +52,16 @@ Frederik Gregaard, CEO of Cardano Foundation[^21]
 
 ## Aiken fills the gaps
 
+There are a few differences between ‘normal mainstream’ Haskell, running on your computer, and Haskell running on Cardano through the Plutus VM. The execution environments differ. To recap, the Cardano ledger only comprehends untyped Plutus core (UPLC), not Haskell. Haskell code must be compiled into Plutus core. When running on a computer, the compiled Haskell is translated into machine code for the machine’s hardware. On the Cardano blockchain, the Plutus VM executes the compiled Haskell, and the program behavior is slightly different.
+
+For this reason the full ecosystem of functions and libraries available to ‘mainstream’ Haskell developers is not reusable on Cardano. Such libraries are important in any language, as they solve basic problems so are often required dependencies. When writing a program, these libraries are included at the top of your code, adding to the size of the program. 
+
+Programming on Cardano is a different challenge, as space is at a premium. Only a subset of Haskell's wider ecosystem tooling can be leveraged on Cardano. It's important to emphasize this is not a Haskell-specific problem, it is a consideration when using any mainstream general purpose language for smart contracts. 
+So in a sense, the Plutus platform is tied to Haskell’s existing language but with the addition of some libraries and program semantics which is not straightforward to work with. You can use whatever off-chain code you like with the Plutus platform, but it is heavily biased towards using Haskell on-chain and off-chain. Developers crave flexibility to use their favourite language for what is typically the largest part of their dApp, the off-chain component. 
+So although Cardano is implemented in Haskell, including the node and the virtual machine that comes with it, it is UPLC that the Plutus VM actually executes. There is no dependency or reliance on Haskell. Other languages can compile to UPLC too. One of those is Aiken, which also has a version of this virtual machine[^22] written in Rust.
+
+## What is Aiken?
+
 
 **_The rest will be uploaded soon..._**
 
@@ -76,4 +86,40 @@ Frederik Gregaard, CEO of Cardano Foundation[^21]
 [^19]: Kasey White, github.com/MicroProofs
 [^20]: Matthias Benkort, github.com/KtorZ
 [^21]: AIKEN: A Game-Changer in the Cardano Landscape, linkedin.com/posts/gregaard_disrupting-defi-how-aiken-changed-the-cardano-activity-7110592762621648896-l070
-[^22]:
+[^22]: Aiken VM written in Rust, github.com/aiken-lang/aiken/blob/main/crates/uplc/src/machine.rs#L63
+[^23]: Type inference refers to the automatic detection of the type of an expression in a formal language.
+[^24]: Aiken credits, aiken-lang.org/credits
+[^25]: Gleam, gleam.run/
+[^26]: Cardano Foundation Developer Survey 2022, cardano-foundation.github.io/state-of-the-developer-ecosystem/2022/#how-satisfied-are-you-with-the-current-state-of-the-plutus-ecosystem
+[^27]: The term Opinionated software solutions relates to the level of guidance and structure a software solution provides. An opinionated solution usually comes with a predefined set of conventions, best practices and design patterns. It shephards developers in a certain direction, which can speed up development but can sometimes limit flexibility.
+[^28]: Aiken Brings a Massive Cardano Smart Contract Performance Increase, youtu.be/4Y1UieAhszY?si=0CwhInAT2sR4mNXd&t=626
+[^29]: A reentrancy attack occurs when a function is externally called during its execution, enabling it to be run several times in a single transaction. This usually occurs when a smart contract calls another smart contract before it resolves its state.
+[^30]: A package manager provideS a method to install new dependencies (packages), manage where packages are stored on your file system, and enables you to publish your own packages.
+[^31]: Lucid, lucid.spacebudz.io/
+[^32]: Aiken UPLC crate, crates.io/crates/uplc
+[^33]: A crate is the smallest amount of code that the Rust compiler considers at a time
+[^34]: Ogmios is a lightweight bridge interface for cardano-node
+[^35]: Blockfrost is an API-as-a-service that allows users to interact with Cardano and other parts of its ecosystem
+[^36]: A higher-kinded type is a type that allows you to create generic structures that can work with a wide range of data types
+[^37]: A type class is a type system construct that supports ad hoc polymorphism
+[^38]: State of the Cardano Developer Ecosystem - 2023 survey, cardano-foundation.github.io/state-of-the-developer-ecosystem/2023/
+[^39]: Rust is growing, flawless.dev/essays/rust-is-growing/
+[^40]: Aiken Playground, play.aiken-lang.org/
+[^41]: Plutus Contract Blueprint, cips.cardano.org/cip/CIP-0057
+[^42]: CIP-0057? | Plutus Smart-Contract Blueprints, github.com/cardano-foundation/CIPs/pull/258
+[^43]: Optimizing the Throughput of Cardano: The Evolution of Indigo Protocol’s Smart Contracts, indigoprotocol1.medium.com/optimizing-the-throughput-of-cardano-the-evolution-of-indigo-protocols-smart-contracts-a498ecc42823
+[^44]: Lenfi V1, github.com/aadafinance/aada_v1_aiken
+[^45]: CNFT Community Royalties Standard, cips.cardano.org/cip/CIP-0027
+[^46]: Jpg store v3, medium.com/@jpgstorenft/unveiling-the-next-gen-smart-contract-update-for-jpg-store-2f883c913979
+[^47]: MinSwap Aiken v2 Audit, lidonation.com/sw/proposals/minswap-aiken-v2-audit-f10
+[^48]: SundaeSwap Aiken proposal, lidonation.com/sw/proposals/sundaeswap-aiken-smart-contracts-f10
+[^49]: Aiken Brings a Massive Cardano Smart Contract Performance Increase, youtu.be/4Y1UieAhszY?si=0CwhInAT2sR4mNXd
+[^50]: Aicon libraries, github.com/SundaeSwap-finance/aicone
+[^51]: Surprise AMA October 8th, 2023, youtube.com/live/Bvedd--CoPw?si=7SM0TTPmYpxMXfjH&t=158
+[^52]: Fortuna, github.com/aiken-lang/fortuna?tab=readme-ov-file
+[^53]: Awesome Aiken, github.com/aiken-lang/awesome-aiken#readme
+[^54]: Bitrue x @Cardano_CF #AMA, twitter.com/i/spaces/1mnxeRpqDBEKX
+[^55]: Aiken discord, discord.gg/Vc3x8N9nz2
+[^56]: Simplifying Cardano dApp development with Demeter, cardanofoundation.org/en/news/simplifying-cardano-dapp-development-with-demeter/
+[^57]: John Woods on Aiken, twitter.com/JohnAlanWoods/status/1706222469856608267?t=93aSQDQ9c6GKhRW73GWzHQ&s=19
+[^58]: Cardano Builder Fest, buidl.2024.cardano.org
