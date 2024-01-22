@@ -106,13 +106,13 @@ You should be coming round to the notion that everything is related in Cardano. 
 [^05]: Cardano Review 2024, coinbureau.com/review/cardano-review/#cardano-developer-ecosystem
 [^06]: Tim Harrison, ‘How we are scaling Cardano in 2022’, iohk.io/en/blog/posts/2022/01/14/how-we-re-scaling-cardano-in-2022/
 [^07]: Basho, Input Endorsers, and the Future of Scalability, youtube.com/watch?v=EYc7r5s8cco
-[^08]:
-[^09]:
-[^10]:
-[^11]:
-[^12]:
-[^13]:
-[^14]:
+[^08]: **Resident set size (RSS)** is the portion of memory occupied by a process that is held in main memory (RAM).
+[^09]: Cardano node release notes, github.com/IntersectMBO/cardano-node/releases
+[^10]: **Regression testing** is re-running tests to ensure that previously developed and tested software is performing as expected after a change.
+[^11]: @SmaugPool, twitter.com/SmaugPool/status/1737814894710231161
+[^12]: CIP-0??? | Plutus v1 compatible script references, github.com/cardano-foundation/CIPs/pull/679
+[^13]: PCP_max_tx_ex_mem_PiLanningham, forum.cardano.org/t/pcp-max-tx-ex-mem-pilanningham/125506
+[^14]: PCP_max_block_size_RichardMcCracken, forum.cardano.org/t/pcp-max-block-size-richardmccracken/125507
 [^15]:
 [^16]:
 [^17]:
