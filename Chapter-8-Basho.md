@@ -94,6 +94,61 @@ You should be coming round to the notion that everything is related in Cardano. 
 
 ## Pipelining
 
+Before Pipelining was introduced, a block was minted by an SPO, that’s a new block in the blockchain that had to be validated and sent onto a peer. The problem was that peers also had to validate it and then send it onto their peer and that’s how the blocks diffused across the network.
+
+By combining validation with propagation, the time it takes for a block to propagate is reduced. By minimizing the ‘dead time’ between blocks, the objective is for blocks to be propagated to at least 95% of peers within 5 seconds (block propagation overhead). This allows flexibility to make other scaling adjustments, such as raising block size, or other Plutus parameter limits.
+
+Pipelining is a natural progression of Cardano’s ‘plumbing’. It’s an important part of the scaling strategy, and a logical approach to ramping up Cardano’s capacity as the ecosystem expands. Each update is carefully monitored and reviewed for at least one epoch (5 days) before proceeding with subsequent changes. A decentralized network architecture must be scaled depending on real-world usage, notwithstanding the substantial research and technical effort that has gone into creating and installing the system.
+
+**Diffusion pipelining**
+
+Pipelining, or more specifically, diffusion pipelining, is a consensus layer innovation that allows for speedier block propagation. It allows for more headroom, allowing Cardano’s performance and competitiveness to improve even more. It’s important to understand the system behavior of how blocks propagate, to see how this strategy accomplishes its purpose.
+
+As it passes around the chain, a block goes through 6 stages:
+
+1. Block header[^15] transmission
+2. Block header validation
+3. Block body request and transmission
+4. Block body validation and local chain extension
+5. Block header transmission to downstream nodes
+6. Block body transmission to downstream nodes
+
+The path of a block is highly sequential. At each node, all steps occur in the same order every time. Block transmission takes a long time due to the large number of nodes and the ever-increasing quantity of blocks. Diffusion pipelining layers some of the above stages on top of one another, allowing them to happen simultaneously. This takes less time and boosts throughput.
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig82.png "figure 8.2")
+<br>**Figure 8.2:** Pipelining (courtesy of @jJosjuaThreatt tweet)
+
+The time savings provided by this technique will allow Cardano to expand even further, including adjustments to:
+
+- Block size – the larger the block, the more transactions, and scripts it can accommodate
+- Plutus memory limitations - the maximum amount of memory that a Plutus script may use
+- Plutus CPU limits - a script may be given extra computing resources to execute more effectively.
+
+Pipelining makes sure that the block header referencing the hash of a previous block is propagated correctly. Metadata included in the next block contains the body of the previous block. This is a safeguard to prevent DDoS (distributed denial of service) attacks even without full block confirmation.
+
+**From theory to practice**
+
+Diffusion pipelining was created with the goal of achieving quicker block propagation while avoiding ‘destructive’ alterations to the chain. Because nodes depend on these current approaches, IOG did not want to eliminate any of the protocols, primitives, or interactions currently in use in Cardano. Instead of modifying how things operate now, they’re establishing a new mini protocol whose purpose is to pre-notify subscribing entities when a new desired block is detected, prior to full validation. Implementing Pipelining didn’t require a hard fork and can be rolled out with a standard node release. It was introduced without fanfare the same time as the Vasil hard fork.
+
+The ability to pre-notify peers and provide them a block before it is verified, allowing the downstream peer to pre-fetch the new block body, is the most significant feature brought by pipelining. This saves a lot of time since the time it takes to verify a block over several hops is reduced significantly. The network was stress tested post-Vasil and the initial results were very positive. The node is now running faster, with more throughput. 
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig83.png "figure 8.3")
+<br>**Figure 8.3:** Tweet from Rick McCracken post-Vasil… *‘We are hitting the chain as absolutely hard as possible from DripDropz.... The graph shows the mempool in red on the phyrhose way above the Cardano chain capacity and the chain is running perfectly fine.’*
+
+## On-disk storage
+
+The Cardano node needs RAM[^16] when it’s running. It’s prudent to start moving things out of RAM, out of that expensive volatile memory into on-disk storage. This is a common practice in computer science. On-disk storage will improve the user experience for developers on Cardano.
+
+By storing elements of the protocol state on disk, nodes will use less memory, allowing RAM-starved systems to operate nodes as long as they have enough storage, and memory will no longer be a scaling restriction. The blockchain state will be able to increase significantly as a result of this.
+
+There is a ‘UtxO HD’ project ongoing to move Cardano’s ledger state from being completely in-memory to being stored more on-disk. This is required to be able to scale to larger ledger states. It will also naturally ease RAM requirements for nodes. This feature will enable other roadmap items, such as parts of Ouroboros *Leios*. 
+
+There is a living document[^17] on GitHub which goes into more technical details.
+
+## Off-chain computing  
+Offloading part of the computing, such as via Asynchronous Contract Execution[^18] (ACE), may improve the efficiency of the core network. Transactions take place outside of the blockchain, yet a trust model allows for quick and inexpensive transactions. This concept is still in research mode and will likely be implemented in a future update.
+
+## Mithril
 
 
 
@@ -113,10 +168,10 @@ You should be coming round to the notion that everything is related in Cardano. 
 [^12]: CIP-0??? | Plutus v1 compatible script references, github.com/cardano-foundation/CIPs/pull/679
 [^13]: PCP_max_tx_ex_mem_PiLanningham, forum.cardano.org/t/pcp-max-tx-ex-mem-pilanningham/125506
 [^14]: PCP_max_block_size_RichardMcCracken, forum.cardano.org/t/pcp-max-block-size-richardmccracken/125507
-[^15]:
-[^16]:
-[^17]:
-[^18]:
+[^15]: **Block header**: The portion of a block that contains information about the block itself (block metadata), typically including a timestamp, a hash representation of the block data, the hash of the previous block's header, and a cryptographic nonce (if needed).
+[^16]: **RAM (random-access memory)** is a form of computer memory that can be read and changed in any order, typically used to store working data and machine code. A random-access memory device allows data items to be read or written in almost the same amount of time irrespective of the physical location of data inside the memory.
+[^17]: Draft UTxO HD design document for review, github.com/input-output-hk/ouroboros-network/commit/f4f9be4f73a4f4cc31e98ec6a0511d9c7e9a4601
+[^18]: Wust, et al, (2019), 'ACE: Asynchronous and Concurrent Execution of Complex Smart Contracts', eprint.iacr.org/2019/835.pdf
 [^19]:
 [^20]:
 [^21]:
