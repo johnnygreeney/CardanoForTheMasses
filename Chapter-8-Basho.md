@@ -150,6 +150,57 @@ Offloading part of the computing, such as via Asynchronous Contract Execution[^1
 
 ## Mithril
 
+Mithril allows users to get the current state of a blockchain without recovering its entire history. Light, fast, efficient, and secure …Mithril is named after the fictional metal found in J. R. R. Tolkien's Middle-earth writings. It is lightweight but *'wrought of pure silver to the power and strength of triple steel'.*
+
+At the Cardano Summit 2021,[^19] IOG researchers Pyrros Chaidos and Roman Oliynykov presented Mithril – a new protocol and network based on the research paper[^20] by Chaidos and Prof Aggelos Kiayias. Mithril utilizes a stake-based threshold multi-signature (STM) scheme to solve chain synchronization, state bootstrapping, and trust issues in dApps. Mithril has evolved into an open-source project with an aggressive biweekly release cadence. The release process[^21] is constantly refined for a smooth developer experience.
+
+The original paper, and related blog[^22] by Olga Hryniuk, are quite technical and outline the long-term vision for the protocol. Like all agile, open-source projects, the final implementation might vary. What is clear is the burning need for a solution like this to enable faster syncing to the blockchain.
+
+Piggybacking on the security of Cardano’s staking system, Mithril enables stakeholders to vouch for some fact, with a weighting proportional to their stake. Mithril’s initial proof of concept is to bootstrap a full Cardano node, however, it is flexible to apply to other protocols. For example, its main feature of validating the state snapshot can be applied to data exchange between sidechains, roll-ups, on-chain voting... Any many-to-one scenario is a potential use case. 
+
+Mithril is an overlay sitting on top of Cardano’s Layer 1 mainchain, allowing users to create proof certificates. The certificates produced by Mithril have the same security properties that Ouroboros has. This has profound benefits. For example, millions of votes could take place off-chain, and then be aggregated together as a threshold signature. It would ultimately only be a single transaction on-chain. A full node like Daedalus can sync much quicker and a light wallet now has full node security, even though it’s a light client.
+
+**How it works**
+
+The STM (stake-based threshold multi-signature) scheme described in the original research paper is now available as a stand-alone core library on GitHub. It contains the full set of primitives of the Mithril protocol and is stand-alone in that it’s blockchain agnostic, it can potentially run on any PoS blockchain. 
+
+- **The Mithril Network** sits on top of the Mithril Core library. There are three node types in the current proof of concept setup. 
+- **The Mithril Signer** is run by a (SPO) stake pool operator, side by side with the Cardano node. It signs the ledger state, ie. creates individual signatures.
+- **The Mithril Aggregator** collects the Signers’ signatures and creates multi-signatures, then embeds them in certificates. The aggregator also creates and stores the ledger state snapshot archive. These can be large, in the tens of GBs, and will grow as a blockchain grows.
+- **The Mithril Client** restores (bootstraps) a full Cardano node by taking a snapshot and its certificate chain from the Aggregator node and verifying their validity with Mithril cryptographic primitives.
+
+The Mithril architecture diagram is not for the faint hearted and difficult to capture the scale in a book. If you want to dig deeper, go to Mike Hornan’s simplified graphic[^23] on the Cardano Forum. The Lottery analogy is often used to explain Mithril:
+
+IOG Architect Arnaud Bailly speaking on Cardano360 May 2022[^24]
+
+>One analogy that you can use to think about it is the lottery. So depending on the amount of stake, you draw tickets from a lottery, and depending on the amount of stakes you draw, depending on the amount of tickets you bought, your chances of having a winning ticket are higher. And so this is the same for Mithril ...you can potentially have several winning tickets. Once enough winning tickets have been drawn, over all the stake pool owners, then a certificate can be issued which provides a certified signature of the current state of the chain from a share, some share of the stake pool owners, from some predefined share... and this is what we call a snapshot.
+>
+>Now the snapshot is made available to clients, and the clients can verify it, they can verify these snapshots by checking the aggregate signatures from all the lottery winners, so to speak, and so from all the signers....and check that they are actually legit and this check also rests on checking that the stake distribution is legit, and this is done through checking the chain certificate down to some general certificate ...and once they have verified the validity of certificate, now they can just download the snapshot itself, bootstrap the node, without having to go through the hassle of verifying everything.
+
+**Progress to date**
+
+The Mithril Network was tested as a centralized version initially (IOG-operated Mithril Aggregator). This paved the way for a decentralized version on the Cardano testnet where SPOs run the Mithril Aggregators. At ScotFest,[^25] Jean-Philippe Raynaud’s demo showed how a Daedalus wallet synched 15 times faster with Mithril, compared to classical bootstrapping. Mithril is crucial for trustless light wallets as they would otherwise need a third party to sync blockchain history. Mithril will enable fast sync times but also benefit from the mainchain’s security properties. On-chain voting during the Age of Voltaire is dependent on Mithril also.
+
+In early 2023, the Mithril team published an SPO on-boarding guide[^26] in preparation for mainnet release, which took place in July 2023. Later in October, the Mithril 2 research paper[^27] was published in partnership with Algorand researchers from Boston University. Mithril 2 uses ‘Approximate Lower Bound Arguments’ (ALBAs)  to prove knowledge of a large dataset without revealing the full dataset.
+
+Romain Pellerin, IOG’s Chief Technical Officer, explained ALBAs have many use cases such as demonstrating possession of multiple digital signatures from different individuals, without revealing each signature. Charles Hoskinson was effusive in his praise for the paper:
+
+> Mithril 2 is out. I’m very proud of this paper. It’s damn fine work.[^28] 
+
+>‘Mythril 2 just came out… the ALBA construction really is as good as it gets, these compact certificates inside Mithril …so we're now at a point where I think it's prudent to start talking about integrating Mithril itself into the Cardano blockchain ledger itself…’[^29]
+
+He revealed in the closing keynote of the Dubai Summit[^30] that Mithril can now bootstrap Daedalus in the lab in 20 minutes, where it used to take 3 days. 
+
+Zooming out, Mithril’s roadmap is based around these key milestones:
+
+- Mithril beta: mainnet launch with volunteer SPOs
+- Mithril MVP (2023): an incentivized protocol with additional features to support basic use cases, such as fast bootstrapping and secure light wallets.
+- Mithril (2024): a fully decentralized and self-sustaining Mithril ecosystem.
+
+To follow the latest Mithril news, read the weekly development updates on Essential Cardano[^31] every Friday, follow mithril.network and contribute to the Mithril repository on GitHub[^32]
+
+## Hydra
+
 
 
 **_To be uploaded soon..._**
@@ -172,9 +223,28 @@ Offloading part of the computing, such as via Asynchronous Contract Execution[^1
 [^16]: **RAM (random-access memory)** is a form of computer memory that can be read and changed in any order, typically used to store working data and machine code. A random-access memory device allows data items to be read or written in almost the same amount of time irrespective of the physical location of data inside the memory.
 [^17]: Draft UTxO HD design document for review, github.com/input-output-hk/ouroboros-network/commit/f4f9be4f73a4f4cc31e98ec6a0511d9c7e9a4601
 [^18]: Wust, et al, (2019), 'ACE: Asynchronous and Concurrent Execution of Complex Smart Contracts', eprint.iacr.org/2019/835.pdf
-[^19]:
-[^20]:
-[^21]:
+[^19]: Cardano Summit 2021, youtube.com/watch?v=rmknjCvRH-Y
+[^20]: Chaidos, Kiayias (2021), 'Mithril: Stake-based Threshold Multisignatures', eprint.iacr.org/2021/916.pdf 
+[^21]: Mithril Release Process, mithril.network/doc/dev-blog/2022/12/05/release-process
+[^22]: Mithril: a stronger and lighter blockchain for better efficiency, iohk.io/en/blog/posts/2021/10/29/mithril-a-stronger-and-lighter-blockchain-for-better-efficiency/
+[^23]: Miken Hornan’s Simplified Mithril diagram, forum.cardano.org/t/new-mithril-diagram-by-mike-hornan/120568
+[^24]: Cardano360 May 2022, youtu.be/Ar_8Lo0nV1s?t=228
+[^25]: Light, fast, efficient, and secure - Mithril, youtube.com/watch?v=VyxsqwNWZt4
+[^26]: Mithril SPO onboarding guide, mithril.network/doc/manual/getting-started/SPO-on-boarding-guide/
+[^27]: Approximate Lower Bound Arguments, eprint.iacr.org/2023/1655
+[^28]: @IOHK_Charles, twitter.com/IOHK_Charles/status/1719314519636254899
+[^29]: Charles Hoskinson on Midnight, token airdrop to all ADA holders, and Cardano Governance!, youtube.com/watch?v=Ki-HSHgtIGk
+[^30]: Closing Keynote- Looking Ahead to 2024 and Beyond, youtu.be/OzLdZxkfAeQ?si=jQ9Qu6Eg9c8-SUe9&t=172
+[^31]: Weekly Development Updates, essentialcardano.io/development-update
+[^32]: Mithril on GitHub, github.com/input-output-hk/mithril
+[^33]: Isomorphism: corresponding or similar in form and relations.
+[^34]:
+[^35]:
+[^36]:
+[^37]:
+[^38]:
+[^39]:
+[^40]:
 
 [^110]:
 [^111]:
