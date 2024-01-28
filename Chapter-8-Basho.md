@@ -297,11 +297,9 @@ Follow the latest progress on the Hydra Head roadmap[^55]
 **Hydra clarifications**
 
 - There has been some discussion promoting Hydra as the ‘ultimate’ be-all and end-all Cardano scalability strategy. Hydra Heads provide a solid basis on which to develop Cardano’s scalability layer. They are a critical building piece that allows more complicated solutions to be built on top of the Extended Unspent Transaction Output (eUTXO) architecture. They are an important part of the scaling journey, but they are not the end goal.
-  
 Mithril’s development is closely tied to that of Hydra, with overlapping teams. Some of Mithril’s components can connect and work fine with Hydra. Their websites, mithril.network and hydra.family, share a similar format with excellent quick start guides, glossary, etc. As they are both open-source projects, anyone can contribute to these pages on GitHub.
 
 - A Hydra Head is usually a relatively small-scale network created by a small number of people. Because these groups will be autonomous at first, looking at the total of their separate metrics is deceptive. Although Hydra Head protocol’s initial iteration will enable small groups of participants to scale up their traffic at a reasonable cost, it will not provide a solution for worldwide consumer-to-consumer (micro) payments or NFT sales right away.
-
 Why not? Because the consensus inside a Head necessitates each participant’s response to each transaction, everyone needs to agree on each transaction. While this offers security assurances to participants in a Hydra Head, it limits the total number of participants in practice. IOG, and the growing number of contributors to the project, continue to research ways to expand the Hydra Head protocol’s capabilities. In 2021, there was a paper released from Tokyo Institute of Technology titled *Interhead Hydra: Two Heads are Better than One*.[^56] It is an iteration on top of Hydra Head proposing a mechanism for linking two Hydra Heads together, allowing the formation of a network of linked Hydra Heads in the long term. 
 
 - There is a **risk for non-participants** as your funds are in the hands of the participants operating the Hydra Head. 
