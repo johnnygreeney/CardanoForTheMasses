@@ -245,7 +245,7 @@ A channel is a communication link between two or more peers. To be a part of a H
 Participants may make financial commitments to a Head while creating it. This entails transferring funds off-chain to a script address that binds them to a set of rules. The script ensures that the protocol is executed safely on-chain, and that participants cannot defraud one another. Any participant, however, may choose to leave the Head at any moment by closing it. In this situation, everyone gets the most recent state they consented to off-chain, on their parallel network.
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig84.png "figure 8.4")
-<br>**Figure 8.4:** Courtesy of Cardanians’s medium post ‘Hydra: Cardano Scalability Solution’[^36] 
+<br>**Figure 8.4:** Courtesy of Cardanians’s medium post ‘Hydra: Cardano Scalability Solution’[^37] 
 
 The on-chain script’s dealer at the table guarantees that everyone follows the rules and doesn’t cheat. In conclusion, there are the same number of chips out as there were before the game began, although they may have been rearranged throughout the game. While the ultimate outcome is known outside of the table, the players are the only ones who know the history of all bets taken throughout the game. The funds, or existing table pot, are unlocked based on the most recent agreed upon snapshot.
 
@@ -256,43 +256,43 @@ The on-chain script’s dealer at the table guarantees that everyone follows the
 
 Hydra Heads are known for their ability to achieve near-instant finality inside a Head. Setting up and closing a Head might take a few blocks. Simulations have shown that a single Hydra head can reach up to 1,000 TPS (Transactions per second), so if 1,000 heads are run in parallel, it should be possible, in theory, to achieve a million TPS. 
 
-So, is Hydra able to call whatever TPS number it wants? In principle, the answer is yes, which highlights a flaw in the common[^37]  use of TPS as a system comparison measure. While it’s easy to simplify the complexity of evaluating protocol performance to a single number, a lofty TPS claim is almost worthless without further context. With this in mind IOG adopt the following practices:
+So, is Hydra able to call whatever TPS number it wants? In principle, the answer is yes, which highlights a flaw in the common[^38]  use of TPS as a system comparison measure. While it’s easy to simplify the complexity of evaluating protocol performance to a single number, a lofty TPS claim is almost worthless without further context. With this in mind IOG adopt the following practices:
 
 - explicitly describe all of the variables that affect the simulation: transaction size, time to verify a single transaction, time required for cryptographic procedures, allotted bandwidth per node, cluster size and geographical distribution, and transaction parallelism limitations.
 
 - evaluate the protocol’s performance on baselines that define the underlying network and hardware infrastructure’s exact and absolute bounds. How effectively one approaches such boundaries indicates how much space for progress there is. 
 
-The research paper[^38] (Section 7: Simulations) has further information and graphics. The Hydra team regularly post testing results on the site[^39] and welcome more real-world test scenarios. Hydra started bearing fruits in 2022. Obsidian Systems and IOG announced *Hydra for Payments*[^40] which is an exciting prospect for micropayments on Cardano. At the *Rare Bloom* event in Denver, SundaeSwap demoed how their protocol could work as a Hydra Head.[^41] 
+The research paper[^39] (Section 7: Simulations) has further information and graphics. The Hydra team regularly post testing results on the site[^40] and welcome more real-world test scenarios. Hydra started bearing fruits in 2022. Obsidian Systems and IOG announced *Hydra for Payments*[^41] which is an exciting prospect for micropayments on Cardano. At the *Rare Bloom* event in Denver, SundaeSwap demoed how their protocol could work as a Hydra Head.[^42] 
 
-Hydra’s team lead, Sebastian Nagel, presented at the 2022 Cardano Summit in Lausanne.[^42] The goal was now for Hydra to be the number one dApp on Cardano, regardless of how this is measured. 
+Hydra’s team lead, Sebastian Nagel, presented at the 2022 Cardano Summit in Lausanne.[^43] The goal was now for Hydra to be the number one dApp on Cardano, regardless of how this is measured. 
 
 Hydra Head is only the first part of a larger group of protocols as described in Chakravarty and co *Hydra: Fast Isomorphic State-Channels*. As Hydra matures and adoption grows, several topologies will be implemented. It’s best to check hydra.network for the latest roadmap. Current plans include a ‘Delegated Node’, a ‘Managed Hydra Head’ (aka Hydra as a Service) and a ‘Star-shaped Network’. 
 
-Sep 21, 2022. Re: Hydra: CH[^43]
+Sep 21, 2022. Re: Hydra: CH[^44]
 
 >When you look at things like Mithril, Hydra… these are extensions of known concepts, like Mithril is a threshold signature idea, and they construct these proof certificates, and then when you do transactions, they're paired with proof certificates, and it gives you the inclusive accountability …it's not a new idea, it's like 10 years of talking about this stuff. We just implemented it. It's a lot of hard cryptography to implement, but once it's done it's done, and it's more about how do you distribute the certificate and build them?
 >
->Hydra is everything Lightning[^44] wanted to be when it grows up. The problem with Lightning is that it's not a hard protocol… payment channels and state channels. The hard part is the fact that Bitcoin is not programmable. So, 95% of your effort is trying to figure out how do you get a model, that's not designed for this, to work with this.
+>Hydra is everything Lightning[^45] wanted to be when it grows up. The problem with Lightning is that it's not a hard protocol… payment channels and state channels. The hard part is the fact that Bitcoin is not programmable. So, 95% of your effort is trying to figure out how do you get a model, that's not designed for this, to work with this.
 >
 >It's almost like when they were upgrading the Hubble telescope in space, you know, after you've launched the telescope into space, it's not upgradable anymore, but yet NASA is like ‘well we need to fix it’. So, they sent astronauts out there, and they put this giant contact lens on it, and they had to figure out how to open shit that you really can only open on Earth, in space. So, you have this guy like basically wearing an oven mitt, with a very tiny screwdriver floating in space, trying to unscrew a panel and gradually upgrade old circuitry, and make it better without getting himself killed. So that's Bitcoin in a nutshell, when you try to apply Lightning.
 >
 > Well with Cardano, we're on Earth, okay, it's programmable meaning that we can always go and pull a module out, put a new module in, and do these things. So, with extended UTXO and Plutus, there's enough there that you can build rich isomorphic state channels. So basically, you can take state and assets, and you can batch and bundle them together, and put them into a layer 2 solution…and then you can use it for microtransactions, you can use it for smart contracts, but then you can build modules on top of it to do specific applications like DEXs, voting… these types of things. In particular, one area I'm very interested to use Hydra in 2023, is to reuse that technology to do all the stuff we're doing right now with Catalyst and voting.
 
-**Oct 3, 2022. Re: Hydra, Let’s Talk Basho.** CH[^45]
+**Oct 3, 2022. Re: Hydra, Let’s Talk Basho.** CH[^46]
 
 >So the way that we designed Plutus is that you have an on-chain component, and that's your Plutus script… and then you have this idea of off-chain infrastructure that coordinates with the dApp to run things… and this is very common in the Ethereum model as well and they have all these things to combine these two, and then off-chain infrastructure sometimes is centralized, sometimes it's not centralized, it depends on the specific dApp. The idea of Hydra is that it would be part of that off-chain kit, so it would be embedded in dApps that require a lot of scale, and basically it would do something similar to what's occurring with Mithril, where you go many-to-one or some
 
-Matthias Benkort’s retrospective blog post[^46] noted ‘one might say 2022 was about ramping up software quality and preparing Hydra for the first pioneers to build.’ In January 2023, IOG collaborated with Mlabs (mlabs.city) to produce the *Implementing auction projects using Hydra*[^47] paper. The study explores various ways to implement digital asset auctions using the Hydra Head protocol. This is central to how DEXs and NFTs will function on Cardano. The paper addresses current project needs and considerations in detail. Discussions are ongoing on Discord and GitHub. 
+Matthias Benkort’s retrospective blog post[^47] noted ‘one might say 2022 was about ramping up software quality and preparing Hydra for the first pioneers to build.’ In January 2023, IOG collaborated with Mlabs (mlabs.city) to produce the *Implementing auction projects using Hydra*[^48] paper. The study explores various ways to implement digital asset auctions using the Hydra Head protocol. This is central to how DEXs and NFTs will function on Cardano. The paper addresses current project needs and considerations in detail. Discussions are ongoing on Discord and GitHub. 
 
-The Hydra team explored integration with the wider ecosystem in 2023, for example, Hydra support for Kupo.[^48] They improved documentation with a Hydra node architecture explainer.[^49] They also updated the Hydra tutorial[^50] to simplify the getting started experience while also including Mithril to fast bootstrap the cardano-node. They worked closely with the Aiken team, exploring the idea of moving the Plutus validator scripts to Aiken. Elsewhere, TxPipe now offer a *Hydra Head as a service* through their platform Demeter (demeter.run).
+The Hydra team explored integration with the wider ecosystem in 2023, for example, Hydra support for Kupo.[^49] They improved documentation with a Hydra node architecture explainer.[^50] They also updated the Hydra tutorial[^51] to simplify the getting started experience while also including Mithril to fast bootstrap the cardano-node. They worked closely with the Aiken team, exploring the idea of moving the Plutus validator scripts to Aiken. Elsewhere, TxPipe now offer a *Hydra Head as a service* through their platform Demeter (demeter.run).
 
-Notable milestones included the release of the first mainnet-compatible Hydra node version.[^51]
+Notable milestones included the release of the first mainnet-compatible Hydra node version.[^52]
 
-The Hydra project is a joint effort by engineers at IOG, but also the Cardano Foundation and a growing list of contributors. The Cardano Foundation deployed *Hydra tally*[^52] to mainnet so more community members could attest and verify validity of Catalyst Fund results. Previously, only IOG could tally votes. The experiment explores how Hydra could potentially decentralize the process.
+The Hydra project is a joint effort by engineers at IOG, but also the Cardano Foundation and a growing list of contributors. The Cardano Foundation deployed *Hydra tally*[^53] to mainnet so more community members could attest and verify validity of Catalyst Fund results. Previously, only IOG could tally votes. The experiment explores how Hydra could potentially decentralize the process.
 
-As the work of the Hydra and Mithril teams converged more and more, Sasha Bogicevic (Hydra) and Franco Testagrossa (Mithril) delivered a masterclass at the Dubai Cardano Summit where they showed how the projects can work together. The Mithril and Hydra also held a joint monthly review meeting,[^53] to talk about progress and related scaling projects. 
+As the work of the Hydra and Mithril teams converged more and more, Sasha Bogicevic (Hydra) and Franco Testagrossa (Mithril) delivered a masterclass at the Dubai Cardano Summit where they showed how the projects can work together. The Mithril and Hydra also held a joint monthly review meeting,[^54] to talk about progress and related scaling projects. 
 
-Follow the latest progress on the Hydra Head roadmap[^54]
+Follow the latest progress on the Hydra Head roadmap[^55]
 
 **Hydra clarifications**
 
@@ -302,7 +302,7 @@ Mithril’s development is closely tied to that of Hydra, with overlapping teams
 
 - A Hydra Head is usually a relatively small-scale network created by a small number of people. Because these groups will be autonomous at first, looking at the total of their separate metrics is deceptive. Although Hydra Head protocol’s initial iteration will enable small groups of participants to scale up their traffic at a reasonable cost, it will not provide a solution for worldwide consumer-to-consumer (micro) payments or NFT sales right away.
 
-Why not? Because the consensus inside a Head necessitates each participant’s response to each transaction, everyone needs to agree on each transaction. While this offers security assurances to participants in a Hydra Head, it limits the total number of participants in practice. IOG, and the growing number of contributors to the project, continue to research ways to expand the Hydra Head protocol’s capabilities. In 2021, there was a paper released from Tokyo Institute of Technology titled *Interhead Hydra: Two Heads are Better than One*.[^55] It is an iteration on top of Hydra Head proposing a mechanism for linking two Hydra Heads together, allowing the formation of a network of linked Hydra Heads in the long term. 
+Why not? Because the consensus inside a Head necessitates each participant’s response to each transaction, everyone needs to agree on each transaction. While this offers security assurances to participants in a Hydra Head, it limits the total number of participants in practice. IOG, and the growing number of contributors to the project, continue to research ways to expand the Hydra Head protocol’s capabilities. In 2021, there was a paper released from Tokyo Institute of Technology titled *Interhead Hydra: Two Heads are Better than One*.[^56] It is an iteration on top of Hydra Head proposing a mechanism for linking two Hydra Heads together, allowing the formation of a network of linked Hydra Heads in the long term. 
 
 - There is a **risk for non-participants** as your funds are in the hands of the participants operating the Hydra Head. 
 
