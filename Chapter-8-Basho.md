@@ -227,8 +227,8 @@ The Hydra ‘head’ protocol was the first part of the Hydra architecture to be
 
 Hydra acts as dApp-embedded software for developers seeking scalability. It is implemented in two parts:
 
-On-chain scripts that execute the Hydra Head protocol
-Hydra node, a software stack which provides a high-level interface using standard web technologies like WebSocket and JSON.
+- On-chain scripts that execute the Hydra Head protocol
+- Hydra node, a software stack which provides a high-level interface using standard web technologies like WebSocket and JSON.
 
 To operate a Hydra Head, a working Cardano node is a prerequisite. You then run a Hydra node, connected to other Hydra nodes and a Cardano node. Each Hydra Head can consist of several Hydra nodes. The Hydra team state in the docs that their current goal is anything up to 100 nodes per head. On-chain code will be the same between Cardano and a hydra head. This is one of the major selling points of the hydra design. 
 
@@ -246,11 +246,11 @@ Participants may make financial commitments to a Head while creating it. This en
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig84.png "figure 8.4")
 <br>**Figure 8.4:** Courtesy of Cardanians’s medium post ‘Hydra: Cardano Scalability Solution’[^36] 
+
 The on-chain script’s dealer at the table guarantees that everyone follows the rules and doesn’t cheat. In conclusion, there are the same number of chips out as there were before the game began, although they may have been rearranged throughout the game. While the ultimate outcome is known outside of the table, the players are the only ones who know the history of all bets taken throughout the game. The funds, or existing table pot, are unlocked based on the most recent agreed upon snapshot.
 
-
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig85.png "figure 8.5")
-[^36] **Figure 8.5:** Hydra Head use cases, from ScotFest talk by Hydra Product Manager, Nebojša Vojvodić 
+<br>**Figure 8.5:** Hydra Head use cases, from ScotFest talk by Hydra Product Manager, Nebojša Vojvodić 
 
 **Evaluating the Hydra head protocol** 
 
@@ -290,19 +290,19 @@ Notable milestones included the release of the first mainnet-compatible Hydra no
 
 The Hydra project is a joint effort by engineers at IOG, but also the Cardano Foundation and a growing list of contributors. The Cardano Foundation deployed *Hydra tally*[^52] to mainnet so more community members could attest and verify validity of Catalyst Fund results. Previously, only IOG could tally votes. The experiment explores how Hydra could potentially decentralize the process.
 
-As the work of the Hydra and Mithril teams converged more and more, Sasha Bogicevic (Hydra) and Franco Testagrossa (Mithril) delivered a masterclass at the Dubai Cardano Summit where they showed how the projects can work together. The Mithril and Hydra also held a joint monthly review meeting,[^52] to talk about progress and related scaling projects. 
+As the work of the Hydra and Mithril teams converged more and more, Sasha Bogicevic (Hydra) and Franco Testagrossa (Mithril) delivered a masterclass at the Dubai Cardano Summit where they showed how the projects can work together. The Mithril and Hydra also held a joint monthly review meeting,[^53] to talk about progress and related scaling projects. 
 
-Follow the latest progress on the Hydra Head roadmap[^53]
+Follow the latest progress on the Hydra Head roadmap[^54]
 
 **Hydra clarifications**
 
 - There has been some discussion promoting Hydra as the ‘ultimate’ be-all and end-all Cardano scalability strategy. Hydra Heads provide a solid basis on which to develop Cardano’s scalability layer. They are a critical building piece that allows more complicated solutions to be built on top of the Extended Unspent Transaction Output (eUTXO) architecture. They are an important part of the scaling journey, but they are not the end goal.
-
+  
 Mithril’s development is closely tied to that of Hydra, with overlapping teams. Some of Mithril’s components can connect and work fine with Hydra. Their websites, mithril.network and hydra.family, share a similar format with excellent quick start guides, glossary, etc. As they are both open-source projects, anyone can contribute to these pages on GitHub.
 
 - A Hydra Head is usually a relatively small-scale network created by a small number of people. Because these groups will be autonomous at first, looking at the total of their separate metrics is deceptive. Although Hydra Head protocol’s initial iteration will enable small groups of participants to scale up their traffic at a reasonable cost, it will not provide a solution for worldwide consumer-to-consumer (micro) payments or NFT sales right away.
 
-Why not? Because the consensus inside a Head necessitates each participant’s response to each transaction, everyone needs to agree on each transaction. While this offers security assurances to participants in a Hydra Head, it limits the total number of participants in practice. IOG, and the growing number of contributors to the project, continue to research ways to expand the Hydra Head protocol’s capabilities. In 2021, there was a paper released from Tokyo Institute of Technology titled *Interhead Hydra: Two Heads are Better than One*.[^54] It is an iteration on top of Hydra Head proposing a mechanism for linking two Hydra Heads together, allowing the formation of a network of linked Hydra Heads in the long term. 
+Why not? Because the consensus inside a Head necessitates each participant’s response to each transaction, everyone needs to agree on each transaction. While this offers security assurances to participants in a Hydra Head, it limits the total number of participants in practice. IOG, and the growing number of contributors to the project, continue to research ways to expand the Hydra Head protocol’s capabilities. In 2021, there was a paper released from Tokyo Institute of Technology titled *Interhead Hydra: Two Heads are Better than One*.[^55] It is an iteration on top of Hydra Head proposing a mechanism for linking two Hydra Heads together, allowing the formation of a network of linked Hydra Heads in the long term. 
 
 - There is a **risk for non-participants** as your funds are in the hands of the participants operating the Hydra Head. 
 
@@ -347,13 +347,33 @@ Why not? Because the consensus inside a Head necessitates each participant’s r
 [^31]: Weekly Development Updates, essentialcardano.io/development-update
 [^32]: Mithril on GitHub, github.com/input-output-hk/mithril
 [^33]: Isomorphism: corresponding or similar in form and relations.
-[^34]:
-[^35]:
-[^36]:
-[^37]:
-[^38]:
-[^39]:
-[^40]:
+[^34]: Prof Aggelos Kiayias, ‘Enter the Hydra: scaling distributed ledgers, the evidence-based way,’ iohk.io/en/blog/posts/2020/03/26/enter-the-hydra-scaling-distributed-ledgers-the-evidence-based-way/
+[^35]: Sebastian Nagel, ‘Hydra – Cardano’s solution for ultimate Layer 2 scalability’, iohk.io/en/blog/posts/2021/09/17/hydra-cardano-s-solution-for-ultimate-scalability/
+[^36]: Hydra Head roadmap, github.com/orgs/input-output-hk/projects/21/views/7
+[^37]: Cardanians Hydra blog, cardanians-io.medium.com/hydra-cardano-scalability-solution-36b05ddc91cf
+[^38]: TPS on crypto twitter, twitter.com/bitcoinissaving/status/1437240100807749633
+[^39]: MMT Chakravarty, S Coretti, M Fitzi, P Gazi, P Kant, A Kiayias, and A Russell (2020) ‘Hydra: fast isomorphic state channels’(Section 7 – Simulations), eprint.iacr.org/2020/299.pdf 
+[^40]: Hydra Head benchmarking, hydra.family/head-protocol/benchmarks
+[^41]: Hydra for Payments, /en/blog/posts/2022/11/10/hydra-for-payments-introducing-developer-tooling-to-unlock-micropayments-on-cardano/
+[^42]: SundaeSwap Labs Hydra demo, twitter.com/sundaeswap/status/1580969361892085762?lang=en
+[^43]: Sebastian Nagel Hydra talk, summit.cardano.org/agenda-day-2/cardano-ballot-speaker-winner-presentation-6/
+[^44]: Charles Hoskinson Interview: Your Cardano Questions Answered, youtu.be/PV_C17noXlA?t=3276
+[^45]: The Lightning Network is a Layer 2 payment protocol that operates on top of a blockchain. It theoretically enables fast transactions between participating nodes and has been touted as a solution to the bitcoin scalability problem.
+[^46]: Let's Talk Basho, youtu.be/fhVo-2QUjLM?t=460
+[^47]: Hydra Head protocol: an open source solution for scalability, cardanofoundation.org/en/news/hydra-head-protocol-an-open-source-solution-for-scalability/
+[^48]: Implementing auction projects using Hydra, iohk.io/en/blog/posts/2023/01/20/implementing-auction-projects-using-hydra/
+[^49]: Hydra Support for Kupo, github.com/CardanoSolutions/kupo/pull/117
+[^50]: Hydra node explainer, hydra.family/head-protocol/core-concepts/architecture/
+[^51]: Hydra tutorial, github.com/input-output-hk/hydra/issues/997
+[^52]: Hydra mainnet release, twitter.com/ch1bo_/status/1656679454570340355
+[^53]: Hydra voting poc, github.com/cardano-foundation/hydra-voting-poc
+[^54]: November 2023 Monthly Review Meeting, drive.google.com/file/d/1-iv8IveUzA2KrJV_Kqrgx4ts05Ow0zjM/edit
+[^55]: Hydra Head roadmap, github.com/orgs/input-output-hk/projects/21
+[^56]: Jourenko, Larangeira, TanakaInterhead Hydra Two Heads are Better than One, eprint.iacr.org/2021/1188
+[^57]:
+[^58]:
+[^59]:
+[^60]:
 
 [^110]:
 [^111]:
