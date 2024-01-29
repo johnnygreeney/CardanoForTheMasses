@@ -340,6 +340,54 @@ Dominik Zajkowski, IOG Technical Architect, expanded on this vision at ScotFest.
 
 ## Milkomeda 
 
+Not everyone is enamored with Cardano’s current architecture. CTO and co-found of dcSpark, Sebastien Guillemot, questioned[^65] Cardano’s monolithic structure and why it has deviated from the initial vision in ‘Why Cardano?’. Having worked on the protocol since the incentivized testnet days, his views should be taken seriously. Having said that, there are trade-offs in any blockchain decisions. 
+
+Cardano is an open ecosystem and people are free to launch sidechains using different models. The first Cardano sidechain was launched by dcSpark. Milkomeda brings EVM compatibility and a bridge for developers to the Ethereum ecosystem. Milkomeda is a portmanteau, named after the *Milky Way* and *Andromeda* galaxies which are due to merge in a few billion years. Milkomeda also brings EVM compatibility to Algorand as well, merging multiple ecosystems. What is interesting is Milkomeda is currently implemented differently on both blockchains. It is a Cardano sidechain with a growing number of dApps,[^66] but a Layer 2 solution on Algorand. 
+
+Guillemot explained the differences and reasoning at the Rare Bloom event.[^67] As discussed previously, a sidechain is a blockchain that aligns technically with a parent chain but differs philosophically on key features. Milkomeda C1, for example, is the Cardano sidechain where they chose to keep the same base asset (ada) but has faster block times (4 secs) with instant finality. It wasn’t possible to implement Milkomeda as a Layer 2 solution on Cardano at the time due to some technical obstacles, which will likely be resolved as features like Mithril mature.
+
+With funding from Catalyst,[^68] dcSpark added wrapped smart contracts meaning EVM contracts could be called directly from any Cardano wallet, extending interoperability further. The UX is frictionless, with the end user oblivious to the fact that they’re using an EVM underneath. Wrapped smart contracts also enable wrapped Oracles to provide off-chain data. This feature integrates access to existing EVM-based Oracles to the Cardano mainnet.
+
+Milkomeda A1 is a Layer 2 on Algorand. While a sidechain gives you greater flexibility but less security, a Layer 2 gives you full security with mathematical proofs, but less flexibility as you need to program everything in zero-knowledge (ZK) circuits.
+
+What is a Layer 2 scaling solution?
+
+There are generally 3 types of Layer 2 solutions.
+
+- State Channels (like Hydra, or the Lightning Network on Bitcoin)
+- ZK Rollups
+- Optimistic Rollups  
+
+Both ZK and optimistic rollups collect off-chain transactions into a batch, then submit them to the Layer 1 blockchain as one transaction.
+
+A **Zero-knowledge (ZK) rollup** is built on top of the existing Layer 1 blockchain to make the transactions faster, cheaper, scalable, secure, and private by not disclosing everything while transacting with the verifier. The problem with many other Layer 2 solutions is that they are not secure enough. There is a trade-off where they focus more on scalability, which can leave them open to exploits. ZK rollups are so powerful as it’s much faster to prove you know the answer, rather than doing the computing to get the answer. 
+
+**Optimistic rollups** are less secure than ZK Roll-Ups but offer greater flexibility because they don’t require everything to be encoded in a ZK circuit. In contrast to ZK rollups where you prove everything is correct, you are just proving dishonesty (with Fraud proofs) as required. As the name suggests, you optimistically presume transactions are valid, or using fraud proofs to prove false transactions within 7 days.
+
+ZK rollups are more scalable as they consume less blockchain resources compared to Optimistic rollups. ZK rollups are difficult to implement today, mainly because they take time to compile and can slow down your dApp. This is improving every year, however, and it is hot research space. 
+
+Ethereum has a huge focus on ZK roll-ups with many projects trying to dominate. @StakeWithPride[^69] pointed out some dubious design fundamentals and values coming out of the Ethereum community. In a video from a core developer, there is an admission that a serious hack is likely with ZK roll-ups on Ethereum. The proposed solution is to leverage Intel SGX trusted enclaves[^70] to ensure security, which doesn’t sound very decentralized.
+
+On Cardano, there was already the unsuccessful Orbis ZK project funded by Catalyst.[^71] Dr Markulf Kohlweiss announced the ZK Lab at Edinburgh University and dcSpark have marked ZK research as a priority in 2023. 
+
+**April 20, 2022, ‘4/20 Hangout with Charles’ Twitter space**,[^72]
+
+
+**Re: L2 scaling solutions, ZK roll ups**… CH:
+
+> Why do we care about this technology? Why is this useful to me as a consumer? Ok, let’s say you go to a bar, and you get carded. When you show your driver’s license to the bartender, you reveal more than just your age. You reveal your precise age. Oftentimes, the driver’s license has an address on it. If you’re an organ donor or not, a picture of you, your gender, you reveal some of them... I think they put Social Security numbers on the driver’s license, military ID, and even more, a passport. You get all this stuff that the bartender should not know.
+>
+> The bartender is looking for a threshold condition. Are you above or below the drinking age? That’s all they need, it’s a Boolean yes or no. Are you over 21?... at or over 21? So, what a zero-knowledge proof can do is, for an identity system with digital ID, you can prove to that bartender that you’re over at the age of 21, but reveal nothing else about you. No other metadata, and an abstraction you can do that for any challenge response protocol. Are you a US citizen or not? Is the money that I've received taxed or not? Are you fully compliant with laws in the state of Colorado? or not? Yes or no. These types of things. Are you eligible to see this information? Yes or no. You remove that judgment in that respect.
+>
+> Now the other application is, do you own this money or not? Zero knowledge proofs are perfect for this application, because basically you’re proving that the money exists and that you have the right to spend it, but you’re not revealing which money it is, and you’re not revealing who you are. So that’s why they’re used in privacy systems.
+
+**Other interoperability solutions** 
+
+There is a growing list of builders on Cardano. For example, Wanchain[^73] is a bi-directional decentralized, non-custodial cross-chain bridge linking Cardano to other tier 1 blockchains. As well as being a decentralized interoperability solution, Wanchain is layer 1 proof-of-stake (PoS) blockchain with an Ethereum-like ecosystem that supports industry-standard Ethereum tools, dApps, and protocols. It has certain similarities to Cardano. Wanchain employs the Galaxy Consensus PoS consensus method, which employs several cryptographic approaches, such as distributed secret sharing and threshold signatures, to enhance random number generation and block creation processes. Galaxy Consensus is a continuation of Cardano’s own Ouroboros protocol.
+
+To understand more check out *Rollups on Cardano Discussion*.[^74] IOG have contributed to this space with their paper on Sonic: Zero Knowledge SNARKS.[^75]
+
+## Midnight *in the Garden of Good and Evil*
 
 
 **_To be uploaded soon..._**
