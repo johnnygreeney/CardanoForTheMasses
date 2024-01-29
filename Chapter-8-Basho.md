@@ -308,6 +308,38 @@ Why not? Because the consensus inside a Head necessitates each participant’s r
 
 ## Sidechains 
 
+A sidechain is a blockchain that is linked to a main blockchain (the mainchain, or parent chain) through a two-way mechanism (a ‘bridge’) that allows tokens and other digital assets from one chain to be utilized in another and the results to be shared back and forth. Multiple interoperable sidechains may be joined to a single parent chain, each of which can function in a different fashion. 
+
+A sidechain is the exact same concept as a blockchain. The difference is philosophical, not technical. The sidechain usually aligns with the mainchain, but a sidechain can have its own business logic, cryptocurrency, monetary policy, consensus rules, programming language, application domain, subset of users, smart-contract capabilities, stablecoins, use cases like NFTs, loyalty points, etc. Side chains are the same technically as a standalone blockchain, in that blocks are produced by validators. 
+
+Unlike state-channels such as Hydra, they offer data-availability and participation for new users. In a state-channel, typically only participants of the channel can see what is going on in the channel, and they must be decided up front. Joining a sidechain is typically done by burning or locking assets on the mainchain, in return for an equal amount on the sidechain.
+
+Cardano’s eUTXO model means the state is pre-sharded on the mainchain, so it’s easier to move state to a sidechain. Sidechains are ideal for medium to low-risk protocols. They are ideal for new, or growing ecosystems because the sidechain can avail of an established mainchain’s security, liquidity, wallets, and user participation. Sidechains lighten the load off layer 1 mainnet, all the while enjoying the veracity that’s provided by its parent chain. 
+
+While there will be large transaction volumes running in parallel on sidechains, these transactions don’t reconcile on the mainchain so resources on the Layer 1 mainchain aren’t consumed by sidechains. 
+
+IOG have been thinking about sidechains for quite some time, as far back as 2014, they reviewed Blockstream’s pegged sidechains paper.[^57] Then the was ScoreX,[^58] a flexible, modular blockchain framework that was built to enable blockchain experiments. It was an early IOG project before it was incubated at HyperLedger Labs.[^59] Ergo was just one example of a blockchain built using ScoreX. IOG has held regular talks with engineers at Hyperledger Fabric, an open source blockchain framework similar to ScoreX. They monitored the rise in popularity of Cosmos, a blockchain focussed on interoperability.
+
+The sidechain strategy has been laid out as early as 2016, in the *Why cardano?* paper. The original proposal was for a CSL (Cardano Settlement Layer) and a CCL (Cardano Computation Layer). This vision manifested itself slightly differently in the sidechains model, in that there would be multiple CCLs.
+
+So you see, a lot of deep thought and academic rigor went into Cardano’s architecture. It’s evident in how rewards incentivize sidechain partnerships. Ada holders traditionally get staking rewards in ada. The same SPOs that power the mainchain, will also provide staking liquidity for sidechains. So now, if the SPO you delegate to is also part of the sidechain SPO subset, you get rewards in that sidechain’s native asset in addition to your usual ada rewards. 
+
+**Re: Sidechains, Let’s Talk Basho**. CH: 
+
+> It's basically like super-Hydra. Hydra is dApp-specific, sidechains are ecosystem-specific
+
+There are often trade-offs to running a sidechain. Increased throughput can mean less security. Bridge security is challenging in practice and there have been many hacks in 2022.[^60] However, Cardano offers a very secure layer 1 mainchain. Funds in a bridge contract are well protected and assets are securely transferred between sidechains based on the formal definition outlined in IOG’s *2019 Proof-of-Stake Sidechains* paper.[^61] 
+
+The research describes how a new ‘firewall’ security property protects a mainchain from its sidechains. Potential failures on the sidechain won’t impact the parent chain. Project Catalyst, for example, is run as a sidechain of Cardano. Even if its safety is compromised, no funds are lost on Cardano. The paper also outlines a blueprint describing merged staking, cross-chain certification, and multi-signature for proof-of-stake sidechains.
+
+Based on this research, IOG developed the Cardano EVM (Ethereum Virtual Machine) sidechain, Mamba, following a deliberate and iterative approach. It was an open-source sidechain protocol with a client written in Scala. Mamba is compatible with Ethereum’s tools and libraries enabling developers to write Solidity smart contracts, dApps, and ERC20 tokens on Cardano. Ethereum smart contracts could run unchanged on Mamba, with much lower *gas* fees.
+
+The consensus protocol used on Mamba is Ourorobos BFT. This was an earlier iteration of Ouroboros used on the Cardano mainnet. It is a simple, deterministic protocol for ledger consensus that tolerates Byzantine faults.[^62] There are different versions of proof-of-stake (PoS), which are suited to different use cases on sidechains and main chains. Sebastien Guillemot gives an excellent breakdown of the trade-offs in his video *Cardano & Algorand: Leader Selection Explained*. 
+
+Dominik Zajkowski, IOG Technical Architect, expanded on this vision at ScotFest. He explained the Plutus scripts for maintaining the EVM Mamba sidechain would be made available as a toolkit[^63] to be used as a reference template, a kind of SDK for future sidechains with Cardano being the core root of trust. Zajkowski explained the toolkit was intentionally incomplete so as to invite the community feedback on features they wanted to see. The documentation[^64] includes the technical spec. 
+
+## Milkomeda 
+
 
 
 **_To be uploaded soon..._**
@@ -368,10 +400,22 @@ Why not? Because the consensus inside a Head necessitates each participant’s r
 [^54]: November 2023 Monthly Review Meeting, drive.google.com/file/d/1-iv8IveUzA2KrJV_Kqrgx4ts05Ow0zjM/edit
 [^55]: Hydra Head roadmap, github.com/orgs/input-output-hk/projects/21
 [^56]: Jourenko, Larangeira, TanakaInterhead Hydra Two Heads are Better than One, eprint.iacr.org/2021/1188
-[^57]:
-[^58]:
-[^59]:
-[^60]:
+[^57]: Adam Back, et al (2014) 'Enabling Blockchain Innovations with Pegged Sidechains', blockstream.com/sidechains.pdf
+[^58]: Scorex project, github.com/input-output-hk/Scorex
+[^59]: HyperLedger Labs, ScoreX, labs.hyperledger.org/labs/archived/scorex.html
+[^60]: Hackers have stolen $1.4 billion this year using crypto bridges, cnbc.com/2022/08/10/hackers-have-stolen-1point4-billion-this-year-using-crypto-bridges.html
+[^61]: Gazi, Kiayias, Zindors (2019), ‘Proof-of-Stake Sidechains’, iohk.io/en/research/library/papers/proof-of-stake-sidechains/
+[^62]: A **Byzantine fault** is any fault presenting different symptoms to different observers. A Byzantine failure is the loss of a system service due to a Byzantine fault in systems that require consensus among distributed nodes.
+[^63]: IOG launches a toolkit for developing custom sidechains on Cardano, iohk.io/en/blog/posts/2023/01/12/iog-launches-a-toolkit-for-developing-custom-sidechains-on-cardano/
+[^64]: Sidechain SDK docs, docs.cardano.org/cardano-sidechains/sidechain-toolkit/introduction
+[^65]: Cardano: the problem & the whitepaper to fix it, youtube.com/watch?v=LIEM6qbc-x8
+[^66]: Milkomeda dApps, milkomeda.com/dapp-store
+[^67]: Sebastien Guillemot Milkomeda Update, youtube.com/watch?v=LlxTmDPw_cs
+[^68]:
+[^69]:
+[^70]:
+
+
 
 [^110]:
 [^111]:
