@@ -372,7 +372,6 @@ On Cardano, there was already the unsuccessful Orbis ZK project funded by Cataly
 
 **April 20, 2022, ‘4/20 Hangout with Charles’ Twitter space**,[^72]
 
-
 **Re: L2 scaling solutions, ZK roll ups**… CH:
 
 > Why do we care about this technology? Why is this useful to me as a consumer? Ok, let’s say you go to a bar, and you get carded. When you show your driver’s license to the bartender, you reveal more than just your age. You reveal your precise age. Oftentimes, the driver’s license has an address on it. If you’re an organ donor or not, a picture of you, your gender, you reveal some of them... I think they put Social Security numbers on the driver’s license, military ID, and even more, a passport. You get all this stuff that the bartender should not know.
@@ -389,6 +388,23 @@ To understand more check out *Rollups on Cardano Discussion*.[^74] IOG have cont
 
 ## Midnight *in the Garden of Good and Evil*
 
+At ScotFest (Nov 2022), Charles Hoskinson revealed his team had been working on another cryptocurrency for the past four years. It is called *Midnight* and will be a Cardano sidechain with a native token called *dust*. As mentioned before, the way sidechains work on Cardano is as a partnership. Midnight gains decentralization, security, infrastructure, liquidity and a thriving ecosystem from Cardano. In return, Midnight pays rent in the form of rewards to Cardano SPOs and delegators. 
+
+IOG reviewed existing privacy solutions like Monero and Zcash and felt they could do better. Research on the privacy requirements for smart contracts has been ongoing for some time. *Kachina-Foundations of Private Smart Contracts* is a paper Charles Hoskinson ranks as ‘one of our most forward-thinking publications’.
+
+IOGs brains thrust (the likes of zero knowledge expert Dr Markulf Kohlweiss) went to work and reviewed other solutions like Zexe and concluded that three ‘must have’ properties were absent in the blockchain space today. Abbreviated to ‘ACE’, they are: freedom of Association, freedom of Commerce and freedom of Expression. 
+
+These basic human rights are not always present in some jurisdictions for various reasons. Midnight will offer confidentiality and privacy with the ability to freely associate with people and engage in legitimate commercial transactions. 
+
+There is also the regulatory side. It is not illegal to seek confidentiality and privacy in most circumstances. As many people believe crypto is cloaked in secrecy and only used for nefarious activity, new dApps need to protect user rights and wishes, but also enable them to comply with regulatory requirements. dApps on Midnight enable users to protect their own data, to keep their data in their own systems. They don't have to share everything but can share assertions about their personal data based on things like KYC and AML, and the body on the other side of the transaction can trust that those assertions are correct. Selective disclosure is not the same as a ‘back door’, fake news and FUD has already been called out and corrected on this matter. 
+
+Midnight goes beyond just privacy transactions and attempts to support true confidentiality with private smart contracts. To implement this concept, certain data must be private to the public, but still enable voluntary or involuntary disclosures. This can be applied in many use cases. With the 2024 US election looming, consider how decentralized anonymous voting could work on Midnight. Eliminating the risk of vote tampering, a Dapp could leverage zero-knowledge cryptography to enable voters to register and prove they are eligible without disclosing unnecessary personal information. A similar use case would be for sharing patients medical records. The implications are far-reaching and profound. 
+
+How will this be achieved? The documentation is not public yet but will likely involve decentralized IDs (DIDs) being tightly integrated with Midnight, linking identities and privacy. Light wallets will provide easy access to innovative features like *dead man switches* for estate planning and multi-party computation features. Monero and Zcash are proven solutions for keeping your transactions and tokens private, but programmability is required too. The Kachina paper explores how to write private smart contracts, and IOG has been busy bringing the theory to life. 
+
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig86.png "figure 8.6")
+<br>**Figure 8.6:** Why Midnight stands out, from IOG’s Chief Strategy Officer Rob Adams talk at ScotFest
 
 **_To be uploaded soon..._**
 
