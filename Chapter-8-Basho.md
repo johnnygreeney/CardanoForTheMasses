@@ -390,21 +390,75 @@ To understand more check out *Rollups on Cardano Discussion*.[^74] IOG have cont
 
 At ScotFest (Nov 2022), Charles Hoskinson revealed his team had been working on another cryptocurrency for the past four years. It is called *Midnight* and will be a Cardano sidechain with a native token called *dust*. As mentioned before, the way sidechains work on Cardano is as a partnership. Midnight gains decentralization, security, infrastructure, liquidity and a thriving ecosystem from Cardano. In return, Midnight pays rent in the form of rewards to Cardano SPOs and delegators. 
 
-IOG reviewed existing privacy solutions like Monero and Zcash and felt they could do better. Research on the privacy requirements for smart contracts has been ongoing for some time. *Kachina-Foundations of Private Smart Contracts* is a paper Charles Hoskinson ranks as ‘one of our most forward-thinking publications’.
+IOG reviewed existing privacy solutions like Monero and Zcash and felt they could do better. Research on the privacy requirements for smart contracts has been ongoing for some time. *Kachina-Foundations of Private Smart Contracts*[^76] is a paper Charles Hoskinson ranks as ‘one of our most forward-thinking publications’.[^77]
 
-IOGs brains thrust (the likes of zero knowledge expert Dr Markulf Kohlweiss) went to work and reviewed other solutions like Zexe and concluded that three ‘must have’ properties were absent in the blockchain space today. Abbreviated to ‘ACE’, they are: freedom of Association, freedom of Commerce and freedom of Expression. 
+IOGs brains thrust (the likes of zero knowledge expert Dr Markulf Kohlweiss) went to work and reviewed other solutions like Zexe[^78] and concluded that three ‘must have’ properties were absent in the blockchain space today. Abbreviated to ‘ACE’, they are: freedom of Association, freedom of Commerce and freedom of Expression. 
 
 These basic human rights are not always present in some jurisdictions for various reasons. Midnight will offer confidentiality and privacy with the ability to freely associate with people and engage in legitimate commercial transactions. 
 
-There is also the regulatory side. It is not illegal to seek confidentiality and privacy in most circumstances. As many people believe crypto is cloaked in secrecy and only used for nefarious activity, new dApps need to protect user rights and wishes, but also enable them to comply with regulatory requirements. dApps on Midnight enable users to protect their own data, to keep their data in their own systems. They don't have to share everything but can share assertions about their personal data based on things like KYC and AML, and the body on the other side of the transaction can trust that those assertions are correct. Selective disclosure is not the same as a ‘back door’, fake news and FUD has already been called out and corrected on this matter. 
+There is also the regulatory side. It is not illegal to seek confidentiality and privacy in most circumstances. As many people believe crypto is cloaked in secrecy and only used for nefarious activity, new dApps need to protect user rights and wishes, but also enable them to comply with regulatory requirements. dApps on Midnight enable users to protect their own data, to keep their data in their own systems. They don't have to share everything but can share assertions about their personal data based on things like KYC and AML, and the body on the other side of the transaction can trust that those assertions are correct. Selective disclosure is not the same as a ‘back door’, fake news[^79] and FUD has already been called out and corrected on this matter. 
 
 Midnight goes beyond just privacy transactions and attempts to support true confidentiality with private smart contracts. To implement this concept, certain data must be private to the public, but still enable voluntary or involuntary disclosures. This can be applied in many use cases. With the 2024 US election looming, consider how decentralized anonymous voting could work on Midnight. Eliminating the risk of vote tampering, a Dapp could leverage zero-knowledge cryptography to enable voters to register and prove they are eligible without disclosing unnecessary personal information. A similar use case would be for sharing patients medical records. The implications are far-reaching and profound. 
 
-How will this be achieved? The documentation is not public yet but will likely involve decentralized IDs (DIDs) being tightly integrated with Midnight, linking identities and privacy. Light wallets will provide easy access to innovative features like *dead man switches* for estate planning and multi-party computation features. Monero and Zcash are proven solutions for keeping your transactions and tokens private, but programmability is required too. The Kachina paper explores how to write private smart contracts, and IOG has been busy bringing the theory to life. 
+How will this be achieved? The documentation is not public yet but will likely involve decentralized IDs (DIDs) being tightly integrated with Midnight, linking identities and privacy. Light wallets will provide easy access to innovative features like *dead man switches*[^80] for estate planning and multi-party computation[^81] features. Monero and Zcash are proven solutions for keeping your transactions and tokens private, but programmability is required too. The Kachina paper explores how to write private smart contracts, and IOG has been busy bringing the theory to life. 
 
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig86.png "figure 8.6")
-<br>**Figure 8.6:** Why Midnight stands out, from IOG’s Chief Strategy Officer Rob Adams talk at ScotFest
+<br>**Figure 8.6:** Why *Midnight* stands out, from IOG’s Chief Strategy Officer Rob Adams talk at ScotFest
+
+After many years of research and development, they created a virtual machine in Typescript. This is significant in terms of developer adoption. Typescript (~35%), a superset of JavaScript (65%), is one of the most popular programming languages in the world.[^82] For perspective, Haskell adoption languishes somewhere between (1-2%). IOG are taking a developer-first approach with Midnight, in contrast to Plutus, which arrived some years after Cardano launched. 
+
+With regulation on the industry’s doorstep, Midnight looks like an astute strategic move by IOG. Regulators have a daunting task trying to legislate for a nascent industry with emerging technology sometimes not yet in production. Midnight offers a potential middle ground where core principles of crypto can be upheld, but also enable dApps meet compliance requirements in different locales. 
+
+Just one example is when a large global enterprise needs to comply with GDPR requirements in Europe, but still have a different US version to comply with requirements in the Bank Secrecy Act. Most companies face large penalties if they fail to keep user data private. There are many other obvious use cases from making medical data accessible, to enabling underground newspapers in volatile societies to operate.
+
+Charles Hoskinson mentioned in his 2022 New Year’s Eve twitter space[^83] sidechains will be rolled out based on the Japanese martial arts concept of *Shuhari* …you learn, you do, then you teach. IOG ‘learned’ with the Mamba proof of concept, now they will ‘do’ with Midnight and ‘teach’ with various toolkits, blogs and formal papers. Eran Barak was unveiled as Midnight CEO and Dr. Vanishree Rao as its head of applied cryptography. Throughout 2023, the Cardano community craved more details about this new, mysterious *Midnight*. 
+
+A long-awaited strategy update was delivered at the Cardano Summit 2023. Despite a keynote with the trademark whiteboard, there was still some confusion about the details. Chinese whispers led to FUD suggesting IOG was abandoning Cardano for Midnight, and that Midnight didn’t need Cardano to succeed.
+
+**Midnight Special**
+
+As time was tight on stage in Dubai, Hoskinson promised a new whiteboard video to clarify any gray areas. The follow up *Midnight Special*[^84] was comprehensive. There had been talk for some time about renaming sidechains to something more descriptive. Partner Chains would be the new model for interoperability on Cardano as it suggests each Partner benefits from the relationship. 
+
+The new model would mean there would still be separation of layers, but now the Cardano Settlement Layer (CSL) would be renamed as the Cardano Asset and Settlement Layer(CASL).[^85] Its purpose and functionality would remain largely the same, ie. act as a proven, robust settlement layer for partner chains. The Cardano Computation Layers (CCL) would now be known as Cardano Service Layers(CSL)[^86] mirroring the philosophy of microservices, or service oriented architecture.[^87] Partner Chains, like Midnight, would have the flexibility to build their own computation layers using modular frameworks and existing components while still leveraging the CASL. Each (CSL) service layer might have its own distinct logic with unique tokenomics, consensus protocol, etc, however they will have the same ‘common ancestor’ in the CASL. 
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig87.png "figure 8.7")
+<br>**Figure 8.7**:  The new partner chains model, graphic credit: cexplorer[^88]
+
+Hoskinson explained they had learnt a lot from ScoreX, Mamba, Cosmos and more recently Polkadot’s Parity Substrate[^89] stack when devising Midnight’s architecture. Substrate is a proven open-source framework tried and tested on 190 Polkdot Parachains.[^90] It describes itself as a ‘Blockchain Framework for a Multichain Future’. Hoskinson went on to explain Midnight would use Substrate as a starting point, and would develop their own custom ‘pallet’ components.[^91] 
+
+>And it's an open source project at the end of the rainbow too. And what's nice is we got kind of a huge leapfrog with getting Parity Substrate as a starting point, but it's really important to understand it’s not stock Parity Substrate. There’s going to be a humongous amount of upgrades, modifications and additions.
+>
+>For example, the Cardano network stack is being ported over…it's written in Rust, and so it's not ‘stock Parity network’…we spent 10s of millions of dollars building the best network stack in the world for cryptocurrency. We would be bloody insane to throw that away for our partner team framework. Brand new consensus protocols are being developed, and then run in this setting with Minotaur, and there's a lot of magic there…so that's all new code and you know, different ways of doing pallets, so all kinds of stuff.
+>
+>So there's a big deviation from what Substrate brought to the table, but then there’s an acknowledgement that there was a lot of amazing engineering work that the Polkadot community did ...they have 190 parachains that they tested it on. So it makes absolutely no sense to throw all that work away…  It's just hybridizing that and keeping the best parts and blending them…and frankly that's what we should be doing, as an industry… is that everybody's doing good work, let's stop fighting each other, let's acknowledge it and the highest compliment is not a tweet saying you're doing good work… the highest compliment is taking the code and building on top of that code, that's what open source truly means at its core.
+
+Borrowing ideas and benefiting from others research is nothing new in the blockchain space, despite the rivalries and tribalism. For example, Polkadot’s BABE protocol[^91] took inspiration from Ouroboros Praos. 
+
+Adopting a multi chain strategy with Substrate and leveraging the findings from the *Minotaur*[^92] paper, Midnight will be able to leverage multiple consensus protocols. We are entering uncharted waters now as Cardano can potentially be the settlement layer for more chains. Security will be provided by Cardano’s SPOs as before, but now Minotaur will allow validators from other chains to contribute. The introduction of Babel fees[^93] (still in research) will smooth integration as chains can transact in their own native currency, while still allowing Cardano SPOs to be compensated in ada. Its thought stake pool operators might run a ‘super node’ similar existing concept with Hyperledger FireFly’s open source Supernode.[^94]
+
+Eran Barak gave more detail, explaining[^95] Midnight will be a 4th generation blockchain as it enables data protection and a multi-resource consensus model. Advancements in zero knowledge technology will allow data and metadata to be protected. While the details will be revealed in time, he stated Midnight would feature a shielded Ledger for confidential information on chain, but also an unshielded Ledger for public data on chain. The user now has the capability of selective disclosure. 
+
+The tokenomics are still to be disclosed but will be made up of a shielded token, dust, for private transactions as well as a second unshielded token for network liquidity and security. This dual token model will mean Enterprise users can have table stakes they expect for business like price predictability, ability to pay in Fiat, SLAs, etc. There will be Typescript templates for zero knowledge circuits, faucets and Visual Studio plugins to attract developers. 
+
+**Other partner chains**
+
+A candidate to be partner chain is World mobile who need a purpose-built blockchain with a degree of centralization to meet regulations around spectrum licensing[^96] and satisfy the International Telecoms Union’s requirements. SingularityNET could also potentially launch a decentralized LLM[^97] as a partner chain. With so many new acronyms and announcements, Hoskinson clarified[^98]
+
+>There's two projects at the same time, Cardano partner chain toolkit and Midnight. One is downstream of the other …Midnight is downstream of the partner chain toolkit, and there's a separate team that works on that… they're both in Rust, with heavy modifications, but one is a blockchain builder kit, and its intention is to build out the partner chain ecosystem and the other is specifically Midnight
+
+As we started the chapter talking about Layer 1s, Layer 2s, state channels and sidechains…it can all get a bit confusing as to where a partner chain begins and ends. Hoskinson added further clarity:
+
+>So 'cause I often get asked a question ‘is Midnight a layer 2 or a sidechain?’ …I say it's neither and both…it’s neither in that it does not rely solely on the security of the main chain, for its security, and it doesn't rely on itself for its security. It actually borrows from both, and you can run multiple consensus algorithms at the same time. So ideally I'd like to blend useful proof of work on Midnight with a BFT protocol enabled by the stake pool operators of Cardano. And how do all of those pieces come together? …that's why I say there's kind of three parts. There's a Cardano part, there’s a framework part and then there’s a Midnight-specific part… and that’s going to take a little while to sort it’s way out.
+>
+>But the other cool thing is that these things always benefit each other. So when we talk about Input Endorsers, a lot of the ideas that we're learning from partner chains are kind of being taken for a test drive, that could then be applied with the design of Input Endorsers and the long term sharding and scalability of Cardano's main chain. So when these SPOs are running this, we're learning a lot that can then be used to actually run and accelerate Cardano transactions and basically make our network have a much higher native TPS rate, and so it's all interconnected in in that respect
+
+The Partner Chains strategy seems to be betting on arguably the most successful features of Cardano to date, its consensus and staking mechanism and the implementation of *Minotaur* being a game changer. Unlike any of the popular cloud service providers, Cardano has never been down since its first block was minted in 2017. Its liquid, non-custodial staking mechanism is years ahead of its time. Hoskinson describes the *Minotaur* paper as ‘probably the best thing we've ever written in the history of our company… because this ends the fight forever about interoperability’.
+
+Visit *midnight.network* for more information  
+
+## Input Endorsers 
+
 
 **_To be uploaded soon..._**
 
@@ -475,12 +529,48 @@ How will this be achieved? The documentation is not public yet but will likely i
 [^65]: Cardano: the problem & the whitepaper to fix it, youtube.com/watch?v=LIEM6qbc-x8
 [^66]: Milkomeda dApps, milkomeda.com/dapp-store
 [^67]: Sebastien Guillemot Milkomeda Update, youtube.com/watch?v=LlxTmDPw_cs
-[^68]:
-[^69]:
-[^70]:
-
-
-
+[^68]: Milkomeda Oracle, cardano.ideascale.com/c/idea/369192
+[^69]: StakeWithPride re: Ethereum zk roll-ups, twitter.com/StakeWithPride/status/1607511445549514752
+[^70]: The core idea of SGX is the creation of a software 'enclave'. The enclave is basically a separated and encrypted region for code and data.
+[^71]: Orbis: Layer 2 ZK Rollup, cardano.ideascale.com/c/idea/396617
+[^72]: April 20, 2022, ‘4/20 Hangout with Charles’ Twitter space, twitter.com/i/spaces/1lDGLLABeBkGm
+[^73]: Temujin Louie, 'Guest blog: collaborating on Cardano interoperability', iog.io/en/blog/posts/2022/04/27/guest-blog-collaborating-on-cardano-interoperability/
+[^74]: Rollups on Cardano Discussion | Cardano Live #48, youtube.com/watch?v=4DslvkLop04
+[^75]: Maller, Bowe, Kohlweiss, Meiklejohn (2019), 'Sonic: Zero-Knowledge SNARKs from Linear-Size Universal and Updateable Structured Reference Strings', eprint.iacr.org/2019/099.pdf
+[^76]: Kerber, Kiayias, Kohlweiss (2021) 'Kachina - Foundations of Private Smart Contracts', eprint.iacr.org/2020/543.pdf
+[^77]: Charles Hoskinson Kachina tweet, twitter.com/iohk_charles/status/1261328840023961602?lang=en
+[^78]: Zexe: Enabling Decentralized Private Computation, eprint.iacr.org/2018/962.pdf
+[^79]: Cardano Midnight: Monero Retracts Negative Statements, u.today/cardano-midnight-monero-retracts-negative-statements
+[^80]: A dead man's switch is a switch that is designed to be activated or deactivated if the human operator becomes incapacitated, or dies. Typically, funds may be sent to a preset address after a set time has expired.
+[^81]: MPC (multi-party computation) enables multiple parties – each holding their own private data – to evaluate a computation without ever revealing any of the private data held by each party.
+[^82]: The top programming languages, statista.com/statistics/793628/worldwide-developer-survey-most-used-languages/
+[^83]: New Years Eve Hangout with Charles, twitter.com/IOHK_Charles/status/1609417098396323840?t=42JFCPU8bk_mbwlix8wGlw&s=19
+[^84]: Midnight Special, youtube.com/watch?v=tBxk79svC78
+[^85]: Cardano Settlement Layer, why.cardano.org/en/introduction/designing-in-layers/
+[^86]: Cardano Computation Layer, why.cardano.org/en/introduction/cardano-computation-layer/
+[^87]: Microservices are an architectural approach where software is composed of small independent services that communicate over well-defined APIs. Service-oriented architecture (SOA) focuses on discrete services instead of a monolithic design
+[^88]: Cardano As The Center Of The Universe, cexplorer.io/article/cardano-as-the-center-of-the-universe
+[^89]: Parity Substrate, substrate.io/
+[^90]: A parachain on Polkadot is similar to a sidechain. They are named after the notion of parallelized chains running parallel to a Relay Chain.
+[^91]: Latest Cardano and Crypto Developments with Charles Hoskinson, 14 Dec 2023, twitter.com/i/spaces/1YqxoDPoMdaKv
+[^92]: BABE protocol, research.web3.foundation/Polkadot/protocols/block-production/Babe
+[^93]: Fitzi, Kiayias, et al. (2022) 'Minotaur: Multi-Resource Blockchain Consensus', dl.acm.org/doi/pdf/10.1145/3548606.3559356
+[^94]: Babel fees - denominating transaction costs in native tokens, iohk.io/en/blog/posts/2021/02/25/babel-fees/
+[^95]: Supernode concept, hyperledger.github.io/firefly/overview/supernode_concept.html
+[^96]: CEO of Midnight on Tokens for ADA Delegates, and what Midnight offers Cardano users! | Eran, youtube.com/watch?v=ZBMj0srAAfw
+[^97]: Spectrum licensing refers to the process of allocating specific frequency ranges, or spectrum bands, to telecommunication service providers.
+[^98]: LLM, or Large language models, are a type of AI that can mimic human intelligence
+[^99]: Surprise AMA 11/26/2023, youtube.com/live/2ItsXSY2qfA?si=bXZAoFVGvcGJQq1-&t=504
+[^100]: Latest Cardano and Crypto Developments with Charles Hoskinson, 14 Dec 2023, twitter.com/i/spaces/1YqxoDPoMdaKv
+[^101]:
+[^102]:
+[^103]:
+[^104]:
+[^105]:
+[^106]:
+[^107]:
+[^108]:
+[^109]:
 [^110]:
 [^111]:
 [^112]:
