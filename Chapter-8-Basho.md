@@ -540,8 +540,6 @@ Only then will a hard fork to *Leios* be possible. It is an ambitious vision, bu
 >So, running execution of scripts… so that's incredibly limiting …0.25%, not 25%, but 0.25% of your block time is for script execution, so it's a very scarce resource. Here it's asynchronous, so it's continuous execution. So, we expect to see not just a 10x, but a very very very significant increase in speed, and a reduction in cost…
 
 
-**_To be uploaded soon..._**
-
 [^01]: Protocol parameters, cexplorer.io/params
 [^02]: Performance engineering: Lies, damned lies and (TPS) benchmarks, youtube.com/watch?v=gpSnyCn2s9U
 [^03]: Cardano became the most developed crypto project on GitHub in 2021, cointelegraph.com/news/cardano-became-the-most-developed-crypto-on-github-in-2021-santiment
