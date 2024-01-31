@@ -459,6 +459,86 @@ Visit *midnight.network* for more information
 
 ## Input Endorsers 
 
+By separating transactions into pre-constructed blocks, input endorsers increase block propagation speeds and throughput (amount of data transferred). This increases block propagation consistency and enables increased transaction rates.
+
+Input endorsers were described by John Woods (ex IOG, now Algorand CTO) as a ‘near end game solution’ for Layer 1 scaling that will put Cardano on the top of the pile when it comes to throughput for Layer 1.
+
+The current process is to scoop transactions out of mempool, forge a block, then send it on to peers. With input endorsers, blocks will be created on an ad hoc basis, signed and counter-signed, and will be flying around the network on a near second-by-second basis.
+
+The existing network Ouroboros Praos, where a block is generated every 20 seconds, is adequately meeting user demands. Input Endorsers will, however, keep Cardano ahead of the curve for the demands coming down the tracks with more and more businesses deploying on Cardano, as Plutus and Marlowe mature.
+
+Currently, blocks are responsible for both consensus and holding transaction data. Input Endorsers divide each block in two. One of the blocks is responsible for consensus, with the other faster block assigned for holding transaction data.
+
+The consensus block will essentially be freed up from its duty of managing transaction data. It will now have a pointer (using ‘reference semantics’) to the block holding the transaction data. This will reduce bottlenecks and the 20 second wait time, enabling blocks to be streamed constantly.
+
+Input Endorsers were muted as far back as the original Ouroboros paper in 2016. Similar to block producers (BP), input endorsers (IE) are described as a stakeholder entity, in the sense that the amount of stake delegated to them affects their capacity to function. 
+
+According to Section 8.1 of the paper: 
+
+>Input-endorsers create a second layer of transaction endorsing prior to block inclusion. [..] Note that input-endorsers are assigned to slots in the same way that slot leaders are, and inputs included in blocks are only acceptable if they are endorsed by an eligible input-endorser.
+
+and also
+
+> Note that blocks and endorsed inputs are diffused independently with each block containing from 0 up to d endorsed inputs.
+
+IOG researcher Peter Gaži explained the input endorsers concept at the Cardano Summit 2021. Input endorsers echo some concepts discussed in a paper called *Prism: Scaling Bitcoin by 10,000x* which is complemented by a video presentation on *Prism* (not to be confused with IOG’s Atala Prism Decentralized Identity solution).
+
+Professor Aggelos Kiayias gave a more detailed explanation in his video whose formulas and math are beyond the scope of this book. It’s clear, however, that input endorsers are kind of an anthology of the best of Cardano as they leverage the power of Mithril, the Extended UTXO model, previous research on ledger combiners and the foundations established by Ouroboros.
+
+In the video, Prof Kiayias explained Ouroboros uses a ‘longest chain’ protocol similar to Bitcoin, except it is based on proof of stake. So it inherits all the decentralization and security benefits of Bitcoin, but with much less energy expenditure. ‘Longest chain’ protocols have serious performance limitations in terms of throughput. If a pipe represents a consensus protocol, where width is the throughput and length is the settlement time, then we want a nice wide, short pipe.
+
+Based on research IOG published at the *ACM Computer and Communications Security Symposium* in 2021, it’s possible to derive the upper bound for the throughput in a longest chain protocol. This works out to be only 8%, leaving 92% of the throughput capacity untapped. Ouroboros *Leios*, and specifically input endorsers, will resolve this critical shortcoming. 
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig88.png "figure 8.8")
+<br>**Figure 8.8:** Longest chain protocol represented as a pipe
+
+As mentioned previously, Ouroboros uses a networking strategy of applying *backpressure* to cope with times when there is peak demand for transaction processing. The system processes what blocks it can, while transactions wait in line to be pulled in for processing. Under peak traffic conditions, transactions will still be processed, but they have to wait their turn.
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig89.png "figure 8.9")
+**Figure 8.9:** Backpressure networking concept 
+
+Input endorsers release segments of mempool (or ‘backup mempools with special privileges’ as a user on Stack Exchange referred to them) to float around before they’re considered for processing in a mainchain block. These floating segments of mempool are called ‘input blocks.’ This allows block producers to free up space in their mempools so they have more capacity to pull transactions in. Mempool segmentation needs to be concurrent across all block producers.
+
+IOG plans on adopting practices from spread spectrum communications to ensure there is minimal overlap between input blocks. Valid input blocks are checked as with longest chain blocks, but additionally, they are attested via the issuance of Mithril certificates. This means input blocks are transformed into verified transaction batches to be included in the mainchain by reference only. Input blocks’ transactions and scripts are processed externally from the mainchain block validation. Longest chain ‘ranking blocks’ are used to organize or ‘rank’ these floating input blocks.
+
+The serialization nature of longest chain protocol resolves ‘double-spending’ in input blocks. This strategy also leverages the strengths of the Extended UTXO model as script execution and validation occurs away from mainchain validation. The goal of higher 
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig810.png "figure 8.10")
+<br>**Figure 8.10:** Input Endorsers graphic adapted from Professor Kiayias explainer video
+
+How this groundbreaking academic research will go from theory to a real-life implementation became a little clearer in November 2022. Input endorsers will be the primary component of Ouroboros Leois and will be proposed, community-reviewed and finalized via CIP 79. As we are now in the ‘age of Voltaire’, everything is open source, encouraging feedback and participation. *Leios* will be a ‘substantial extension’ of the Ouroboros protocol. It is described in greater depth in a longer paper included as part of this CIP.
+
+The paper is also available on GitHub and is surprisingly readable. This is perhaps by design to attract as much discussion and engagement as possible in the initial stages. It was written by IOG chief architect Duncan Coutts, often described as a ‘real life wizard’ by Charles Hoskinson. You can peer inside his mind and follow the debate with other deep thinkers such as nuclear physicist Michael Lisenfelt here.
+
+The paper details exactly how input endorsers might work. At a high level, the research proposes moving from a sequential blockchain to a parallel blockchain. *Leios* will decouple the consensus from the validation of blocks, meaning blocks will be validated constantly. 
+
+With the current Ourorboros Praos protocol, the time during which a block is forged and diffused across the network is only a fraction of the overall average time between blocks. Currently on Cardano mainnet: blocks are produced on average every 20 seconds, but the time to send blocks across the network is within 5 seconds (this is the ∆ parameter).
+
+Before the block arrives at a node, that node is idle, and after it has downloaded, validated and forwarded the block then it will return to being idle. *Leois* proposes different ways to make better use of idle resources.
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig811.png "figure 8.11")
+<br>**Figure 8.11:**  Ouroboros Praos block diffusion time (∆) is a fraction of time between blocks 
+
+A distributed system of nodes is a parallel system, but Ouroboros Praos is a sequential algorithm. Any such sequential algorithm running on a parallel system will leave resources unused. The algorithm is sequential because the structure of the blockchain itself is linear.
+
+Ouroboros *Leios* will attempt to deploy a ‘concurrent blockchain’ to achieve a parallel distributed algorithm for constructing the chain. By controlling the degree of concurrency and parallelism in the algorithm, this will enable larger workloads where currently unused idle resources are put to work. The paper clarifies the terms: 
+
+>We distinguish concurrency and parallelism: concurrency is about data or events that are not sequenced with respect to each other, whereas parallelism is about using more computer hardware to compute more quickly.
+
+The paper goes into greater detail on how this could be achieved with new types of objects such as input blocks, endorsement blocks, endorsement reports, endorsement certificates, and ranking blocks. The above linked paper and CIP outline the many considerations and risks with such a complex solution and will no doubt evolve and update as further prototyping and simulation eventually arrives at the best design. The first such public simulation was presented by Benjamin Beckmann (IOG Director of Architecture & Infrastructure) at ScotFest.
+
+The exhaustive process will follow the familiar trail of security analysis, peer review, auditing, formalization a precise description of the expected behaviors to clarify the design to engineering, performance testing, prototyping, updates to the ledger…and all this is dependent on progress with other features such as ‘On disk storage of ledger state’, a successful Ouroboros *Genesis* rollout, increased adoption of light wallets, etc.  
+
+Only then will a hard fork to *Leios* be possible. It is an ambitious vision, but IOG and the Cardano community are building on granite, reaping the rewards of doing things the right way from the start. All the features and concepts described in this book are anchored in deep academic research, peer-reviewed by the brightest minds in cryptography and implemented based on formal specifications. 
+
+**Oct 3, 2022. Re: Input Endorsers, Let’s Talk Basho.** CH
+
+>So, what happens is that you go from this standard process of a chain of blocks, and there's only one canonical view, to basically, doing a lot of these things asynchronously and in parallel, and they just kind of get batched together, and then asynchronously and in parallel, lots of stuff happens and then they get batched together… So, this concept of input blocks and key blocks, as discussed in our parallel chains paper.
+>
+>Now this batching…you think of Mithril certificates where you talk about batching transactions, events together …you also could reuse this technology in the extended UTXO model to patch blocks together. So, it gives you a way of figuring out conflict-free history, and potentially what this means is that you have asynchronous parallel processing of an enormous amount of events. So, the throughput gains, assuming new data structures, and assuming new designs, are gargantuan for this because you basically can be real time, continuously running computations. Right now, in the current design, only 0.25% of your block time budget is for computation.
+>
+>So, running execution of scripts… so that's incredibly limiting …0.25%, not 25%, but 0.25% of your block time is for script execution, so it's a very scarce resource. Here it's asynchronous, so it's continuous execution. So, we expect to see not just a 10x, but a very very very significant increase in speed, and a reduction in cost…
+
 
 **_To be uploaded soon..._**
 
