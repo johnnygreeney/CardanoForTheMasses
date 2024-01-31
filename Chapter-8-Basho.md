@@ -495,7 +495,7 @@ Based on research IOG published at the *ACM Computer and Communications Security
 As mentioned previously, Ouroboros uses a networking strategy of applying *backpressure* to cope with times when there is peak demand for transaction processing. The system processes what blocks it can, while transactions wait in line to be pulled in for processing. Under peak traffic conditions, transactions will still be processed, but they have to wait their turn.
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig89.png "figure 8.9")
-**Figure 8.9:** Backpressure networking concept 
+<br>**Figure 8.9:** Backpressure networking concept 
 
 Input endorsers release segments of mempool (or ‘backup mempools with special privileges’ as a user on Stack Exchange referred to them) to float around before they’re considered for processing in a mainchain block. These floating segments of mempool are called ‘input blocks.’ This allows block producers to free up space in their mempools so they have more capacity to pull transactions in. Mempool segmentation needs to be concurrent across all block producers.
 
