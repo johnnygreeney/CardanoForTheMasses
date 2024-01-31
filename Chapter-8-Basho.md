@@ -642,21 +642,19 @@ Only then will a hard fork to *Leios* be possible. It is an ambitious vision, bu
 [^98]: LLM, or Large language models, are a type of AI that can mimic human intelligence
 [^99]: Surprise AMA 11/26/2023, youtube.com/live/2ItsXSY2qfA?si=bXZAoFVGvcGJQq1-&t=504
 [^100]: Latest Cardano and Crypto Developments with Charles Hoskinson, 14 Dec 2023, twitter.com/i/spaces/1YqxoDPoMdaKv
-[^101]: Surprise AMA 11/26/2023, youtube.com/live/2ItsXSY2qfA?si=bXZAoFVGvcGJQq1-&t=504
-[^102]: Latest Cardano and Crypto Developments with Charles Hoskinson, 14 Dec 2023, twitter.com/i/spaces/1YqxoDPoMdaKv
-[^103]: Ouroboros Family (Input Endorsers), youtu.be/PF1SW7e137A?t=1760
-[^104]: Prism: Scaling Bitcoin by 10,000x, arxiv.org/abs/1909.11261
-[^105]: Presentation, Prism: Scaling Bitcoin, youtube.com/watch?v=gTJyDtuWvUQ
-[^106]: Advances in Ouroboros: Scaling for Future Growth, youtube.com/watch?v=xKv94MwSNBw
-[^107]: The longest chain is what individual nodes accept as the valid version of the blockchain. The rule that nodes adopt the longest chain of blocks allows every node on the network to agree on what the blockchain looks like, and therefore agree on the same transaction history. The Longest Chain Rule ensures that the network will recognise the ‘chain with most work’ as the main chain. The chain with the most work is typically (not always) the longest of the forks.
-[^108]: Proof-of-Stake Longest Chain Protocols: Security vs Predictability, tselab.stanford.edu/downloads/PoS_LC_SBC2020.pdf
-[^109]: Gaži, Kiayias, Russell (2020), 'Tight Consistency Bounds for Bitcoin', eprint.iacr.org/2020/661.pdf
-[^110]: Input Endorsers on stack exchange, cardano.stackexchange.com/questions/4626/what-are-input-endorsers-and-how-do-they-make-cardano-more-scalable
-[^111]: In telecommunication and radio communication, spread-spectrum techniques are methods by which a signal generated with a particular bandwidth is deliberately spread in the frequency domain, resulting in a signal with a wider bandwidth.
-[^112]: Coutts, Panagiotakos, Fitzi (2022), 'Ouroboros Leios: design goals and concepts', iohk.io/en/research/library/papers/ouroboros-leios-design-goals-and-concepts/
-[^113]: CIPs/CIP-0079/README.md, github.com/cardano-foundation/CIPs/blob/ouroboros-leios/CIP-0079/README.md
-[^114]: CIP-0079? | Implement Ouroboros Leios to increase Cardano throughput, github.com/cardano-foundation/CIPs/pull/379
-[^115]:  Driving continued technology advancement through Input Endorsers, youtube.com/watch?v=IGu_1bl6UHQ
-[^116]: Let's Talk Basho, youtu.be/fhVo-2QUjLM?t=780
-[^117]: Fitzi, Gaži, Kiayias, Russell (2018), 'Parallel Chains: Improving Throughput and Latency of Blockchain Protocols via Parallel Composition', iohk.io/en/research/library/papers/parallel-chains-improving-throughput-and-latency-of-blockchain-protocols-via-parallel-composition
+[^101]: Ouroboros Family (Input Endorsers), youtu.be/PF1SW7e137A?t=1760
+[^102]: Prism: Scaling Bitcoin by 10,000x, arxiv.org/abs/1909.11261
+[^103]: Presentation, Prism: Scaling Bitcoin, youtube.com/watch?v=gTJyDtuWvUQ
+[^104]: Advances in Ouroboros: Scaling for Future Growth, youtube.com/watch?v=xKv94MwSNBw
+[^105]: The longest chain is what individual nodes accept as the valid version of the blockchain. The rule that nodes adopt the longest chain of blocks allows every node on the network to agree on what the blockchain looks like, and therefore agree on the same transaction history. The Longest Chain Rule ensures that the network will recognise the ‘chain with most work’ as the main chain. The chain with the most work is typically (not always) the longest of the forks.
+[^106]: Proof-of-Stake Longest Chain Protocols: Security vs Predictability, tselab.stanford.edu/downloads/PoS_LC_SBC2020.pdf
+[^107]: Gaži, Kiayias, Russell (2020), 'Tight Consistency Bounds for Bitcoin', eprint.iacr.org/2020/661.pdf
+[^108]: Input Endorsers on stack exchange, cardano.stackexchange.com/questions/4626/what-are-input-endorsers-and-how-do-they-make-cardano-more-scalable
+[^109]: In telecommunication and radio communication, spread-spectrum techniques are methods by which a signal generated with a particular bandwidth is deliberately spread in the frequency domain, resulting in a signal with a wider bandwidth.
+[^110]: Coutts, Panagiotakos, Fitzi (2022), 'Ouroboros Leios: design goals and concepts', iohk.io/en/research/library/papers/ouroboros-leios-design-goals-and-concepts/
+[^111]: CIPs/CIP-0079/README.md, github.com/cardano-foundation/CIPs/blob/ouroboros-leios/CIP-0079/README.md
+[^112]: CIP-0079? | Implement Ouroboros Leios to increase Cardano throughput, github.com/cardano-foundation/CIPs/pull/379
+[^113]:  Driving continued technology advancement through Input Endorsers, youtube.com/watch?v=IGu_1bl6UHQ
+[^114]: Let's Talk Basho, youtu.be/fhVo-2QUjLM?t=780
+[^115]: Fitzi, Gaži, Kiayias, Russell (2018), 'Parallel Chains: Improving Throughput and Latency of Blockchain Protocols via Parallel Composition', iohk.io/en/research/library/papers/parallel-chains-improving-throughput-and-latency-of-blockchain-protocols-via-parallel-composition
 
