@@ -108,11 +108,71 @@ CIP999 (read as ‘CIP minus 1’) - Cardano Problem Statements (CPS)
 
 CPSs complement CIPs. CIP999 explains the need for CPSs, their set structure, statuses and criteria for their success. CPSs were introduced to simplify the process when explaining the problem statement of complex CIPs, replacing the more elaborate ‘*motivation*’ section. They may also exist as standalone ‘requests for proposals from ecosystem actors who've identified a problem but are yet to find any suitable solution’.
 
-
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig92.png "figure 9.2")
 <br>**Figure 9.2:** CIP workflow from editors’ perspective
 
 ## What is Project Catalyst?
+
+Another governance piece introduced in 2020 was Project Catalyst. Catalyst is a grant program that combines proposal and voting processes. Establishing a long-term future for Cardano growth began with a treasury and democratic voting in the Catalyst project. 
+
+Catalyst is a community-driven innovation grants program that uses elements of decentralized governance to make certain decisions (i.e. the Cardano community votes to decide which proposals should receive grant funding). Funds are granted as ada, provided to IOG directly from the Cardano treasury, to administer the funding disbursements. 
+
+There are effectively two parts to Catalyst:
+
+1. Submitting, reviewing, and voting on proposals
+2. Delivering the grant-funded project and demonstrating proof of achievement as part of the community-led accountability model
+
+So in this way, members of the Cardano community submit proposals to deliver projects for the benefit of growing the Cardano ecosystem. The community then reviews the project proposals, providing feedback based on criteria of ‘Impact’, ‘Feasibility’, and ‘Value for Money'. Finally the community then votes on which proposals to allocate funding towards. Catalyst currently uses IdeaScale[^22] to crowdsource all proposal submissions and community reviews. ProjectCatalyst.io is a home for all things Catalyst and is where all of the funded-projects progress reporting and accountability is ultimately open and available for community members to keep track of their favorite projects they voted for. 
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig93.png "figure 9.3")
+<br>**Figure 9.3:**  The opening screen for each Catalyst Town Hall meeting
+
+**Cardano’s Treasury**
+
+To solve the issues, a variety of treasury systems have emerged. These systems might include iterative treasury rounds when project funding requests are presented, debated, and voted on. Poor voter privacy and ballot submission security are two typical downsides. Furthermore, if master nodes are coerced, the validity of funding choices may be jeopardized, and a lack of expert input may promote undesired contributions.
+
+Cardano was established as a third-generation blockchain to address the shortcomings of previous projects. Cardano aims to make the process more democratic by giving everyone influence and guaranteeing that choices are made fairly. It is critical to have transparent voting and financing mechanisms to achieve this. This is where Voltaire enters the picture.
+
+The aforementioned (Lancaster University) paper on treasury systems for cryptocurrencies proposes a community-controlled, decentralized, collaborative decision-making method for long-term blockchain development and maintenance financing. This kind of collaborative intelligence is based on liquid democracy,[^23] which is a combination of direct, and representative, democracy that combines the advantages of both.
+
+This method allows the Treasury System to use expert knowledge in the voting process while also guaranteeing that all ada holders are given a chance to vote. As a result, for each project, a voter may vote personally or delegate their voting authority to a community member who is knowledgeable about the subject.
+
+To maintain long-term viability, the community controls the treasury system, which is regularly replenished from sources such as:
+
+- a share of stake pool rewards and transaction costs 
+- contributions or charities 
+- newly minted coins held back for future financing.
+
+The treasury will then be able to finance initiatives and pay for improvement suggestions since ada is always accumulating. As a result, the financing process may be split into ‘treasury periods,’ each of which is divided into the following phases:
+
+- pre-voting 
+- voting
+- post-voting.
+
+Project ideas may be presented at any time throughout the term, debated by experts and voters, and then voted on to finance the most critical initiatives. Despite the fact that anybody may submit a proposal, only a select few will be funded, based on a community vote.
+
+**Decision making process**
+
+Scientists (even nuclear physicists),[^24] developers, executive types, investors, and the general public are among the ada holders who vote. With such a diverse field of participants, with different agendas and motives, there must be proper mechanisms in place to preserve inclusivity, and ensure fair reviews and voting takes place. 
+
+A person’s voting power is proportional to the quantity of ada they hold; the more ada they own, the more weight their vote carries. Along with direct ‘yes’ voting, a person might transfer their voting authority to an expert they trust as part of the liquid democracy concept. Note that ‘No’ voting was removed in Fund11. In this instance, the expert votes on behalf of their delegators. 
+
+Following the vote, project ideas may be assessed and ranked depending on the number of yes/no votes; the poorest project proposals will be eliminated. The top-ranked ideas will be financed in turn until the allocated treasury money is depleted, after which the shortlisted proposals will be ranked according to their score. Breaking down the decision-making process into phases ensures each proposal is rigorously and fairly critiqued.
+
+IOG’s research team leveraged ZK proofs to safeguard voter privacy. Zero-knowledge (ZK) approaches are mathematical methods for verifying information without exposing any underlying facts. The zero-knowledge proof in this situation indicates that someone may vote without providing any personal information other than their eligibility to vote. Any prospect of voter coercion is eliminated as a result. 
+
+Project Catalyst is a treasury system that combines proposals, and voting processes, with the goal of fostering a democratic culture in the Cardano community. Cardano’s treasury will initially be replenished by a proportion of stake pool payouts, assuring a long-term treasury supply. Other blockchains have treasury systems, but IOG’s combines perfect anonymity thanks to zero-knowledge proofs, liquid democracy thanks to expert engagement and vote delegation (planned for Catalyst in 2024), and community participation.
+
+It’s also worth noting that this treasury system technique may be used on blockchains other than Cardano. It has previously been suggested that it be implemented for Ethereum Classic[^25] and we’ll see later how COTI availed of the Catalyst Natives feature. 
+
+Following a successful limited user group trial, Project Catalyst became accessible to the public. Although Cardano on-chain governance is still in its infancy, all metrics and indicators point to a bright future with the community leading the way. 
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig94.png "figure 9.4")
+<br>**Figure 9.4:**  Catalyst overview
+
+There are a lot of moving parts to Catalyst. This graphic from IOG’s blog post *Project Catalyst - A virtuous cycle of Cardano ecosystem development*[^26] is a good summary of the steps involved and end goals. 
+
+## Catalyst’s early funds 
 
 
 
@@ -144,11 +204,21 @@ CPSs complement CIPs. CIP999 explains the need for CPSs, their set structure, st
 [^20]: Cardano Improvement Proposals (CIPs) — Introduction from an Insider, rxphair.medium.com/cardano-improvement-proposals-cips-introduction-from-an-insider-7b2f7cc94d01
 [^21]: CIP-0001 categories, github.com/cardano-foundation/CIPs/tree/master/CIP-0001#categories
 [^22]: Cardano IdeaScale, cardano.ideascale.com/
-[^23]:
-[^24]:
-[^25]:
-[^26]:
-[^27]:
-[^28]:
+[^23]: Liquid democracy is a form of delegative democracy where an electorate engages in collective decision-making through direct participation and dynamic representation. This democratic system leverages parts of both direct and representative democracy.
+[^24]: Cardano Network Parameters with Dr. Michael Liesenfelt | Cardano Live #54, youtube.com/watch?v=eAs_L68RO-c
+[^25]: The ETC Cooperative Withdraws Support For The ETC Treasury, medium.com/etccooperative/the-etc-cooperative-withdraws-support-for-the-etc-treasury-c3f8772fff71
+[^26]: Tim Richmond, ‘Project Catalyst - A virtuous cycle of Cardano ecosystem development’,  iohk.io/en/blog/posts/2022/05/10/project-catalyst-a-virtuous-cycle-of-cardano-ecosystem-development-investing-in-great-ideas-to-make-positive-real-world-changes/
+[^27]: Dr Dor Garbash, ‘Project Catalyst; introducing our first public fund for Cardano community innovation’, iohk.io/en/blog/posts/2020/09/16/project-catalyst-introducing-our-first-public-fund-for-cardano-community-innovation/
+[^28]: Catalyst Telegram Channel, t.me/cardanocatalyst
 [^29]:
 [^30]:
+[^31]:
+[^32]:
+[^33]:
+[^34]:
+[^35]:
+[^36]:
+[^37]:
+[^38]:
+[^39]:
+[^40]:
