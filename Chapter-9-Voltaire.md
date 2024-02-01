@@ -253,10 +253,64 @@ Catalyst also partnered with the Financial Times and Seedstars (seedstars.com) t
 
 ## The Cardano cFund
 
+The cFund, which was first unveiled at the 2020 Shelley summit, is an early-stage investment fund that focuses on creative firms on Cardano. Wave Financial, in collaboration with IOG, manages the cFund, a crypto-native hedge fund. The fund uses an early-stage venture approach to invest in creative technological firms that are building Cardano-based apps, services, and products, as well as other R&D projects that IOG is working on.
+
+**The ‘c’ in cFund**
+
+The letter ‘c’ in the name relates to the mathematics word ‘coefficient,’ which refers to a variable’s multiplier. cFund is positioned to provide a multiplier effect in terms of growth and reach for its portfolio firms by using both IOG’s and Wave Financial’s subject knowledge and industry relationships.
+
+**Services offered**
+
+The cFund serves as a funding provider, adviser, and partner to its portfolio firms and the greater Cardano ecosystem. cFund delivers access and direction to its portfolio by using IOG and Wave Financial resources, reputation, knowledge, and network. cFund is a great believer in adding value to its investments and strives to be the first port of call for management teams.
+
+According to IOG’s foundational philosophy of ‘cascading disruption,[^39] most of the structures that make up global financial, governance, and social systems are inherently unstable, and slight disturbances may generate a ripple effect that radically reconfigures the system. The purpose of cFund is to find and fund solutions that bring these disparities together in a fair and transparent way for all participants. While other cryptocurrencies[^40] have strong ties to Silicon Valley, Cardano is innovating with Catalyst acting as its own ‘built in’ funding mechanism.
+
+COTI, a decentralized and scalable payments network for the e-commerce sector, was cFund’s first investment in this area. 
+
+Another example is Occam.Fi, a suite of DeFi solutions optimized for Cardano. Their initial product is a decentralized financing platform. The next generation of DeFi apps will be able to raise funding utilizing the Cardano blockchain thanks to this launchpad. 
+
+**October 16, 2020. …There are a lot of different funds so could you explain to us what is DC fund, cFund and the Cardano Foundation fund?** CH:[^41]
+
+>So, the DC fund is what we’ve termed the funds that are coming out of Catalyst… and those are grant models … Cardano doesn’t have agency, so we can’t own land, it can’t have intellectual property… it can’t have equity, these types of things …so when it gives out funding… It's like when the National science foundation (NSF) gives out funding, or DARPA[^42] gives out funding …where it’s funding the development of something because we, as a society, have determined that that is a good idea.
+>
+> So, for example when NSF gives research for theoretical physics …it says we, as a society, would like our brilliant physicist to be well funded so that they can figure out how time works and gravity works and so forth …but there’s no money that comes out of that …or these things but there’s a social benefit, that potentially could be leveraged over time to make the country better… Perhaps we invent anti-gravity at some point …. but it’s not the primary goal.
+>
+>So, we look at DC fund like that …. where we say it’s a ‘return on intention’. Grants are coming through, and the goal is to make Cardano better…. but it’s not to make Bob a millionaire, or something like that…
+>
+>cFund is a venture capital arm of my company and Waves[^43]… we’re working together and setting all of that up and basically that’s going to be where you run a project and you come to Charles and the others who are involved with that… you say, ‘I would like you to invest in my company… and give me the resources I need to get it to the next level…. and then we would look at you like any venture capitalist would look at you…. ask you the same questions Andreessen Horowitz (a16z.com) will ask you, or Kleiner Perkins (kleinerperkins.com) will ask you and so forth …and if we determine it’s a good investment, I’ll open up the checkbook and cut a check and send your way and we get equity back for that, because that’s a private investment.
+>
+>Then the Cardano Foundation they have something called the CCCI, Commercially Critical Cardano Infrastructure… and that’s saying there needs to be some product validation and bootstrapping, that Cardano really is competitive, or capable of doing the things that Ethereum and EOS and Tezos and Algorand do.
+>
+>So we’re going to give out some very specific very targeted grants to help get the ecosystem along …okay the DC Fund, the community is in charge of that … the grants from the (Cardano) Foundation, the Foundation’s in charge of that and they’re very directed towards catching us up and getting us where we need to go to compete with Ethereum and the rest of the gang …and the cFund is a good old-fashioned investment for things that I think we ought to have on our ecosystem.
+
+## dReps
+
+IOG introduced the notion of delegating your voting rights to a Delegate Representatives (dReps), and urged people interested to register during a Fund8 Project Catalyst Town Hall.[^44]  
+
+The ongoing growth of the Cardano ecosystem is great news but, on the other hand, offers a problem. The community’s obligation to examine and vote on ideas grows as the quantity of proposals grows. A new approach was needed to guarantee that all ideas get the attention they deserve, as well as to support further development.
+
+Ada holders may give their votes to one or more dReps through delegation. This provides the more passive voter with a chance to have their voice heard, but now across a larger number of proposals than they could read and evaluate personally.
+
+Catalyst dReps will vote on most Project Catalyst proposals, improving the quality of decision-making within each Fund. dReps will collaborate to develop policy, gather and evaluate data, consult with experts, and ultimately vote on a variety of initiatives and issues proposed by the community. If you’d like to get involved, you can join the dRep pioneers here.[^45]  
+
+**Fund9**
+
+Catalyst’s relentless, Borg-like momentum continued with Fund9 opening in June 2022. There is typically something new and innovative with the arrival of each fund, and this time Cardashift[^46] joined the Catalyst Natives program.[^47] Their challenge[^48] was based on value creation through positive impact-oriented projects. Cardashift listed Cardano’s ‘green’ credentials, its focus on Africa and its deterministic nature among their reasons for partnering with Catalyst in their medium blog post.[^49] As with every quarterly fund, the rewards for successful proposals increased. The Fund9 launch guide[^50] outlined how the 16m ada was to be allocated. 
+
+## Tactical Pause for Catalyst
+
+Although Catalyst has been a huge success in many ways, it’s not perfect. There were also questions[^51] asked of Fund6 winner Cardax DEX after launching on Milkomeda (dcSpark’s Cardano sidechain) instead of Cardano mainchain as initially proposed. There were rumblings of discontent when one the 205 winners of Fund9 was a controversial proposal called *Daedalus Turbo*. The problem statement of the proposal read: 
+
+>Daedalus, the decentralized Cardano wallet, is painfully slow, taking a whole day to sync initially and hours to resync when used only occasionally—an unfavorable impression of Cardano for new users. 
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/rick.png "Rick tweet")
+
 
 
 **_To be uploaded soon..._**
 
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig96.png "figure 9.6")
+<br>**Figure 9.6:** Fund7 stats
 
 
 [^01]: **Dash** is an open source cryptocurrency and is a form of decentralized autonomous organization (DAO) run by a subset of users, called ‘masternodes’. It is an altcoin that was forked from the Bitcoin protocol. The currency permits fast transactions that can be untraceable.
@@ -297,5 +351,26 @@ Catalyst also partnered with the Financial Times and Seedstars (seedstars.com) t
 [^36]: CIP Editor funded, twitter.com/SebastienGllmt/status/1525139808926191618
 [^37]: ‘FT x Cardano Blockchain Challenge’, seedstars.com/community/entrepreneurs/programs/ft-cardano-blockchain-challenge/
 [^38]: Post Conference recap, thoughts and an AMA 04/21/2019, youtu.be/pBXZVrBQ6U8?t=5003
-[^39]:
-[^40]:
+[^39]: Cardano | The First Domino, youtube.com/watch?v=W7gGO058rtU
+[^40]: Crypto Startup Solana Raises $314 Million to Develop Faster Blockchain, wsj.com/articles/crypto-startup-solana-raises-314-million-to-develop-faster-blockchain-11623240001
+[^41]: Entrevista CEO IOG Charles Hoskinson e Maria Carmo #Cardano #ada Delegue na CARDs ou @cardanistas, youtu.be/rHu6oLTZ7kI?t=3061
+[^42]: DARPA: The Defense Advanced Research Projects Agency is a research and development agency of the United States Department of Defense responsible for the development of emerging technologies for use by the military
+[^43]: Waves, everipedia.org/wiki/lang_en/waves-cryptocurrency
+[^44]: Project Catalyst Fund8 launch - Town Hall #1 February 2022, youtube.com/watch?v=rNZJvzjgduM
+[^45]: Catalyst dRep applications, bit.ly/3rSyHvP
+[^46]: Cardashift is a community-run launchpad that raises funds, builds and accelerates startups that are solving social and environmental issues.
+[^47]: Fernando Sanchez, ‘Introducing Catalyst Natives - How any business can leverage the Cardano innovation engine’, iohk.io/en/blog/posts/2021/11/10/introducing-catalyst-natives-how-any-business-can-leverage-the-cardano-innovation-engine
+[^48]: Fund9 Catalyst Natives Cardashift challenge: demonstrating and monetizing impact, iohk.io/en/blog/posts/2022/06/01/fund9-catalyst-natives-cardashift-challenge-demonstrating-and-monetizing-impact/
+[^49]: The 3 reasons why we choose Cardano to maximize our impact, cardashift.medium.com/the-3-reasons-why-we-choose-cardano-to-maximize-our-impact-28b2e914e894
+[^50]: Fund9 launch guide, drive.google.com/file/d/1kJ8F6doXUIJQRiA5pmSMxXc9feVfF21y/view
+[^51]: @cwpaulm questions CardaxDEX, twitter.com/cwpaulm/status/1597666144059432960?s=20&t=HBr5f_ZkSoMQ4rzv0eIdOA
+[^52]: Daedalus Turbo gap analysis, twitter.com/RichardMcCrackn/status/1575057817181966337?s=20&t=XXfR1C0qB9jx6InYxgpQEA
+[^53]: Repositioning Project Catalyst ahead of the next funding round, iohk.io/en/blog/posts/2022/11/01/repositioning-project-catalyst-ahead-of-the-next-funding-round/
+[^54]: Systemization of Knowledge (SoK) papers evaluate, systematize, and contextualize existing knowledge.
+[^55]: Kiayias, Lazos (2022), 'SoK: Blockchain Governance', arxiv.org/pdf/2201.07188.pdf
+[^56]:
+[^57]:
+[^58]:
+[^59]:
+[^60]:
+[^61]:
