@@ -386,9 +386,28 @@ The paper lists **seven properties** by which to assess different requirements f
 [^53]: Repositioning Project Catalyst ahead of the next funding round, iohk.io/en/blog/posts/2022/11/01/repositioning-project-catalyst-ahead-of-the-next-funding-round/
 [^54]: Systemization of Knowledge (SoK) papers evaluate, systematize, and contextualize existing knowledge.
 [^55]: Kiayias, Lazos (2022), 'SoK: Blockchain Governance', arxiv.org/pdf/2201.07188.pdf
-[^56]:
-[^57]:
-[^58]:
-[^59]:
-[^60]:
-[^61]:
+[^56]: CIP 1694, github.com/cardano-foundation/CIPs/tree/master/CIP 1694
+[^57]: Co-building the gears of innovation through the relaunch of Project Catalyst with Fund10, projectcatalyst.io/blog/co-building-the-gears-of-innovation-through-the-relaunch-of-project-catalyst-with-fund10
+[^58]: Project Catalyst - Weekly Town Hall - #128, youtu.be/CaKQAhnOKbE?t=1819
+[^59]: Jormungandr Node, github.com/input-output-hk/jormungandr/blob/master/CHANGELOG.md
+[^60]: Project Catalyst Fund10 proposals: forging the road ahead, together, projectcatalyst.io/blog/project-catalyst-fund10-proposals-forging-the-road-ahead-together
+[^61]: IOG Catalyst Team : Ideascale replacement and web-browser based Voting Centre with liquid democracy aka “Catalyst Voices”, .lidonation.com/en/proposals/iog-catalyst-team-ideascale-replacement-and-web-browser-based-voting-centre-with-liquid-democracy-aka-catalyst-voices-f10
+[^62]: Project Catalyst - Weekly Town Hall - #140, youtube.com/watch?v=2f7v0x6xal0&t=2548s
+[^63]: Cardanopace on X, twitter.com/cardanopace/status/1694373619961393534?s=20
+[^64]: Cardano Project Catalyst: Dissecting the Imbalance in Voting Power, thecryptobasic.com/2023/09/05/cardano-project-catalyst-dissecting-the-imbalance-in-voting-power/
+[^65]: Quadratic voting is a collective decision-making procedure which involves individuals allocating votes to express the degree of their preferences, rather than just the direction of their preferences.
+[^66]: Quadratic Voting is not a silver bullet for Governance, forum.cardano.org/t/quadratic-voting-is-not-a-silver-bullet-for-governance/116135
+[^67]: Project Catalyst Milestone Module, milestones.projectcatalyst.io/
+[^68]: ‘From Prototype to Powerhouse: Catalyst Explorer in Fund 10 and beyond’, lidonation.com/en/posts/from-prototype-to-powerhouse-catalyst-explorer-in-fund-10-and-beyond
+[^69]: ‘Cardano For the M₳sses - Japanese Book’, lidonation.com/en/proposals/cardano-for-the-marasses-japanese-book-f10
+[^70]: Johnny Nguyen and Dor Garbash Fund10 proposal, lidonation.com/de/proposals/for-the-community-by-the-community-optimizing-the-roi-of-catalyst-through-listening-to-builders-expert-analysis-and-assessment-of-cardanos-community-g-f10
+[^71]: Cardano Catalyst Fund 11 is Now Open With Big Changes From Fund 10, youtu.be/7hKZWYC7YHQ?si=KrShWlibgtAoG5wX
+[^72]: @santicarmuega on Fund11 changes, twitter.com/santicarmuega/status/1730977552519270712?s=46
+[^73]: @ravanave views on Catalyst, twitter.com/ravanave/status/1730363424796737649?s=46
+[^74]: Catalyst Working Groups Research & Scoping Analysis by IOG Catalyst Team, Rare Evo, and Sustainable ADA, cardano.ideascale.com/c/idea/113181
+[^75]: IOHK youtube channel, youtube.com/c/IohkIo
+[^76]: LIDO NATION Catalyst Explorer, lidonation.com/en/catalyst-explorer
+[^77]: CIP 1694, github.com/cardano-foundation/CIPs/tree/master/CIP 1694
+[^78]:
+[^79]:
+[^80]:
