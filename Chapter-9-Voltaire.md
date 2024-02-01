@@ -224,6 +224,35 @@ Catalyst Natives is an opportunity for businesses of all sizes to have access to
 
 ## Later Funds
 
+Every Catalyst fund cycle has provided new, remarkable accomplishments. Fund7 was no different. 
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig96.png "figure 9.6")
+<br>**Figure 9.6:** Fund7 stats
+
+After the votes were tabulated and counted in Fund7, 269 additional initiatives[^33] were selected to get ada. Given that each of these projects was created in response to 24 real-world problems provided by the Cardano community, as well as one additional task issued by COTI, Cardano’s first Catalyst Native pioneer, these were impressive numbers. 
+
+This time around, over 52,500 wallets registered to vote, and community advisers reviewed over 900 proposals to assist voters make informed judgements. The number of ideas financed by the Cardano Treasury had almost quadrupled in a short period of time, reaching 575 projects. 
+
+The Cardano Treasury now contained roughly 800m ada in order to maintain and build the ecosystem. Many of the projects that were funded in previous rounds have now been completed and their end products were being showcased.[^34]
+
+**Fund8**
+
+Every three months, a new Project Catalyst innovation fund campaign launches, offering the chance to obtain resources from the Cardano Treasury. Fund8 offered $16m funding in ada.
+
+Fund8 results[^35] confirmed the momentum just keeps growing as voting turnout increased and a diverse range of projects were funded. One of the smallest amounts requested, and funded, was also one of the most significant. Sebastien Guillemot’s successful proposal[^36] meant he was the first CIP editor to be paid for his time. More editors followed, serving as stewards of the CIP process. 
+
+Catalyst also partnered with the Financial Times and Seedstars (seedstars.com) to launch the *FT x Cardano Blockchain Challenge* where selected startups participated in a 3-day Bootcamp and connected to Seedstars’ network of mentors. 24 startups were selected to participate in a 3-month Acceleration Program.’ More details are on Seedstar’s website.[^37]
+
+**April 21, 2019… Who pays? Who decides?** CH:[^38]
+
+>This is why it’s so incredibly important that you have a treasury system …and voting systems because right now here’s how the cryptocurrency space works and this is why things get so toxic ….you have a very small group of people who are developers, investors, big people who are actually building stuff in the space, the entrepreneurial class, developer class the infrastructure class… then you have the speculators which are everybody else …and they hold the currency, they’re fans of it, maybe even philosophically aligned with it …but they don’t have a voice, they can’t do anything …they’re just sitting there just hoping for things to materialize.
+>
+>…and then a subset of them maybe move into the other class when they have smart contracts or whatever… but the vast majority of them are there yet they have opinions about where things should go…what they should do …and so the key is to give them tools to organize… tools to vote… tools to discuss the philosophy and direction …to have teeth, not just ‘here’s my opinion’, but also when my opinion is let manifest and gets a democratic consent behind it …then that opinion will turn into money …that then can be used by the other class.
+>
+>All of a sudden everybody has power and actually has a voice ..and an opinion and you’re not just talking about when is this coming out, or what is is it that is coming out…you’re actually talking about where do we want to go, and how are we going to get there and the things we need to do to get there… who’s the best leader to get there… you can’t fork that…. you can fork the code and have another Treasury system…but it’s like saying well that big meetup group over there… I’m going to host my own meetup group and I’m going to copy everything… the same banners and the same catering and the same everything… it doesn’t mean other people are going to show up 
+
+## The Cardano cFund
+
 
 
 **_To be uploaded soon..._**
@@ -262,11 +291,11 @@ Catalyst Natives is an opportunity for businesses of all sizes to have access to
 [^30]: Catalyst Circle meeting minutes, catalyst-swarm.gitbook.io/catalyst-circle/minutes
 [^31]: Introducing Catalyst Natives - How any business can leverage the Cardano innovation engine, iohk.io/en/blog/posts/2021/11/10/introducing-catalyst-natives-how-any-business-can-leverage-the-cardano-innovation-engine/
 [^32]: ADA Pay, adapay.finance/
-[^33]:
-[^34]:
-[^35]:
-[^36]:
-[^37]:
-[^38]:
+[^33]: Fund 7 initiatives, drive.google.com/file/d/193GZulHuk0zhpTrMiLhcNC4OeEMoRyIa/view
+[^34]: Project Catalyst - Funded Projects Reporting (public MVP), docs.google.com/spreadsheets/d/1bfnWFa94Y7Zj0G7dtpo9W1nAYGovJbswipxiHT4UE3g/edit#gid=416498551
+[^35]: Fund 8 results, drive.google.com/file/d/1s3jCE7pmoUujy3ASMia-UhFl2KLi_hnf/view
+[^36]: CIP Editor funded, twitter.com/SebastienGllmt/status/1525139808926191618
+[^37]: ‘FT x Cardano Blockchain Challenge’, seedstars.com/community/entrepreneurs/programs/ft-cardano-blockchain-challenge/
+[^38]: Post Conference recap, thoughts and an AMA 04/21/2019, youtu.be/pBXZVrBQ6U8?t=5003
 [^39]:
 [^40]:
