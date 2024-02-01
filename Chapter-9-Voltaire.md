@@ -305,12 +305,30 @@ Although Catalyst has been a huge success in many ways, it’s not perfect. Ther
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/rick.png "Rick tweet")
 
+Many Cardano users felt aggrieved as the sum rewarded was large, with other projects missing out. Anyone conducting a basic ‘gap analysis,’ as SPO Rick McCracken tweeted,[^52] would probably arrive at the same conclusion that the project was not timely as years of research and product development were already devoted to Mithril. For anyone following Cardano, IOG’s *Lace* (lace.io) light wallet has been prioritized over Daedalus for some time.  
+
+From a user experience perspective, many people felt overwhelmed trying to track over a thousand proposals for a given fund on IdeaScale. Many promising projects have gone unfunded. It was generally welcomed by the community when IOG announced a ‘time out’ for Catalyst in a November 2022 blog post.[^53]
+
+As Catalyst took a break, there was a timely SoK[^54] research paper[^55] published just around this same time, reflecting on the state of governance in ten blockchains including Bitcoin, Ethereum and Cardano.
+
+The paper lists **seven properties** by which to assess different requirements for effective blockchain governance. 
+
+1. **Suffrage** deals with participation eligibility, how inclusive is the governance mechanism? 
+2. **Confidentiality**: are decision-makers’ inputs protected from ‘external influences’? 
+3. **Verifiability**: can decision-makers confirm their input has been considered in the output?
+4. **Accountability** relates to decision-makers being held accountable for their input
+5. **Sustainability** questions if decision-makers are suitably incentivised?
+6. **Pareto efficiency** asks ‘how well the intentions of the decision-makers can be turned into actions?’
+7. **Liveness** is a measure of how quickly a blockchain’s governance mechanism can produce outputs efficiently
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig97.png "figure 9.7")
+<br>**Figure 9.7:** The partition map of governance properties from the ‘SoK: Blockchain Governance’ paper
+
 
 
 **_The rest of the chapter will be uploaded soon..._**
 
-![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig97.png "figure 9.7")
-<br>**Figure 9.7:** ...
+
 
 
 [^01]: **Dash** is an open source cryptocurrency and is a form of decentralized autonomous organization (DAO) run by a subset of users, called ‘masternodes’. It is an altcoin that was forked from the Bitcoin protocol. The currency permits fast transactions that can be untraceable.
