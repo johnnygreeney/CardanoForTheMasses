@@ -307,10 +307,10 @@ Although Catalyst has been a huge success in many ways, it’s not perfect. Ther
 
 
 
-**_To be uploaded soon..._**
+**_The rest of the chapter will be uploaded soon..._**
 
-![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig96.png "figure 9.6")
-<br>**Figure 9.6:** Fund7 stats
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig97.png "figure 9.7")
+<br>**Figure 9.7:** ...
 
 
 [^01]: **Dash** is an open source cryptocurrency and is a form of decentralized autonomous organization (DAO) run by a subset of users, called ‘masternodes’. It is an altcoin that was forked from the Bitcoin protocol. The currency permits fast transactions that can be untraceable.
