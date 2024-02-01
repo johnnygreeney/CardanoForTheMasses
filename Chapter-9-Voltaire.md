@@ -174,7 +174,67 @@ There are a lot of moving parts to Catalyst. This graphic from IOG’s blog post
 
 ## Catalyst’s early funds 
 
+In Sept 2020, IOG announced the establishment of Project Catalyst’s first public fund, a milestone for Cardano in terms of on-chain governance, treasury, and community innovation.
 
+The public fund was launched after five months of intensive activity across two earlier pilot funds. The first experiment, dubbed ‘Fund 0,’ was conducted with the help of an IOG focus group. Fund1 was the first time the concept was shared with the Cardano community, enlisting the aid of over 50 people to help IOG construct the platform and procedures. While this voting round did not provide ‘real’ financing, it was a significant opportunity for the IOG team and the Cardano community to test and enhance the new process.
+
+There was a long way to go. However, with the help of the community, IOG sustained a steady rate of advancement. If Fund0 was the technical run through, then Fund1 was the dress rehearsal. Fund2, which was announced in September 2020,[^27] was the opening night when the community’s top performers fought for financing to bring their concept to fruition.
+
+**Funding great proposals**
+
+IOG’s pioneer group of 50 community members assisted them in identifying areas for improvement so that they could build and enhance the process before making it more broadly available. Clarifying the documentation and standards encouraged community members to participate more and submit proposals. 
+
+To that end, IOG worked on a guide to assist anybody in creating their best proposal possible for Fund2 and beyond. The community could access up to $250k worth of ada in the first public fund. 
+
+IOG started small, asking the community to respond to a challenge statement: ‘How can we encourage developers and entrepreneurs to create dApps and businesses on top of Cardano in the next six months?’ Funding proposals could address this with a broad range of concepts, including marketing campaigns and infrastructure development, as well as business planning and content production.
+
+The first step was to ‘examine the problem,’ which included asking members of the community for their input. Then, through a special Telegram chat channel,[^28] IOG urged everyone to submit their ideas to the innovation platform, where they could collaborate and debate.
+
+**The public votes**
+
+IOG put things to a vote after the phases of brainstorming, cooperation, and proposal. Proposals were evaluated on IdeaScale, or via a mobile voting application. When it came time to vote, everyone registered using the voting app. Each participant’s ‘right’ to vote is connected to their ada holdings, and voting will earn them further ada rewards. Voting works similarly to a ‘transaction,’ enabling all participants to cast a vote to say ‘yes’ or ‘no.’ 
+
+**How it works**
+
+Voltaire is a critical component of the Cardano ecosystem since it enables every ada holder to participate in decision making about the platform’s future development and contribute to the ecosystem’s growth. Project Catalyst is a critical first step in achieving such capacity.
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig95.png "figure 9.5")
+<br>**Figure 9.5:**  Catalyst ‘here’s how it works’
+
+Fund3 went live in January 2021, and with each fund, IOG wanted to grow the Catalyst community by encouraging more individuals to participate. Every funding round starts with a set of objectives. Each challenge symbolizes the Cardano community’s ‘intention,’ a common objective to accomplish. IOG likes to speak about ‘return on intention’ as a means of monitoring project success. Each challenge is intended to be wide enough to elicit both technical and general ideas while remaining focused. 
+
+Fund2 had a $250,000 ada pool, while Fund3 doubled that, awarding $500,000 in ada to proposers, voters, and community advisors. The breadth, amount of money, and community participation have all increased with each funding cycle. On the IdeaScale innovation platform in Feb 2021, there were 7,000 members and 1,800 active voters. Adoption was increasing by 10% per week.
+
+Fund4 was the most accessible and ambitious round yet, as well as the first million-dollar round — the ada pot used to finance Cardano development initiatives. The funding was used by proposal teams to create tools, construct dApps, establish developer education and training efforts, and much more. 
+
+IOG continued to make the project more available to the Cardano community during 2021 to promote participation. Voter registration increased considerably. The redesigned registration center was now completely connected with the Daedalus wallet. Yoroi lite wallet users could easily register via a browser plugin. After that, voters could finish the process using a specific mobile voting app, which can be downloaded on iOS or Android. Project Catalyst had risen to become the world’s biggest decentralized autonomous organization (DAO) in less than six months.
+
+## Catalyst Circle
+
+As Fund4 came to an end in July 2021, Catalyst had already proven itself as a one-stop hub for teamwork and decentralized innovation. However, this rapid expansion brought with it new obstacles. 
+
+Project Catalyst was gaining in contributions from increasingly different functional groups who were helping to bring the collective intelligence forward. Specifically, community advisors, funded-proposers, stake pool operators (SPOs), toolmakers & maintainers, all who contribute to Catalyst’s success and expansion.
+
+Project Catalyst gains from having a broader set of participants as it results in more diverse ideas and proposals. It also makes communication between all of these groups more difficult. Every cohort wants to be heard, and their thoughts and concerns need to be aired at the project level.
+
+These groups need representation and trustworthy leadership to advocate for them. Project Catalyst’s influence would be severely reduced if such representation was inadequate or non-existent. This is why the Catalyst Circle was created. Catalyst Circle[^29] was a ‘human sensor array’ that served as a representative body for all the Project Catalyst participants. The Circle kept track of Catalyst’s present state and future intentions for governance. Within the Catalyst ecosystem, it identified and discussed issues, objections, and possibilities. For example, the Circle might debate the amounts distributed to a fund, tweaks or conditions to incentive parameters, the Catalyst API, and so on.
+
+This activity gave an insight into the hopes, desires, needs, and worries of the community inside Project Catalyst by documenting meetings and collecting activities in a backlog available to everyone.[^30] The Circle was also in charge of choosing its own future form and designing the Circle election procedures. Catalyst Circle was paused after V4. It will likely restart, or resurface in a new form, with the learnings and experiences key to any future incarnations.  
+
+## Catalyst Natives 
+
+As part of Project Catalyst, the first Catalyst Natives pilot was launched in late 2021. Catalyst Natives allows any project to tap into the collective intelligence of the community to solve business challenges and outsource projects. Catalyst Natives gives decentralized innovation fund management to partners, some external to Cardano, aiming to develop their ecosystem by incentivizing innovators to assist in finding solutions to problems.
+
+**COTI, the first Catalyst Native**
+
+Catalyst Natives expands access to Project Catalyst to organizations outside of the Cardano ecosystem could now present challenges and give incentives and rewards to individuals who successfully satisfy the challenge with their suggested innovations.
+
+COTI presented the community[^31] with a novel technological challenge in this pilot, which was to create an innovative plug-in to be integrated with their existing ADA Pay system[^32] to support all the different e-commerce software solutions. 
+
+Following the pilot, IOG allowed Catalyst Natives to accept more challenges from other entities; however, these challenges were selected by IOG, in the first phase, to ensure they provide value to the Cardano ecosystem. Organizations proposing challenges via Natives will finance those ideas, thus Catalyst Natives will not utilize Cardano Treasury funds to pay for the initiatives that have been successfully voted on. COTI distributed $100k in COTI tokens in Fund7, which was in addition to the $8m ada fund.
+
+Catalyst Natives is an opportunity for businesses of all sizes to have access to a vault of ideas and the people who can help them come to life. Catalyst Natives is now aiming to assist Cardano ecosystem partners, and native asset token projects, handle particular pain points for which they either do not have the resources, or simply do not have a solution, and outsource them as Catalyst challenges for proposers to solve. 
+Later Funds
 
 
 
@@ -210,10 +270,10 @@ There are a lot of moving parts to Catalyst. This graphic from IOG’s blog post
 [^26]: Tim Richmond, ‘Project Catalyst - A virtuous cycle of Cardano ecosystem development’,  iohk.io/en/blog/posts/2022/05/10/project-catalyst-a-virtuous-cycle-of-cardano-ecosystem-development-investing-in-great-ideas-to-make-positive-real-world-changes/
 [^27]: Dr Dor Garbash, ‘Project Catalyst; introducing our first public fund for Cardano community innovation’, iohk.io/en/blog/posts/2020/09/16/project-catalyst-introducing-our-first-public-fund-for-cardano-community-innovation/
 [^28]: Catalyst Telegram Channel, t.me/cardanocatalyst
-[^29]:
-[^30]:
-[^31]:
-[^32]:
+[^29]: Introducing the Catalyst Circle, iohk.io/en/blog/posts/2021/07/08/introducing-the-catalyst-circle
+[^30]: Catalyst Circle meeting minutes, catalyst-swarm.gitbook.io/catalyst-circle/minutes
+[^31]: Introducing Catalyst Natives - How any business can leverage the Cardano innovation engine, iohk.io/en/blog/posts/2021/11/10/introducing-catalyst-natives-how-any-business-can-leverage-the-cardano-innovation-engine/
+[^32]: ADA Pay, adapay.finance/
 [^33]:
 [^34]:
 [^35]:
