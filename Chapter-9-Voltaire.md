@@ -376,7 +376,7 @@ There is plenty of feedback and suggestions coming from the community. For examp
 
 Despite its detractors, Catalyst continues to evolve and improve based on past learnings. There is a Fund11 proposal in flight to pave a way forward for different working groups.[^74] Meanwhile, Catalyst marches on with the following impressive stats at time of writing: 
 
-![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig97.png "figure 9.7")
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig98.png "figure 9.8")
 <br>**Figure 9.8:**  Project Catalyst stats Dec 14, 2023
 
 **Participating in Catalyst**
