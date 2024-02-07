@@ -324,6 +324,67 @@ The paper lists **seven properties** by which to assess different requirements f
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig97.png "figure 9.7")
 <br>**Figure 9.7:** The partition map of governance properties from the ‘SoK: Blockchain Governance’ paper
 
+The paper concludes that while each blockchain displays some of the properties, no blockchain meets all the requirements for effective governance. It was food for thought just before the dawn of the *Age of Voltaire*. 
+
+With the Catalyst pause after Fund9 and the *Age of Voltaire* still in its infancy, the Catalyst team introduced a new concept in the first Town Hall of 2023 called *Special Voting Events (SVE)* that leveraged Catalyst tooling. A SVE was a vote held that was unrelated to Catalyst fund cycles. It was a stopgap measure for obtaining community consent on important decisions before Catalyst resumed with Fund10 and new governance tools were being built to allow for polls and temperature checks. We learned in ScotFest 2022 presentations that Catalyst is merely a sighter for the Age of Voltaire, and 2023 would be about integrating tooling to ultimately facilitate the implementation of CIP 1694[^56] which we will discuss shortly. 
+
+**Fund10** 
+
+Catalyst made a welcome return with Fund10 in June 2023. The updates and changes were announced in a blog post.[^57] Catalyst’s Lead Architect, Stephen Johnson, walked through the details and demoed[^58] how the community could now start to interact with the ‘Catalyst continuous testnet’. 
+
+Up until Fund10, Catalyst was implemented as a mix of on-chain and off-chain components. Proposals lived on IdeaScale, supported by android and iphone voting apps and a dependence on the re-purposed Jormungandr[^59] node (previously used for the Incentivized Testnet). As the Voltaire era unfolds, the voting experience has moved into the growing list of light wallets, complemented by a new website, projectcatalyst.io.
+
+Fund10 saw 192 projects, from 100 unique proposers, receive a total of 50 million ADA in funding from the Cardano community. After the pause, deep in a bear market, ada holders were clearly hungry for Catalyst’s resumption with approximately 409,000 votes cast, a 12.48% increase compared to Fund9. 
+
+The most significant moment of Fund10 was that it was the first time the community could decide who should be in charge of Catalyst. The community voted for IOG to continue to provide services to the community as the Catalyst Fund Operator.[^60] 
+
+The Catalyst team’s proposal[^61] is to replace IdeaScale with ‘Catalyst Voices’. Michael Madoff, the Group Product Manager for Voltaire, joined Kriss Baird (Group Product Manager) for Town Hall #140[^62] to explain how Catalyst fits in the overall Voltaire roadmap era. Madoff explained:
+
+>We learned a lot about experiments with Community governance through everything that's happened in Catalyst and the contributions everyone here has made
+
+There was pushback from some proposers, for example on Twitter (X),[^63]  PACE posted: 
+
+>This is a massive concern as IOG has a direct incentive to remove competition from categories they are competing in.
+
+There was also an article[^64] highlighting that a very small fraction of the community has disproportionately large voting power and that up to 50% of wallet holders have virtually no influence, controlling only 1% of the voting power. 
+
+Some suggested Quadratic Voting[^65] could address this issue, while others rejected the suggestion. Adam Rusch posted his views that *Quadratic Voting is not a silver bullet for Governance* on Cardano Forum.[^66] 
+
+Each project team was now obliged to provide more transparency by formulating their 'Statement of Milestones,' using the Milestone Module,[^67] which monitors critical checkpoints throughout the project’s lifecycle. Projectcatalyst.io also had a full data refresh updating with all the Fund10 cohort data. This enabled users to track the progress of each funded project within the milestone program. LIDO NATION had previously blogged[^68] that “the hardest part of providing the Catalyst Explorer has been getting the data.” 
+
+The power and reach of Catalyst hit home for me personally, when a proposal[^69] to translate this book into Japanese was approved in Fund10. Another notable funded proposal[^70] was submitted by former IOG employees, Johnny Nguyen and Dor Garbash. Their project is *‘For the community, by the community: Optimizing the ROI of Catalyst through listening to builders, expert analysis and assessment of Cardano’s Community Grants Fund. Brought to you by Catalyst and Intersect MBO Architects.’*
+
+**Fund11**
+
+Updates to Fund11 were announced at the Dubai Cardano Summit in November 2023. Many of the changes addressed feedback from the community. The ‘downvote’ made a welcome exit, a cap of five proposals per person was introduced and proposers could not have anything projects open from Fund7 or earlier. Fund11 also saw the birth of ‘Working Groups’. It’s not clear how they will function just yet, but will likely be something similar to what *Catalyst Circle* was. Fund11 saw the following three categories:
+
+- Concept: for brand new ideas limited to a budget of 100K ada.
+- Solution: projects who already have at least a proof of concept for review, limited to 300K ada.
+- Product:  proposals with a product already in the market, limited to 750K ada.
+
+…each category had distinct tracks to focus the scope of submissions: 
+
+- Cardano Use Cases
+- Cardano Open: Developers
+- Cardano Open: Ecosystem
+- Catalyst Systems Improvements: Discovery
+- Catalyst System Improvements: Development
+
+Daniel Ribar (Community and Product at Project Catalyst) talked in depth about Fund11 in a *Cardano with Paul* interview.[^71] With the longtime Catalyst leadership team now voted in for another year to run affairs, the team clarified that they will apply fund rules. Proposals submitted incorrectly, in the wrong track or out of scope, will be notified with guidance on how to come inline, otherwise they risk being withdrawn. 
+
+There is plenty of feedback and suggestions coming from the community. For example, Santiago Carmuega, of TxPipe, explained his case[^72] for an alternative parameter that would be more effective than max number of proposals per team. Small details can have a big impact on a business model of small teams following an open-source software philosophy. Founder of *Axo*, Jarek Hirniak[^73] felt Catalyst needs to be more open to ‘bold experiments’. 
+
+Despite its detractors, Catalyst continues to evolve and improve based on past learnings. There is a Fund11 proposal in flight to pave a way forward for different working groups.[^74] Meanwhile, Catalyst marches on with the following impressive stats at time of writing: 
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig97.png "figure 9.7")
+<br>**Figure 9.8:**  Project Catalyst stats Dec 14, 2023
+
+**Participating in Catalyst**
+
+There are several ways to participate in Project Catalyst. Submit a proposal, vote, review, comment or become a mentor. Registering an account on the collaboration platform is the first step. Another option is to join the Project Catalyst community at TownHall every Wednesday, which is live broadcast on IOG’s YouTube Channel.[^75] You can monitor each fund and catch up on previously funded proposals on projectcatalyst.io, or alternatively with LIDO NATION’s excellent Catalyst Explorer.[^76]
+
+## The Age of Voltaire
+
 
 
 **_The rest of the chapter will be uploaded soon..._**
