@@ -410,6 +410,12 @@ The vision for the MBO, was outlined by Johnny Nguyen (former Director of *Proje
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig99.png "figure 9.9")
 <br>**Figure 9.9**: based on slide from ScotFest
 
+The MBO, which would become known as *Intersect*,[^80] is the anchor institution for Voltaire, but not the only one. IOG has been steadily building out its presence in universities all over the globe, as well as opening the Hoskinson Center for Formal Mathematics,[^81] the Zero-Knowledge Lab[^82] not forgetting the Edinburgh Decentralization Index (EDI).[^83] Other institutions and MBOs will likely follow with different focuses and priorities. 
+
+*‘Institutions… their only job is to take complexity and turn it into simplicity’* - CH
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig910.png "figure 9.10")
+<br>**Figure 9.10:**  Slide from Michael Madoff’s (Voltaire Product Manager) talk at ScotFest, Note: ‘7. Info’ was later added as a ‘Proposal’
 
 
 **_The rest of the chapter will be uploaded soon..._**
