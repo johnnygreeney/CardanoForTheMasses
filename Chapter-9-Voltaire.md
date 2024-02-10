@@ -385,6 +385,31 @@ There are several ways to participate in Project Catalyst. Submit a proposal, vo
 
 ## The Age of Voltaire
 
+CIP 1694[^77] was named after Voltaire’s year of birth. It is arguably the most important CIP to date as it is a proposal to bootstrap the *Age of Voltaire*. Co-authored by Charles Hoskinson, it is the first CIP he has gotten directly involved with. It’s clear a lot of thought went into it, and it’s intentionally written as a transitional, living document.
+
+When Cardano was formed, there was a tripartite structure with Emurgo, Cardano Foundation (CF) and IOG with remits for ecosystem growth, governance and engineering respectively. It was always the intention to move to a members-based organization (MBO) that would manage the bureaucracy of protocol governance. It was hoped originally that the Swiss-based CF would be this entity but due to limitations with the stiftung[^78] structure, it was not viable. 
+
+CIP 1694 is the fruit of years of research. IOG have been working on the idea of a decentralized update system for some time. For example, they wrote a paper *Updateable Blockchains*[^79] with the European Union, with a Horizon 2020 grant, to explore ways to implement this vision. 
+
+Early in 2022, IOG and the CF held workshops to hammer out a way forward for the Voltaire era. The first question was ‘What is good governance?’. Charles Hoskinson explained in his ScotFest keynote that the answer was based on three different categories:
+
+1. **The idea of representation** …did you consent to something? There is direct representation where you personally voted on something, and **delegated authority** where you hand someone else your vote. In CIP 1694, this role is called a **DRep, a delegated representative**. This concept was already introduced in a similar form in project Catalyst. IOG like to plant seeds and telegraph upcoming features. Wisdom comes from testing and experimenting with ideas in a live environment. IOG has learnt a lot from 3 years of Catalyst funding rounds. 
+
+Governance needs some notion of rules, usually called a **constitution**. These are the guardrails that provide some degree of stability. The exciting thing about a constitution, in a blockchain setting, is that it can be machine understandable. Formal specifications can be the blueprints for Cardano, which a computer can understand to the extent it can integrate with an update system. Once a voting system is in place, a constitution can be ratified, hashed and embedded into a transaction. You now have the option to sign a type of ‘end user agreement’ by signing a transaction. 
+
+**Institutions** are generally a target of decentralization. If we are ‘killing the middleman’, why would institutions matter? Institutions, at their best, set standards and provide a review process from domain experts. Institutions are essential for good governance as they are the custodians of knowledge and best practices. People can be biased, sometimes we need objective neutral bodies to provide guidance. After much consideration, it was decided the most important ‘anchor’ institute would be a **members-based organization (MBO)** which should operate similar to other open source initiatives like the Linux Foundation, or the Cloud Native Computing Foundation (CNCF).
+
+**Who, or what is the MBO?**
+
+The MBO is a point of aggregation to bring together all the different groups: over 3,000 stake pool operators, the Cardano Ambassadors, the 1,300+ projects building on Cardano, open-source projects running on Cardano (the Node, Mithril, Hydra, dcSpark, TxPipe.io, ogmios.dev, etc), IOG, CF, Emurgo, all ada holders, etc. The members will own and run the MBO, staffing the steering committees. The goal of Voltaire is to bring these moving parts together. As Charles Hoskinson stated in his keynote: “IO is not running the show, we haven't been for a long time...”
+
+The vision for the MBO, was outlined by Johnny Nguyen (former Director of *Project Constellation* at IOG) at ScotFest:
+
+>Serve as the aggregation point of the entire Cardano community and its members. The members-based organization aims to uncover the community's pains and desires, facilitating the development of strategies to address them, and attracting firms and individuals with a capacity and the capability to do so.
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig99.png "figure 9.9")
+<br>**Figure 9.9**: based on slide from ScotFest
+
 
 
 **_The rest of the chapter will be uploaded soon..._**
@@ -469,37 +494,84 @@ There are several ways to participate in Project Catalyst. Submit a proposal, vo
 [^75]: IOHK youtube channel, youtube.com/c/IohkIo
 [^76]: LIDO NATION Catalyst Explorer, lidonation.com/en/catalyst-explorer
 [^77]: CIP 1694, github.com/cardano-foundation/CIPs/tree/master/CIP 1694
-[^78]:
-[^79]:
-[^80]:
-[^81]:
-[^82]:
-[^83]:
-[^84]:
-[^85]:
-[^86]:
-[^87]:
-[^88]:
-[^89]:
-[^90]:
-[^91]:
-[^92]:
-[^93]:
-[^94]:
-[^95]:
-[^96]:
-[^97]:
-[^98]:
-[^99]:
-[^100]:
-[^101]:
-[^102]:
-[^103]:
-[^104]:
-[^105]:
-[^106]:
-[^107]:
-[^108]:
-[^109]:
-[^110]:
-[^111]:
+[^78]: A stiftung is a foundation which exists to give effect to the stated, non-commercial wishes of its founder, as set out in a foundation deed and the articles of association (statutes).
+[^79]:  Ciampi, Karayannidis, Kiayias and Zindros (2020), 'Updatable Blockchains', iohk.io/en/research/library/papers/updatable-blockchains/
+[^80]: Intersect ‘Uniting the Cardano Ecosystem’, intersectmbo.org
+[^81]: Carnegie Mellon Receives $20 Million to Establish Hoskinson Center for Formal Mathematics, cmu.edu/news/stories/archives/2021/september/hoskinson-center-for-formal-mathematics.html
+[^82]: Cardano builder IOG and University of Edinburgh launch Zero-Knowledge Lab to drive greater blockchain scalability and security, iohk.io/en/blog/posts/2022/11/18/cardano-builder-iog-and-university-of-edinburgh-launch-zero-knowledge-lab-to-drive-greater-blockchain-scalability-and-security/ 
+[^83]: Cardano builder IOG and University of Edinburgh to create first ever index to provide industry standard metric for crypto decentralization, iohk.io/en/blog/posts/2022/11/18/cardano-builder-iog-and-university-of-edinburgh-to-create-first-ever-index-to-provide-industry-standard-metric-for-crypto-decentralization/ 
+[^84]: Charles Hoskinson: Crypto regulations & policy, Importance of stablecoins & the future of Cardano, youtu.be/uEV8tQ6z87k?si=iVazdagl5JWZez3q&t=1983 
+[^85]: Charles Hoskinson - Book about Decentralized Governance, youtube.com/watch?v=kutZ41J-tTU 
+[^86]: github.com/input-output-hk/cardano-ledger/blob/8884d921c8c3c6e216a659fca46caf729282058b/eras/babbage/test-suite/cddl-files/babbage.cddl#L56 
+[^87]: Tricameralism is the practice of having three legislative or parliamentary chambers. It is contrasted with unicameralism and bicameralism, each of which is far more common 
+[^88]: ScotFest fireside chat with Joel Telpner, youtube.com/watch?v=YvTfSx6pv9Y 
+[^89]: @KtorZ ‘delay is good’, twitter.com/_KtorZ_/status/1538101313564811265?s=20&t=Kygsq-InxS6AO0XhjFfr8g 
+[^90]: First Principles: Research for the Future, youtu.be/MVuweooiXPI?t=2280 
+[^91]: Ledger team updates, input-output-hk.github.io/cardano-updates/2023-01-19-ledger 
+[^92]: Road to a Polyglot Ecosystem for Cardano, youtube.com/watch?v=skcCg1WaedA 
+[^93]: Canonical, in computer science, is the standard state or behavior of an attribute. This term is borrowed from mathematics, where it is used to refer to concepts that are unique and/or natural. 
+[^94]: Agda is a dependently typed functional programming language. Charles Hoskinson referred to it as 'Super Haskell' 
+[^95]: IO ScotFest Keynote with Charles Hoskinson, youtu.be/tbtkClr3Y3I 
+[^96]: Staking and Regulation, youtube.com/live/J7y2tvpHY5w?feature=share&t=412 
+[^97]: Contingent Staking (Part 2), youtube.com/watch?v=C_a9F0aSUSk
+[^98]: CIP 1694: An explainer, youtube.com/watch?v=obFeC2JS_IQ&t=5s
+[^99]: Interactive map of 1694 workshops, cip1694.intersectmbo.org/
+[^100]: Cardano Governance Updates: Community Input, Voltaire Phase, and CIP 1694 Updates, forum.cardano.org/t/cardano-governance-updates-community-input-voltaire-phase-and-CIP 1694-updates/115878
+[^101]: Minimal Viable Governance, forum.cardano.org/t/minimal-viable-governance/115621
+[^102]: CPS 0007 - Volaire Era Governance, github.com/cardano-foundation/CIPs/pull/481
+[^103]: CPS 0006 - Governance Security, github.com/cardano-foundation/CIPs/pull/491
+[^104]: Governance Security Workshops, twitter.com/RichardMcCrackn/status/1650135262574395392?s=20
+[^105]: Entering Voltaire: on-chain poll for SPOs, cardanofoundation.org/en/news/entering-voltaire-on-chain-poll-for-spos/
+[^106]: CIP-0094? | SPO On-chain Polls #496, github.com/cardano-foundation/CIPs/pull/496
+[^107]: Cardano Forum SPO-Poll threads, forum.cardano.org/tag/spo-poll
+[^108]: Cardano Improvement Proposal - 1694: Can Decentralized Communities Make Superior Decisions?, medium.com/@photrek/cardano-improvement-proposal-1694-ca971194eb20
+[^109]: A plutocracy is a state or society governed by the wealthy
+[^110]: Reaction to CIP 1694 status update, github.com/cardano-foundation/CIPs/pull/380#issuecomment-1615285365
+[^111]: Edinburgh CIP 1694 workshop Miro Board, miro.com/app/board/uXjVM7H7URo=/
+[^112]: CIP-0100? | Governance Metadata, github.com/cardano-foundation/CIPs/pull/556
+[^113]: CIP-95, cips.cardano.org/cip/CIP-0095
+[^114]: CIP-95, github.com/Ryun1/CIPs/blob/governance-wallet-connector/CIP-0095/README.md#open-questions
+[^115]: Cardano Ballot Event on CIP 1694, intersectmbo.org/news/intersect-announces-cardano-ballot-on-future-governance
+[^116]: Cardano Foundation Wallet Connector, github.com/cardano-foundation/cardano-connect-with-wallet
+[^117]: Vacuumlabs Fund10 Proposal, milestones.projectcatalyst.io/projects/1000108
+[^118]: Intersect Roadmap, intersectmbo.org/roadmap
+[^119]: Summon Platform Poll, tempcheck.smmn.app/poll
+[^120]: Cardano Ballot, github.com/cardano-foundation/cf-cardano-ballot
+[^121]: A ‘work package’ is like a procurement brief capturing the requirements that need vendor support to deliver. 
+[^122]: Latest Cardano and Crypto Developments with Charles Hoskinson, 14 Dec 2023, twitter.com/i/spaces/1YqxoDPoMdaKv
+[^123]: IOG appoints W. Sean Ford as CEO of newly created stablecoin venture, iohk.io/en/blog/posts/2023/10/23/iog-appoints-w-sean-ford-as-ceo-of-newly-created-stablecoin-venture/
+[^124]: Cardano DeFi Alliance, cardanodefialliance.org/
+[^125]: NFT Guild, nft-guild.io/
+[^126]: UTXO Alliance, utxo-alliance.org/
+[^127]: Parameters Committee Updates, forum.cardano.org/c/governance/parameters-committee-updates/220
+[^128]: Matthew Capps, Protocol Change Proposal-001 tweet,  twitter.com/cryptstitution/status/1725745468821344432?s=46
+[^129]: Adam Rusch, twitter.com/AdamRusch
+[^130]: Transparency for Governance, youtu.be/a1DoWRyMVw4?si=FDRObWts8x56xnbR&t=152
+[^131]: Initial draft of governance policy, github.com/IntersectMBO/community/pull/1
+[^132]: Intersect discord server, discord.com/invite/Gr7FhzaVrk
+[^133]: Cardano Foundation 2023 Products to Advance Blockchain, cardanofoundation.org/en/news/cardano-foundation-2023-products-to-advance-blockchain/
+[^134]: Ledger Synch, cardanofoundation.org/en/news/accessing-cardano-blockchain-data-with-ledger-sync/
+[^135]: Identity wallet, identity.cardanofoundation.org/
+[^136]: Cardano Explorer, beta.explorer.cardano.org/en/
+[^137]: Aiken, cardanofoundation.org/en/news/aiken-the-future-of-smart-contracts/
+[^138]: Kupo, github.com/CardanoSolutions/kupo#readme
+[^139]: Ogmios, ogmios.dev/
+[^140]: Merkle Tree implementation in Java / Aiken, github.com/cardano-foundation/merkle-tree-java
+[^141]: Cardano Conversions Utility, github.com/cardano-foundation/cf-cardano-conversions-java
+[^142]: hydra-java, github.com/cardano-foundation/hydra-java
+[^143]: Releasing an open source rewards calculation, cardanofoundation.org/en/news/releasing-an-open-source-rewards-calculation/
+[^144]: Mateusz Czeladka post, linkedin.com/posts/mateuszszczap_github-cardano-foundationcf-cardano-ballot-activity-7138582045655568385-K6gY/ 
+[^145]: SanchoNet, sancho.network/
+[^146]: Barataria was a fictional island awarded to Sancho Panza as a prank in Part II of Cervantes' novel Don Quixote
+[^147]: SanchoNet discord channel, discord.com/channels/826816523368005654/1128361520514994178
+[^148]: Mike Hornan, twitter.com/Hornan7
+[^149]: Mike Hornan SanchoNet tutorials, youtube.com/@hancoeur/videos
+[^150]: Adam Dean, twitter.com/adamKDean
+[^151]: Blockfrost, twitter.com/blockfrost_io
+[^152]: Ryan Williams, github.com/Ryun1
+[^153]: Serialization converts the state of an object into a byte stream. Deserialization is the reverse process.
+[^154]: Emurgo Cardano Serialization Library, github.com/Emurgo/cardano-serialization-lib
+[^155]: Mithril on SanchoNet, github.com/input-output-hk/mithril/issues/1173
+[^156]: NFTxLV, nftxlv.com/
+[^157]: GovTool documentation, docs.sanchogov.tools/about/sancho-govtool-testing
+[^158]: Closing Keynote- Looking Ahead to 2024 and Beyond, youtu.be/OzLdZxkfAeQ?si=hmL23uC9u8dCVBnT&t=846
