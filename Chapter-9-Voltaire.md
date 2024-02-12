@@ -412,25 +412,25 @@ The vision for the MBO, was outlined by Johnny Nguyen (former Director of *Proje
 
 The MBO, which would become known as *Intersect*,[^80] is the anchor institution for Voltaire, but not the only one. IOG has been steadily building out its presence in universities all over the globe, as well as opening the Hoskinson Center for Formal Mathematics,[^81] the Zero-Knowledge Lab[^82] not forgetting the Edinburgh Decentralization Index (EDI).[^83] Other institutions and MBOs will likely follow with different focuses and priorities. 
 
-*‘Institutions… their only job is to take complexity and turn it into simplicity’* - CH
+*‘Institutions… their only job is to take complexity and turn it into simplicity’* - CH[^84]
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig910.png "figure 9.10")
 <br>**Figure 9.10:**  Slide from Michael Madoff’s (Voltaire Product Manager) talk at ScotFest, Note: ‘7. Info’ was later added as a ‘Proposal’
 
-The CIP is worthy of a book in its own right, and Hoskinson has often stated he would like to write a book on governance.[^84] Like all CIPs, CIP 1694 is a living document which updates and evolves with feedback. While constitutions have been written before, we are entering uncharted waters as nothing on this scale has been attempted in the crypto space. Liquid democracy is not a new concept, but there are few examples of successful implementations. CIP 1694’s motivation is to bootstrap the Voltaire era, to integrate new and existing on-chain and off-chain components to self-govern the ecosystem. The ultimate goal is to have a governance layer on top of Cardano that is fully, end-to-end, on-chain. 
+The CIP is worthy of a book in its own right, and Hoskinson has often stated he would like to write a book on governance.[^85] Like all CIPs, CIP 1694 is a living document which updates and evolves with feedback. While constitutions have been written before, we are entering uncharted waters as nothing on this scale has been attempted in the crypto space. Liquid democracy is not a new concept, but there are few examples of successful implementations. CIP 1694’s motivation is to bootstrap the Voltaire era, to integrate new and existing on-chain and off-chain components to self-govern the ecosystem. The ultimate goal is to have a governance layer on top of Cardano that is fully, end-to-end, on-chain. 
 
 **Where we are – 5 out of 7 system**
 
 At time of writing, governance transactions (eg. Hard forks, parameter changes, etc.) require a signature from at least five out of the seven Cardano governance (Genesis) keys, currently held by the three founding entities. This process was always intended to be an ephemeral form of governance as we got through the earlier eras of the roadmap before Voltaire. There have until now currently been two types of governance transaction:
 
-- Protocol parameter updates using transaction field nº6 of the transaction body[^85]
+- Protocol parameter updates using transaction field nº6 of the transaction body[^86]
 - Movements of the treasury and the reserves using Move Instantaneous Rewards (MIR) certificates
 
 **Terminology & Concepts**
 
 The CIP introduces some new terms. First there is a **governance action** which any ada holder can submit. Three individual groups then vote to ratify, or drop, the governance action.
 
-The three groups that form this tricameral[^86] legislative body:
+The three groups that form this tricameral[^87] legislative body:
 
 - A constitutional committee, 
 - DReps (same name but different role to Catalyst dReps).
