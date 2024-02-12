@@ -483,7 +483,7 @@ Also remember the SPOs demonstrated another aspect of Cardano’s decentralizati
 
 The CIP favors voting by stake over votes per person. One of the most important aspects of CIP 1694 is the notion of ‘one Lovelace, one vote’.Voting per person requires some notion of identity verification, so there is proof someone is who they claim to be. The CIP explains that a fully decentralized solution for this is currently not possible. With regulation varying by jurisdiction, it is prudent to steer clear of any mechanism that can be construed as ‘centralized’ by willfully ignorant parties. 
 
-That said, the CIP should be open to change in future as decentralized IDs (DIDs) evolve. The World Wide Web Consortium (W3C) announced that Decentralized Identifiers (DIDs) is now an official web standard in summer 2022. IOG Chief Scientist Aggelos Kiayias also inferred they will inevitably be part of the 4th generation of blockchains.[^89] More about Decentralized Identifiers later.
+That said, the CIP should be open to change in future as decentralized IDs (DIDs) evolve. The World Wide Web Consortium (W3C) announced that Decentralized Identifiers (DIDs) is now an official web standard in summer 2022. IOG Chief Scientist Aggelos Kiayias also inferred they will inevitably be part of the 4th generation of blockchains.[^90] More about Decentralized Identifiers later.
 
 **Where we are going**
 
