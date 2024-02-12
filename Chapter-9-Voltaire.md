@@ -442,7 +442,7 @@ DRep delegation will piggyback on the existing stake delegation and registration
 
 Ouroboros has been a huge success story, with a large majority of ada staked making Cardano one of the most decentralized networks. By leveraging the SPO network, the process gains a passionate Cardano user group who are educated and qualified to vote on crucial decisions. Registered DReps are expected to vote on governance actions regularly to still be considered active. It will be measured using a new parameter called ‘drepActivity’. Inactive DReps won’t count towards the active voting stake, but can become active again by resuming voting. 
 
-The Cardano Constitution will be drafted with as much input from the community as possible. This Constitution will contain the guardrails, the shared values, core tenets and guiding principles agreed upon by stakeholders. In these early days, it will just be a text document with its hash recorded on-chain. IOG’s Chief Legal Officer Joel Telpner joined Charles Hoskinson for a fireside chat[^87] at ScotFest to discuss the challenges of drafting a new constitution. Telpner described what a constitution is:
+The Cardano Constitution will be drafted with as much input from the community as possible. This Constitution will contain the guardrails, the shared values, core tenets and guiding principles agreed upon by stakeholders. In these early days, it will just be a text document with its hash recorded on-chain. IOG’s Chief Legal Officer Joel Telpner joined Charles Hoskinson for a fireside chat[^88] at ScotFest to discuss the challenges of drafting a new constitution. Telpner described what a constitution is:
 
 > I think you can actually simplify a constitution and say it's a set of rules, but it's a set of rules to do what? It does three things. It establishes how you legislate; it establishes how you administer and establishes how you adjudicate. It creates this framework for those three functions.
 
@@ -479,7 +479,7 @@ There are also two pre-defined DRep options which, once selected, remain the sel
 
 The DReps will likely be the most active voters. The constitutional committee is voting most of the time, but not for a no confidence motion, or if it's a new committee or quorum vote. The upper house is typically the most powerful, while SPOs sometimes vote only if the active voting stake threshold isn't met. It might appear the SPOs have the weakest position in the tricameral body if they vote least often. However, it is more nuanced than that because the DReps and SPOs can get rid of the constitutional committee.
 
-Also remember the SPOs demonstrated another aspect of Cardano’s decentralization when they effectively vetoed the original date for the Vasil hard fork.[^88] 
+Also remember the SPOs demonstrated another aspect of Cardano’s decentralization when they effectively vetoed the original date for the Vasil hard fork.[^89] 
 
 The CIP favors voting by stake over votes per person. One of the most important aspects of CIP 1694 is the notion of ‘one Lovelace, one vote’.Voting per person requires some notion of identity verification, so there is proof someone is who they claim to be. The CIP explains that a fully decentralized solution for this is currently not possible. With regulation varying by jurisdiction, it is prudent to steer clear of any mechanism that can be construed as ‘centralized’ by willfully ignorant parties. 
 
