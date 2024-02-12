@@ -417,6 +417,76 @@ The MBO, which would become known as *Intersect*,[^80] is the anchor institution
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig910.png "figure 9.10")
 <br>**Figure 9.10:**  Slide from Michael Madoff’s (Voltaire Product Manager) talk at ScotFest, Note: ‘7. Info’ was later added as a ‘Proposal’
 
+The CIP is worthy of a book in its own right, and Hoskinson has often stated he would like to write a book on governance.[^84] Like all CIPs, CIP 1694 is a living document which updates and evolves with feedback. While constitutions have been written before, we are entering uncharted waters as nothing on this scale has been attempted in the crypto space. Liquid democracy is not a new concept, but there are few examples of successful implementations. CIP 1694’s motivation is to bootstrap the Voltaire era, to integrate new and existing on-chain and off-chain components to self-govern the ecosystem. The ultimate goal is to have a governance layer on top of Cardano that is fully, end-to-end, on-chain. 
+
+**Where we are – 5 out of 7 system**
+
+At time of writing, governance transactions (eg. Hard forks, parameter changes, etc.) require a signature from at least five out of the seven Cardano governance (Genesis) keys, currently held by the three founding entities. This process was always intended to be an ephemeral form of governance as we got through the earlier eras of the roadmap before Voltaire. There have until now currently been two types of governance transaction:
+
+- Protocol parameter updates using transaction field nº6 of the transaction body[^85]
+- Movements of the treasury and the reserves using Move Instantaneous Rewards (MIR) certificates
+
+**Terminology & Concepts**
+
+The CIP introduces some new terms. First there is a **governance action** which any ada holder can submit. Three individual groups then vote to ratify, or drop, the governance action.
+
+The three groups that form this tricameral[^86] legislative body:
+
+- A constitutional committee, 
+- DReps (same name but different role to Catalyst dReps).
+- Stake pool operators (SPOs)
+
+The **constitutional committee** will have a similar role to an upper house. Continuing the analogy, DReps would make up the lower house. **Stake Pool Operators** are the same group introduced earlier who run the nodes that power the network. A **DRep**, or **delegated representative**, can be any ada holder representing themselves, or other ada holders who have delegated their voting rights to them. 
+
+DRep delegation will piggyback on the existing stake delegation and registration mechanisms. Just like when the ada delegated to a pool is not moved anywhere, ada delegated to a DRep is not transferred anywhere either. Also like delegated ada, you can choose to re-delegate from DRep to DRep at any time.
+
+Ouroboros has been a huge success story, with a large majority of ada staked making Cardano one of the most decentralized networks. By leveraging the SPO network, the process gains a passionate Cardano user group who are educated and qualified to vote on crucial decisions. Registered DReps are expected to vote on governance actions regularly to still be considered active. It will be measured using a new parameter called ‘drepActivity’. Inactive DReps won’t count towards the active voting stake, but can become active again by resuming voting. 
+
+The Cardano Constitution will be drafted with as much input from the community as possible. This Constitution will contain the guardrails, the shared values, core tenets and guiding principles agreed upon by stakeholders. In these early days, it will just be a text document with its hash recorded on-chain. IOG’s Chief Legal Officer Joel Telpner joined Charles Hoskinson for a fireside chat[^87] at ScotFest to discuss the challenges of drafting a new constitution. Telpner described what a constitution is:
+
+> I think you can actually simplify a constitution and say it's a set of rules, but it's a set of rules to do what? It does three things. It establishes how you legislate; it establishes how you administer and establishes how you adjudicate. It creates this framework for those three functions.
+
+Each of the three bodies plays their role in ratifying governance actions. Roles may vary for each body in different circumstances. For example, the constitutional committee will always be in one of two states, either a **normal state**, or a state of **no confidence**. As you might expect, if it's in a state of no confidence, it cannot participate in governance actions. It must be replaced before any governance actions can be enacted.
+
+The makeup of the initial constitutional committee is not confirmed, but likely to be the core members of Intersect as well as other community members and groups. There are two ways to replace the constitutional committee. If it's in a normal state, the committee itself, along with the DReps, can both approve a motion to replace the constitutional committee. The SPOs are not required in this scenario. 
+
+If the constitutional committee is in a state of no confidence, the SPOs and the DReps can vote to replace it. If it's already in a state of no confidence, the assumption is the majority want to replace the constitutional committee. 
+
+The upper house generally has fewer members than the lower house, however, there is no fixed size (quorum) for the constitutional committee in CIP 1694. It can vary each time a committee is formed. The quorum size is the signature threshold, how many committee members need to sign to ratify something.
+
+There are **seven different types of governance actions**: 
+
+1. A motion of no confidence in the constitutional committee. 
+2. Change the members (and/or quorum) of the constitutional committee. 
+3. Constitution updates 
+4. Hard Fork initiation
+5. Protocol parameter changes
+6. Treasury withdrawals (small, medium or large)
+7. Information (no effect on-chain, just there for the record)
+
+As anyone can submit a governance action, there is a **governance deposit** required to prevent spamming. This deposit is returned once the governance action is ratified, dropped or expired. Governance actions will be ratified by on-chain voting, with each of the six types of governance actions having different ratification requirements based on some, or all of the following:
+
+- a set quorum votes of the Constitutional committee (ie. one person, one vote)
+- a set stake-controlled threshold of DReps 
+- a set stake-controlled threshold of SPOs
+
+Governance actions will be checked for ratification on epoch boundaries. A vote can be a **yes**, a **no** or an **abstain**. An abstaining vote won’t count for active voting stake but if you want to change your vote, you can just vote again and it will supersede your early ‘abstain’ vote. A governance action’s progress can be monitored on-chain and is enacted one epoch after they are ratified.
+
+There are also two pre-defined DRep options which, once selected, remain the selected response until you select otherwise:  
+
+- If you delegate to **Abstain**, then your stake is actively marked as not participating in governance. This means your delegated stake will not be considered to be a part of the active voting stake, but it will be considered to be registered for the purpose of the incentives.
+- If you delegate to **No Confidence**, then your stake is counted as a Yes vote on every ‘No Confidence’ action and a No vote on every other action. Your delegated stake will be considered part of the active voting stake and also serves as a directly auditable measure of your confidence in the constitutional committee.
+
+The DReps will likely be the most active voters. The constitutional committee is voting most of the time, but not for a no confidence motion, or if it's a new committee or quorum vote. The upper house is typically the most powerful, while SPOs sometimes vote only if the active voting stake threshold isn't met. It might appear the SPOs have the weakest position in the tricameral body if they vote least often. However, it is more nuanced than that because the DReps and SPOs can get rid of the constitutional committee.
+
+Also remember the SPOs demonstrated another aspect of Cardano’s decentralization when they effectively vetoed the original date for the Vasil hard fork.[^88] 
+
+The CIP favors voting by stake over votes per person. One of the most important aspects of CIP 1694 is the notion of ‘one Lovelace, one vote’.Voting per person requires some notion of identity verification, so there is proof someone is who they claim to be. The CIP explains that a fully decentralized solution for this is currently not possible. With regulation varying by jurisdiction, it is prudent to steer clear of any mechanism that can be construed as ‘centralized’ by willfully ignorant parties. 
+
+That said, the CIP should be open to change in future as decentralized IDs (DIDs) evolve. The World Wide Web Consortium (W3C) announced that Decentralized Identifiers (DIDs) is now an official web standard in summer 2022. IOG Chief Scientist Aggelos Kiayias also inferred they will inevitably be part of the 4th generation of blockchains.[^89] More about Decentralized Identifiers later.
+
+**Where we are going**
+
 
 **_The rest of the chapter will be uploaded soon..._**
 
