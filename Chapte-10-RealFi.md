@@ -5,3 +5,8 @@
 
 
 **_To be uploaded soon..._**
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig101.png "figure 10.1")
+<br>**Figure 10.1:** here here
+
+[^01]: 
