@@ -585,7 +585,7 @@ Undeterred, the community found a workaround. *Summon Platform and DripDropz* co
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig913.png "figure 9.13")
 <br>**Figure 9.13:** Temperature check results
 
-Nicolas Cerny followed up with some forensic analysis.[^119] He noted some of the possible reasons for the low turnout may have been the nature of the poll being non-binding, the relatively short notice of two weeks for the Cardano Ballot event, and many ada holders are just not interested in participating in the governance process. It will hopefully serve as a learning experience and the subsequent open-sourcing of the Cardano Ballot code means anyone can now initiate their own poll, encouraging more engagement and participation in future.
+Nicolas Cerny followed up with some forensic analysis.[^120] He noted some of the possible reasons for the low turnout may have been the nature of the poll being non-binding, the relatively short notice of two weeks for the Cardano Ballot event, and many ada holders are just not interested in participating in the governance process. It will hopefully serve as a learning experience and the subsequent open-sourcing of the Cardano Ballot code means anyone can now initiate their own poll, encouraging more engagement and participation in future.
 
 ## Intersect
 
