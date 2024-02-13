@@ -487,11 +487,180 @@ That said, the CIP should be open to change in future as decentralized IDs (DIDs
 
 **Where we are going**
 
+The current proposal encompasses two new ledger eras. The first era will be called *Conway*, after the celebrated English mathematician John Horton Conway. The current plan for the Conway ledger era is to:
 
-**_The rest of the chapter will be uploaded soon..._**
+- introduce SPO voting for hard forks 
+- provide an on-chain mechanism for rotating the governance keys
+- rewire the ledger rules involving governance as outlined in CIP 1694
 
+Follow the latest updates from the different engineering teams on GitHub.
 
+If CIP 1694 is to be a success, then we should realize the vision laid out in the *Road to a Polyglot Ecosystem for Cardano* whiteboard video. The governance mechanisms outlined above would allow for multiple clients, with different dev teams, different approaches, programming languages and commercial USPs. There would be no canonical client or wallet for Cardano, just certified or uncertified. IOG have been working on this for some time, writing papers and building out expertise in formal methods, specifically with Agda.
 
+The idea would be that interested parties, such as dcSpark, TxPipe and others, would work with *Intersect* to maintain the reference architecture. This non-production code would be put through the CIP process, before a formal spec, in Agda, is drafted. This ‘Agda core’ spec enables code extraction to serve as a reference for testing. 
+
+There would no longer be a canonical client of Cardano, just competing clients written in Rust, Typescript, Python and Haskell. The users would just be concerned with if it was certified or not. This creates a healthy ‘survival of the fittest’ marketplace where security is assured and there is more choice for the end user. 
+
+CH at ScotFest 2022 keynote:
+
+>So that's Voltaire …it’s deeply philosophical, it's the hardest thing I've ever done in my life, it's the hardest thing you're ever going to do in your life and we're going to get it done, because it needs to get done and I'm damn tired of our industry failing, and it's about time we can point to something and say ‘you know what we did it the right way’. We have to tend to our own gardens first. That was a lesson of Candide. So we have to fix Cardano's governance before we have the right to complain about any other person's governance. 
+
+Just how hard it would be became evident with some of the initial skepticism. Some felt governance was not as important as making Cardano more developer-friendly, or expediting progress on Input Endorsers, for example. Others just aren’t turned on by sitting in a room for three days hammering out the minutiae of a hypothetical vote on a parameter they’ve occasionally heard of. While many are too busy, or just not bothered to participate in governance, there is also the inevitability that topics like contingent staking would be divisive. 
+
+The issue of contingent staking was the perfect example of how a proposed feature can be deep divisive. On the foot of the SEC crackdown on Kraken exchange, Charles Hopkinson muted the idea of contingent staking. 
+
+This was not a new idea, it had been proposed years ago. It is the notion that stake pool operators have the option to approve ada holders who to stake with their pool. It could be implemented as a multisig transaction which could include a KYC process.
+
+Some objectors felt that government(s) could lean on stake pool operators and force them to blacklist certain users, and that the proposed feature smacked of censorship. Others for the fear argued the new functionality would not replace existing configurations but expand the platform, extending participation to new user groups.
+
+Hopkinson made several follow up videos in response, explaining contingent staking wouldn't replace traditional staking in any way and that both worlds can coexist. Contingent staking would not be about enforcing regulation, but enabling it.
+
+It was an example of how every issue of governance can be subjective. How do we even measure success? Many people were interested and engaged and 2023 saw the Cardano community show up in their droves in the depths of the coldest Crypto Winter. 
+
+So 2023 would be all about debating how to implement CIP 1694. But first people needed to be informed. Early discussions like the one between Matthias Benkort (Cardano Foundation) and Jared Corduan and Kevin Hammond (from IOG) were important to ensure there was a clear understanding of what was being proposed
+
+The CIP was written in a deliberately high-level, approachable format to stimulate discussion and feedback. The community did not disappoint with 50 workshops, 30 in-person and 20 online, with over 1000 participants from 20+ countries. The CIP has had the most feedback (750+ comments) of any CIP with many contributors, some familiar faces, and some new ones from all corners of the globe, listed in the ‘acknowledgements’ section of the CIP.
+
+In addition to community-led workshops, IOG, EMURGO, and the Cardano Foundation co-hosted three separate governance workshops. The CF workshop occurred in Zug, Switzerland (CF), in June, followed by Tokyo, Japan (EMURGO). The Edinburgh workshop in July marked the conclusion of the CIP 1694 design feedback loop.
+
+Dozens of blogs have been written, and contentious issues have been argued over Reddit, Twitter (X) and Telegram. It is not possible to acknowledge every voice here, but you can dig into the finer detail by following Nicolas Cerny’s diary of events on the Cardano Forum. Some of points that stood out were:
+
+**Consensus is rarely unanimous** 
+
+Updates to CIP 1694 have led to wrangling among some of the community, especially the plan to incentivize participation and legitimacy by freezing the withdrawal of accrued ada staking rewards, which would be inaccessible until the wallet is delegated to a DRep. While many felt DReps should be rewarded, or at least comped, for their work, others argued that there should be no incentives for DReps to do their job, as it might attract the wrong sort only ‘in it for the money’. The interim proposal is to escrow Lovelace from the treasury until a way forward can be agreed, likely using the on-chain governance mechanism currently under construction. 
+
+Alternative governance mechanisms have been put forward. @HeptaSean shared his Minimal Viable Governance proposal on the Cardano Forum. He suggests a leaner governance framework without a constitution or CC, no DReps, no SPO votes where every ada holder can directly vote.
+
+There is also Cardano Problem Statement, CPS-0007, submitted by Pi Lanningham. The CPS aims ‘to frame a set of motivations, goals, constraints, and open questions for the very broad topic of Cardano governance’ to stimulate a wider discussion on whether there is a viable alternative to CIP 1694. Another useful contribution was CPS–0006 *Governance Security* from Rick McCracken who also ran several community governance workshop sessions. 
+
+In May, the Cardano Foundation conducted a SPO on-chain poll, a new mechanism (defined in CIP-94) to allow stake pool operators to vote on crucial issues based on the stake delegated to their pool. The poll is similar to governance action 7 (info) as neither have a binding effect although ‘minPoolCost’ was subsequently cut to 170 ada.
+The inaugural poll asked ‘Which setup would you prefer to be put in place from Q3 2023 onwards?’ with 6 options:
+
+- Keep k at 500 and minPoolCost at 340 ada.
+- Keep k at 500 and halve minPoolCost to 170 ada.
+- Increase k to 1000 and keep minPoolCost at 340 ada.
+- Increase k to 1000 and halve minPoolCost to 170 ada.
+- I would prefer to abstain.
+- None of the above.
+
+Not everyone approved of the options in the poll. Some found it strange that there was no ‘MinPoolCost = 0’ option, while others felt the question lacked context. With this feedback in mind, there were discussion threads created on the Cardano Forum to explore the options in more detail.
+
+In an essay titled *Cardano Improvement Proposal — 1694: Can Decentralized Communities Make Superior Decisions?* authors Kenric Nelson, Juana Attieh, Megan Hess, Vanessa Cardui, and Stephen Whitenstall evaluated Cardano’s shift to a community-led governance model. The recurring issue of unfair distribution of voting power reared its head again. The essay warns a system with a one-coin-one-vote (1c1v) philosophy can result in a plutocracy, with a small portion of addresses tend to control a disproportionate amount of voting influence. 
+
+Governance on Cardano hit a milestone on Friday, June 30, 2023 when the CIP 1694 Pull Request was merged into the main branch of the Cardano Foundation CIP repository. The proposal’s status advanced on to the ‘Proposed’ stage. The update was not unanimously welcomed with some contributors concerned things were being rushed without other alternative models being explored sufficiently. Veteran CIP editor Matthias Benkort explained the reasoning for the merge:
+
+>It has arguably undergone sufficient conversations, the specification is well articulated and the rationale pretty furnished as well. Originally, we wanted to wait for after the final Edinburgh workshop, though with @JaredCorduan no longer able to continue championing the pull request, it is better to continue conversations on this CIP in separate pull requests. It should also help make conversations a bit more manageable as they can be scoped to specific areas of the CIP. (…)  I'd like to remind everyone about the goals of the CIP process and what the process itself stands for. A CIP is NOT binding anyhow, nor is it any kind of authoritative document that command changes on a project. A CIP is first and foremost, a technical solution to a problem that is thoroughly discussed and backed by arguments.
+
+In any case, SPOs have the final say as they must upgrade their nodes with any proposed changes. 
+
+The Edinburgh meetup in July was the capstone workshop for all the CIP 1694 feedback to date. Representatives from the in-person workshops held around the world were invited to discuss and share their insights with their peers. 
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig911.png "figure 9.11")
+<br>**Figure 9.11:** Screenshot from the Miro board set up for the Edinburgh CIP 1694 workshop
+
+In a presentation, Kevin Hammond listed six key issues which came up in all workshops: on-chain deposits, treasury withdrawals, community tooling, action expiration, action thresholds, and DRep incentives. There was broad consensus on most topics but some required a specialized working group to map a way forward. You can follow some of the discussions on the public Miro board.
+
+As almost everything in Cardano takes the form of a transaction, getting the metadata standard correct is critical. Metadata allows developers to embed information specific to the context of the transaction. For example, the NFT standard (see CIP-25, CIP-68, CIP-60) on Cardano has evolved with new capabilities unlocked with past roadmap releases. Pi Lanningham authored CIP-0100 to clear up what metadata standards need to be introduced to enable the on-chain governance mechanisms proposed in CIP 1694.  
+
+CIP-95 is a crucial CIP, which extends CIP-30 and describes the interface between webpage/web-based stacks and Cardano wallets. More specifically, it is a specification (based on the Draft Conway Ledger Era) that defines the API of the javascript object that is injected into web applications. The CIP enables voting capabilities for governance tools. At the Edinburgh hackathon, decisions were made around open questions and the base design was approved. 
+
+We’ve only scratched the surface. As governance can be subjective, it's best you read CIP 1694 yourself, especially the Rationale and Changelog sections which add context. 
+
+**Cardano Ballot**
+
+In November, Intersect announced a community-wide poll to get a ‘temperature check’ on CIP 1694’s progress. The vote took place on the Cardano Ballot app developed by the Cardano Foundation which had been stress-tested on the Cardan Summit Awards 2022 and 2023. The Cardano Ballot is powered by the open-source Wallet Connector developed by the Cardano Foundation, based on the CIP-30 and CIP-8 standards. It works with many Cardano wallets but hardware wallets were not supported due to features missing in the firmware of the hardware wallets. Vacuumlabs are working on a solution, funded by Catalyst Fund 10. IOG engineers also contributed to the ballot event which posed the question: 
+
+>Based on the current progress, should we as a Cardano community continue to develop and deploy minimum viable on-chain governance as described in CIP 1694, subject to the final approval of the SPOs?
+
+Participants voted Yes, No, or Abstain and could also include a comment with their vote. 
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig912.png "figure 9.12")
+<br>**Figure 9.12:** Screenshot from 1694ballot.cardano.org/vote
+
+The poll was non-binding and part of a broader iterative process to garner community participation and feedback. As usual, the community’s response was emphatic. Many felt it would not be a fair reflection of community sentiment as most people hold their ada on hardware wallets. Others questioned why existing community tooling was not used. There was some confusion over the abruptness of this poll suddenly appearing on their timeline, although it had been muted as far back as the NFTxLV in September and featured on the Intersect Roadmap.
+
+Undeterred, the community found a workaround. *Summon Platform and DripDropz* collaborated to offer an alternative CIP 1694 temperature check. The poll itself remained unchanged but people could now vote with hardware wallets and also review live results. The drama from the initial ‘Twitter storm’ was short lived and the ballot(s) only served to demonstrate decentralized governance in practice. 
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig913.png "figure 9.13")
+<br>**Figure 9.13:** Temperature check results
+
+Nicolas Cerny followed up with some forensic analysis. He noted some of the possible reasons for the low turnout may have been the nature of the poll being non-binding, the relatively short notice of two weeks for the Cardano Ballot event, and many ada holders are just not interested in participating in the governance process. It will hopefully serve as a learning experience and the subsequent open-sourcing of the Cardano Ballot code means anyone can now initiate their own poll, encouraging more engagement and participation in future.
+
+## Intersect
+
+The much talked about MBO was renamed *Intersect*, as in the intersection of Cardano and its community, and launched in July after the Edinburgh workshop. Intersect is an aggregation point for Cardano’s community governance and development. It is ‘an MBO’, not ‘the MBO’...other MBOs will likely follow.  
+
+*Intersect* will serve as a steward of the underlying blueprints so this means the code for the Cardano Node, core Cardano libraries and components moving over from IOG’s GitHub repos to Intersect repos. It will be the community’s town hall for advancing Cardano’s roadmap. Grants and work packages will be available for members to apply for.  CH:
+
+>..there is an open question of what is the next priority? So Intersect is one of the organs, not the only one, but an organ where that is discussed from a product to product viewpoint. And the people who serve in those working groups are basically going to be the ones who start filling out that product priority…and the engineers are the ones who go and execute that, but they execute at the behest of the backlog.
+>
+>…
+The other thing is it helps us with business intelligence, where we, for the first time ever as an ecosystem, really need to look at other ecosystems. I've been trying to do this, like with Sean Ford coming in from Algorand, and you know Eran (Barak) and others coming in from the Polkadot ecosystem. But it turns out that other ecosystems do great work too, and they think differently and sometimes value things differently, but a lot of that stuff from those other ecosystems could be of tremendous benefit to Cardano… but it has to be harnessed, translated and captured in the right way. So when you have a bucket like Intersect what that allows you to do is to not only have Cardno community members but within those working groups you could have people from other ecosystems.
+
+There already exist several institutions where community members share their expertise to support a specific need or aspect of Cardano. There is the Cardano DeFi Alliance (CDA) which standardizes best practices within the DeFi ecosystem. The NFT Guild  which focuses on developing standards and tooling for the Cardano NFT space. The UTXO Alliance advocates interoperability across systems using UTXO-based blockchains. 
+Members from these existing groups will amalgamate into the various Intersect boards, councils, committees and working groups. The goals of Intersect are distilled in it’s five pillars:
+
+1. Support the community to develop the ecosystem by hosting developer-focused conferences, hackathons, and events.
+2. Administrate and champion Cardano’s community-led governance implemented by CIP 1694.
+3. Coordinate delivery of the community approved Cardano Technical Roadmap.
+4. Coordinate the routine maintenance of Cardano for system stability.
+5. Coordinate open source development of core technologies for Cardano.
+
+**Intersect Committees** 
+
+The Parameters Committee meets every few weeks to review Cardano's parameters encompassing network, technical and economic parameters. The minutes of these meetings are available on the Cardano Forum. You can see the consideration that goes into a parameter change by reading Matthew Capps *Protocol Change Proposal-001, Chronology of Documented Events* tweet.
+
+An important stream for Intersect is the Cardano Civics Committee (CCC) which is an advisory committee focussing on off-chain discussions about governance proposals. It will support the Constitutional Committee and monitor the governance process to ensure it is working as intended. Notable members include Adam Rusch who holds a PhD in Social Sciences and Marcus Fysh, British Member of Parliament for Yeovil.
+The Membership, and Community Committee (MCC) fosters community inclusivity. More committees and working groups will follow in 2024… 
+
+>...it's not decentralized governance if it's not by the people, for the people, run by the people...
+- Amar Singh, EMURGO
+
+Key to Intersect being a success is the commitment to open-source development on Cardano. The Open Source Committee (OSC) is the shepherd for this open-source approach. Without wanting to get lost in abbreviations, the OSC will act as an advisory body to the Open Source Program Office within Intersect. The OSC has mapped out the following tenets:
+
+- Maintain the legitimacy of the Cardano Open Source Project (COSP)
+- Maintain the (high quality) security and health of the Cardano mainnet
+- Sustainable Development of the COSP must continue.
+- Be a good Open Source citizen.
+
+Pat Sheridan, co-founder and CEO of Modus Create, is the interim Chair for the crucial bootstrapping phase. Michael Peyton Jones created a first draft of the open source governance policy. The committee is always open to new members. To learn more, it’s best to check out the Intersect discord #OSC-feedback channel for the latest news.
+
+True open source means having flexibility to choose from different options. The Cardano Foundation has also been following an Open Source strategy. Director of Product, Alex Apeldoorn, outlined the suite of products released in 2023. Ledger Sync, Identity Wallet, Cardano Explorer, Aiken, Kupo, and Ogmios all follow open source principles and make life easier to develop on Cardano. 
+
+We already focussed on Aiken’s growing adoption. Acknowledging that Java is still the preferred language for a lot of enterprise developers, the CF created Ledger Sync and the Identity Wallet in Java as open source tools with this audience in mind. Ledger Sync puts sequential blockchain data in a new, more accessible database structure, while the Identity Wallet is a W3C-compatible mobile wallet for managing self-sovereign identities across Cardano and other blockchains. The wallet supports multiple standards, integrating key event receipt infrastructure (KERI) for interoperability so as to fit a broad range of use cases and enterprise adoption.
+
+But wait, there’s more…The *Cardano Ballot* project, a Fully functional Merkle Tree in Java / Aiken, the Cardano Conversions library and State Channels L2 (hydra-java Client) were all open-sourced. Not forgetting what we mentioned early about the CF open sourced the rewards calculation, in an effort to enable anyone to perform and validate the rewards calculation in a way that is independent of a single implementation. 
+
+With a strong finish to the year, with multiple launches in December, the CF is poised to build on this momentum in 2024. As CF engineer Mateusz Czeladka remarked, *‘Open Source has a compounding effect, others can build on what you created. Love it’*
+
+## SanchoNet 
+
+There are a lot of tools to be built in order for CIP 1694 to become a reality. We naturally need a testbed for this journey. Also to come out of the Edinburgh meetup in July ‘23 was *SanchoNet*, a testnet for people to try out new tools and mechanisms related to CIP 1694.  
+
+SanchoNet was named after the character Sancho Panza, Don Quixote’s companion in Miguel de Cervantes’ literary classic. SanchoNet is ultimately about transforming an aspirational digital *Barataria* into on-chain governance reality on Cardano mainnet. Note SanchoNet is not another (ITN) incentivized testnet but a testnet where test-ada is used to stress test experimental features. 
+
+First introduced to the community in Edinburgh, SanchoNet was rolled out in 6 phases with each Cardano Node (cardano-cli) release enabling new governance capabilities. As it’s fast moving and it’s best to check for the latest updates on IOG’s Discord server in the dedicated SanchoNet channel.
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig914.png "figure 9.14")
+<br>**Figure 9.14**: SanchoNet roadmap
+
+Although limited to stake pool operators at the command line initially, the next phase started once the tools were in place for DRep to register, receive delegation and vote. Test-ada holders could also now participate by submitting governance actions. There are plenty of areas where developers can contribute, with tooling required for wallet integrations, DRep explorers to visualize blockchain data, governance dashboards, etc. SanchoNet follows its own independent development roadmap scoped with a technical, rather than governance focus.  
+
+The community stepped up as it always does. Mike Hornan, SPO of ‘able’ stake pool, led the way contributing cardano-cli cheat sheets, infographics, hosting workshops and recording YouTube tutorials. Adam Dean maintained the testnet, Blockfrost provided API access to SanchoNet. CIP editor Ryan Williams hosted biweekly ‘sancho-wallets’ open hours on Discord to discuss SanchoNet news and CIP-95 progress. Emurgo released a Serialization Library for the Conway ledger era. The library can be used to generate new certificates and transactions that can be submitted to SanchoNet. Many others contributed with dozens of SPOs signed up running the SanchoNet network. Although there are different roadmap eras and separate engineering streams, almost everything overlaps in Cardano and so it’s no surprise the Mithril team have been busy testing on SanchoNet also.
+
+**GovTool**
+
+GovTool was first demoed at September's NFTxLV event and is available for testing at sanchogov.tools. As this is new tool and process for most users, there is comprehensive documentation including a testing ‘to do’ list. Governance tooling follows an open source model in that it is owned and maintained by the community. Intersect committees and working groups hosting and maintaining tooling.
+
+You can still use the cardano-cli if you prefer, but now there is also the user-friendly GovTool UI which allows a broader base of ada holders to test governance features available in SanchoNet. 
+
+We are currently deep in the weeds of Phase 5, with the focus on more technical functionality testing and building network resilience. Ada holders could now propose and endorse parameter updates. The final Phase 6 will focus on the governance actions related to hard fork initiation. 
+
+If 2023 was the year we talked about governance, 2024 will be about implementation. The consultation period for the constitution will come into focus, guided by the Cardano Civics Committee (CCC). Then there is the milestone that will be the Chang hard fork. The Constitutional Convention is set for late 2024 in Buenos Aires, Argentina which will capture the feedback from the Constitution Global Workshop Series. The year will climax with the ‘moment of truth’ when an on-chain vote to ratify the constitution will take place. CH at 2023 Dubai Summit
+
+>Currently Catalyst is the only mechanism upon which we access the cardano treasury…well that's great, but that's like saying you have a garden hose to access your water from the tank… it's very small throughput, there's a lot of water in the tank ... the Cardano treasury has a lot of funds in it, but not a lot of it gets emitted out …and that was by design, because we had to wait for a governance system to be in place. Now that there's a governance system in place, technically speaking CIP 1694 would allow the community to open up the treasury for things that aren't related to Catalyst.
+>
+>So in practice you'd have to treat it like a government… and what a government does, they have budget …little pie chart right you have slices in the pie …you have your slice for development, and your slice for marketing, and your slice for bureaucracy, and you know your slice for you know buying an island somewhere… or whatever the hell you guys want to do….but you have to draw the pie …and you have to decide how big of a pie is that going to be? Is it $50 million? Is it $100 million? So one of the biggest governance challenges actually next year is going to be how do we, as a community, come together, and decide on an annual budget for how much resource funds should be actually spent out of the Cardano treasury?  
 
 [^01]: **Dash** is an open source cryptocurrency and is a form of decentralized autonomous organization (DAO) run by a subset of users, called ‘masternodes’. It is an altcoin that was forked from the Bitcoin protocol. The currency permits fast transactions that can be untraceable.
 [^02]: **Tezos** (ticker: XTZ) is a decentralized blockchain founded by Arthur Breitman and Kathleen Breitman. The Breitmans also founded Dynamic Ledger Solutions (DLS), a company primarily focused on developing Tezos technology and owns the Tezos Intellectual property. The currency was launched in an initial coin offering (ICO) on July 1, 2017.
