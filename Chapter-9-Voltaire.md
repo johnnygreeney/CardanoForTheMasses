@@ -493,47 +493,48 @@ The current proposal encompasses two new ledger eras. The first era will be call
 - provide an on-chain mechanism for rotating the governance keys
 - rewire the ledger rules involving governance as outlined in CIP 1694
 
-Follow the latest updates from the different engineering teams on GitHub.
+Follow the latest updates from the different engineering teams on GitHub.[^91]
 
-If CIP 1694 is to be a success, then we should realize the vision laid out in the *Road to a Polyglot Ecosystem for Cardano* whiteboard video. The governance mechanisms outlined above would allow for multiple clients, with different dev teams, different approaches, programming languages and commercial USPs. There would be no canonical client or wallet for Cardano, just certified or uncertified. IOG have been working on this for some time, writing papers and building out expertise in formal methods, specifically with Agda.
+If CIP 1694 is to be a success, then we should realize the vision laid out in the *Road to a Polyglot Ecosystem for Cardano* whiteboard video.[^92] The governance mechanisms outlined above would allow for multiple clients, with different dev teams, different approaches, programming languages and commercial USPs. There would be no canonical[^93] client or wallet for Cardano, just certified or uncertified. IOG have been working on this for some time, writing papers and building out expertise in formal methods, specifically with Agda.[^94]
 
 The idea would be that interested parties, such as dcSpark, TxPipe and others, would work with *Intersect* to maintain the reference architecture. This non-production code would be put through the CIP process, before a formal spec, in Agda, is drafted. This ‘Agda core’ spec enables code extraction to serve as a reference for testing. 
 
 There would no longer be a canonical client of Cardano, just competing clients written in Rust, Typescript, Python and Haskell. The users would just be concerned with if it was certified or not. This creates a healthy ‘survival of the fittest’ marketplace where security is assured and there is more choice for the end user. 
 
-CH at ScotFest 2022 keynote:
+CH at ScotFest 2022 keynote:[^95]
 
 >So that's Voltaire …it’s deeply philosophical, it's the hardest thing I've ever done in my life, it's the hardest thing you're ever going to do in your life and we're going to get it done, because it needs to get done and I'm damn tired of our industry failing, and it's about time we can point to something and say ‘you know what we did it the right way’. We have to tend to our own gardens first. That was a lesson of Candide. So we have to fix Cardano's governance before we have the right to complain about any other person's governance. 
 
 Just how hard it would be became evident with some of the initial skepticism. Some felt governance was not as important as making Cardano more developer-friendly, or expediting progress on Input Endorsers, for example. Others just aren’t turned on by sitting in a room for three days hammering out the minutiae of a hypothetical vote on a parameter they’ve occasionally heard of. While many are too busy, or just not bothered to participate in governance, there is also the inevitability that topics like contingent staking would be divisive. 
 
-The issue of contingent staking was the perfect example of how a proposed feature can be deep divisive. On the foot of the SEC crackdown on Kraken exchange, Charles Hopkinson muted the idea of contingent staking. 
+The issue of contingent staking was the perfect example of how a proposed feature can be deep divisive. On the foot of the SEC crackdown on Kraken exchange, Charles Hopkinson muted the idea of contingent staking.[^96] 
 
 This was not a new idea, it had been proposed years ago. It is the notion that stake pool operators have the option to approve ada holders who to stake with their pool. It could be implemented as a multisig transaction which could include a KYC process.
 
 Some objectors felt that government(s) could lean on stake pool operators and force them to blacklist certain users, and that the proposed feature smacked of censorship. Others for the fear argued the new functionality would not replace existing configurations but expand the platform, extending participation to new user groups.
 
-Hopkinson made several follow up videos in response, explaining contingent staking wouldn't replace traditional staking in any way and that both worlds can coexist. Contingent staking would not be about enforcing regulation, but enabling it.
+Hopkinson made several follow up videos[^97] in response, explaining contingent staking wouldn't replace traditional staking in any way and that both worlds can coexist. Contingent staking would not be about enforcing regulation, but enabling it.
 
 It was an example of how every issue of governance can be subjective. How do we even measure success? Many people were interested and engaged and 2023 saw the Cardano community show up in their droves in the depths of the coldest Crypto Winter. 
 
-So 2023 would be all about debating how to implement CIP 1694. But first people needed to be informed. Early discussions like the one between Matthias Benkort (Cardano Foundation) and Jared Corduan and Kevin Hammond (from IOG) were important to ensure there was a clear understanding of what was being proposed
+So 2023 would be all about debating how to implement CIP 1694. But first people needed to be informed. Early discussions[^98] like the one between Matthias Benkort (Cardano Foundation) and Jared Corduan and Kevin Hammond (from IOG) were important to ensure there was a clear understanding of what was being proposed
 
-The CIP was written in a deliberately high-level, approachable format to stimulate discussion and feedback. The community did not disappoint with 50 workshops, 30 in-person and 20 online, with over 1000 participants from 20+ countries. The CIP has had the most feedback (750+ comments) of any CIP with many contributors, some familiar faces, and some new ones from all corners of the globe, listed in the ‘acknowledgements’ section of the CIP.
+The CIP was written in a deliberately high-level, approachable format to stimulate discussion and feedback. The community did not disappoint with 50 workshops, 30 in-person and 20 online, with over 1000 participants from 20+ countries.[^99] The CIP has had the most feedback (750+ comments) of any CIP with many contributors, some familiar faces, and some new ones from all corners of the globe, listed in the ‘acknowledgements’ section of the CIP.
 
 In addition to community-led workshops, IOG, EMURGO, and the Cardano Foundation co-hosted three separate governance workshops. The CF workshop occurred in Zug, Switzerland (CF), in June, followed by Tokyo, Japan (EMURGO). The Edinburgh workshop in July marked the conclusion of the CIP 1694 design feedback loop.
 
-Dozens of blogs have been written, and contentious issues have been argued over Reddit, Twitter (X) and Telegram. It is not possible to acknowledge every voice here, but you can dig into the finer detail by following Nicolas Cerny’s diary of events on the Cardano Forum. Some of points that stood out were:
+Dozens of blogs have been written, and contentious issues have been argued over Reddit, Twitter (X) and Telegram. It is not possible to acknowledge every voice here, but you can dig into the finer detail by following Nicolas Cerny’s diary of events on the Cardano Forum.[^100] Some of points that stood out were:
 
 **Consensus is rarely unanimous** 
 
 Updates to CIP 1694 have led to wrangling among some of the community, especially the plan to incentivize participation and legitimacy by freezing the withdrawal of accrued ada staking rewards, which would be inaccessible until the wallet is delegated to a DRep. While many felt DReps should be rewarded, or at least comped, for their work, others argued that there should be no incentives for DReps to do their job, as it might attract the wrong sort only ‘in it for the money’. The interim proposal is to escrow Lovelace from the treasury until a way forward can be agreed, likely using the on-chain governance mechanism currently under construction. 
 
-Alternative governance mechanisms have been put forward. @HeptaSean shared his Minimal Viable Governance proposal on the Cardano Forum. He suggests a leaner governance framework without a constitution or CC, no DReps, no SPO votes where every ada holder can directly vote.
+Alternative governance mechanisms have been put forward. @HeptaSean shared his *Minimal Viable Governance* proposal on the Cardano Forum.[^101] He suggests a leaner governance framework without a constitution or CC, no DReps, no SPO votes where every ada holder can directly vote.
 
-There is also Cardano Problem Statement, CPS-0007, submitted by Pi Lanningham. The CPS aims ‘to frame a set of motivations, goals, constraints, and open questions for the very broad topic of Cardano governance’ to stimulate a wider discussion on whether there is a viable alternative to CIP 1694. Another useful contribution was CPS–0006 *Governance Security* from Rick McCracken who also ran several community governance workshop sessions. 
+There is also Cardano Problem Statement, CPS-0007,[^102] submitted by Pi Lanningham. The CPS aims ‘to frame a set of motivations, goals, constraints, and open questions for the very broad topic of Cardano governance’ to stimulate a wider discussion on whether there is a viable alternative to CIP 1694. Another useful contribution was CPS–0006 *Governance Security*[^103] from Rick McCracken who also ran several community governance workshop sessions.[^104] 
 
-In May, the Cardano Foundation conducted a SPO on-chain poll, a new mechanism (defined in CIP-94) to allow stake pool operators to vote on crucial issues based on the stake delegated to their pool. The poll is similar to governance action 7 (info) as neither have a binding effect although ‘minPoolCost’ was subsequently cut to 170 ada.
+In May, the Cardano Foundation conducted a SPO on-chain poll,[^105] a new mechanism (defined in CIP-94)[^106] to allow stake pool operators to vote on crucial issues based on the stake delegated to their pool. The poll is similar to governance action 7 (info) as neither have a binding effect although ‘minPoolCost’ was subsequently cut to 170 ada.
+
 The inaugural poll asked ‘Which setup would you prefer to be put in place from Q3 2023 onwards?’ with 6 options:
 
 - Keep k at 500 and minPoolCost at 340 ada.
@@ -543,11 +544,11 @@ The inaugural poll asked ‘Which setup would you prefer to be put in place from
 - I would prefer to abstain.
 - None of the above.
 
-Not everyone approved of the options in the poll. Some found it strange that there was no ‘MinPoolCost = 0’ option, while others felt the question lacked context. With this feedback in mind, there were discussion threads created on the Cardano Forum to explore the options in more detail.
+Not everyone approved of the options in the poll. Some found it strange that there was no ‘MinPoolCost = 0’ option, while others felt the question lacked context. With this feedback in mind, there were discussion threads created on the Cardano Forum[^107] to explore the options in more detail.
 
-In an essay titled *Cardano Improvement Proposal — 1694: Can Decentralized Communities Make Superior Decisions?* authors Kenric Nelson, Juana Attieh, Megan Hess, Vanessa Cardui, and Stephen Whitenstall evaluated Cardano’s shift to a community-led governance model. The recurring issue of unfair distribution of voting power reared its head again. The essay warns a system with a one-coin-one-vote (1c1v) philosophy can result in a plutocracy, with a small portion of addresses tend to control a disproportionate amount of voting influence. 
+In an essay titled *Cardano Improvement Proposal — 1694: Can Decentralized Communities Make Superior Decisions?*[^108] authors Kenric Nelson, Juana Attieh, Megan Hess, Vanessa Cardui, and Stephen Whitenstall evaluated Cardano’s shift to a community-led governance model. The recurring issue of unfair distribution of voting power reared its head again. The essay warns a system with a one-coin-one-vote (1c1v) philosophy can result in a plutocracy,[^109] with a small portion of addresses tend to control a disproportionate amount of voting influence. 
 
-Governance on Cardano hit a milestone on Friday, June 30, 2023 when the CIP 1694 Pull Request was merged into the main branch of the Cardano Foundation CIP repository. The proposal’s status advanced on to the ‘Proposed’ stage. The update was not unanimously welcomed with some contributors concerned things were being rushed without other alternative models being explored sufficiently. Veteran CIP editor Matthias Benkort explained the reasoning for the merge:
+Governance on Cardano hit a milestone on Friday, June 30, 2023 when the CIP 1694 Pull Request was merged into the main branch of the Cardano Foundation CIP repository. The proposal’s status advanced on to the ‘Proposed’ stage. The update was not unanimously welcomed with some contributors concerned[^110] things were being rushed without other alternative models being explored sufficiently. Veteran CIP editor Matthias Benkort explained the reasoning for the merge:
 
 >It has arguably undergone sufficient conversations, the specification is well articulated and the rationale pretty furnished as well. Originally, we wanted to wait for after the final Edinburgh workshop, though with @JaredCorduan no longer able to continue championing the pull request, it is better to continue conversations on this CIP in separate pull requests. It should also help make conversations a bit more manageable as they can be scoped to specific areas of the CIP. (…)  I'd like to remind everyone about the goals of the CIP process and what the process itself stands for. A CIP is NOT binding anyhow, nor is it any kind of authoritative document that command changes on a project. A CIP is first and foremost, a technical solution to a problem that is thoroughly discussed and backed by arguments.
 
@@ -556,19 +557,19 @@ In any case, SPOs have the final say as they must upgrade their nodes with any p
 The Edinburgh meetup in July was the capstone workshop for all the CIP 1694 feedback to date. Representatives from the in-person workshops held around the world were invited to discuss and share their insights with their peers. 
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig911.png "figure 9.11")
-<br>**Figure 9.11:** Screenshot from the Miro board set up for the Edinburgh CIP 1694 workshop
+<br>**Figure 9.11:** Screenshot from the Miro board[^111] set up for the Edinburgh CIP 1694 workshop
 
 In a presentation, Kevin Hammond listed six key issues which came up in all workshops: on-chain deposits, treasury withdrawals, community tooling, action expiration, action thresholds, and DRep incentives. There was broad consensus on most topics but some required a specialized working group to map a way forward. You can follow some of the discussions on the public Miro board.
 
-As almost everything in Cardano takes the form of a transaction, getting the metadata standard correct is critical. Metadata allows developers to embed information specific to the context of the transaction. For example, the NFT standard (see CIP-25, CIP-68, CIP-60) on Cardano has evolved with new capabilities unlocked with past roadmap releases. Pi Lanningham authored CIP-0100 to clear up what metadata standards need to be introduced to enable the on-chain governance mechanisms proposed in CIP 1694.  
+As almost everything in Cardano takes the form of a transaction, getting the metadata standard correct is critical. Metadata allows developers to embed information specific to the context of the transaction. For example, the NFT standard (see CIP-25, CIP-68, CIP-60) on Cardano has evolved with new capabilities unlocked with past roadmap releases. Pi Lanningham authored CIP-0100[^112] to clear up what metadata standards need to be introduced to enable the on-chain governance mechanisms proposed in CIP 1694.  
 
-CIP-95 is a crucial CIP, which extends CIP-30 and describes the interface between webpage/web-based stacks and Cardano wallets. More specifically, it is a specification (based on the Draft Conway Ledger Era) that defines the API of the javascript object that is injected into web applications. The CIP enables voting capabilities for governance tools. At the Edinburgh hackathon, decisions were made around open questions and the base design was approved. 
+CIP-95[^113] is a crucial CIP, which extends CIP-30 and describes the interface between webpage/web-based stacks and Cardano wallets. More specifically, it is a specification (based on the Draft Conway Ledger Era) that defines the API of the javascript object that is injected into web applications. The CIP enables voting capabilities for governance tools. At the Edinburgh hackathon, decisions were made around open questions[^114] and the base design was approved. 
 
-We’ve only scratched the surface. As governance can be subjective, it's best you read CIP 1694 yourself, especially the Rationale and Changelog sections which add context. 
+We’ve only scratched the surface. As governance can be subjective, it's best you read CIP 1694 yourself, especially the *Rationale* and *Changelog* sections which add context. 
 
 **Cardano Ballot**
 
-In November, Intersect announced a community-wide poll to get a ‘temperature check’ on CIP 1694’s progress. The vote took place on the Cardano Ballot app developed by the Cardano Foundation which had been stress-tested on the Cardan Summit Awards 2022 and 2023. The Cardano Ballot is powered by the open-source Wallet Connector developed by the Cardano Foundation, based on the CIP-30 and CIP-8 standards. It works with many Cardano wallets but hardware wallets were not supported due to features missing in the firmware of the hardware wallets. Vacuumlabs are working on a solution, funded by Catalyst Fund 10. IOG engineers also contributed to the ballot event which posed the question: 
+In November, Intersect announced[^115] a community-wide poll to get a ‘temperature check’ on CIP 1694’s progress. The vote took place on the Cardano Ballot app developed by the Cardano Foundation which had been stress-tested on the Cardan Summit Awards 2022 and 2023. The Cardano Ballot is powered by the open-source *Wallet Connector*[^116] developed by the Cardano Foundation, based on the CIP-30 and CIP-8 standards. It works with many Cardano wallets but hardware wallets were not supported due to features missing in the firmware of the hardware wallets. Vacuumlabs are working on a solution, funded by Catalyst Fund 10.[^117] IOG engineers also contributed to the ballot event which posed the question: 
 
 >Based on the current progress, should we as a Cardano community continue to develop and deploy minimum viable on-chain governance as described in CIP 1694, subject to the final approval of the SPOs?
 
@@ -577,14 +578,14 @@ Participants voted Yes, No, or Abstain and could also include a comment with the
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig912.png "figure 9.12")
 <br>**Figure 9.12:** Screenshot from 1694ballot.cardano.org/vote
 
-The poll was non-binding and part of a broader iterative process to garner community participation and feedback. As usual, the community’s response was emphatic. Many felt it would not be a fair reflection of community sentiment as most people hold their ada on hardware wallets. Others questioned why existing community tooling was not used. There was some confusion over the abruptness of this poll suddenly appearing on their timeline, although it had been muted as far back as the NFTxLV in September and featured on the Intersect Roadmap.
+The poll was non-binding and part of a broader iterative process to garner community participation and feedback. As usual, the community’s response was emphatic. Many felt it would not be a fair reflection of community sentiment as most people hold their ada on hardware wallets. Others questioned why existing community tooling was not used. There was some confusion over the abruptness of this poll suddenly appearing on their timeline, although it had been muted as far back as the NFTxLV in September and featured on the Intersect Roadmap.[^118]
 
-Undeterred, the community found a workaround. *Summon Platform and DripDropz* collaborated to offer an alternative CIP 1694 temperature check. The poll itself remained unchanged but people could now vote with hardware wallets and also review live results. The drama from the initial ‘Twitter storm’ was short lived and the ballot(s) only served to demonstrate decentralized governance in practice. 
+Undeterred, the community found a workaround. *Summon Platform and DripDropz* collaborated to offer an alternative CIP 1694 temperature check.[^119] The poll itself remained unchanged but people could now vote with hardware wallets and also review live results. The drama from the initial ‘Twitter storm’ was short lived and the ballot(s) only served to demonstrate decentralized governance in practice. 
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig913.png "figure 9.13")
 <br>**Figure 9.13:** Temperature check results
 
-Nicolas Cerny followed up with some forensic analysis. He noted some of the possible reasons for the low turnout may have been the nature of the poll being non-binding, the relatively short notice of two weeks for the Cardano Ballot event, and many ada holders are just not interested in participating in the governance process. It will hopefully serve as a learning experience and the subsequent open-sourcing of the Cardano Ballot code means anyone can now initiate their own poll, encouraging more engagement and participation in future.
+Nicolas Cerny followed up with some forensic analysis.[^119] He noted some of the possible reasons for the low turnout may have been the nature of the poll being non-binding, the relatively short notice of two weeks for the Cardano Ballot event, and many ada holders are just not interested in participating in the governance process. It will hopefully serve as a learning experience and the subsequent open-sourcing of the Cardano Ballot code means anyone can now initiate their own poll, encouraging more engagement and participation in future.
 
 ## Intersect
 
@@ -781,42 +782,43 @@ If 2023 was the year we talked about governance, 2024 will be about implementati
 [^117]: Vacuumlabs Fund10 Proposal, milestones.projectcatalyst.io/projects/1000108
 [^118]: Intersect Roadmap, intersectmbo.org/roadmap
 [^119]: Summon Platform Poll, tempcheck.smmn.app/poll
-[^120]: Cardano Ballot, github.com/cardano-foundation/cf-cardano-ballot
-[^121]: A ‘work package’ is like a procurement brief capturing the requirements that need vendor support to deliver. 
-[^122]: Latest Cardano and Crypto Developments with Charles Hoskinson, 14 Dec 2023, twitter.com/i/spaces/1YqxoDPoMdaKv
-[^123]: IOG appoints W. Sean Ford as CEO of newly created stablecoin venture, iohk.io/en/blog/posts/2023/10/23/iog-appoints-w-sean-ford-as-ceo-of-newly-created-stablecoin-venture/
-[^124]: Cardano DeFi Alliance, cardanodefialliance.org/
-[^125]: NFT Guild, nft-guild.io/
-[^126]: UTXO Alliance, utxo-alliance.org/
-[^127]: Parameters Committee Updates, forum.cardano.org/c/governance/parameters-committee-updates/220
-[^128]: Matthew Capps, Protocol Change Proposal-001 tweet,  twitter.com/cryptstitution/status/1725745468821344432?s=46
-[^129]: Adam Rusch, twitter.com/AdamRusch
-[^130]: Transparency for Governance, youtu.be/a1DoWRyMVw4?si=FDRObWts8x56xnbR&t=152
-[^131]: Initial draft of governance policy, github.com/IntersectMBO/community/pull/1
-[^132]: Intersect discord server, discord.com/invite/Gr7FhzaVrk
-[^133]: Cardano Foundation 2023 Products to Advance Blockchain, cardanofoundation.org/en/news/cardano-foundation-2023-products-to-advance-blockchain/
-[^134]: Ledger Synch, cardanofoundation.org/en/news/accessing-cardano-blockchain-data-with-ledger-sync/
-[^135]: Identity wallet, identity.cardanofoundation.org/
-[^136]: Cardano Explorer, beta.explorer.cardano.org/en/
-[^137]: Aiken, cardanofoundation.org/en/news/aiken-the-future-of-smart-contracts/
-[^138]: Kupo, github.com/CardanoSolutions/kupo#readme
-[^139]: Ogmios, ogmios.dev/
-[^140]: Merkle Tree implementation in Java / Aiken, github.com/cardano-foundation/merkle-tree-java
-[^141]: Cardano Conversions Utility, github.com/cardano-foundation/cf-cardano-conversions-java
-[^142]: hydra-java, github.com/cardano-foundation/hydra-java
-[^143]: Releasing an open source rewards calculation, cardanofoundation.org/en/news/releasing-an-open-source-rewards-calculation/
-[^144]: Mateusz Czeladka post, linkedin.com/posts/mateuszszczap_github-cardano-foundationcf-cardano-ballot-activity-7138582045655568385-K6gY/ 
-[^145]: SanchoNet, sancho.network/
-[^146]: Barataria was a fictional island awarded to Sancho Panza as a prank in Part II of Cervantes' novel Don Quixote
-[^147]: SanchoNet discord channel, discord.com/channels/826816523368005654/1128361520514994178
-[^148]: Mike Hornan, twitter.com/Hornan7
-[^149]: Mike Hornan SanchoNet tutorials, youtube.com/@hancoeur/videos
-[^150]: Adam Dean, twitter.com/adamKDean
-[^151]: Blockfrost, twitter.com/blockfrost_io
-[^152]: Ryan Williams, github.com/Ryun1
-[^153]: Serialization converts the state of an object into a byte stream. Deserialization is the reverse process.
-[^154]: Emurgo Cardano Serialization Library, github.com/Emurgo/cardano-serialization-lib
-[^155]: Mithril on SanchoNet, github.com/input-output-hk/mithril/issues/1173
-[^156]: NFTxLV, nftxlv.com/
-[^157]: GovTool documentation, docs.sanchogov.tools/about/sancho-govtool-testing
-[^158]: Closing Keynote- Looking Ahead to 2024 and Beyond, youtu.be/OzLdZxkfAeQ?si=hmL23uC9u8dCVBnT&t=846
+[^120]: Voltaire Update: The CIP-1694 Temperature Checks - Insights and Analysis, forum.cardano.org/t/cardano-governance-updates-community-input-voltaire-phase-and-cip-1694-updates/115878/18#voltaire-update-the-cip-1694-temperature-checks-insights-and-analysis-1
+[^121]: Cardano Ballot, github.com/cardano-foundation/cf-cardano-ballot
+[^122]: A ‘work package’ is like a procurement brief capturing the requirements that need vendor support to deliver. 
+[^123]: Latest Cardano and Crypto Developments with Charles Hoskinson, 14 Dec 2023, twitter.com/i/spaces/1YqxoDPoMdaKv
+[^124]: IOG appoints W. Sean Ford as CEO of newly created stablecoin venture, iohk.io/en/blog/posts/2023/10/23/iog-appoints-w-sean-ford-as-ceo-of-newly-created-stablecoin-venture/
+[^125]: Cardano DeFi Alliance, cardanodefialliance.org/
+[^126]: NFT Guild, nft-guild.io/
+[^127]: UTXO Alliance, utxo-alliance.org/
+[^128]: Parameters Committee Updates, forum.cardano.org/c/governance/parameters-committee-updates/220
+[^129]: Matthew Capps, Protocol Change Proposal-001 tweet,  twitter.com/cryptstitution/status/1725745468821344432?s=46
+[^130]: Adam Rusch, twitter.com/AdamRusch
+[^131]: Transparency for Governance, youtu.be/a1DoWRyMVw4?si=FDRObWts8x56xnbR&t=152
+[^132]: Initial draft of governance policy, github.com/IntersectMBO/community/pull/1
+[^133]: Intersect discord server, discord.com/invite/Gr7FhzaVrk
+[^134]: Cardano Foundation 2023 Products to Advance Blockchain, cardanofoundation.org/en/news/cardano-foundation-2023-products-to-advance-blockchain/
+[^135]: Ledger Synch, cardanofoundation.org/en/news/accessing-cardano-blockchain-data-with-ledger-sync/
+[^136]: Identity wallet, identity.cardanofoundation.org/
+[^137]: Cardano Explorer, beta.explorer.cardano.org/en/
+[^138]: Aiken, cardanofoundation.org/en/news/aiken-the-future-of-smart-contracts/
+[^139]: Kupo, github.com/CardanoSolutions/kupo#readme
+[^140]: Ogmios, ogmios.dev/
+[^141]: Merkle Tree implementation in Java / Aiken, github.com/cardano-foundation/merkle-tree-java
+[^142]: Cardano Conversions Utility, github.com/cardano-foundation/cf-cardano-conversions-java
+[^143]: hydra-java, github.com/cardano-foundation/hydra-java
+[^144]: Releasing an open source rewards calculation, cardanofoundation.org/en/news/releasing-an-open-source-rewards-calculation/
+[^145]: Mateusz Czeladka post, linkedin.com/posts/mateuszszczap_github-cardano-foundationcf-cardano-ballot-activity-7138582045655568385-K6gY/ 
+[^146]: SanchoNet, sancho.network/
+[^147]: Barataria was a fictional island awarded to Sancho Panza as a prank in Part II of Cervantes' novel Don Quixote
+[^148]: SanchoNet discord channel, discord.com/channels/826816523368005654/1128361520514994178
+[^149]: Mike Hornan, twitter.com/Hornan7
+[^150]: Mike Hornan SanchoNet tutorials, youtube.com/@hancoeur/videos
+[^151]: Adam Dean, twitter.com/adamKDean
+[^152]: Blockfrost, twitter.com/blockfrost_io
+[^153]: Ryan Williams, github.com/Ryun1
+[^154]: Serialization converts the state of an object into a byte stream. Deserialization is the reverse process.
+[^155]: Emurgo Cardano Serialization Library, github.com/Emurgo/cardano-serialization-lib
+[^156]: Mithril on SanchoNet, github.com/input-output-hk/mithril/issues/1173
+[^157]: NFTxLV, nftxlv.com/
+[^158]: GovTool documentation, docs.sanchogov.tools/about/sancho-govtool-testing
+[^159]: Closing Keynote- Looking Ahead to 2024 and Beyond, youtu.be/OzLdZxkfAeQ?si=hmL23uC9u8dCVBnT&t=846
