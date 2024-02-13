@@ -585,79 +585,80 @@ Undeterred, the community found a workaround. *Summon Platform and DripDropz* co
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig913.png "figure 9.13")
 <br>**Figure 9.13:** Temperature check results
 
-Nicolas Cerny followed up with some forensic analysis.[^120] He noted some of the possible reasons for the low turnout may have been the nature of the poll being non-binding, the relatively short notice of two weeks for the Cardano Ballot event, and many ada holders are just not interested in participating in the governance process. It will hopefully serve as a learning experience and the subsequent open-sourcing of the Cardano Ballot code means anyone can now initiate their own poll, encouraging more engagement and participation in future.
+Nicolas Cerny followed up with some forensic analysis.[^120] He noted some of the possible reasons for the low turnout may have been the nature of the poll being non-binding, the relatively short notice of two weeks for the Cardano Ballot event, and many ada holders are just not interested in participating in the governance process. It will hopefully serve as a learning experience and the subsequent open-sourcing of the Cardano Ballot code[^121] means anyone can now initiate their own poll, encouraging more engagement and participation in future.
 
 ## Intersect
 
 The much talked about MBO was renamed *Intersect*, as in the intersection of Cardano and its community, and launched in July after the Edinburgh workshop. Intersect is an aggregation point for Cardano’s community governance and development. It is ‘an MBO’, not ‘the MBO’...other MBOs will likely follow.  
 
-*Intersect* will serve as a steward of the underlying blueprints so this means the code for the Cardano Node, core Cardano libraries and components moving over from IOG’s GitHub repos to Intersect repos. It will be the community’s town hall for advancing Cardano’s roadmap. Grants and work packages will be available for members to apply for.  CH:
+*Intersect* will serve as a steward of the underlying blueprints so this means the code for the Cardano Node, core Cardano libraries and components moving over from IOG’s GitHub repos to Intersect repos. It will be the community’s town hall for advancing Cardano’s roadmap. Grants and work packages[^122] will be available for members to apply for.  CH:[^123]
 
 >..there is an open question of what is the next priority? So Intersect is one of the organs, not the only one, but an organ where that is discussed from a product to product viewpoint. And the people who serve in those working groups are basically going to be the ones who start filling out that product priority…and the engineers are the ones who go and execute that, but they execute at the behest of the backlog.
 >
 >…
-The other thing is it helps us with business intelligence, where we, for the first time ever as an ecosystem, really need to look at other ecosystems. I've been trying to do this, like with Sean Ford coming in from Algorand, and you know Eran (Barak) and others coming in from the Polkadot ecosystem. But it turns out that other ecosystems do great work too, and they think differently and sometimes value things differently, but a lot of that stuff from those other ecosystems could be of tremendous benefit to Cardano… but it has to be harnessed, translated and captured in the right way. So when you have a bucket like Intersect what that allows you to do is to not only have Cardno community members but within those working groups you could have people from other ecosystems.
+The other thing is it helps us with business intelligence, where we, for the first time ever as an ecosystem, really need to look at other ecosystems. I've been trying to do this, like with Sean Ford[^124] coming in from Algorand, and you know Eran (Barak) and others coming in from the Polkadot ecosystem. But it turns out that other ecosystems do great work too, and they think differently and sometimes value things differently, but a lot of that stuff from those other ecosystems could be of tremendous benefit to Cardano… but it has to be harnessed, translated and captured in the right way. So when you have a bucket like Intersect what that allows you to do is to not only have Cardno community members but within those working groups you could have people from other ecosystems.
 
-There already exist several institutions where community members share their expertise to support a specific need or aspect of Cardano. There is the Cardano DeFi Alliance (CDA) which standardizes best practices within the DeFi ecosystem. The NFT Guild  which focuses on developing standards and tooling for the Cardano NFT space. The UTXO Alliance advocates interoperability across systems using UTXO-based blockchains. 
+There already exist several institutions where community members share their expertise to support a specific need or aspect of Cardano. There is the Cardano DeFi Alliance (CDA)[^125] which standardizes best practices within the DeFi ecosystem. The NFT Guild[^126]  which focuses on developing standards and tooling for the Cardano NFT space. The UTXO Alliance[^127] advocates interoperability across systems using UTXO-based blockchains. 
 Members from these existing groups will amalgamate into the various Intersect boards, councils, committees and working groups. The goals of Intersect are distilled in it’s five pillars:
 
-1. Support the community to develop the ecosystem by hosting developer-focused conferences, hackathons, and events.
-2. Administrate and champion Cardano’s community-led governance implemented by CIP 1694.
-3. Coordinate delivery of the community approved Cardano Technical Roadmap.
-4. Coordinate the routine maintenance of Cardano for system stability.
-5. Coordinate open source development of core technologies for Cardano.
+1. Support the **community** to develop the ecosystem by hosting developer-focused conferences, hackathons, and events.
+2. Administrate and champion Cardano’s **community-led governance** implemented by CIP 1694.
+3. Coordinate delivery of the community approved **Cardano Technical Roadmap**.
+4. Coordinate the routine **maintenance** of Cardano for system stability.
+5. Coordinate open source **development** of core technologies for Cardano.
 
 **Intersect Committees** 
 
-The Parameters Committee meets every few weeks to review Cardano's parameters encompassing network, technical and economic parameters. The minutes of these meetings are available on the Cardano Forum. You can see the consideration that goes into a parameter change by reading Matthew Capps *Protocol Change Proposal-001, Chronology of Documented Events* tweet.
+The Parameters Committee meets every few weeks to review Cardano's parameters encompassing network, technical and economic parameters. The minutes of these meetings are available on the Cardano Forum.[^128] You can see the consideration that goes into a parameter change by reading Matthew Capps *Protocol Change Proposal-001, Chronology of Documented Events* tweet.[^129]
 
-An important stream for Intersect is the Cardano Civics Committee (CCC) which is an advisory committee focussing on off-chain discussions about governance proposals. It will support the Constitutional Committee and monitor the governance process to ensure it is working as intended. Notable members include Adam Rusch who holds a PhD in Social Sciences and Marcus Fysh, British Member of Parliament for Yeovil.
+An important stream for Intersect is the Cardano Civics Committee (CCC) which is an advisory committee focussing on off-chain discussions about governance proposals. It will support the Constitutional Committee and monitor the governance process to ensure it is working as intended. Notable members include Adam Rusch[^130] who holds a PhD in Social Sciences and Marcus Fysh, British Member of Parliament for Yeovil.
+
 The Membership, and Community Committee (MCC) fosters community inclusivity. More committees and working groups will follow in 2024… 
 
 >...it's not decentralized governance if it's not by the people, for the people, run by the people...
-- Amar Singh, EMURGO
+- Amar Singh, EMURGO[^131]
 
 Key to Intersect being a success is the commitment to open-source development on Cardano. The Open Source Committee (OSC) is the shepherd for this open-source approach. Without wanting to get lost in abbreviations, the OSC will act as an advisory body to the Open Source Program Office within Intersect. The OSC has mapped out the following tenets:
 
-- Maintain the legitimacy of the Cardano Open Source Project (COSP)
+- Maintain the **legitimacy** of the Cardano Open Source Project (COSP)
 - Maintain the (high quality) security and health of the Cardano mainnet
 - Sustainable Development of the COSP must continue.
 - Be a good Open Source citizen.
 
-Pat Sheridan, co-founder and CEO of Modus Create, is the interim Chair for the crucial bootstrapping phase. Michael Peyton Jones created a first draft of the open source governance policy. The committee is always open to new members. To learn more, it’s best to check out the Intersect discord #OSC-feedback channel for the latest news.
+Pat Sheridan, co-founder and CEO of Modus Create, is the interim Chair for the crucial bootstrapping phase. Michael Peyton Jones created a first draft[^132] of the open source governance policy. The committee is always open to new members. To learn more, it’s best to check out the Intersect discord[^132] #OSC-feedback channel for the latest news.
 
-True open source means having flexibility to choose from different options. The Cardano Foundation has also been following an Open Source strategy. Director of Product, Alex Apeldoorn, outlined the suite of products released in 2023. Ledger Sync, Identity Wallet, Cardano Explorer, Aiken, Kupo, and Ogmios all follow open source principles and make life easier to develop on Cardano. 
+True open source means having flexibility to choose from different options. The Cardano Foundation has also been following an Open Source strategy. Director of Product, Alex Apeldoorn, outlined the suite of products[^133] released in 2023. Ledger Sync,[^134] Identity Wallet,[^135] Cardano Explorer,[^136] Aiken,[^137] Kupo,[^138] and Ogmios[^139] all follow open source principles and make life easier to develop on Cardano. 
 
 We already focussed on Aiken’s growing adoption. Acknowledging that Java is still the preferred language for a lot of enterprise developers, the CF created Ledger Sync and the Identity Wallet in Java as open source tools with this audience in mind. Ledger Sync puts sequential blockchain data in a new, more accessible database structure, while the Identity Wallet is a W3C-compatible mobile wallet for managing self-sovereign identities across Cardano and other blockchains. The wallet supports multiple standards, integrating key event receipt infrastructure (KERI) for interoperability so as to fit a broad range of use cases and enterprise adoption.
 
-But wait, there’s more…The *Cardano Ballot* project, a Fully functional Merkle Tree in Java / Aiken, the Cardano Conversions library and State Channels L2 (hydra-java Client) were all open-sourced. Not forgetting what we mentioned early about the CF open sourced the rewards calculation, in an effort to enable anyone to perform and validate the rewards calculation in a way that is independent of a single implementation. 
+But wait, there’s more… The *Cardano Ballot* project, a Fully functional Merkle Tree in Java / Aiken,[^140] the Cardano Conversions library[^141] and State Channels L2 (hydra-java Client)[^142] were all open-sourced. Not forgetting what we mentioned early about the CF open sourced the rewards calculation,[^143] in an effort to enable anyone to perform and validate the rewards calculation in a way that is independent of a single implementation. 
 
-With a strong finish to the year, with multiple launches in December, the CF is poised to build on this momentum in 2024. As CF engineer Mateusz Czeladka remarked, *‘Open Source has a compounding effect, others can build on what you created. Love it’*
+With a strong finish to the year, with multiple launches in December, the CF is poised to build on this momentum in 2024. As CF engineer Mateusz Czeladka remarked,[^144] *‘Open Source has a compounding effect, others can build on what you created. Love it’*
 
 ## SanchoNet 
 
-There are a lot of tools to be built in order for CIP 1694 to become a reality. We naturally need a testbed for this journey. Also to come out of the Edinburgh meetup in July ‘23 was *SanchoNet*, a testnet for people to try out new tools and mechanisms related to CIP 1694.  
+There are a lot of tools to be built in order for CIP 1694 to become a reality. We naturally need a testbed for this journey. Also to come out of the Edinburgh meetup in July ‘23 was *SanchoNet*,[^145] a testnet for people to try out new tools and mechanisms related to CIP 1694.  
 
-SanchoNet was named after the character Sancho Panza, Don Quixote’s companion in Miguel de Cervantes’ literary classic. SanchoNet is ultimately about transforming an aspirational digital *Barataria* into on-chain governance reality on Cardano mainnet. Note SanchoNet is not another (ITN) incentivized testnet but a testnet where test-ada is used to stress test experimental features. 
+SanchoNet was named after the character Sancho Panza, Don Quixote’s companion in Miguel de Cervantes’ literary classic. SanchoNet is ultimately about transforming an aspirational digital *Barataria*[^146] into on-chain governance reality on Cardano mainnet. Note SanchoNet is not another (ITN) incentivized testnet but a testnet where test-ada is used to stress test experimental features. 
 
-First introduced to the community in Edinburgh, SanchoNet was rolled out in 6 phases with each Cardano Node (cardano-cli) release enabling new governance capabilities. As it’s fast moving and it’s best to check for the latest updates on IOG’s Discord server in the dedicated SanchoNet channel.
+First introduced to the community in Edinburgh, SanchoNet was rolled out in 6 phases with each Cardano Node (cardano-cli) release enabling new governance capabilities. As it’s fast moving and it’s best to check for the latest updates on IOG’s Discord server in the dedicated SanchoNet channel.[^147]
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig914.png "figure 9.14")
 <br>**Figure 9.14**: SanchoNet roadmap
 
 Although limited to stake pool operators at the command line initially, the next phase started once the tools were in place for DRep to register, receive delegation and vote. Test-ada holders could also now participate by submitting governance actions. There are plenty of areas where developers can contribute, with tooling required for wallet integrations, DRep explorers to visualize blockchain data, governance dashboards, etc. SanchoNet follows its own independent development roadmap scoped with a technical, rather than governance focus.  
 
-The community stepped up as it always does. Mike Hornan, SPO of ‘able’ stake pool, led the way contributing cardano-cli cheat sheets, infographics, hosting workshops and recording YouTube tutorials. Adam Dean maintained the testnet, Blockfrost provided API access to SanchoNet. CIP editor Ryan Williams hosted biweekly ‘sancho-wallets’ open hours on Discord to discuss SanchoNet news and CIP-95 progress. Emurgo released a Serialization Library for the Conway ledger era. The library can be used to generate new certificates and transactions that can be submitted to SanchoNet. Many others contributed with dozens of SPOs signed up running the SanchoNet network. Although there are different roadmap eras and separate engineering streams, almost everything overlaps in Cardano and so it’s no surprise the Mithril team have been busy testing on SanchoNet also.
+The community stepped up as it always does. Mike Hornan,[^148] SPO of ‘able’ stake pool, led the way contributing cardano-cli cheat sheets, infographics, hosting workshops and recording YouTube tutorials.[^149] Adam Dean[^150] maintained the testnet, Blockfrost[^151] provided API access to SanchoNet. CIP editor Ryan Williams[^152] hosted biweekly ‘sancho-wallets’ open hours on Discord to discuss SanchoNet news and CIP-95 progress. Emurgo released a Serialization Library[^153] for the Conway ledger era. The library[^154] can be used to generate new certificates and transactions that can be submitted to SanchoNet. Many others contributed with dozens of SPOs signed up running the SanchoNet network. Although there are different roadmap eras and separate engineering streams, almost everything overlaps in Cardano and so it’s no surprise the Mithril team have been busy testing on SanchoNet also.[^155]
 
 **GovTool**
 
-GovTool was first demoed at September's NFTxLV event and is available for testing at sanchogov.tools. As this is new tool and process for most users, there is comprehensive documentation including a testing ‘to do’ list. Governance tooling follows an open source model in that it is owned and maintained by the community. Intersect committees and working groups hosting and maintaining tooling.
+GovTool was first demoed at September's NFTxLV event[^156] and is available for testing at sanchogov.tools. As this is new tool and process for most users, there is comprehensive documentation including a testing ‘to do’ list.[^157] Governance tooling follows an open source model in that it is owned and maintained by the community. Intersect committees and working groups hosting and maintaining tooling.
 
 You can still use the cardano-cli if you prefer, but now there is also the user-friendly GovTool UI which allows a broader base of ada holders to test governance features available in SanchoNet. 
 
 We are currently deep in the weeds of Phase 5, with the focus on more technical functionality testing and building network resilience. Ada holders could now propose and endorse parameter updates. The final Phase 6 will focus on the governance actions related to hard fork initiation. 
 
-If 2023 was the year we talked about governance, 2024 will be about implementation. The consultation period for the constitution will come into focus, guided by the Cardano Civics Committee (CCC). Then there is the milestone that will be the Chang hard fork. The Constitutional Convention is set for late 2024 in Buenos Aires, Argentina which will capture the feedback from the Constitution Global Workshop Series. The year will climax with the ‘moment of truth’ when an on-chain vote to ratify the constitution will take place. CH at 2023 Dubai Summit
+If 2023 was the year we talked about governance, 2024 will be about implementation. The consultation period for the constitution will come into focus, guided by the Cardano Civics Committee (CCC). Then there is the milestone that will be the Chang hard fork. The Constitutional Convention is set for late 2024 in Buenos Aires, Argentina which will capture the feedback from the Constitution Global Workshop Series. The year will climax with the ‘moment of truth’ when an on-chain vote to ratify the constitution will take place. CH at 2023 Dubai Summit[^158]
 
 >Currently Catalyst is the only mechanism upon which we access the cardano treasury…well that's great, but that's like saying you have a garden hose to access your water from the tank… it's very small throughput, there's a lot of water in the tank ... the Cardano treasury has a lot of funds in it, but not a lot of it gets emitted out …and that was by design, because we had to wait for a governance system to be in place. Now that there's a governance system in place, technically speaking CIP 1694 would allow the community to open up the treasury for things that aren't related to Catalyst.
 >
