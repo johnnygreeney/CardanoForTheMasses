@@ -613,10 +613,10 @@ The Parameters Committee meets every few weeks to review Cardano's parameters en
 
 An important stream for Intersect is the Cardano Civics Committee (CCC) which is an advisory committee focussing on off-chain discussions about governance proposals. It will support the Constitutional Committee and monitor the governance process to ensure it is working as intended. Notable members include Adam Rusch[^130] who holds a PhD in Social Sciences and Marcus Fysh, British Member of Parliament for Yeovil.
 
-The Membership, and Community Committee (MCC) fosters community inclusivity. More committees and working groups will follow in 2024… 
+The Membership, and Community Committee (MCC) fosters community inclusivity. More committees and working groups will follow in 2024… - Amar Singh, EMURGO[^131]
 
 >...it's not decentralized governance if it's not by the people, for the people, run by the people...
-- Amar Singh, EMURGO[^131]
+
 
 Key to Intersect being a success is the commitment to open-source development on Cardano. The Open Source Committee (OSC) is the shepherd for this open-source approach. Without wanting to get lost in abbreviations, the OSC will act as an advisory body to the Open Source Program Office within Intersect. The OSC has mapped out the following tenets:
 
