@@ -77,7 +77,7 @@ The wallet will securely generate, update, deactivate, and restore Decentralized
 
 
 
-**_To be uploaded soon..._**
+**_The rest of the chapter will be uploaded soon..._**
 
 
 
