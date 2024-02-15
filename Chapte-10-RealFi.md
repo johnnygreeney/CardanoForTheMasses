@@ -106,10 +106,10 @@ Following the introduction of native assets with the *Mary* hard fork, the possi
 Below is an example transaction in human readable format. This is about Bill, Ted and Barney exchanging ada and a new native token, JohnCoin (JCN). 
 
 **Transaction**:
-< Receive 20 ada from Bill
-> Send 10 ada to Ted
-> Send 9.66 ada to Bill
-–Use 0.34 ada as the transaction fee
+<- Receive 20 ada from Bill
+-> Send 10 ada to Ted
+-> Send 9.66 ada to Bill
+*Use 0.34 ada as the transaction fee*
 
 Bill has received 20 ada in the past, so has a UTXO worth 20 ada in Daedalus. He takes that UTXO, sends 10 ada to Ted, 9.66 ada back to himself, and uses the leftover 0.34 as the transaction fee. For it to be a legitimate transaction, the inputs and the outputs must be equal, ie.  20 = 10 + 9.66 + 0.34
 
@@ -117,23 +117,23 @@ Bill has received 20 ada in the past, so has a UTXO worth 20 ada in Daedalus. He
 Now let’s look at a transaction that uses JohnCoin, JCN as well as ada.
 
 **Transaction**:
-<Receive 20 JCN from Bill
-<Receive 4 ada from Bill
->Send 10 JCN to Ted
->Send 10 JCN to Bill
->Send 3.66 ada to Bill
-–Use 0.34 ada as the transaction fee
+<- Receive 20 JCN from Bill
+<- Receive 4 ada from Bill
+-> Send 10 JCN to Ted
+-> Send 10 JCN to Bill
+-> Send 3.66 ada to Bill
+*Use 0.34 ada as the transaction fee*
 
 This time Bill wanted to send 10 JCN to Ted. He also had to include some ‘extra’ ada to cover the transaction fee. It worked fine, but it was inconvenient and not really sustainable if we were dealing with hundreds, or thousands, of transactions. 
 
 Here’s how this same transaction would work with Babel fees.
 
 **Transaction**:
-<Receive 20 JCN from Bill
->Send 10 JCN to Ted
->Send 8 JCN to Bill
->Send -0.34 ada and 2 JCN to whomever takes on the debt
-–Use 0.34 ada as the transaction fee
+<- Receive 20 JCN from Bill
+-> Send 10 JCN to Ted
+-> Send 8 JCN to Bill
+-> Send -0.34 ada and 2 JCN to whomever takes on the debt
+*Use 0.34 ada as the transaction fee*
 
 This poses some questions:
 
@@ -144,11 +144,11 @@ How can Bill send a negative amount of ada to just anyone, as a valid transactio
 So the first user to ‘volunteer’ to take on the debt, Barney in this example, will make a transaction as follows:
 
 Transaction:
-<Receive 4 ada from Barney
-<Receive -0.34 ada and 2 JCN from Bill’s transaction
->Send 3.32 ada to Barney
->Send 2 JCN to Barney
-–Use 0.34 ada as the transaction fee
+<- Receive 4 ada from Barney
+<- Receive -0.34 ada and 2 JCN from Bill’s transaction
+-> Send 3.32 ada to Barney
+-> Send 2 JCN to Barney
+*Use 0.34 ada as the transaction fee*
 
 Barney has volunteered to take on the debt of -0.34 debt, in doing so validating Bill’s transaction. All fees were technically paid in ada, however, the way Bill sees it, he only paid using JCN.
 
