@@ -208,17 +208,17 @@ These features have been in research for some time but will be crucial as DeFi a
 [^13]: Babel Fees, iohk.io/en/blog/posts/2021/02/25/babel-fees/
 [^14]: Cardano360 - February 2021, youtu.be/YXaK0cvgoFQ?t=2184
 [^15]: Chakravarty, Karayannidis, Kiayias, Peyton Jones, Vinogradova (2022), 'Babel Fees via Limited Liabilities', iohk.io/en/research/library/papers/babel-fees-via-limited-liabilities/
-[^16]: HODL is slang in the cryptocurrency community for holding the cryptocurrency rather than selling it. HODL can also mean ‘Hold On for Dear Life’ and refers to not selling, even during strong market volatility and poor market performance.
-[^17]: Game theory is the study of mathematical models of strategic interaction in between rational decision-makers. It has applications in all fields of social science, as well as in logic and computer science. Originally, it addressed zero-sum games, in which each participant’s gains or losses are exactly balanced by those of the other participants. Today, game theory applies to a wide range of behavioral relations and is now an umbrella term for the science of logical decision making in humans, animals, and computers.
+[^16]: **HODL** is slang in the cryptocurrency community for holding the cryptocurrency rather than selling it. HODL can also mean ‘Hold On for Dear Life’ and refers to not selling, even during strong market volatility and poor market performance.
+[^17]: **Game theory** is the study of mathematical models of strategic interaction in between rational decision-makers. It has applications in all fields of social science, as well as in logic and computer science. Originally, it addressed zero-sum games, in which each participant’s gains or losses are exactly balanced by those of the other participants. Today, game theory applies to a wide range of behavioral relations and is now an umbrella term for the science of logical decision making in humans, animals, and computers.
 [^18]: Roundtable with Charles Hoskinson and Alex Chepurnoy | Ergo Pulse, youtube.com/watch?v=k9a3SYV6FJA
 [^19]: **Spot trading** is a continuous process of buying and selling tokens and coins at a spot price for immediate settlement. The trader usually intends to gain profits from market fluctuations
 [^20]: An **atomic swap** is an exchange of cryptocurrencies from separate blockchains. The swap is conducted between two entities without a third party's involvement. The idea is to remove centralized intermediaries like regulated exchanges and give token owners total control
 [^21]: Babel fees via limited liabilities, youtube.com/watch?v=iJEmRZ6leXE
 [^22]: Surprise AMA 02/26/2021, youtu.be/6eD_rnII3ms?t=42
 [^23]: **Tether** (ticker USDT) is a cryptocurrency that is hosted on the Ethereum and Bitcoin blockchains, among others. Its tokens are issued by the Hong Kong company Tether Limited, which in turn is controlled by the owners of Bitfinex. Tether is called a stablecoin because it was originally designed to always be worth US$1.00, maintaining $1.00 in reserves for each tether issued.
-[^24]:
-[^25]:
-[^26]:
+[^24]: Stablefees and the Decentralized Reserve System, iohk.io/en/blog/posts/2021/06/10/stablefees-and-the-decentralized-reserve-system/
+[^25]: Network traffic and tiered pricing, iohk.io/en/blog/posts/2021/11/26/network-traffic-and-tiered-pricing/
+[^26]: Pegging means attaching or tying a currency's exchange rate to another currency
 [^27]:
 [^28]:
 [^29]:
