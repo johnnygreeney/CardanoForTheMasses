@@ -187,6 +187,160 @@ These features have been in research for some time but will be crucial as DeFi a
 
 ## Djed stablecoin
 
+Cardano's primary stablecoin is named after *Djed*, the symbol of ‘stability’ in ancient Egypt and the symbolic backbone of the god *Osiris*, the god of the afterlife and resurrection. Djed is the first stablecoin to remove price fluctuation via formal verification. One of the major roadblocks to cryptocurrency adoption is its volatility. Transparency, immutability of data, and proven security of financial transactions are all advantages of blockchain technology. It is, however, more difficult to forecast crypto market fluctuations compared to fiat currencies. This makes it difficult to use cryptocurrency in everyday life.
+
+A stablecoin is a cryptocurrency that is pegged[^26] to a basket of fiat currencies or a single fiat currency; commodities such as gold or silver; equities; or other cryptocurrencies. Stablecoins have built-in processes that maintain a minimal price variation from their target price, making them suitable for storing or exchanging value since the volatility is removed.
+
+There are three main stablecoin types:
+
+- Over-collateralized stablecoin backed by basket of other cryptocurrencies
+- Algorithmic – the reserve (made up usually of one or more cryptocurrencies) is controlled by an algorithm
+- Fiat-backed – a fiat currency reserve is used as collateral
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig103.png "figure 10.3")
+<br>**Figure 10.3:** Stablecoin Classification
+
+The price stability of certain stablecoins is jeopardized due to a lack of transparency and liquidity in their reserves. To solve these issues, IOG partnered up with COTI to implement Djed, a stablecoin contract, based on the Djed research paper.[^27]
+
+**How stablecoins work underneath the hood**
+
+Different processes contribute to the coin’s value stability and assist to minimize price fluctuations. The economic concepts of supply and demand underlie these systems. A popular technique is to back the stablecoin with a reserve of the pegged currency. If demand for ‘buy’ or ‘sell’ orders exceeds supply, the supply should be raised to minimize price swings. 
+
+Stablecoin reserves are not usually kept in cash. They are usually invested in financial assets that provide interest, such as bonds. The operator raises funds from the returns on these investments. Price stability is maintained as long as the stablecoin is fully backed by reserves in the currency to which it is tied — and the operator can respond rapidly to fluctuations in demand.
+
+The Djed stablecoin is intended to be a fiat currency-pegged asset with a governing algorithm. This method ensures a steady flow of funds. Djed isn’t only a dollar-denominated currency. It can function with any currency if oracles are available to provide the contract with the appropriate price index.
+
+Djed’s reserve coin is called **Shen**, continuing with the ancient Egyptian theme. The Shen is said to be a symbol of both royalty and symmetry with a deep connection with infinity and permanence. 
+
+**Risks**
+
+Investments are often connected with stablecoin reserves. Due to the lack of liquidity in these investments, the operator may be unable to respond quickly to demand. In the short term, this weakens stability. Fiat-backed stablecoins have the disadvantage of requiring faith in the parties holding the reserves. Tether stablecoin (USDT) has already fallen as low as $0.92 in 2017[^28] due to a lack of reserve transparency and the ‘full-backing’ claim, as well as ineffective stabilizing safeguards.
+
+When the underpinning asset is a cryptocurrency on a public blockchain, there are no transparency concerns. Furthermore, because of its automated and secure processes, the adoption of smart contracts allows the rapid and reliable implementation of stabilizing steps.
+
+**What category of stablecoin is Djed?**
+
+Djed is categorized as an over-collateralized stablecoin. The semantics are important because although Djed uses an algorithm, using an algorithm in itself is not a reason to be called an algorithmic stable coin. Djed uses external collateral (ada) which is unrelated to the protocol. Algorithmic stablecoins uses internal collateral, like in the case of Luna and UST. Djed is over-collateralized 4x to 8x, while algorithmic stable coins are usually only partially collateralized. Over-collateralized stable coins are traditionally less capital efficient, however, djed is different and actually fixes that with the Shen model with its symbiotic relationship. So djed is very capital efficient… one dollar worth of ada always equals one dollar worth of djed. 
+
+Another difference is djed is always redeemable for the collateral, which is ada. Algorithmic stablecoins are not always redeemable. They are dependent on the value of the governance token. Djed stability is based on over-collateralization and not on the trust on the governance token, which is what you need to have if you're using an algorithmic stable coin.
+
+Djed is a crypto-backed algorithmic stablecoin contract which functions as an autonomous bank. It works by minting and burning stablecoins and reserve coins, as well as holding a reserve of base coins. The contract uses the reserve to buy and sell stablecoins and charges fees that accrue in the reserve to keep the price of stablecoins pegged to a target price. Holders of reserve coins, who contribute funds to the reserve while accepting the risk of price volatility, are the beneficiaries of this revenue stream.
+
+**Formal verification – the theory behind Djed**
+
+Djed is the first stablecoin protocol that has been formally verified. Djed’s design and stability features are considerably enhanced by the use of formal methods[^29] in the programming process. Mathematical theorems are used to prove the properties using formal methods:
+
+- Maintain the upper and lower bounds: the price will not move above or below the given price. Purchases and sales are not restricted in the typical reserve ratio range, and users have no motive to trade stablecoins on the secondary market outside of the peg range
+
+- Peg stability during market crashes: the peg is maintained up to a certain limit, which is set by the reserve ratio, even when the price of the base coin falls drastically
+
+- There is no insolvency since there is no bank involved, there is no bank contract to go bankrupt
+
+- No bank runs because all users are treated equally and honestly, there is no reason for users to scramble to redeem their stablecoins
+
+- Monotonically rising equity per reserve coin: the reserve excess per reserve coin is guaranteed to rise when users engage with the contract under certain circumstances. Reserve coin holders are certain to earn under these circumstances
+
+- No reserve draining: under certain circumstances, it is impossible for a rogue user to carry out a series of acts that would deplete the bank’s reserves
+
+- Bounded dilution: there is a limit on reserve coin holders and their profit can be diluted as a result of issuing more reserve coins.
+
+**Versions**
+
+Djed is available in two versions:
+
+- Minimal Djed: This version aims to be as minimal, intuitive, and simple as possible while maintaining stability
+
+- Extended Djed: this more sophisticated version offers greater stability. The adoption of a continuous pricing model and dynamic fees to further encourage the maintenance of an appropriate reserve ratio are the primary distinctions.
+
+**Implementations**
+
+IOG, Ergo, and Emurgo have been testing various techniques by implementing the Djed stablecoin contract.
+
+SigmaUSD on Ergo was the first Djed stablecoin contract to be deployed. In Q1 2021, it was the first stablecoin to be implemented on a UTXO-based ledger. It contained a 1% charge for buying and selling transactions, as well as an hourly exchange rate update from an oracle. An unidentified user with a big quantity of ERGs (Ergo’s native currency) launched a reserve draining attack against the first version but the attempt was unsuccessful, and the perpetrator is said to have lost $100k.
+
+To deter similar attacks, the first version of Minimal Djed was replaced with a version in which the charge was set to 2%, the oracle updated every 12 minutes, and each oracle update could only affect the price by 0.49 % unless the price difference was larger than 50%. This increased resistance to reserve draining attacks.
+
+The IOG team has also implemented Djed in Solidity. One version employs the Ethereum blockchain’s native currency ether as a base coin, while the other can use any ERC20-compliant token as a base coin. These implementations have been launched to testnets for Binance Smart Chain, Avalanche Fuji, Polygon Mumbai, Ethereum Kovan,[^30] Ethereum Rinkeby, and RSK testnets so far. 
+
+In addition, there is an OpenStar implementation. OpenStar is a Scala-based[^31] framework for private permissioned blockchains. Djed’s implementation with OpenStar is based on the concept of off-chain smart contract execution in order to create a stablecoin on Cardano that is not reliant on on-chain smart contracts.
+
+**Djed implementation on Cardano**
+
+Cardano’s Alonzo upgrade made Plutus smart contracts possible. Haskell runs on the Plutus Platform, which ensures a secure, full-stack development environment. Djed’s implementation has run in parallel, and assisted in, Plutus V2’s development.
+
+Stablecoins and reserve coins are native assets in this implementation that are uniquely recognized by the hash of the monetary policy that regulates their minting and burning via the Djed protocol. This approach also expects that oracle data, such as the exchange rate, be delivered to transactions as signed data rather than being posted on the blockchain.
+
+See the Djed paper or Bruno Woltzenlogel Paleo’s talk at Ergo summit 2021[^32] for more information about Djed stablecoin.
+
+**COTI (currency of the internet)**
+
+COTI is a longtime partner of IOG. The cFund[^33] for Cardano Developments made its first equity investment in COTI. It acts as a bridge between DeFi apps and the Cardano blockchain. COTI offers a solution called Ada Pay (adapay.finance), a payment gateway that allows retailers to accept ada payments with near-instant settlement. Unlike many financial products on the market, Coti’s treasury has always had transparent proof of reserves. 
+
+Charles Hoskinson and COTI chief executive Shahaf Bar-Geffen revealed at the 2021 Cardano Summit that the COTI (coti.io) platform would be the official issuer of Djed.[^34] Stablecoins, according to the COTI development team, are a ‘killer app’ that will be used by a huge number of crypto users to settle payments and cover expenses. 
+
+**Terra UST 2022 collapse**
+
+Terra’s UST algorithmic stablecoin[^35] lost its peg[^36] to the US dollar in early May 2022. UST plummeted to 9c forcing Terra to dig deep into its Bitcoin reserves (~$1.3 billion) from its confirmed Bitcoin address[^37] in a desperate attempt to steady the ship. The dramatic collapse was summed up well by the Coin Bureau.[^38] 
+
+Tether (USDT), one of the industry’s oldest stablecoins, has previously received criticism for its lack of transparency[^39] and reluctance to be audited. The suddenness of Terra’s collapse renewed skepticism on the viability of existing stablecoins and drove many[^40] to re-evaluate their views of Djed, and how it’s designed to be more resilient to similar hazards. Shahaf Bar-Geffen confirmed in subsequent update[^41] that Djed survived unscathed from the same tumultuous weekend for the crypto markets.  
+
+**Why is Djed better than Terra Luna?**
+
+2022 was a bad year for hacks and scams but the two big collapses, FTX and Luna, were due to human greed and corruption. The lack of self-regulation within the crypto industry was also a factor. Just as the crypto industry was tarnished by the FTX collapse, some are trying to tarnish Djed as guilty by association. Luna was also an algorithmic stablecoin, Djed also has an algorithm but that’s where the similarity ends. Djed is categorized as an over-collateralized stablecoin. 
+
+There are years of academic research behind Djed’s algorithm. It started as the product of formal methods and has been battle-tested in simulations. Ergo have also implemented their version, SigmaUSD, which has withstood huge market volatility (90% drop) and maintained its peg. The theory behind over-collateralized stablecoins has repeatedly shown its resilience in adverse market conditions. 
+
+Luna was not over-collateralized, Djed is over-collateralized by a healthy 4-8x ratio. Luna was backed by an asset, UST, which it had a direct correlation. The Luna ‘death spiral’ occurred because as UST lost its peg,[^42] the solution was to sell Luna. So, Luna’s price inevitably nose-dived creating a circular dependency. As the fiasco unfolded, the centralized entity behind Luna even tried to halt the network and add Bitcoin as an uncorrelated backing asset. 
+
+Djed is backed by Ada, which is uncorrelated to Djed. There is no dependency, ada can exist without Djed. Ada has its own utility and ecosystem with plenty of liquidity. Djed is autonomous and decentralized running on its own smart contract. There is no human involvement, no central entity adjusting the reserve ratio. The dynamic ‘buy’ and ‘sell’ conditions are all set automatically. The fees go to Shen holders, not to the centralized issuer.
+
+**Djed is launched**
+
+COTI had already signed 40 partnerships with DEXs in the buildup to the long-awaited Djed launch. The private testnet scalability issues were addressed. The public testnet was launched in May 2022 and was followed by a full regress audit. Two security audits were conducted, which is due diligence for such a financial token. The public mainnet was launched in January 2023. 
+
+**How does Djed work?**
+
+At a high level, ada is backing the Djed stablecoin. Those who have Djed are the first to receive from the liability pool. They will always get back one dollar for their Djed. This is the safety mechanism in the system, it is over-collateralized, so Djed holders get the priority. On top of this, there is an equity pool created by those who provide liquidity and receive Shen in return.  
+
+I send Ada to the smart contract, I get Djed back in return. If I want my ada back, I can send Djed back to the smart contract and get back ada. If I want to enjoy some upside while accepting more risk, I mint Shen by sending ada to the smart contract and burn it when I want to take my upside out. The process is autonomous, managing itself without any human involvement.
+
+*400-800%*
+
+Within the ratio of 400-800%, ie. 4x – 8x worth of ada to dollar ratio, this is the optimum range. You can mint and burn Djed, you can mint and burn Shen… 
+
+*Above 800%*
+
+Above 800% (8x), you can mint and burn Djed as much as you like, however, you cannot mint Shen anymore. For example, Shen holders are rewarded for the risk they take on early on. They are providing liquidity when needed. Otherwise, everyone might just wait until the ratio goes over 800% to mint Shen. The fact that you can’t mint Shen over 800% effectively protects Shen holders who minted it earlier. 
+
+*Under 400%*
+
+You can't mint Djed because there is not enough collateral. You can just burn Djed, and in doing so, raise the ratio. Within this range, you can send ada to the smart contract get Shen back. Under 400% (4x), you mint Shen but you can't burn it. This is the risk Shen holders take on, they can’t burn it (withdraw) below 400%. Shen holders must wait until there is more ada in the smart contract and the reserve ratio rises above 400% (4x).
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig104.png "figure 10.4")
+<br>**Figure 10.4**: Djed reserve ratio.
+
+Despite its promising beginnings, Djed has faced some challenges, with its reserves dwindling to 356%. It saw something of a revival in late 2023 as Djed surged above[^43] 400% again allowing users the opportunity to mint and burn both $DJED and $SHEN. It's likely Djed is here to stay and will be reliable, however, it will need to be complemented by other stablecoins on Cardano. 
+
+**Other Stablecoins on Cardano**
+
+In April 2022 **WingRiders** launched with their DEX also bringing wrapped stablecoins[^44] (USDC and USDT) and liquidity through the Milkomeda bridge.
+
+At the 2022 Cardano Summit, James Wager of Indigo Labs announced **iUSD**. iUSD is pegged to the median value of USDC (USD Coin), TUSD (TrueUSD), and USDT (Tether); this design allows iUSD to maintain its peg even if one of these three stablecoins depegs. 
+
+Also in Lausanne, Vineeth Bhuvanagiri (Director of Emurgo Fintech) announced Anzens, a product suite to bridge the gap between DeFi, RealFi and TradFi (traditional finance). The first product will be a **USDA**, a fiat-backed stablecoin. It will operate by minting or burning USDA coins at a fixed exchange rate of 1 USDA to 1 USD based on user demand, ensuring that each USDA coin is backed by a corresponding US dollar held by a regulated US banking partner. In time, Emurgo will expand beyond the tokenization of dollars to other currencies and real-world assets. 
+
+In his talk,[^45] Bhuvanagiri highlighted the savings in fees when using Cardano’s native asset standard. By contrast, Ethereum’s smart contract-based model requires more funds for gas (transaction) fees when moving funds around in USDC and USDT. USDC (USD Coin) and USDT (Tether) are centralized stablecoins, issued by private entities who charge hefty fees, primarily based on Ethereum.
+
+**Mehen** is creating the **USDM** fiat-backed stablecoin for Cardano. Mehen claims that they will revolutionize the space with unmatched transparency, adaptability, and security. They claim USDM is not just another stablecoin. Unlike some centralized stablecoins on other blockchains, which can be frozen or taken off you by authorities, $usdm will be a Cardano native asset which cannot be frozen.  ‘$usdm is as native as $ada’ is a bullish claim, watch this space. 
+
+**IOG launches dedicated Stablecoin venture**
+
+In late 2023, IOG announced a new spin-off company which will focus solely on stablecoins. W. Sean Ford has been appointed as the CEO and David Markley as COO. Both worked at Algorand Inc who have had some success[^46] implementing stablecoin projects in the Marshall Islands and Brazil amongst others, as well as working with the Bank of Italy. Stablecoins is an area Charles Hoskinson has been researching and developing since 2013 with BitShares, and has expressed frustration trying to negotiate with some ‘pay to play’ centralized stablecoins.[^47] 
+
+It will be interesting to see what impact the new venture has on an area some consider a weak spot for Cardano. At the Dubai Cardano Summit, an expert panel[^48] voiced their concerns that iUSD is not reliable enough to keep its peg, while also doubting Djed's ability to scale, as although it keeps its peg, it's not capital efficient. 
+
+## How EUTXO copes with impermanent loss
+
 
 
 **_The rest of the chapter will be uploaded soon..._**
@@ -219,30 +373,30 @@ These features have been in research for some time but will be crucial as DeFi a
 [^24]: Stablefees and the Decentralized Reserve System, iohk.io/en/blog/posts/2021/06/10/stablefees-and-the-decentralized-reserve-system/
 [^25]: Network traffic and tiered pricing, iohk.io/en/blog/posts/2021/11/26/network-traffic-and-tiered-pricing/
 [^26]: Pegging means attaching or tying a currency's exchange rate to another currency
-[^27]:
-[^28]:
-[^29]:
-[^30]:
-[^31]:
-[^32]:
-[^33]:
-[^34]:
-[^35]:
-[^36]:
-[^37]:
-[^38]:
-[^39]:
-[^40]:
-[^41]:
-[^42]:
-[^43]:
-[^44]:
-[^45]:
-[^46]:
-[^47]:
-[^48]:
-[^49]:
-[^50]:
+[^27]: Zahnentferner, Kaidalov, Etienne, Díaz (2021) 'Djed: A Formally Verified Crypto-Backed Pegged Algorithmic Stablecoin', eprint.iacr.org/2021/1069.pdf
+[^28]: Tether Price History and Everything You Need to Know, rain.bh/learn/tether-price-history-and-information-you-need-for-tether-trading
+[^29]: **Formal verification** is the act of proving or disproving the correctness of intended algorithms underlying a system with respect to a certain formal specification or property, using formal methods of mathematics. Formal verification can be helpful in proving the correctness of systems such as: cryptographic protocols, combinational circuits, digital circuits with internal Memory, and software expressed as source code.
+[^30]: **Kovan** is a Proof of Authority (PoA) publicly accessible blockchain for Ethereum; created and maintained by a consortium of Ethereum developers.
+[^31]: **Scala** is a general-purpose programming language providing support for functional programming and a strong static type system. Designed to be concise, many of Scala’s design decisions aimed to address criticisms of Java.
+[^32]: Ergo Summit 2021 - Entering The New Era - Announcing AgeUSD & The Hardening Upgrade, youtube.com/watch?v=zG-rxMCDIa0&t=8366s
+[^33]: A closer look at the cFund, iohk.io/en/blog/posts/2021/07/28/a-closer-look-at-the-cfund/
+[^34]: Djed update, medium.com/cotinetwork/djed-development-update-421cea2c610b
+[^35]: **Terra (LUNA)** is a Decentralized system focused on enhancing the DeFi space through programmable payments to drive adoption. The Protocol has a native Token, LUNA, and is backed by a host of fiat-pegged Stablecoin. By employing Stablecoin, Terra presents a payment infrastructure void of the shortcomings of traditional payment methods such as Credit card and old Blockchain-based payment systems.
+[^36]: Terra UST collapse, coindesk.com/business/2022/05/09/ust-stablecoin-falls-below-dollar-peg-for-second-time-in-48-hours/
+[^37]: Terra BTC address, bitaps.com/2c2daf15ff549f84faf3dde74da288727f4a63724c957bf83a2d263a97779f65/bc1q9d4ywgfnd8h43da5tpcxcn6ajv590cg6d3tg6axemvljvt2k76zs50tv4q
+[^38]: Crypto Market EMERGENCY: UST, LUNA & BTC - What Gives?!, youtube.com/watch?v=x5v67Larlx8
+[^39]: The tether controversy, explained, theverge.com/22620464/tether-backing-cryptocurrency-stablecoin
+[^40]: Cardana ADA: I was wrong, youtube.com/watch?v=ew-qrNFKWtA
+[^41]: COTI updates by Shahaf Bar-Geffen, COTI’s CEO, youtube.com/watch?v=453M7PjkIbc
+[^42]: The Death Spiral: How Terra’s Algorithmic Stablecoin Came Crashing Down, forbes.com/sites/rahulrai/2022/05/17/the-death-spiral-how-terras-algorithmic-stablecoin-came-crashing-down/?sh=2e4307f371a2
+[^43]: @cotinetwork, twitter.com/COTInetwork/status/1720163923658248297
+[^44]: $ADA: DEX WingRiders Launches, Bringing USDC and USDT Stablecoins to Cardano Mainnet, cryptoglobe.com/latest/2022/04/ada-dex-wingriders-launches-bringing-usdc-and-usdt-stablecoins-to-cardano-mainnet/
+[^45]: Stablecoins: what Cardano needs to bridge the gap between traditional finance and DeFi, youtube.com/watch?v=XGAH-TYl600
+[^46]: Algorand stablecoin use cases, algorandtechnologies.com/news/stablecoin-use-cases-on-algorand
+[^47]: @stakewithpride, x.com/StakeWithPride/status/1682401463631515649?s=20
+[^48]: The Landscape of Stablecoins: Development and Considerations, youtu.be/-pKEZgn-eWw?si=z0iZJ1KZCiqSqHkT&t=435
+[^49]: In DeFi, **impermanent loss** refers to the loss in value when investing liquidity in a liquidity pool compared to just holding tokens. The event occurs when the price of a user's tokens changes compared to when they deposited them in a liquidity pool. The larger the change is, the bigger the loss.
+[^50]: A **bull market** or **bull run** is a state of a financial market where prices are rising. The term bull market is often used in the context of the stock market. However, it can be used in any financial market including cryptocurrencies.
 [^51]:
 [^52]:
 [^53]:
