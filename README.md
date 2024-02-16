@@ -25,7 +25,7 @@ There has already been significant progress made on a **Spanish** translation by
 
 A **Japanese** translation[^4] of older 'Age of Voltaire' Edition, funded by Catalyst, is at an advanced stage.
 
-A **Vietnamese** translation is being led by Hoang Phuong Linh, with team from - http://Cardano.Vn, book title in VietNamese: "*Cardano For The Masses - Cardano Bible*"
+A **Vietnamese** translation is being led by Hoang Phuong Linh, with team from - http://Cardano.Vn, book title in VietNamese: "*Cardano For The Masses - Cardano Bible*" which received Catalyst funding in Fund11[^5]
 
 If you are interested in translating this book, the plan is to set up a team of volunteers at _Transifex_[^6] 
 
@@ -33,15 +33,16 @@ If you are interested in translating this book, the plan is to set up a team of 
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/CC.png "Creative Commons")
 
-**Cardano for the Masses - Chang Edition** by John Greene is licensed under a _Creative Commons Attribution-ShareAlike 4.0 International License.[^5] The terms of that license apply.	
+**Cardano for the Masses - Chang Edition** by John Greene is licensed under a _Creative Commons Attribution-ShareAlike 4.0 International License.[^7] The terms of that license apply.	
 
 
 [^1]: Cardano for the Masses - Chang edition, amazon.com/dp/B0B912X5G6
 [^2]: Markdown cheatsheet, github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 [^3]: KDP Guidelines kdp.amazon.com/en_US/help/topic/GU72M65VRFPH43L6
 [^4]: Cardano For the M₳sses - Japanese Book, lidonation.com/ja/proposals/cardano-for-the-marasses-japanese-book-f10
-[^5]: Creative Commons License, creativecommons.org/licenses/by-sa/4.0/
+[^5]: Cardano For the M₳sses: - Vietnames translation, www.lidonation.com/en/proposals/cardano-for-the-marasses-age-of-voltaire-edition-f11
 [^6]: transifex.com/cardanobookcom/cardanoforthemaases/
+[^7]: Creative Commons License, creativecommons.org/licenses/by-sa/4.0/
 
 
 
