@@ -341,6 +341,58 @@ It will be interesting to see what impact the new venture has on an area some co
 
 ## How EUTXO copes with impermanent loss
 
+Impermanent loss[^49] is a downside to those providing liquidity to a DEX. It can be a confusing term for newcomers.
+
+The automated market maker (AMM) and order book are the most common architectures used to run DEXs (decentralized exchanges). AMMs are straightforward to build, and this architecture has subsequently become the standard for account-based chains. However, there are several drawbacks with this design, ‘impermanent loss’ being one of them.
+
+Cardano employs the EUTXO model, which is deterministic, making it more predictable than the account-based model in terms of impermanent loss. The term ‘impermanent’ is a little deceptive because a drop in token price might only be transitory, and the price could climb again depending on market conditions. Because the price corrected upwards, the loss would be transient (impermanent). All that matters is the dollar price when you withdraw. If it’s lower than the price you bought at, then obviously the ‘loss’ becomes permanent. Ada peaked at $1.20 in the 2018 bull run.[^50] It plummeted then rose to an all-time high of $3.10 in Sept 2021. Volatility is to be expected in an immature industry, pricing emerging technology.
+
+With light-touch regulation, it’s arguable that ‘impermanent loss’ is an inevitable risk for liquidity providers[^51] in the ‘wild west’ of crypto trading exchanges. If the loss exceeds the trading fees collected, the liquidity provider bears a loss, which could have been avoided if they had kept their tokens. It's also common that while liquidity providers may not lose money, their earnings may be lower than if you had simply retained the tokens.
+
+**AMM**
+ 
+The Automated Market Maker (AMM) DEX architecture offers smart contract-based automated trading of crypto pairs. With Ethereum being the dominant smart contract platform to date, naturally most pairs are between Ethereum tokens and stablecoins.
+
+Liquidity pools enable users to pool their assets into smart contracts, which effectively power AMMs. The more liquidity in the pool, the more reliable the trading environment for traders on the DEX with which the pool is affiliated, and naturally, the more transaction fees the liquidity providers earn. Liquidity pools provide the liquidity on both sides of a trade. The pool uses an algorithm to determine the price of an asset based on its availability in the pool.
+
+So AMMs are solely dependent on their liquidity providers to provide sufficient pool size to ensure trading is fair and reliable. Liquidity providers are more commonly known as ‘market makers’ in traditional finance.
+
+IOG has several papers[^52] on the importance of the right incentives[^53] in cryptocurrency space. Incentives are essential to motivate liquidity providers for DEXs to function reliably and fairly. Liquidity providers are incentivized by yield farming[^54] in this case.
+
+**Order book**
+
+The mechanics of order book architecture should be familiar to anyone working in the world of economics. It's a simple model to understand. The order book basically stores all buy/sell (asks/bids) orders and organizes them according to the asset's price when the traders place their orders. The asset can be exchanged if there is sufficient supply and demand.
+
+Order book architecture is much more suited for EUTXO-based ledgers, such as Cardano and Ergo, because its design, together with EUTXO features, mitigates the impacts of impermanent loss.
+
+The number of tokens in a liquidity pool, and the number of liquidity providers contributing to it, are variables when it comes to predicting and avoiding impermanent loss. If there is regular impermanent loss occurring, then pools are not viable and liquidity providers will naturally go to a more profitable rival pool(s). It can be a vicious circle, as it can be too late to salvage once a ‘crypto bank run’ occurs like what happened with the Terra Luna debacle.[^55]
+
+To recap from earlier,
+
+- UTXO-based blockchains don’t have accounts holding a balance. Users' wallets keep track of a list of unspent outputs corresponding with all of the user's addresses and determine the user's balance. Remember UTXO transactions are analogous to 'cash in cash out'. The EUTXO model includes a datum, which is contract-specific metadata. This is significant because it allows Cardano to accommodate multi-assets and smart contracts.
+- Account-based model holds a coin balance in an account (protected by a private key or a smart contract). Assets are represented as balances inside users' accounts, with the balances being saved as a global state of accounts. Each node maintains its own state, which is updated with each transaction.
+
+There are various major distinctions between the above models, but there is one that stands out. AMMs that operate on Account-based chains are more likely to employ the Constant Formula Market Maker (CFMM) pricing formula, which is one of the most widely used AMM algorithms. There are inefficiencies in this formula, such as it provides users with little to no privacy.[^56]
+
+Also, the Total Value Locked (TVL)[^57] is dispersed throughout the whole price range, implying that an asset's price might be $1 or $100,000. CFMM pricing is unreasonable under this premise and does not represent actual market realities. Furthermore, deals with a low token volume tend to have a lot of slippage.[^58] While CFMM is a common feature for AMMs, these inefficiencies may cause liquidity providers' earnings to be impacted. What's more, this liquidity is prone to impermanent loss.
+
+**EUTXO and order book DEXs mitigate impermanent loss**
+
+The key advantages of EUTXO architecture in terms of security, determinism, parallelism, and scalability were discussed earlier. EUTXO features make Cardano a suitable platform for DEXs that use order book architecture, since it provides greater resistance to impermanent loss. This design has a number of advantages, one of which is the concentration of liquidity allocated within a custom price range. This feature improves liquidity efficiency while reducing impermanent loss.
+
+**Global vs Local state**
+
+Unlike Account-based blockchains, where each transaction outcome changes the global state, EUTXO-based blockchains verify transaction legitimacy at the transaction level, with the balance equal to the total of remaining UTXOs. EUTXO works at the local level.
+
+This is not the case with account-based blockchains. Smart contracts and other actors constantly interact and impact the global state, resulting in the use of assets and resources, as well as the volatile fluctuation of gas prices. Transaction fees can be very unpredictable because of this, even spiking between the time a transaction is submitted and the time it’s verified. As a result, the chain may reject such a transaction, but the gas costs are collected nevertheless, potentially resulting in the user's wallet taking a hit. As transaction volumes increase and enterprise customers consider using the platform, this is a critical flaw for the likes of Ethereum.
+
+Extortionate ‘gas’ fees are not an issue with Cardano’s EUTXO model, since transactions are verified and executed at the local state. This is made possible by adding a datum (supplementary contract-specific metadata) to the transaction. The datum is passed to the transaction’s validation logic, ensuring that EUTXO remains deterministic. This essentially guarantees that transaction costs are fixed and will not vary in the future. Another advantage of EUTXO and determinism is that bad actors cannot reshuffle transactions, which is a danger with Account-based models.
+
+A key benefit of transaction validation being local is that it allows for a high degree of parallelism. Account-based chains can't do this since transactions must be handled sequentially.
+
+Cardano has met with some criticism for being too conservative by its competitors.[^59] Rather than ‘move fast and break things’, Cardano has been implemented carefully with scalability and performance addressed only after a secure network and consensus protocols were established. As the enhancements introduced at Vasil take hold, we have seen a raft of DEXs launch on Cardano such as Genius Yeild, Axo, DexHunter among others.[^60]  
+
+## Certified dApps on Cardano
 
 
 **_The rest of the chapter will be uploaded soon..._**
@@ -397,18 +449,18 @@ It will be interesting to see what impact the new venture has on an area some co
 [^48]: The Landscape of Stablecoins: Development and Considerations, youtu.be/-pKEZgn-eWw?si=z0iZJ1KZCiqSqHkT&t=435
 [^49]: In DeFi, **impermanent loss** refers to the loss in value when investing liquidity in a liquidity pool compared to just holding tokens. The event occurs when the price of a user's tokens changes compared to when they deposited them in a liquidity pool. The larger the change is, the bigger the loss.
 [^50]: A **bull market** or **bull run** is a state of a financial market where prices are rising. The term bull market is often used in the context of the stock market. However, it can be used in any financial market including cryptocurrencies.
-[^51]:
-[^52]:
-[^53]:
-[^54]:
-[^55]:
-[^56]:
-[^57]:
-[^58]:
-[^59]:
-[^60]:
-[^61]:
-[^62]:
+[^51]: A **market maker** or **liquidity provider** quotes both a buy and a sell price in a financial instrument or commodity held in inventory, hoping to make a profit on the bid-offer spread, or turn. The U.S. Securities and Exchange Commission defines a ‘market maker’ as a firm that stands ready to buy and sell stock on a regular and continuous basis at a publicly quoted price.
+[^52]: Kiayias,Koutsoupias, Stouka (2021) 'Incentives Against Power Grabs or How to Engineer the Revolution in a Pooled Proof of Stake System', arxiv.org/pdf/2111.08562.pdf
+[^53]: Judmayer, Stifter, Zamyatin, Tsabary, Eyal, Gaži, Meiklejohn, Weippl (2021), ‘SoK: Algorithmic Incentive Manipulation Attacks on Permissionless PoW Cryptocurrencies’, eprint.iacr.org/2020/1614.pdf
+[^54]: **Yield farming** is a DeFi term for leveraging DeFi protocols and products to generate high returns that sometimes reach over 100% in annualized yields 'when factoring in interest, token rewards, ‘cashback’ bonuses, and other incentives.' Yield farming is a way for cryptocurrency enthusiasts to maximize their returns. It typically involves users lending or locking up their funds using smart contracts. In return, users earn fees in the form of crypto.
+[^55]: Is Do Kwon going to get arrested after Terra's LUNA price collapse?, fxstreet.com/cryptocurrencies/news/is-do-kwon-going-to-get-arrested-after-terras-luna-price-collapse-202205191033
+[^56]: Chitra, Angeris, Evans (2021), 'Differential Privacy in Constant Function Market Makers', eprint.iacr.org/2021/1101.pdf
+[^57]: The **(TVL) Total Value Locked** into a smart contract or set of smart contracts that may be deployed or stored at one or more exchanges or markets. This is used as a measurement of investor deposits. It is the dollar value of all the coins or tokens locked into a platform, protocol, lending program, yield farming program, or insurance liquidity pool.
+[^58]: Slippage refers to the difference between the expected price of a trade and the price at which the trade is executed. Slippage can occur at any time but is most prevalent during periods of higher volatility when market orders are used.
+[^59]: Criticism from Solana founder, twitter.com/IOHK_Charles/status/1532360549857693697?s=20&t=YIDNMde_QXHGEURpgZj8UA
+[^60]: CardanoCube DEXs, cardanocube.io/collections/exchanges-dex
+[^61]: Cardano 2021 Summit session on Certification, summit.cardano.org/sessions/smart-contract-certification-the-why-and-how
+[^62]: Prof. Simon Thompson, iohk.io/en/team/simon-thompson
 [^63]:
 [^64]:
 [^65]:
