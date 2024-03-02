@@ -394,6 +394,47 @@ Cardano has met with some criticism for being too conservative by its competitor
 
 ## Certified dApps on Cardano
 
+With the surge of new third-party apps comes the potential of improper or harmful information, as well as content that isn’t up to par. As a result, addressing challenges like discovery and quality assurance is critical for early ecosystem development. At the 2021 Cardano Summit, IOG provided a deeper dive[^61] into this crucial issue by introducing a certification program to examine apps built on top of Cardano. 
+
+**The importance of certification**
+
+IOG’s certification procedure is responsible for preventing code-level security bugs, achieved by deploying several degrees of ‘defense.’ There will be numerous levels to choose from. Automated logic checks, at their most basic level, will help identify some forms of harmful code. These will, for example, be able to determine if the contract has a mechanism for recovering funds that have been locked up. Locked funds must be retrievable under a well-written contract.
+
+Furthermore, manual smart contract audits will assist IOG in verifying the integrity of any dApp. In the end, thorough formal verification will test the mathematical model to establish that a smart contract’s behavior matches the formal specification.
+
+Any certification program, of course, is only as good as the people who put it together and operate it. As a result, IOG has partnered with some of the most well-known players in the functional programming field.
+
+**Certification and assurance**
+
+When it comes to building and dealing with smart contracts, high assurance is essential. You want to know that the source code is of excellent quality, that the contract is secured and will perform as expected, and that it makes use of good attributes and behaviors. Certification guarantees that security tests be carried out prior to any deployment, and that smart contracts may be inspected as they evolve. It aids both smart contract developers and end users by assisting with the protection of user assets and reputation from code defects or exploitation.
+
+IOG announced their intentions to offer higher levels of certification for decentralized apps (dApps) at the Cardano Summit 2021. This certification scheme will establish quality standards for dApps and associated smart contacts.
+
+**Three certification levels**
+
+Professor Simon Thompson,[^62] technical project director at IOG, is leading this endeavor. It will assist IOG in adhering to best practices seen in the industry. They’re collaborating with companies like Runtime Verification (runtimeverification.com), Tweag (tweag.io), Well-Typed (well-typed.com), Certik (certik.io), and others to launch this new certification program, which will be integrated to a new dAppStore. 
+
+**What are the various levels of certification?**
+
+In terms of assurance and auditing, there are three levels of certification, each of which is complementary to the others rather than progressive.
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig105.png "figure 10.5")
+<br>**Figure 10.5**:   Levels of Certification 
+  
+**Benefits of assurance**
+
+Both application developers and auditors will be able to verify the validity, compliance, and consistency of requirements via certification. It will also ensure that dApps launched on Cardano are free of typical security flaws and offer a degree of resilience, stability, and upkeep. While certification will be heavily encouraged and the proposed dApp Store will be curated, it will not be compulsory or operate as a ‘gatekeeper,’ ensuring a balance between user assurance and decentralized principles.
+
+You can give assurance to the community and ensure that things will operate as planned by auditing the specs, design, and ideation stages. This evidence provides extensive documentation of requirements, which will serve as a future reference point.
+
+**Certification and the dApp Store**
+
+IOG intends to link this certification with their new dApp Store to produce cryptographically secure non-fungible tokens (NFTs) that serve as proof of the certification levels they will guarantee. The dApp Store will be part of *Lace* light wallet, where users will be able to examine the certification status of each dApp as they browse through the categories and individual dApps. Users will have more confidence in the quality and safety of dApps if the required certification status is evident throughout the selection process.
+
+At ScotFest in 2022,[^63] Simon Thompson provided an update on the team’s progress. Working with the community, the *Cardano Dapp Certification Working Group* is now in place along with the guardrails outlined in *CIP-52 - Cardano audit best practice guidelines*.
+
+## Oracles on Cardano 
+
 
 **_The rest of the chapter will be uploaded soon..._**
 
@@ -461,10 +502,10 @@ Cardano has met with some criticism for being too conservative by its competitor
 [^60]: CardanoCube DEXs, cardanocube.io/collections/exchanges-dex
 [^61]: Cardano 2021 Summit session on Certification, summit.cardano.org/sessions/smart-contract-certification-the-why-and-how
 [^62]: Prof. Simon Thompson, iohk.io/en/team/simon-thompson
-[^63]:
-[^64]:
-[^65]:
-[^66]:
+[^63]: dApp Certification Program, youtu.be/kSvfj1YZ1Oo
+[^64]: Chainlink (ticker: LINK) is a decentralized oracle network that brings off-chain data into an on-chain format, bridging the gap between isolated blockchains and real-world data.
+[^65]: Cardano Announces Strategic Collaboration To Integrate Chainlink’s Oracles, chainlinktoday.com/cardano-announces-strategic-collaboration-to-integrate-chainlinks-oracles/
+[^66]: **Parametric insurance** is a type of insurance that does not indemnify the pure loss, but ex-ante (Latin for ‘before the event”) agrees to make a payment upon the occurrence of a triggering event. The triggering event is often a catastrophic natural event which may ordinarily precipitate a loss or a series of losses. But parametric insurance principles are also applied to Agricultural crop insurance and other normal risks not of the nature of disaster, if the outcome of the risk is correlated to a parameter or an index of parameters.
 [^67]:
 [^68]:
 [^69]:
