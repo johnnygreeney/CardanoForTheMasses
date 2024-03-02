@@ -435,6 +435,22 @@ At ScotFest in 2022,[^63] Simon Thompson provided an update on the team’s prog
 
 ## Oracles on Cardano 
 
+Using Plutus and Marlowe to develop dependable and transparent financial applications utilizing oracles and smart contracts lies at the core of DeFi and RealFi’s promise. IOG announced an innovative strategic relationship with Chainlink[^64] Labs at the 2021 Cardano Summit,[^65] which will assist developers in creating smart contracts for Cardano DeFi apps.
+
+Chainlink’s ‘decentralized oracle networks’ will enable access to real-world databases, allowing ‘smart contracts’ to execute around data like election outcomes, sports scores, and cryptocurrency prices. Another example where this may be beneficial is the delivery of weather data. Chainlink Labs collaborates with a number of FinTech firms in Sub-Saharan Africa that are attempting to make parametric insurance a reality. Weather data that is secure, reliable, and resilient is a critical input for parametric insurance[^66] contracts.
+
+Across numerous blockchains, but primarily Ethereum, Chainlink delivers oracle services to fuel hybrid smart contracts. Smart contracts may connect to any external API via Chainlink oracle networks, allowing them to use safe off-chain calculations for feature-rich applications. Chainlink presently secures tens of billions of dollars across DeFi, insurance, gaming, and other important sectors, providing a universal gateway to all blockchains to global organizations and prominent data providers.
+
+Developers utilizing the blockchain will be able to inject Chainlink’s institutional-grade data into their smart contracts. Support for additional Chainlink decentralized services will come after market price feeds: sports data for betting markets, weather datasets for parametric insurance products, and verifiable randomness for gaming and non-fungible tokens (NFTs). This partnership between IOG and Chainlink Labs will provide access to a plethora of secure data, assisting DeFi in realizing its goal of creating a more cost-effective and equitable global economic system. 
+
+IOG state Chainlink is their preferred oracle option for Cardano, however, there are worthy alternatives as listed on Essential Cardano[^67] and third-party sites like CardanoCube.[^68] Charli3 launched the first Cardano native oracle at *Rare Bloom* in Denver.[^69] Another EUTXO-based option is Ergo’s Oracle Pools[^70] who claim in their blog:
+
+> The design of Ergo’s oracle pools are more efficient and programmable than using multiple single oracle data points such as in Chainlink’s oracle design. We build hierarchies of confidence using oracle pools, and pools of oracle pools, in Ergo. It’s faster, cheaper, and more beneficial to the end user.
+
+Ergo’s claims should be taken seriously, having already demonstrated their technical prowess delivering 15k outputs per transaction using EUTXO and rollups. 
+
+## Cardano in Africa
+
 
 **_The rest of the chapter will be uploaded soon..._**
 
@@ -506,10 +522,10 @@ At ScotFest in 2022,[^63] Simon Thompson provided an update on the team’s prog
 [^64]: Chainlink (ticker: LINK) is a decentralized oracle network that brings off-chain data into an on-chain format, bridging the gap between isolated blockchains and real-world data.
 [^65]: Cardano Announces Strategic Collaboration To Integrate Chainlink’s Oracles, chainlinktoday.com/cardano-announces-strategic-collaboration-to-integrate-chainlinks-oracles/
 [^66]: **Parametric insurance** is a type of insurance that does not indemnify the pure loss, but ex-ante (Latin for ‘before the event”) agrees to make a payment upon the occurrence of a triggering event. The triggering event is often a catastrophic natural event which may ordinarily precipitate a loss or a series of losses. But parametric insurance principles are also applied to Agricultural crop insurance and other normal risks not of the nature of disaster, if the outcome of the risk is correlated to a parameter or an index of parameters.
-[^67]:
-[^68]:
-[^69]:
-[^70]:
+[^67]: Essential Cardano Oracles, github.com/input-output-hk/essential-cardano/blob/main/essential-cardano-list.md#oracles
+[^68]: CardanoCube Oracles, cardanocube.io/collections/oracle
+[^69]: Charli3 Cardano Native Oracle Launch at Rare Bloom, youtu.be/bGFMMs0oDZo
+[^70]: Ergo Oracle Pools, ergoplatform.org/en/blog/2021-04-27-chainlink-oracles-vs-ergo-oracle-pools/
 [^71]:
 [^72]:
 [^73]:
