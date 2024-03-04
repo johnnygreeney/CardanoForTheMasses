@@ -451,9 +451,77 @@ Ergo’s claims should be taken seriously, having already demonstrated their tec
 
 ## Cardano in Africa
 
+Cardano was introduced at the start of this book by citing its mission: 
 
-**_The rest of the chapter will be uploaded soon..._**
+> Cardano is an open platform that seeks to provide economic identity to the billions who lack it by providing decentralized applications to manage identity, value and governance
 
+Despite technological advances, people still live in two different worlds, one for the developed, and one for the developing. The billions who lack economic identity are not currently in the developed world. The demand for Cardano is most pronounced in the likes of Africa, southeast Asia, the subcontinent of India, Mongolia, Latin America, amongst others, where the effects of globalization have not been so favorable.
+
+Cardano is not just a cryptocurrency; it is a platform for governance, identity, and tokenizing digital assets. Countries without working infrastructure and systems are ripe for disruption. There is a wider gamut of possibilities for installing, or replacing, systems for voting, land ownership registries, payment mechanisms and supply chain processes. 
+
+There is precedent for this strategy. When Estonia left the Soviet Bloc, they had a blank slate to start over from. Their subsequent digital transformation[^71] is seen by other countries as an example of how to overhaul your infrastructure. 
+
+Africa is not Cardano’s sole focus, but it is an ideal launchpad for their technology. All the projects and initiatives discussed in this chapter can be reproduced in other jurisdictions, including the developed world. If a system can work for 5m Ethiopian students, it can work similarly for the country’s 107m citizens. If a system can connect the unconnected in Tanzania, its model can be rolled out to neighboring countries.
+ 
+Kenya’s M-Pesa[^72] (mobile money payments) success story is proof that ‘necessity is the mother of all invention’. Since its launch in 2007, M-Pesa is now flourishing across Africa with millions of users and transactions every month, often on old mobiles discarded by users in the developed world. 
+
+Microlending platforms like Kiva (kiva.org) provide a profitable business model that is well-suited to Africa’s expanding economy. Small loans may be life-changing for farmers, entrepreneurs, and anybody with the will to create and flourish in this environment.
+
+It’s getting easier and cheaper to get users online, and this continuing trend is key for infrastructure projects like World Mobile. While there are the old challenges like corruption and civil unrest in Africa, there is often no legacy system to replace, so decision makers are more open and forward-looking.  
+
+Demographics is another major consideration. Africa is the world's youngest continent, with a median age of 20 years and 60% of its population under 25. One of the reasons China has invested over $20 billion in Africa’s infrastructure is they see it as an opportunity to shape geopolitics and world economics in the decades to come.
+
+In the past, the likes of Silicon Valley were the primary drivers of innovation. This has changed with blockchain as it is permissionless, more accessible and built to enable social financial inclusion on a global scale. The model is becoming flatter, with less hierarchies, so now anyone anywhere who has an idea and drive can use blockchain platforms. 
+
+IOG’s roots in Africa are deep as showcased during their ‘Africa Special’ in 2021. John O’Connor, Director of African Operations at IOG, provided an update on progress at ScotFest.[^73]  O’Connor has now transitioned to be CEO of RealFi, a new company, a subsidiary at IO continuing his work on the continent with many projects funded by Catalyst, Emurgo Africa and *ariob*, (ariob.io) an incubator scheme IOG runs in collaboration with iceaddis (iceaddis.com).
+
+EMURGO also places a big focus on Africa. Yosuke Yoshida gave an update on the ‘State of Web 3.0 in Africa’ at the Dubai Summit.[^74] 
+
+**Ethiopian Ministry of Education**
+
+This was IOG’s flagship partnership announced in 2021. The project was to implement SSI, leveraging the Atala Prism system enabling 5m students and 750k teachers transition from paper-based systems to a DID-based solution. Tracking grades, education attainment and attendance are an ideal use case to pave the way for future partners. Verified credentials could then enable the graduates to prove their academic achievements and succeed in the job market. The Tigray civil war (2020-2022 ceasefire) did not help matters, but development is now complete and deployment live in schools is ongoing. 
+
+**World Mobile Chain (WMC)**
+
+Under the charismatic leadership of Mickey Watkins, World Mobile are trailblazers in bringing connectivity to the developing world. World Mobile runs on a mesh network[^75] leveraging Cardano to deliver last-mile connectivity to the unconnected, or those who are being overcharged for it. Leveraging cutting-edge tech and aerostats,[^76] WMC aims to provide internet access at 50% of the price of rival networks. World Mobile has made rapid progress[^77] evolving from ‘smart cities’ to ‘smart countries’ and are now launching their ‘dynamic network technology’ to areas of the US that don't have mobile coverage.
+
+Watkins updated[^78] that they started the ‘sharing economy’ in Zanzibar, they’ve expanded to Kenya, Mozambique, Nigeria and most impressively in Pakistan, even though WMC have no equipment or personnel on the ground there.
+
+**Empowa**
+
+Empowa is as ‘RealFi’ as it gets. This decentralized funding platform delivers affordable housing across Mozambique and beyond. Empowa uses crypto-based liquidity on Cardano to provide financing for housing developers to deliver a ‘lease-to-own’ model. There is a dire need for such a project, with the absence of any real mortgage market across the continent. Empowa has already had a big impact, expanding from 1% access to housing, to 60% in Mozambique. 
+
+**Pezesha**
+
+Pezesha is a fintech company based in Kenya for powering affordable working capital to small and medium businesses (SMEs) in Africa. Launched in 2016, its mission is to democratize financial services for the unbanked across Africa. Pezesha’s founder, Hilda Moraa, went into greater detail in her talk at ScotFest.[^79] IOG has previously invested in Moraa’s dream and they will partner with *Lace* light wallet and Atala Prism to make their loans accessible to a wider audience. RealFi on *Lace* will be in the form of a ‘marketplace of marketplaces’, and one of those marketplaces will be Pezesha. Charles Hoskinson often stated that his measure of success is if something like Pezesha could run on Cardano[^80] as it would bookend his vision laid out in his Ted Talk[^81] in Bermuda in 2014. 
+
+![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/fig106.png "figure 10.6")
+<br>**Figure 10.6**: Image credit Pezesha
+
+## Outlook 
+
+
+Cardano has come a long way in a short space of time. The Byron era was slow and frustrating, but it led to the creation of the hard fork combinator and the steady release cadence we’ve seen since. It wasn’t long ago when the idea of proof-of-stake was ridiculed, now it’s self-evident. The extensive research and steady implementation of prior eras mean developers are building on granite. 
+
+Cardano has stayed true to its principles, even when it was inconvenient. The incentivized testnet (ITN) could have been a cryptocurrency in its own right, but it was just an *orderve* before Shelley mainnet. Cardano has approached development from a different angle to other ‘build first, fix later’ blockchains. With hacks and scams now weekly news in the industry, this methodical and sensible approach is a breath of fresh air. 
+
+There has already been the unexpected CNFT boom, a result of the right features and easy user experience. When I was studying for my masters (2018) I remember thinking at the time a term like non-fungible token (NFT) would never catch on. Now NFTs are on the verge of going mainstream. Brand new community-driven programming languages like Aiken and Helios have emerged and flourished, developer tooling is proliferating, and there is an abundance of riches in terms of light wallets with many catering for on-chain voting and partial delegation. 
+
+We are now a year into the *Age of Voltaire*, the most challenging and ambitious implementation of on-chain governance ever. Nobody else is attempting anything like this. Another differentiator is the Midnight partner chain, offering privacy-based smart contracts. 
+
+As you can see from the last few chapters, there are a lot of moving parts in their infancy. Yet as features are released, earlier parts of the roadmap seem to make more sense in hindsight. While the mainchain has prioritized security and reliability, sidechains enable developers to have more flexible programming paradigms and faster consensus protocols. Adoption takes time, Ethereum had to wait more than two years before *CryptoKitties*[^82] garnered significant user adoption.
+
+No matter how impressive Cardano may be, there are dark regulatory clouds forming with the fallout of 2022’s scams and hacks and the subsequent SEC crackdown on the exchanges in 2023. It’s frustrating that something as principled and meticulous as Cardano is mentioned in the same breath as some of the actors now departing the stage. Let’s hope it’s just the trash taking itself out. 
+
+Regulation may be on its way, but it is not clear what form it will take or how it will be enforced. Most countries are now rolling out CBDCs (Central bank digital coins),[^83] typically preceded by a regulatory crackdown on anything resembling competition. One case study of note is Nigeria where a third of the adult population use crypto, the highest adoption rate anywhere. When the government banned crypto in February 2021, the assumption was citizens would embrace the eNaira (Nigerian CBDC). 
+
+The reality was crypto couldn’t be banned, and never went away. In October 2022, a Bloomberg report found usage of eNaira at just 0.5% of the country’s population. In Jan 2023, the Nigerian government placed a cap on ATM cash withdrawals, seemingly to force CBDC adoption, only to perform a full U-turn passing a bill legalizing cryptocurrency. *The Nigerian Capital Market Master Plan*[^84] claims it’s only interested in creating a ‘vibrant capital market’. Whatever the motive it shows how supposed regulatory headwinds can turn to tailwinds very quickly.
+
+In any case, Cardano continues marching to the beat of its own drum, with the last eras of the roadmap coming to fruition. While some competitors are trying to bandage failing infrastructure, and others just implode, Cardano is already looking toward ‘4th gen’ technologies like multi-resource consensus, privacy-based smart contracts, Babel fees, etc. This book started by explaining the origins of Bitcoin. It is ironic that Cardano is now leading the way in realizing the vision outlined by Satoshi Nakamoto in the 2009 Bitcoin whitepaper. CH:
+
+We realized the vision of Bitcoin. For Colored coins, (we have) Cardano native assets. Lightning is basically what Hydra has achieved. Inclusive accountability means that everybody has a copy of the blockchain, even without having a copy of the blockchain. So, you're your own node, you're your own bank. When you look at input endorsers, it creates a network that can scale to billions of users eventually, and tons of things going on, without sacrificing decentralization, the system gets more decentralized over time …and then Voltaire, that one CPU-one vote notion …that idea that everybody can contribute in governance, I think we will be there. So, all the things that Satoshi outlined, we finally realized, in some way or another, in this project with this community, and we're just getting started in that respect. 
+
+Whatever unfolds next, one thing is for certain, there will be plenty to write about in the next edition of Cardano for the Masses.
 
 
 [^01]: Cardano Enters Top 10 by TVL, medium.com/tap-in-with-taptools/cardano-enters-top-10-by-tvl-e9fd873ee064
@@ -526,20 +594,20 @@ Ergo’s claims should be taken seriously, having already demonstrated their tec
 [^68]: CardanoCube Oracles, cardanocube.io/collections/oracle
 [^69]: Charli3 Cardano Native Oracle Launch at Rare Bloom, youtu.be/bGFMMs0oDZo
 [^70]: Ergo Oracle Pools, ergoplatform.org/en/blog/2021-04-27-chainlink-oracles-vs-ergo-oracle-pools/
-[^71]:
-[^72]:
-[^73]:
-[^74]:
-[^75]:
-[^76]:
-[^77]:
-[^78]:
-[^79]:
-[^80]:
-[^81]:
-[^82]:
-[^83]:
-[^84]:
-[^85]:
-[^86]:
-[^87]:
+[^71]: 8 lessons from Estonia’s digital transformation for Latin America and the Caribbean, blogs.iadb.org/administracion-publica/en/8-lessons-from-estonias-digital-transformation-for-latin-america-and-the-caribbean/
+[^72]: M-Pesa: Kenya's mobile money success story celebrates 15 years, africa.businessinsider.com/local/markets/m-pesa-kenyas-mobile-money-success-story-celebrates-15-years/srp9gne
+[^73]: IOG & Africa, youtu.be/tHC80NFj4lo
+[^74]: State of Web 3.0 in Africa, youtube.com/watch?v=f6ZIB-I6qJU
+[^75]: A mesh network is a local area network (LAN) where the nodes connect directly, dynamically and non-hierarchically to as many other nodes as possible. The nodes cooperate with one another to efficiently route data to and from clients.
+[^76]: How World Mobile’s aerostats work, worldmobile.io/blog/post/how-aerostats-work
+[^77]: World Mobile: Building smart cities, building smart countries, youtube.com/watch?v=5ijAOa6VjzA
+[^78]: Essential Cardano 360 End of Year Show - December Edition, youtu.be/Rms03OHqYws?si=DIS-J4qRf_Z4lU61&t=1595
+[^79]: Powering affordable working capital, youtube.com/watch?v=2ZgOAduls7Q
+[^80]: Charles Hoskinson explains how he will know that Cardano has achieved ‘Success’, cardanofeed.com/charles-hoskinson-explains-how-he-will-know-that-cardano-has-achieved-success-356.html
+[^81]: The future will be decentralized | Charles Hoskinson | TEDxBermuda, www.youtube.com/watch?v=97ufCT6lQcY
+[^82]: Guide to Ethereum, medium.com/coinmonks/pauls-guide-to-ethereum-280be582653
+[^83]: CBDCs by country, cbdctracker.org/
+[^84]: The Nigerian Capital Market Master Plan, sec.gov.ng/wp-content/uploads/2015/10/Opportunities-in-the-Nigerian-Capital-Market.pdf
+[^85]: Halting the Solana Blockchain with Epsilon Stake, tik-db.ee.ethz.ch/file/9d40dad802dd12d9ba1f1b7c1759920c/
+[^86]: First Principles: Research for the Future, youtube.com/watch?v=MVuweooiXPI
+[^87]: Let's Talk Basho, youtu.be/fhVo-2QUjLM?t=1938
