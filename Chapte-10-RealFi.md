@@ -521,7 +521,7 @@ In any case, Cardano continues marching to the beat of its own drum, with the la
 
 We realized the vision of Bitcoin. For Colored coins, (we have) Cardano native assets. Lightning is basically what Hydra has achieved. Inclusive accountability means that everybody has a copy of the blockchain, even without having a copy of the blockchain. So, you're your own node, you're your own bank. When you look at input endorsers, it creates a network that can scale to billions of users eventually, and tons of things going on, without sacrificing decentralization, the system gets more decentralized over time …and then Voltaire, that one CPU-one vote notion …that idea that everybody can contribute in governance, I think we will be there. So, all the things that Satoshi outlined, we finally realized, in some way or another, in this project with this community, and we're just getting started in that respect. 
 
-Whatever unfolds next, one thing is for certain, there will be plenty to write about in the next edition of Cardano for the Masses.
+Whatever unfolds next, one thing is for certain, there will be plenty to write about in the next edition of *Cardano for the Masses.*
 
 
 [^01]: Cardano Enters Top 10 by TVL, medium.com/tap-in-with-taptools/cardano-enters-top-10-by-tvl-e9fd873ee064
