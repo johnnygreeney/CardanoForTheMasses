@@ -23,7 +23,7 @@ The 3rd 'Chang' edition[^1] was published on 3rd Jan 2024, under an open-source 
 
 There has already been significant progress made on a **Spanish** translation by Humberto Rojas Serrano and Joe San.
 
-A **Japanese** translation[^4], funded by Catalyst, is already completed.[^5] See here. 
+A **Japanese** translation[^4], funded by Catalyst, is already complete and available.[^5]  
 
 A **Vietnamese** translation is being led by Hoang Phuong Linh, with team from - http://Cardano.Vn, book title in VietNamese: "*Cardano For The Masses - Cardano Bible*" which received Catalyst funding in Fund11[^6]
 
