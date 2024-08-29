@@ -42,7 +42,7 @@ If you are interested in translating this book, the plan is to set up a team of 
 [^4]: Cardano For the M₳sses - Japanese Book, lidonation.com/ja/proposals/cardano-for-the-marasses-japanese-book-f10
 [^5]: Cardano For the M₳sses - Japanese Edition, amazon.com/dp/B0D44MG8RJ
 [^6]: Cardano For the M₳sses: - Vietnames translation, www.lidonation.com/en/proposals/cardano-for-the-marasses-age-of-voltaire-edition-f11
-[^7]: https://drive.google.com/drive/folders/19c5d6cgbg3xp6yfx3vBkjC46PT1AJMuh
+[^7]: Cardano For the M₳sses: - Vietnames translation PDFs, https://drive.google.com/drive/folders/19c5d6cgbg3xp6yfx3vBkjC46PT1AJMuh
 [^8]: Vietnamese audiobook - https://t.co/vGTJ8OBkKI
 [^9]: transifex.com/cardanobookcom/cardanoforthemaases/
 [^10]: Creative Commons License, creativecommons.org/licenses/by-sa/4.0/
