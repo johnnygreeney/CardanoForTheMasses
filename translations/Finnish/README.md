@@ -1,3 +1,4 @@
 Translator: Kai Ahokangas
 
-Please see note on translations [here](/README.md)
+Please see note on translations [here](/README.md#translations)
+
