@@ -1,3 +1,3 @@
 Translator: Kai Ahokangas
 
-Please see note on translations [here](/blob/main/README.md)
+Please see note on translations [here](/main/README.md)
