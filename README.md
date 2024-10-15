@@ -27,7 +27,9 @@ A **Japanese** translation[^4], funded by Catalyst, is already complete and avai
 
 A **Vietnamese** translation is now complete. Led by Hoang Phuong Linh, with team from - http://Cardano.Vn, the project received Catalyst funding in Fund11[^6]. You can download PDF of the translation[^7], listen to the audiobook online.[^8]
 
-If you are interested in translating this book, please get in touch: john@cardanobook.com . The plan is to keep it simple and manage translations in individual folders. Translators can follow whatever format they wish there, however, I recommened following same 'markdown' format as this main repo. 
+A **Finnish** translation, by Kai Ahokangas, is in progress.
+
+If you are interested in translating this book, please get in touch: john@cardanobook.com. The plan is to keep it simple and manage translations in subfolders [here](/translations). Translators can follow whatever format they wish, however, I recommened following same 'markdown' format as this main repo. 
 
 ## Licensing
 
