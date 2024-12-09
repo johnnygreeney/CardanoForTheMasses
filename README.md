@@ -1,27 +1,23 @@
 # Cardano for the M₳sses
 
-The 3rd 'Chang' edition[^1] was published on 3rd Jan 2024, under an open-source licence. If there is interest from  the community, the plan is to have an update for the actual _Chang_ hard fork scheduled for later in 2024.  
+The 3rd edition[^1], was published Jan 2024. The 4th will be published early 2025, under an open-source licence. 
 
 ## Guidelines for contributors  
 >_'I didn't have time to write a short letter, so I wrote a long one instead'_  
 
-- The book should as concise as possible. Earlier editions were too long. Many sections have been cut to make it more concise and readable.
+- The book should as concise as possible. Earlier editions were too long. 
 - Everything is done in 'markdown' files, see here[^2] for a cheatsheet
-- Keep it short as possible, can a paragraph just be sentence? Do you need long sentences when a shorter simple one will do? Don’t say 'sesquipedalian' when you can just say 'long'.
 - 'Measure twice cut once'. Target of 10 chapters of roughly equal length 15-25 google doc pages. Does your contribution fit into structure and tone of the rest of the book? 
-- Write for intended audience, ie. Someone who just heard of Cardano. This book should be the less technical 'story of Cardano' that preps readers for more technical 'Mastering Cardano' book coming soon.
-- Best to share the book as is, we can merge all the changes in the next edition. 
+-  Intended audience, ie. Someone who just heard of Cardano. This book should be the less technical 'story of Cardano' that preps readers for more technical 'Mastering Cardano' book coming soon.
 
 ## To do
 - Add style guide 
-- May be a low stakes way of stress testing _Cardano Ballot_ and _GovTool_ to choose a cover, etc…
-- Model for bootstrapping has always been self-sustaining with no Catalyst funding, etc. Hundreds of books have been given away already at conferences and meetups since Aug 2022. For now, more sales equals more giveaways... Amzn ‘author copies’ p&p allow slightly discounted distribution to events/meetups.
-- Working on an Audio book - abridged version + quotes mp4 edited with audacity
-- Guidelines for KDP, Kindle Direct Publishing[^3] are useful rules for all publishing platforms. Would be nice to get it out on more platforms like book.io, etc
+- improve/replace graphics
+- Guidelines for KDP, Kindle Direct Publishing[^3] are useful rules for all publishing platforms. 
 
 ## Translations 
 
-There has already been significant progress made on a **Spanish** translation by Humberto Rojas Serrano and Joe San.
+There has already been progress made on a **Spanish** translation by Humberto Rojas Serrano and Joe San.
 
 A **Japanese** translation[^4], funded by Catalyst, is already complete and available.[^5]  
 
@@ -47,8 +43,3 @@ If you are interested in translating this book, please get in touch: john@cardan
 [^7]: Cardano For the M₳sses: - Vietnames translation PDFs, https://drive.google.com/drive/folders/19c5d6cgbg3xp6yfx3vBkjC46PT1AJMuh
 [^8]: Vietnamese audiobook - https://t.co/vGTJ8OBkKI
 [^9]: Creative Commons License, creativecommons.org/licenses/by-sa/4.0/
-
-
-
-
-
