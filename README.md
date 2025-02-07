@@ -1,13 +1,12 @@
 # Cardano for the M₳sses
 
-The 3rd edition[^1], was published Jan 2024. The 4th will be published early 2025, under an open-source licence. 
+The 4rd edition[^1], was published Jan 2025 under an open-source licence. 
 
 ## Guidelines for contributors  
 >_'I didn't have time to write a short letter, so I wrote a long one instead'_  
-
-- The book should as concise as possible. Earlier editions were too long. 
+- Keep it short as possible, without leaving important stuff out.  
 - Everything is done in 'markdown' files, see here[^2] for a cheatsheet
-- 'Measure twice cut once'. Target of 10 chapters of roughly equal length 15-25 google doc pages. Does your contribution fit into structure and tone of the rest of the book? 
+- 'Measure twice cut once'. Target of 11 chapters of roughly equal length 15-25 google doc pages.  
 -  Intended audience, ie. Someone who just heard of Cardano. This book should be the less technical 'story of Cardano' that preps readers for more technical 'Mastering Cardano' book coming soon.
 
 ## To do
@@ -15,7 +14,7 @@ The 3rd edition[^1], was published Jan 2024. The 4th will be published early 202
 - improve/replace graphics
 - Guidelines for KDP, Kindle Direct Publishing[^3] are useful rules for all publishing platforms. 
 
-## Translations 
+## Translations of earlier editions
 
 There has already been progress made on a **Spanish** translation by Humberto Rojas Serrano and Joe San.
 
@@ -32,7 +31,6 @@ If you are interested in translating this book, please get in touch: john@cardan
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/CC.png "Creative Commons")
 
 **Cardano for the Masses - Chang Edition** by John Greene is licensed under a _Creative Commons Attribution-ShareAlike 4.0 International License.[^9] The terms of that license apply.	
-
 
 [^1]: Cardano for the Masses - Chang edition, amazon.com/dp/B0B912X5G6
 [^2]: Markdown cheatsheet, github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
