@@ -222,6 +222,7 @@ Sep 2022	Vasil release (Plutus V2)<br>
 Nov 2022	Launch of Age of Voltaire at ScotFest<br>
 Feb 2023	'Valentine' hard fork<br>
 2024		Chang hard fork (scheduled)<br>
+Jan 2025		Plomin hard fork
 
 Note that there was no white paper in all this time, instead IOG focused on building on principles. In the next chapter we’ll delve into more technical details and explain Cardano’s roadmap and naming scheme. 
 
@@ -315,4 +316,7 @@ An intrinsically useless object that serves as a medium of exchange, also known 
 [^78]: Gazi1, Kiayias, Zindros (2018), ‘Proof-of-Stake Sidechains’, eprint.iacr.org/2018/1239.pdf
 [^79]: Dynal Patel, ‘Incentivized Testnet: what is it and how to get involved’, iohk.io/en/blog/posts/2019/10/24/incentivized-testnet-what-is-it-and-how-to-get-involved
 [^80]: Charles Hoskinson on leaving Ethereum, youtube.com/watch?v=AWSI78nh6jc
+
+
+
 
