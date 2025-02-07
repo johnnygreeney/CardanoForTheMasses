@@ -3,7 +3,7 @@
 *‘There is no honest man! not one, that can resist the attraction of gold!’* <br>
 ― Aristophanes
 
-** not formatted **
+**TO DO: add markdown format**
 
 There are a lot of moving parts in terms of a dApps architecture. We won’t be teaching you ‘how to code’ in the next few chapters, but you should get a good feel for the different languages, tools and services available. The various playgrounds and interactive programming tutorials arguably offer a more intuitive experience when you decide to code your first program. If blockchain is a minefield of jargon, then programming is just another patch you must traverse. Lets quickly run through some of the terms and phrases you will encounter. 
 
