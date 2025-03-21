@@ -30,7 +30,7 @@ If you are interested in translating this book, please get in touch: john@cardan
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/CC.png "Creative Commons")
 
-**Cardano for the Masses - Chang Edition** by John Greene is licensed under a _Creative Commons Attribution-ShareAlike 4.0 International License.[^9] The terms of that license apply.	
+**Cardano for the Masses - Chang Edition** by John Greene is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.[^9] The terms of that license apply.	
 
 [^1]: Cardano for the Masses - Chang edition, amazon.com/dp/B0B912X5G6
 [^2]: Markdown cheatsheet, github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
