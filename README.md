@@ -30,14 +30,14 @@ If you are interested in translating this book, please get in touch: john@cardan
 
 ![alt text](https://github.com/johnnygreeney/CardanoForTheMasses/blob/main/images/CC.png "Creative Commons")
 
-**Cardano for the Masses - Chang Edition** by John Greene is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.[^9] The terms of that license apply.	
+**Cardano for the Masses - Plomin Edition** by John Greene is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.[^9] The terms of that license apply.	
 
 [^1]: Cardano for the Masses - Chang edition, amazon.com/dp/B0B912X5G6
 [^2]: Markdown cheatsheet, github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 [^3]: KDP Guidelines kdp.amazon.com/en_US/help/topic/GU72M65VRFPH43L6
 [^4]: Cardano For the M₳sses - Japanese Book, lidonation.com/ja/proposals/cardano-for-the-marasses-japanese-book-f10
 [^5]: Cardano For the M₳sses - Japanese Edition, amazon.com/dp/B0D44MG8RJ
-[^6]: Cardano For the M₳sses: - Vietnames translation, www.lidonation.com/en/proposals/cardano-for-the-marasses-age-of-voltaire-edition-f11
-[^7]: Cardano For the M₳sses: - Vietnames translation PDFs, https://drive.google.com/drive/folders/19c5d6cgbg3xp6yfx3vBkjC46PT1AJMuh
+[^6]: Cardano For the M₳sses: - Vietnamese translation, www.lidonation.com/en/proposals/cardano-for-the-marasses-age-of-voltaire-edition-f11
+[^7]: Cardano For the M₳sses: - Vietnamese translation PDFs, https://drive.google.com/drive/folders/19c5d6cgbg3xp6yfx3vBkjC46PT1AJMuh
 [^8]: Vietnamese audiobook - https://t.co/vGTJ8OBkKI
 [^9]: Creative Commons License, creativecommons.org/licenses/by-sa/4.0/
